@@ -567,6 +567,11 @@
 
 <script>
 // ============================================================
+// BASE PATH (supports serving under a subpath like /bench)
+// ============================================================
+const BASE_PATH = window.location.pathname.replace(/\/[^/]*$/, '').replace(/\/$/, '');
+
+// ============================================================
 // STATE
 // ============================================================
 let state = {
@@ -590,7 +595,7 @@ function showView(id) {
 // SETUP
 // ============================================================
 async function loadDatasets() {
-  const resp = await fetch('/api/datasets');
+  const resp = await fetch(BASE_PATH + '/api/datasets');
   const data = await resp.json();
   const sel = document.getElementById('inp-dataset');
   sel.innerHTML = '';
@@ -608,7 +613,7 @@ async function startQuiz() {
   const dataset = document.getElementById('inp-dataset').value;
   const count = parseInt(document.getElementById('inp-count').value);
 
-  const resp = await fetch('/api/start', {
+  const resp = await fetch(BASE_PATH + '/api/start', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ participant: name, dataset, max_questions: count }),
@@ -633,7 +638,7 @@ async function loadQuestion() {
   state.selectedAnswer = null;
   state.phase = 'choosing';
 
-  const resp = await fetch(`/api/question/${state.sessionId}`);
+  const resp = await fetch(`${BASE_PATH}/api/question/${state.sessionId}`);
   const data = await resp.json();
 
   if (data.done) {
@@ -730,7 +735,7 @@ async function submitAnswer() {
 
   const confidence = parseInt(document.getElementById('conf-slider').value) / 100;
 
-  const resp = await fetch('/api/answer', {
+  const resp = await fetch(BASE_PATH + '/api/answer', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -797,7 +802,7 @@ async function submitAnswer() {
 // RESULTS
 // ============================================================
 async function showResults() {
-  const resp = await fetch(`/api/results/${state.sessionId}`);
+  const resp = await fetch(`${BASE_PATH}/api/results/${state.sessionId}`);
   const data = await resp.json();
 
   showView('view-results');
@@ -846,7 +851,7 @@ async function showResults() {
 // LEADERBOARD
 // ============================================================
 async function loadLeaderboard() {
-  const resp = await fetch('/api/leaderboard');
+  const resp = await fetch(BASE_PATH + '/api/leaderboard');
   const data = await resp.json();
   const entries = data.entries || [];
 
