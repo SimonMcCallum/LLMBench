@@ -137,16 +137,22 @@ def _run_local_benchmark(
     dataset_name: str,
     method: str,
 ) -> List[BenchmarkResult]:
-    """Run benchmark on a local model."""
-    from core.local_tester import evaluate_local_model
+    """Run benchmark on a local model, using trained confidence head if available."""
+    from core.local_tester import evaluate_local_model, load_confidence_head
 
     model, tokenizer, info = load_local_model(model_key)
     device = "cuda" if info.get("vram_gb", 0) > 0 else "cpu"
+
+    # Try to load trained NormShift confidence head from NNCONFIDENCE
+    confidence_head, head_type = load_confidence_head(model_key, device)
+    if confidence_head is None:
+        print(f"  No trained confidence head found, using entropy-based confidence")
 
     try:
         results = evaluate_local_model(
             model, tokenizer, model_key, examples, dataset_name,
             method=method, device=device,
+            confidence_head=confidence_head,
         )
     finally:
         unload_model(model)
