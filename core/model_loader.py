@@ -214,12 +214,18 @@ def get_api_client(vendor: str) -> Optional[Dict]:
 
 
 def list_available_models() -> Dict[str, list]:
-    """List all available models grouped by type."""
+    """List all available models grouped by type (respects enabled field)."""
     config = get_models_config()
 
-    result = {"local": list(config.get("local_models", {}).keys()), "api": {}}
+    local = config.get("local_models", {})
+    result = {
+        "local": [k for k, v in local.items() if v.get("enabled", True)],
+        "api": {},
+    }
 
     for vendor, vendor_config in config.get("api_models", {}).items():
+        if not vendor_config.get("enabled", True):
+            continue
         api_key = os.environ.get(vendor_config["api_key_env"], "")
         if api_key:
             result["api"][vendor] = vendor_config["models"]

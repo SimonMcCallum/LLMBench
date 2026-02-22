@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LLM-Bench &mdash; Admin</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --surface2: #242836;
+      --border: #2e3345;
+      --text: #e4e7ef;
+      --text-dim: #8b90a5;
+      --accent: #6c8aff;
+      --accent-dim: #4a62c4;
+      --green: #4ccd8a;
+      --red: #ef5f6b;
+      --orange: #f0a44b;
+      --yellow: #e8d44d;
+      --radius: 12px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 20px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0 16px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 24px;
+    }
+    header .title { font-size: 1.4rem; font-weight: 700; letter-spacing: -0.02em; }
+    header .title span { color: var(--accent); }
+    header .subtitle { color: var(--text-dim); font-size: 0.85rem; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 8px 16px;
+      border: none; border-radius: 8px;
+      font-size: 0.9rem; font-weight: 500;
+      cursor: pointer; transition: all 0.15s;
+      color: var(--text);
+    }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: var(--accent-dim); }
+    .btn-danger { background: var(--red); color: #fff; }
+    .btn-danger:hover { opacity: 0.85; }
+    .btn-ghost { background: transparent; border: 1px solid var(--border); }
+    .btn-ghost:hover { background: var(--surface2); }
+    .btn-sm { padding: 4px 10px; font-size: 0.8rem; }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+    .card h3 { font-size: 1rem; margin-bottom: 12px; }
+
+    /* ---- VIEWS ---- */
+    .view { display: none; }
+    .view.active { display: block; }
+
+    /* ---- LOGIN ---- */
+    .login-box {
+      max-width: 380px;
+      margin: 80px auto;
+    }
+    .login-box h2 {
+      text-align: center;
+      margin-bottom: 24px;
+      font-size: 1.3rem;
+    }
+    .login-box input {
+      width: 100%;
+      padding: 12px 16px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 1rem;
+      margin-bottom: 12px;
+      outline: none;
+    }
+    .login-box input:focus { border-color: var(--accent); }
+    .login-box .btn { width: 100%; justify-content: center; padding: 12px; }
+    .login-error {
+      color: var(--red);
+      font-size: 0.85rem;
+      text-align: center;
+      margin-bottom: 10px;
+      min-height: 20px;
+    }
+
+    /* ---- NAV TABS ---- */
+    .nav-tabs {
+      display: flex; gap: 4px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 4px;
+      margin-bottom: 24px;
+    }
+    .nav-tab {
+      flex: 1;
+      padding: 10px 12px;
+      text-align: center;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-dim);
+      transition: all 0.15s;
+      border: none;
+      background: none;
+    }
+    .nav-tab:hover { color: var(--text); background: var(--surface2); }
+    .nav-tab.active { color: #fff; background: var(--accent); }
+
+    /* ---- SUMMARY CARDS ---- */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .summary-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      text-align: center;
+    }
+    .summary-card .value { font-size: 1.6rem; font-weight: 700; color: var(--accent); }
+    .summary-card .label { font-size: 0.8rem; color: var(--text-dim); margin-top: 2px; }
+
+    /* ---- TABLES ---- */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    th, td {
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    th { color: var(--text-dim); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.03em; }
+    tr:hover td { background: var(--surface2); }
+
+    /* ---- TOGGLE SWITCH ---- */
+    .toggle {
+      position: relative;
+      width: 42px; height: 24px;
+      display: inline-block;
+    }
+    .toggle input { opacity: 0; width: 0; height: 0; }
+    .toggle .slider {
+      position: absolute; inset: 0;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .toggle .slider::before {
+      content: '';
+      position: absolute;
+      height: 18px; width: 18px;
+      left: 2px; bottom: 2px;
+      background: var(--text-dim);
+      border-radius: 50%;
+      transition: 0.2s;
+    }
+    .toggle input:checked + .slider { background: var(--accent); border-color: var(--accent); }
+    .toggle input:checked + .slider::before { transform: translateX(18px); background: #fff; }
+
+    /* ---- FORMS ---- */
+    .form-row {
+      display: flex; gap: 8px; align-items: end;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+    .form-group { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 120px; }
+    .form-group label { font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.03em; }
+    .form-group input, .form-group select {
+      padding: 8px 12px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text);
+      font-size: 0.85rem;
+      outline: none;
+    }
+    .form-group input:focus, .form-group select:focus { border-color: var(--accent); }
+
+    /* ---- CHECKBOX GRID ---- */
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 6px;
+      margin: 8px 0 16px;
+    }
+    .checkbox-item {
+      display: flex; align-items: center; gap: 8px;
+      padding: 8px 10px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      transition: 0.15s;
+    }
+    .checkbox-item:hover { border-color: var(--accent); }
+    .checkbox-item input { accent-color: var(--accent); }
+    .checkbox-item.checked { border-color: var(--accent); background: rgba(108, 138, 255, 0.1); }
+
+    /* ---- TOAST ---- */
+    .toast {
+      position: fixed;
+      bottom: 24px; right: 24px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      z-index: 1000;
+      animation: slideIn 0.3s ease;
+      max-width: 360px;
+    }
+    .toast.success { background: var(--green); color: #000; }
+    .toast.error { background: var(--red); color: #fff; }
+    @keyframes slideIn { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+    /* ---- VENDOR SECTION ---- */
+    .vendor-section {
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .vendor-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 16px;
+      background: var(--surface2);
+      cursor: pointer;
+    }
+    .vendor-header .vendor-name { font-weight: 600; font-size: 0.9rem; }
+    .vendor-header .vendor-meta { font-size: 0.8rem; color: var(--text-dim); }
+    .vendor-body { padding: 12px 16px; }
+
+    /* ---- STATUS BADGE ---- */
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .badge-green { background: rgba(76, 205, 138, 0.15); color: var(--green); }
+    .badge-red { background: rgba(239, 95, 107, 0.15); color: var(--red); }
+    .badge-dim { background: var(--surface2); color: var(--text-dim); }
+
+    /* ---- SECTION DIVIDER ---- */
+    .section-title {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-dim);
+      margin: 20px 0 10px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- ==================== LOGIN ==================== -->
+    <div id="view-login" class="view active">
+      <div class="login-box card">
+        <h2>LLM-Bench <span style="color:var(--accent)">Admin</span></h2>
+        <div id="login-error" class="login-error"></div>
+        <input type="password" id="login-password" placeholder="Admin password" autofocus
+               onkeydown="if(event.key==='Enter')doLogin()">
+        <button class="btn btn-primary" onclick="doLogin()">Sign In</button>
+      </div>
+    </div>
+
+    <!-- ==================== MAIN PANEL ==================== -->
+    <div id="view-main" class="view">
+      <header>
+        <div>
+          <div class="title">LLM-Bench <span>Admin</span></div>
+          <div class="subtitle">Model Management &amp; Benchmark Control</div>
+        </div>
+        <button class="btn btn-ghost btn-sm" onclick="doLogout()">Logout</button>
+      </header>
+
+      <!-- Nav Tabs -->
+      <div class="nav-tabs">
+        <button class="nav-tab active" data-tab="tab-models" onclick="switchTab(this)">Models</button>
+        <button class="nav-tab" data-tab="tab-benchmark" onclick="switchTab(this)">Benchmark</button>
+        <button class="nav-tab" data-tab="tab-results" onclick="switchTab(this)">Results</button>
+        <button class="nav-tab" data-tab="tab-leaderboard" onclick="switchTab(this)">Leaderboard</button>
+      </div>
+
+      <!-- Summary -->
+      <div class="summary-grid" id="summary-grid"></div>
+
+      <!-- ======== MODELS TAB ======== -->
+      <div id="tab-models" class="tab-content active">
+        <div class="section-title">Local Models</div>
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+            <h3 style="margin:0">HuggingFace Models</h3>
+            <button class="btn btn-primary btn-sm" onclick="toggleAddLocalForm()">+ Add Model</button>
+          </div>
+
+          <!-- Add Local Model Form (hidden) -->
+          <div id="add-local-form" style="display:none;margin-bottom:16px">
+            <div class="form-row">
+              <div class="form-group"><label>Key</label><input id="new-local-key" placeholder="e.g. llama3-70b"></div>
+              <div class="form-group"><label>HF Path</label><input id="new-local-hf" placeholder="e.g. meta-llama/Llama-3-70B-Instruct"></div>
+              <div class="form-group" style="max-width:100px"><label>Params (B)</label><input id="new-local-params" type="number" step="0.1" value="7.0"></div>
+            </div>
+            <div class="form-row">
+              <label style="display:flex;align-items:center;gap:6px;font-size:0.85rem">
+                <input type="checkbox" id="new-local-auth"> Requires auth token
+              </label>
+              <div style="flex:1"></div>
+              <button class="btn btn-ghost btn-sm" onclick="toggleAddLocalForm()">Cancel</button>
+              <button class="btn btn-primary btn-sm" onclick="addLocalModel()">Add</button>
+            </div>
+          </div>
+
+          <table id="local-models-table">
+            <thead><tr><th>Key</th><th>HF Path</th><th>Params</th><th>Auth</th><th>Enabled</th><th></th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <div class="section-title">API Models</div>
+        <div id="api-vendors-container"></div>
+
+        <div class="card" style="margin-top:12px">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+            <h3 style="margin:0">Add New Vendor</h3>
+          </div>
+          <div id="add-vendor-form">
+            <div class="form-row">
+              <div class="form-group"><label>Vendor Name</label><input id="new-vendor-name" placeholder="e.g. mistral"></div>
+              <div class="form-group"><label>Endpoint</label><input id="new-vendor-endpoint" placeholder="https://api.example.com/v1/chat"></div>
+              <div class="form-group"><label>API Key Env Var</label><input id="new-vendor-env" placeholder="MISTRAL_API_KEY"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label>Models (comma-separated)</label><input id="new-vendor-models" placeholder="model-large, model-small"></div>
+              <button class="btn btn-primary btn-sm" onclick="addVendor()">Add Vendor</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======== BENCHMARK TAB ======== -->
+      <div id="tab-benchmark" class="tab-content" style="display:none">
+        <div class="card">
+          <h3>Run Benchmark</h3>
+          <div class="section-title">Select Models</div>
+          <div id="bench-models" class="checkbox-grid"></div>
+
+          <div class="section-title">Select Datasets</div>
+          <div id="bench-datasets" class="checkbox-grid"></div>
+
+          <div class="section-title">Parameters</div>
+          <div class="form-row">
+            <div class="form-group" style="max-width:140px">
+              <label>Max Examples</label>
+              <input id="bench-max" type="number" value="100" min="1" max="1000">
+            </div>
+            <div class="form-group" style="max-width:140px">
+              <label>Method</label>
+              <select id="bench-method">
+                <option value="sequential">Sequential</option>
+                <option value="unified">Unified</option>
+              </select>
+            </div>
+            <div class="form-group" style="max-width:180px">
+              <label>Temperatures</label>
+              <input id="bench-temps" placeholder="0.0, 0.7" value="0.0">
+            </div>
+            <div class="form-group" style="max-width:120px">
+              <label>Repetitions</label>
+              <input id="bench-reps" type="number" value="1" min="1" max="10">
+            </div>
+          </div>
+
+          <div style="margin-top:16px;display:flex;gap:8px;align-items:center">
+            <button class="btn btn-primary" onclick="runBenchmark()">Run Benchmark</button>
+            <span id="bench-status" style="font-size:0.85rem;color:var(--text-dim)"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======== RESULTS TAB ======== -->
+      <div id="tab-results" class="tab-content" style="display:none">
+        <div class="card">
+          <h3>Benchmark History</h3>
+          <table id="history-table">
+            <thead><tr><th>Timestamp</th><th>Models</th><th>Datasets</th><th>Examples</th></tr></thead>
+            <tbody></tbody>
+          </table>
+          <div id="history-empty" style="text-align:center;color:var(--text-dim);padding:24px;display:none">No benchmark runs yet</div>
+        </div>
+      </div>
+
+      <!-- ======== LEADERBOARD TAB ======== -->
+      <div id="tab-leaderboard" class="tab-content" style="display:none">
+        <div class="card">
+          <h3>Leaderboard</h3>
+          <table id="leaderboard-table">
+            <thead><tr><th>#</th><th>Model</th><th>Dataset</th><th>Accuracy</th><th>HLCC</th><th>ECE</th><th>Cal. Gap</th></tr></thead>
+            <tbody></tbody>
+          </table>
+          <div id="lb-empty" style="text-align:center;color:var(--text-dim);padding:24px;display:none">No leaderboard data</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast container -->
+  <div id="toast-container"></div>
+
+  <script>
+    // ============================================================
+    // STATE
+    // ============================================================
+    let modelsConfig = {};
+    let datasetsConfig = {};
+    let authenticated = false;
+
+    // ============================================================
+    // FETCH WRAPPER
+    // ============================================================
+    async function adminFetch(path, options = {}) {
+      const defaults = {
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest',
+        },
+        credentials: 'same-origin',
+      };
+      const merged = { ...defaults, ...options };
+      if (options.headers) merged.headers = { ...defaults.headers, ...options.headers };
+      if (options.body && typeof options.body === 'object' && !(options.body instanceof FormData)) {
+        merged.body = JSON.stringify(options.body);
+      }
+      const resp = await fetch('/vet' + path, merged);
+      if (resp.status === 401) {
+        showView('view-login');
+        throw new Error('Not authenticated');
+      }
+      return resp;
+    }
+
+    // ============================================================
+    // VIEWS
+    // ============================================================
+    function showView(id) {
+      document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    function switchTab(el) {
+      document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+      document.querySelectorAll('.tab-content').forEach(t => t.style.display = 'none');
+      document.getElementById(el.dataset.tab).style.display = 'block';
+
+      // Load data for the tab
+      const tab = el.dataset.tab;
+      if (tab === 'tab-results') loadHistory();
+      if (tab === 'tab-leaderboard') loadLeaderboard();
+    }
+
+    // ============================================================
+    // TOAST
+    // ============================================================
+    function toast(msg, type = 'success') {
+      const el = document.createElement('div');
+      el.className = `toast ${type}`;
+      el.textContent = msg;
+      document.getElementById('toast-container').appendChild(el);
+      setTimeout(() => el.remove(), 3500);
+    }
+
+    // ============================================================
+    // AUTH
+    // ============================================================
+    async function doLogin() {
+      const pw = document.getElementById('login-password').value;
+      const errEl = document.getElementById('login-error');
+      errEl.textContent = '';
+      try {
+        const resp = await fetch('/vet/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'same-origin',
+          body: JSON.stringify({ password: pw }),
+        });
+        const data = await resp.json();
+        if (resp.ok && data.success) {
+          authenticated = true;
+          showView('view-main');
+          loadDashboard();
+        } else {
+          errEl.textContent = data.error || 'Login failed';
+        }
+      } catch (e) {
+        errEl.textContent = 'Connection error';
+      }
+    }
+
+    async function doLogout() {
+      try { await adminFetch('/logout', { method: 'POST' }); } catch {}
+      authenticated = false;
+      document.getElementById('login-password').value = '';
+      showView('view-login');
+    }
+
+    // ============================================================
+    // DASHBOARD LOAD
+    // ============================================================
+    async function loadDashboard() {
+      try {
+        const [modelsResp, datasetsResp] = await Promise.all([
+          adminFetch('/api/models'),
+          adminFetch('/api/datasets'),
+        ]);
+        modelsConfig = await modelsResp.json();
+        datasetsConfig = await datasetsResp.json();
+        renderSummary();
+        renderLocalModels();
+        renderApiVendors();
+        renderBenchmarkForm();
+      } catch (e) {
+        console.error('Failed to load dashboard:', e);
+      }
+    }
+
+    // ============================================================
+    // SUMMARY CARDS
+    // ============================================================
+    function renderSummary() {
+      const local = Object.keys(modelsConfig.local_models || {});
+      const localEnabled = local.filter(k => (modelsConfig.local_models[k].enabled !== false));
+      const api = modelsConfig.api_models || {};
+      const apiModelCount = Object.values(api).reduce((s, v) => s + (v.models || []).length, 0);
+      const vendorCount = Object.keys(api).length;
+      const datasetCount = Object.keys(datasetsConfig.datasets || datasetsConfig).length;
+
+      document.getElementById('summary-grid').innerHTML = `
+        <div class="summary-card"><div class="value">${localEnabled.length}/${local.length}</div><div class="label">Local Models</div></div>
+        <div class="summary-card"><div class="value">${apiModelCount}</div><div class="label">API Models (${vendorCount} vendors)</div></div>
+        <div class="summary-card"><div class="value">${datasetCount}</div><div class="label">Datasets</div></div>
+      `;
+    }
+
+    // ============================================================
+    // LOCAL MODELS TABLE
+    // ============================================================
+    function renderLocalModels() {
+      const local = modelsConfig.local_models || {};
+      const tbody = document.querySelector('#local-models-table tbody');
+      tbody.innerHTML = Object.entries(local).map(([key, m]) => {
+        const enabled = m.enabled !== false;
+        return `<tr>
+          <td><strong>${esc(key)}</strong></td>
+          <td style="font-size:0.8rem;color:var(--text-dim)">${esc(m.hf_path)}</td>
+          <td>${m.params_b}B</td>
+          <td>${m.requires_auth ? '<span class="badge badge-red">Yes</span>' : '<span class="badge badge-dim">No</span>'}</td>
+          <td>
+            <label class="toggle">
+              <input type="checkbox" ${enabled ? 'checked' : ''} onchange="toggleLocal('${esc(key)}', this.checked)">
+              <span class="slider"></span>
+            </label>
+          </td>
+          <td><button class="btn btn-danger btn-sm" onclick="removeLocal('${esc(key)}')">Remove</button></td>
+        </tr>`;
+      }).join('');
+    }
+
+    function toggleAddLocalForm() {
+      const form = document.getElementById('add-local-form');
+      form.style.display = form.style.display === 'none' ? 'block' : 'none';
+    }
+
+    async function addLocalModel() {
+      const key = document.getElementById('new-local-key').value.trim();
+      const hf_path = document.getElementById('new-local-hf').value.trim();
+      const params_b = parseFloat(document.getElementById('new-local-params').value) || 7.0;
+      const requires_auth = document.getElementById('new-local-auth').checked;
+      if (!key || !hf_path) { toast('Key and HF Path are required', 'error'); return; }
+      try {
+        const resp = await adminFetch('/api/models/local', {
+          method: 'POST',
+          body: { key, hf_path, params_b, requires_auth },
+        });
+        const data = await resp.json();
+        if (resp.ok) {
+          toast(`Added model: ${key}`);
+          toggleAddLocalForm();
+          document.getElementById('new-local-key').value = '';
+          document.getElementById('new-local-hf').value = '';
+          await loadDashboard();
+        } else {
+          toast(data.error || 'Failed to add model', 'error');
+        }
+      } catch (e) { toast('Request failed', 'error'); }
+    }
+
+    async function toggleLocal(key, enabled) {
+      try {
+        const resp = await adminFetch(`/api/models/local/${key}/toggle`, {
+          method: 'POST',
+          body: { enabled },
+        });
+        if (!resp.ok) toast('Failed to toggle model', 'error');
+        else toast(`${key}: ${enabled ? 'enabled' : 'disabled'}`);
+        await loadDashboard();
+      } catch (e) { toast('Request failed', 'error'); }
+    }
+
+    async function removeLocal(key) {
+      if (!confirm(`Remove local model "${key}"?`)) return;
+      try {
+        const resp = await adminFetch(`/api/models/local/${key}`, { method: 'DELETE' });
+        if (resp.ok) { toast(`Removed: ${key}`); await loadDashboard(); }
+        else toast('Failed to remove model', 'error');
+      } catch (e) { toast('Request failed', 'error'); }
+    }
+
+    // ============================================================
+    // API VENDORS
+    // ============================================================
+    function renderApiVendors() {
+      const api = modelsConfig.api_models || {};
+      const container = document.getElementById('api-vendors-container');
+      container.innerHTML = Object.entries(api).map(([vendor, cfg]) => {
+        const enabled = cfg.enabled !== false;
+        const models = (cfg.models || []);
+        return `
+        <div class="vendor-section">
+          <div class="vendor-header">
+            <div>
+              <span class="vendor-name">${esc(vendor)}</span>
+              <span class="vendor-meta"> &mdash; ${esc(cfg.endpoint || '')} &mdash; env: ${esc(cfg.api_key_env || '')}</span>
+            </div>
+            <div style="display:flex;gap:8px;align-items:center">
+              <label class="toggle">
+                <input type="checkbox" ${enabled ? 'checked' : ''} onchange="toggleVendor('${esc(vendor)}', this.checked)">
+                <span class="slider"></span>
+              </label>
+              <button class="btn btn-danger btn-sm" onclick="removeVendor('${esc(vendor)}')">Remove</button>
+            </div>
+          </div>
+          <div class="vendor-body">
+            <table>
+              <thead><tr><th>Model</th><th></th></tr></thead>
+              <tbody>
+                ${models.map(m => `<tr>
+                  <td>${esc(m)}</td>
+                  <td style="text-align:right"><button class="btn btn-danger btn-sm" onclick="removeApiModel('${esc(vendor)}','${esc(m)}')">Remove</button></td>
+                </tr>`).join('')}
+              </tbody>
+            </table>
+            <div class="form-row" style="margin-top:8px">
+              <div class="form-group"><input id="add-model-${esc(vendor)}" placeholder="New model name"></div>
+              <button class="btn btn-primary btn-sm" onclick="addApiModel('${esc(vendor)}')">Add Model</button>
+            </div>
+          </div>
+        </div>`;
+      }).join('');
+    }
+
+    async function toggleVendor(vendor, enabled) {
+      try {
+        const resp = await adminFetch(`/api/models/api/${vendor}/toggle`, {
+          method: 'POST', body: { enabled },
+        });
+        if (resp.ok) toast(`${vendor}: ${enabled ? 'enabled' : 'disabled'}`);
+        else toast('Failed to toggle vendor', 'error');
+        await loadDashboard();
+      } catch (e) { toast('Request failed', 'error'); }
+    }
+
+    async function removeVendor(vendor) {
+      if (!confirm(`Remove vendor "${vendor}" and all its models?`)) return;
+      try {
+        const resp = await adminFetch(`/api/models/api/${vendor}`, { method: 'DELETE' });
+        if (resp.ok) { toast(`Removed vendor: ${vendor}`); await loadDashboard(); }
+        else toast('Failed to remove vendor', 'error');
+      } catch (e) { toast('Request failed', 'error'); }
+    }
+
+    async function addApiModel(vendor) {
+      const input = document.getElementById(`add-model-${vendor}`);
+      const name = input.value.trim();
+      if (!name) { toast('Model name is required', 'error'); return; }
+      try {
+        const resp = await adminFetch(`/api/models/api/${vendor}`, {
+          method: 'POST', body: { model_name: name },
+        });
+        if (resp.ok) { toast(`Added: ${vendor}/${name}`); input.value = ''; await loadDashboard(); }
+        else { const d = await resp.json(); toast(d.error || 'Failed', 'error'); }
+      } catch (e) { toast('Request failed', 'error'); }
+    }
+
+    async function removeApiModel(vendor, model) {
+      if (!confirm(`Remove "${model}" from ${vendor}?`)) return;
+      try {
+        const resp = await adminFetch(`/api/models/api/${vendor}/${model}`, { method: 'DELETE' });
+        if (resp.ok) { toast(`Removed: ${vendor}/${model}`); await loadDashboard(); }
+        else toast('Failed to remove model', 'error');
+      } catch (e) { toast('Request failed', 'error'); }
+    }
+
+    async function addVendor() {
+      const vendor = document.getElementById('new-vendor-name').value.trim();
+      const endpoint = document.getElementById('new-vendor-endpoint').value.trim();
+      const api_key_env = document.getElementById('new-vendor-env').value.trim();
+      const modelsStr = document.getElementById('new-vendor-models').value.trim();
+      const models = modelsStr ? modelsStr.split(',').map(s => s.trim()).filter(Boolean) : [];
+      if (!vendor || !endpoint || !api_key_env) { toast('Vendor, endpoint, and env var are required', 'error'); return; }
+      try {
+        const resp = await adminFetch('/api/models/api/vendor', {
+          method: 'POST', body: { vendor, endpoint, api_key_env, models },
+        });
+        if (resp.ok) {
+          toast(`Added vendor: ${vendor}`);
+          ['new-vendor-name','new-vendor-endpoint','new-vendor-env','new-vendor-models'].forEach(id => document.getElementById(id).value = '');
+          await loadDashboard();
+        } else { const d = await resp.json(); toast(d.error || 'Failed', 'error'); }
+      } catch (e) { toast('Request failed', 'error'); }
+    }
+
+    // ============================================================
+    // BENCHMARK FORM
+    // ============================================================
+    function renderBenchmarkForm() {
+      // Models checkboxes
+      const modelsEl = document.getElementById('bench-models');
+      const localModels = Object.entries(modelsConfig.local_models || {})
+        .filter(([, v]) => v.enabled !== false)
+        .map(([k]) => k);
+      const apiModels = [];
+      for (const [vendor, cfg] of Object.entries(modelsConfig.api_models || {})) {
+        if (cfg.enabled === false) continue;
+        for (const m of (cfg.models || [])) apiModels.push(`${vendor}/${m}`);
+      }
+
+      modelsEl.innerHTML =
+        localModels.map(m => `<label class="checkbox-item" onclick="this.classList.toggle('checked')">
+          <input type="checkbox" name="bench-model" value="${esc(m)}"> ${esc(m)}
+        </label>`).join('') +
+        apiModels.map(m => `<label class="checkbox-item" onclick="this.classList.toggle('checked')">
+          <input type="checkbox" name="bench-model" value="${esc(m)}"> ${esc(m)}
+        </label>`).join('');
+
+      // Datasets checkboxes
+      const datasetsEl = document.getElementById('bench-datasets');
+      const datasets = datasetsConfig.datasets || datasetsConfig;
+      const dsNames = Array.isArray(datasets) ? datasets : Object.keys(datasets);
+      datasetsEl.innerHTML = dsNames.map(d => {
+        const name = typeof d === 'object' ? d.name || Object.keys(d)[0] : d;
+        return `<label class="checkbox-item" onclick="this.classList.toggle('checked')">
+          <input type="checkbox" name="bench-dataset" value="${esc(name)}"> ${esc(name)}
+        </label>`;
+      }).join('');
+    }
+
+    async function runBenchmark() {
+      const models = [...document.querySelectorAll('input[name="bench-model"]:checked')].map(el => el.value);
+      const datasets = [...document.querySelectorAll('input[name="bench-dataset"]:checked')].map(el => el.value);
+      if (!models.length || !datasets.length) { toast('Select at least one model and dataset', 'error'); return; }
+
+      const tempsStr = document.getElementById('bench-temps').value;
+      const temperatures = tempsStr.split(',').map(s => parseFloat(s.trim())).filter(n => !isNaN(n));
+
+      const body = {
+        models,
+        datasets,
+        max_examples: parseInt(document.getElementById('bench-max').value) || 100,
+        method: document.getElementById('bench-method').value,
+        temperatures: temperatures.length ? temperatures : [0.0],
+        num_repetitions: parseInt(document.getElementById('bench-reps').value) || 1,
+      };
+
+      const statusEl = document.getElementById('bench-status');
+      statusEl.textContent = 'Submitting...';
+
+      try {
+        const resp = await adminFetch('/api/benchmark', { method: 'POST', body });
+        const data = await resp.json();
+        if (data.success) {
+          statusEl.textContent = `Task created: ${data.task_file}` + (data.git_pushed ? ' (pushed to git)' : ' (local only)');
+          toast('Benchmark queued');
+        } else {
+          statusEl.textContent = '';
+          toast(data.error || 'Failed to trigger benchmark', 'error');
+        }
+      } catch (e) {
+        statusEl.textContent = '';
+        toast('Request failed', 'error');
+      }
+    }
+
+    // ============================================================
+    // HISTORY
+    // ============================================================
+    async function loadHistory() {
+      try {
+        const resp = await adminFetch('/api/history');
+        const data = await resp.json();
+        const runs = data.runs || [];
+        const tbody = document.querySelector('#history-table tbody');
+        const empty = document.getElementById('history-empty');
+
+        if (!runs.length) {
+          tbody.innerHTML = '';
+          empty.style.display = 'block';
+          return;
+        }
+        empty.style.display = 'none';
+
+        tbody.innerHTML = runs.map(r => {
+          const cfg = r.config || {};
+          const models = (cfg.models || []).join(', ');
+          const datasets = (cfg.datasets || []).join(', ');
+          const examples = cfg.max_examples || '';
+          return `<tr>
+            <td>${esc(r.timestamp || r.filename)}</td>
+            <td>${esc(models)}</td>
+            <td>${esc(datasets)}</td>
+            <td>${examples}</td>
+          </tr>`;
+        }).join('');
+      } catch (e) { console.error('Failed to load history:', e); }
+    }
+
+    // ============================================================
+    // LEADERBOARD
+    // ============================================================
+    async function loadLeaderboard() {
+      try {
+        const resp = await adminFetch('/api/leaderboard');
+        const data = await resp.json();
+        const entries = data.entries || {};
+        const tbody = document.querySelector('#leaderboard-table tbody');
+        const empty = document.getElementById('lb-empty');
+
+        const list = Array.isArray(entries) ? entries : Object.values(entries);
+        if (!list.length) {
+          tbody.innerHTML = '';
+          empty.style.display = 'block';
+          return;
+        }
+        empty.style.display = 'none';
+
+        list.sort((a, b) => (b.mean_hlcc_score || 0) - (a.mean_hlcc_score || 0));
+        tbody.innerHTML = list.map((e, i) => `<tr>
+          <td>${i + 1}</td>
+          <td><strong>${esc(e.model_name || '')}</strong></td>
+          <td>${esc(e.dataset || '')}</td>
+          <td>${fmt(e.accuracy)}</td>
+          <td>${fmt(e.mean_hlcc_score)}</td>
+          <td>${fmt(e.ece)}</td>
+          <td>${fmt(e.calibration_gap)}</td>
+        </tr>`).join('');
+      } catch (e) { console.error('Failed to load leaderboard:', e); }
+    }
+
+    // ============================================================
+    // UTILS
+    // ============================================================
+    function esc(s) {
+      if (s == null) return '';
+      const d = document.createElement('div');
+      d.textContent = String(s);
+      return d.innerHTML;
+    }
+
+    function fmt(v) {
+      if (v == null || v === '') return '-';
+      return (typeof v === 'number') ? v.toFixed(3) : String(v);
+    }
+
+    // ============================================================
+    // INIT — check if already authenticated
+    // ============================================================
+    (async function init() {
+      try {
+        const resp = await fetch('/vet/api/models', {
+          headers: { 'X-Requested-With': 'XMLHttpRequest' },
+          credentials: 'same-origin',
+        });
+        if (resp.ok) {
+          authenticated = true;
+          showView('view-main');
+          modelsConfig = await resp.json();
+          const dsResp = await fetch('/vet/api/datasets', {
+            headers: { 'X-Requested-With': 'XMLHttpRequest' },
+            credentials: 'same-origin',
+          });
+          if (dsResp.ok) datasetsConfig = await dsResp.json();
+          renderSummary();
+          renderLocalModels();
+          renderApiVendors();
+          renderBenchmarkForm();
+        }
+      } catch {}
+    })();
+  </script>
+</body>
+</html>

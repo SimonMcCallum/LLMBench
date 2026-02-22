@@ -1,0 +1,67 @@
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: llm-bench-app
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      # Persist results across deploys
+      - ../results:/app/results
+      # Config must be writable for admin model management
+      - ../config:/app/config
+      # Inbox for benchmark triggers
+      - ../.claude/inbox:/app/.claude/inbox
+      # Git repo access for push (benchmark trigger)
+      - ../.git:/app/.git:ro
+    networks:
+      - internal
+    expose:
+      - "8080"
+
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: llm-bench-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/security-headers.conf:/etc/nginx/snippets/security-headers.conf:ro
+      - ./nginx/rate-limit.conf:/etc/nginx/snippets/rate-limit.conf:ro
+      - ../web/static:/var/www/static:ro
+      # Mount TLS certs (generate with certbot or place manually)
+      - ./certs:/etc/nginx/certs:ro
+      # Shared log volume for fail2ban
+      - nginx-logs:/var/log/nginx
+    depends_on:
+      - app
+    networks:
+      - internal
+
+  fail2ban:
+    image: crazymax/fail2ban:latest
+    container_name: llm-bench-fail2ban
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    volumes:
+      - ./fail2ban/jail.local:/etc/fail2ban/jail.local:ro
+      - ./fail2ban/filter.d:/etc/fail2ban/filter.d:ro
+      - nginx-logs:/var/log/nginx:ro
+      - fail2ban-db:/var/lib/fail2ban
+    network_mode: host
+
+volumes:
+  nginx-logs:
+  fail2ban-db:
+
+networks:
+  internal:
+    driver: bridge

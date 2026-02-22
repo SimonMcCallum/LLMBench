@@ -35,6 +35,12 @@ desktop.ini
 .claude/daemon.log
 .claude/daemon_state.json.tmp
 
+# Docker secrets (never commit actual .env)
+docker/.env
+docker/fail2ban/db/
+docker/certs/*.pem
+docker/certs/*.key
+
 # Generated / transient
 *.log
 *.pid

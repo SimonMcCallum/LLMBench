@@ -20,6 +20,7 @@ Usage:
 
 import argparse
 import json
+import os
 import random
 import uuid
 from datetime import datetime
@@ -28,6 +29,14 @@ from pathlib import Path
 from flask import Flask, jsonify, request, send_from_directory
 
 app = Flask(__name__, static_folder="static")
+app.secret_key = os.environ.get("SECRET_KEY", os.urandom(32))
+app.config["SESSION_COOKIE_SAMESITE"] = "Lax"
+app.config["SESSION_COOKIE_HTTPONLY"] = True
+
+# Register admin panel blueprint
+from web.admin import admin_bp  # noqa: E402
+
+app.register_blueprint(admin_bp)
 
 # ============================================================
 # PATHS — relative to repo root
