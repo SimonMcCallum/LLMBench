@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LLM-Bench &mdash; Confidence Quiz</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --surface2: #242836;
+      --border: #2e3345;
+      --text: #e4e7ef;
+      --text-dim: #8b90a5;
+      --accent: #6c8aff;
+      --accent-dim: #4a62c4;
+      --green: #4ccd8a;
+      --red: #ef5f6b;
+      --orange: #f0a44b;
+      --yellow: #e8d44d;
+      --radius: 12px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 24px 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 32px 0 24px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 32px;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    header h1 span { color: var(--accent); }
+    header p { color: var(--text-dim); margin-top: 6px; font-size: 0.95rem; }
+
+    /* ---- VIEWS ---- */
+    .view { display: none; }
+    .view.active { display: block; }
+
+    /* ---- SETUP ---- */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      margin-bottom: 20px;
+    }
+    .card h2 { font-size: 1.15rem; margin-bottom: 16px; }
+
+    label {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    input[type="text"], select {
+      width: 100%;
+      padding: 10px 14px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    input[type="text"]:focus, select:focus {
+      border-color: var(--accent);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+    .btn-primary:hover { background: var(--accent-dim); }
+    .btn-primary:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+    .btn-secondary {
+      background: var(--surface2);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover { background: var(--border); }
+
+    .btn-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    /* ---- QUIZ ---- */
+    .progress-bar-bg {
+      width: 100%;
+      height: 6px;
+      background: var(--surface2);
+      border-radius: 3px;
+      margin-bottom: 24px;
+      overflow: hidden;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 3px;
+      transition: width 0.4s ease;
+    }
+
+    .q-meta {
+      display: flex;
+      justify-content: space-between;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      margin-bottom: 12px;
+    }
+
+    .q-text {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 24px;
+      line-height: 1.55;
+    }
+
+    .choices {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .choice-btn {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 18px;
+      background: var(--surface2);
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.15s;
+      text-align: left;
+      color: var(--text);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .choice-btn:hover {
+      border-color: var(--accent);
+      background: rgba(108, 138, 255, 0.06);
+    }
+    .choice-btn.selected {
+      border-color: var(--accent);
+      background: rgba(108, 138, 255, 0.12);
+    }
+    .choice-btn.correct {
+      border-color: var(--green);
+      background: rgba(76, 205, 138, 0.1);
+    }
+    .choice-btn.incorrect {
+      border-color: var(--red);
+      background: rgba(239, 95, 107, 0.1);
+    }
+    .choice-btn .letter {
+      flex-shrink: 0;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      background: var(--border);
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+    .choice-btn.selected .letter { background: var(--accent); color: #fff; }
+    .choice-btn.correct .letter { background: var(--green); color: #fff; }
+    .choice-btn.incorrect .letter { background: var(--red); color: #fff; }
+
+    /* ---- CONFIDENCE ---- */
+    .confidence-section {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .confidence-section h3 {
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+      color: var(--text-dim);
+    }
+
+    .confidence-display {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .confidence-value {
+      font-size: 2.4rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+    .confidence-label {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      margin-top: 2px;
+    }
+
+    .slider-container { padding: 0 4px; }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 8px;
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 3px solid var(--bg);
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+
+    .slider-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      margin-top: 8px;
+    }
+
+    /* ---- FEEDBACK ---- */
+    .feedback {
+      padding: 18px 22px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-weight: 600;
+      display: none;
+    }
+    .feedback.correct {
+      background: rgba(76, 205, 138, 0.12);
+      border: 1px solid var(--green);
+      color: var(--green);
+    }
+    .feedback.incorrect {
+      background: rgba(239, 95, 107, 0.12);
+      border: 1px solid var(--red);
+      color: var(--red);
+    }
+    .feedback .score-detail {
+      font-weight: 400;
+      font-size: 0.9rem;
+      margin-top: 6px;
+      opacity: 0.85;
+    }
+
+    /* ---- RUNNING STATS ---- */
+    .running-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .stat-box {
+      background: var(--surface2);
+      border-radius: 8px;
+      padding: 12px;
+      text-align: center;
+    }
+    .stat-box .stat-value {
+      font-size: 1.3rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+    .stat-box .stat-label {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      margin-top: 2px;
+    }
+
+    /* ---- RESULTS ---- */
+    .results-header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .results-header h2 { font-size: 1.4rem; margin-bottom: 8px; }
+    .big-score {
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+    .big-score.positive { color: var(--green); }
+    .big-score.negative { color: var(--red); }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .metric-card {
+      background: var(--surface2);
+      border-radius: 10px;
+      padding: 16px;
+    }
+    .metric-card .metric-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+    .metric-card .metric-name {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      margin-top: 2px;
+    }
+
+    /* ---- LEADERBOARD ---- */
+    .leaderboard-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    .leaderboard-table th {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 2px solid var(--border);
+      color: var(--text-dim);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .leaderboard-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .leaderboard-table tr.human td { background: rgba(108, 138, 255, 0.05); }
+    .leaderboard-table .type-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .type-badge.llm { background: var(--surface2); color: var(--text-dim); }
+    .type-badge.human { background: rgba(108, 138, 255, 0.2); color: var(--accent); }
+
+    .question-review {
+      margin-top: 28px;
+    }
+    .review-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .review-item .review-num {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+    .review-item .review-num.correct { background: var(--green); color: #fff; }
+    .review-item .review-num.incorrect { background: var(--red); color: #fff; }
+    .review-detail { flex: 1; }
+    .review-detail .review-q {
+      font-size: 0.9rem;
+      margin-bottom: 4px;
+    }
+    .review-detail .review-meta {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+    }
+
+    @media (max-width: 600px) {
+      .running-stats { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+      .metrics-grid { grid-template-columns: 1fr; }
+      .stat-box .stat-value { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>LLM-<span>Bench</span></h1>
+      <p>Confidence-calibrated MCQ benchmark &mdash; human edition</p>
+    </header>
+
+    <!-- ==================== SETUP VIEW ==================== -->
+    <div id="view-setup" class="view active">
+      <div class="card">
+        <h2>Start a Quiz</h2>
+        <label for="inp-name">Your name</label>
+        <input type="text" id="inp-name" placeholder="Anonymous" autocomplete="off">
+
+        <label for="inp-dataset">Dataset</label>
+        <select id="inp-dataset"></select>
+
+        <label for="inp-count">Number of questions</label>
+        <select id="inp-count">
+          <option value="10">10 questions</option>
+          <option value="20" selected>20 questions</option>
+          <option value="50">50 questions</option>
+          <option value="100">100 questions</option>
+        </select>
+
+        <div class="btn-row">
+          <button class="btn btn-primary" onclick="startQuiz()">Start Quiz</button>
+          <button class="btn btn-secondary" onclick="showView('view-leaderboard'); loadLeaderboard()">Leaderboard</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>How Scoring Works</h2>
+        <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 12px;">
+          Your score depends on <strong>both</strong> your answer and your confidence level.
+          Being right with high confidence earns the most points; being wrong with high confidence
+          costs the most.
+        </p>
+        <table style="width:100%; font-size:0.85rem; color:var(--text-dim);">
+          <tr><th style="text-align:left">Confidence</th><th>Correct</th><th>Incorrect</th></tr>
+          <tr><td>100% (certain)</td><td style="color:var(--green)">+2.0</td><td style="color:var(--red)">&minus;2.0</td></tr>
+          <tr><td>75%</td><td style="color:var(--green)">+1.75</td><td style="color:var(--red)">&minus;1.13</td></tr>
+          <tr><td>50%</td><td style="color:var(--green)">+1.5</td><td style="color:var(--orange)">&minus;0.50</td></tr>
+          <tr><td>25%</td><td style="color:var(--green)">+1.25</td><td style="color:var(--yellow)">&minus;0.13</td></tr>
+          <tr><td>0% (guessing)</td><td style="color:var(--green)">+1.0</td><td>0.0</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- ==================== QUIZ VIEW ==================== -->
+    <div id="view-quiz" class="view">
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progress-fill" style="width: 0%"></div>
+      </div>
+
+      <div class="running-stats" id="running-stats">
+        <div class="stat-box">
+          <div class="stat-value" id="stat-accuracy">0%</div>
+          <div class="stat-label">Accuracy</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value" id="stat-hlcc">0.00</div>
+          <div class="stat-label">Avg HLCC</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value" id="stat-progress">0/0</div>
+          <div class="stat-label">Progress</div>
+        </div>
+      </div>
+
+      <div class="q-meta">
+        <span id="q-number">Question 1 of 20</span>
+        <span id="q-subject"></span>
+      </div>
+
+      <div class="q-text" id="q-text"></div>
+
+      <div class="choices" id="choices"></div>
+
+      <div class="confidence-section" id="confidence-section">
+        <h3>How confident are you?</h3>
+        <div class="confidence-display">
+          <div class="confidence-value" id="conf-value">50%</div>
+          <div class="confidence-label" id="conf-label">Uncertain</div>
+        </div>
+        <div class="slider-container">
+          <input type="range" id="conf-slider" min="0" max="100" value="50"
+                 oninput="updateConfidence(this.value)">
+          <div class="slider-labels">
+            <span>Guessing</span>
+            <span>Somewhat sure</span>
+            <span>Certain</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="feedback" id="feedback"></div>
+
+      <div class="btn-row">
+        <button class="btn btn-primary" id="btn-submit" onclick="submitAnswer()" disabled>
+          Select an answer
+        </button>
+      </div>
+    </div>
+
+    <!-- ==================== RESULTS VIEW ==================== -->
+    <div id="view-results" class="view">
+      <div class="card">
+        <div class="results-header">
+          <h2>Quiz Complete</h2>
+          <div class="big-score" id="final-hlcc"></div>
+          <p style="color: var(--text-dim);">Average HLCC Score</p>
+        </div>
+
+        <div class="metrics-grid" id="metrics-grid"></div>
+
+        <div class="btn-row" style="justify-content:center;">
+          <button class="btn btn-primary" onclick="showView('view-setup')">New Quiz</button>
+          <button class="btn btn-secondary" onclick="showView('view-leaderboard'); loadLeaderboard()">Leaderboard</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Question Review</h2>
+        <div class="question-review" id="question-review"></div>
+      </div>
+    </div>
+
+    <!-- ==================== LEADERBOARD VIEW ==================== -->
+    <div id="view-leaderboard" class="view">
+      <div class="card">
+        <h2>Leaderboard</h2>
+        <p style="color:var(--text-dim); font-size:0.9rem; margin-bottom:16px;">
+          Human participants vs. LLM models on the same MCQ benchmarks.
+        </p>
+        <div id="leaderboard-content"></div>
+        <div class="btn-row" style="margin-top:20px;">
+          <button class="btn btn-secondary" onclick="showView('view-setup')">Back</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+// ============================================================
+// STATE
+// ============================================================
+let state = {
+  sessionId: null,
+  totalQuestions: 0,
+  answered: 0,
+  selectedAnswer: null,
+  phase: 'choosing', // 'choosing' | 'confirming' | 'feedback'
+  responses: [],
+};
+
+// ============================================================
+// VIEW MANAGEMENT
+// ============================================================
+function showView(id) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+// ============================================================
+// SETUP
+// ============================================================
+async function loadDatasets() {
+  const resp = await fetch('/api/datasets');
+  const data = await resp.json();
+  const sel = document.getElementById('inp-dataset');
+  sel.innerHTML = '';
+  data.datasets.forEach(ds => {
+    const opt = document.createElement('option');
+    opt.value = ds;
+    opt.textContent = ds;
+    if (ds === 'truthfulqa') opt.selected = true;
+    sel.appendChild(opt);
+  });
+}
+
+async function startQuiz() {
+  const name = document.getElementById('inp-name').value.trim() || 'Anonymous';
+  const dataset = document.getElementById('inp-dataset').value;
+  const count = parseInt(document.getElementById('inp-count').value);
+
+  const resp = await fetch('/api/start', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ participant: name, dataset, max_questions: count }),
+  });
+  const data = await resp.json();
+  if (data.error) { alert(data.error); return; }
+
+  state.sessionId = data.session_id;
+  state.totalQuestions = data.total_questions;
+  state.answered = 0;
+  state.responses = [];
+  state.selectedAnswer = null;
+
+  showView('view-quiz');
+  loadQuestion();
+}
+
+// ============================================================
+// QUIZ FLOW
+// ============================================================
+async function loadQuestion() {
+  state.selectedAnswer = null;
+  state.phase = 'choosing';
+
+  const resp = await fetch(`/api/question/${state.sessionId}`);
+  const data = await resp.json();
+
+  if (data.done) {
+    showResults();
+    return;
+  }
+
+  // Update progress
+  const pct = (state.answered / state.totalQuestions) * 100;
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('q-number').textContent =
+    `Question ${data.question_number} of ${data.total_questions}`;
+  document.getElementById('q-subject').textContent = data.subject || '';
+  document.getElementById('q-text').textContent = data.question;
+  document.getElementById('stat-progress').textContent =
+    `${state.answered}/${state.totalQuestions}`;
+
+  // Render choices
+  const letters = 'ABCDEFGHIJ';
+  const container = document.getElementById('choices');
+  container.innerHTML = '';
+  data.choices.forEach((choice, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'choice-btn';
+    btn.innerHTML = `<span class="letter">${letters[i]}</span><span>${choice}</span>`;
+    btn.onclick = () => selectChoice(i);
+    btn.dataset.index = i;
+    container.appendChild(btn);
+  });
+
+  // Reset confidence
+  document.getElementById('conf-slider').value = 50;
+  updateConfidence(50);
+  document.getElementById('confidence-section').style.display = 'block';
+
+  // Reset feedback
+  document.getElementById('feedback').style.display = 'none';
+
+  // Reset button
+  const btn = document.getElementById('btn-submit');
+  btn.textContent = 'Select an answer';
+  btn.disabled = true;
+  btn.onclick = submitAnswer;
+
+  // Update slider color
+  updateSliderColor(50);
+}
+
+function selectChoice(index) {
+  if (state.phase === 'feedback') return;
+
+  state.selectedAnswer = index;
+  state.phase = 'confirming';
+
+  document.querySelectorAll('.choice-btn').forEach((btn, i) => {
+    btn.classList.toggle('selected', i === index);
+  });
+
+  const submitBtn = document.getElementById('btn-submit');
+  submitBtn.disabled = false;
+  submitBtn.textContent = 'Submit Answer';
+}
+
+function updateConfidence(val) {
+  const pct = parseInt(val);
+  document.getElementById('conf-value').textContent = pct + '%';
+
+  let label = 'Guessing';
+  if (pct >= 90) label = 'Certain';
+  else if (pct >= 70) label = 'Confident';
+  else if (pct >= 50) label = 'Somewhat sure';
+  else if (pct >= 30) label = 'Uncertain';
+  else label = 'Guessing';
+  document.getElementById('conf-label').textContent = label;
+
+  updateSliderColor(pct);
+}
+
+function updateSliderColor(pct) {
+  const slider = document.getElementById('conf-slider');
+  const r = Math.round(108 + (pct / 100) * (76 - 108));
+  const g = Math.round(138 + (pct / 100) * (205 - 138));
+  const b = Math.round(255 + (pct / 100) * (138 - 255));
+  const color = `rgb(${r},${g},${b})`;
+  slider.style.background = `linear-gradient(to right, var(--surface2) 0%, ${color} ${pct}%, var(--surface2) ${pct}%)`;
+}
+
+async function submitAnswer() {
+  if (state.selectedAnswer === null) return;
+  if (state.phase === 'feedback') {
+    loadQuestion();
+    return;
+  }
+
+  const confidence = parseInt(document.getElementById('conf-slider').value) / 100;
+
+  const resp = await fetch('/api/answer', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      session_id: state.sessionId,
+      selected_answer: state.selectedAnswer,
+      confidence: confidence,
+    }),
+  });
+  const data = await resp.json();
+
+  state.answered++;
+  state.responses.push(data);
+  state.phase = 'feedback';
+
+  // Show feedback
+  const fb = document.getElementById('feedback');
+  fb.style.display = 'block';
+  if (data.is_correct) {
+    fb.className = 'feedback correct';
+    fb.innerHTML = `Correct! <span class="score-detail">HLCC: ${data.hlcc_score >= 0 ? '+' : ''}${data.hlcc_score.toFixed(2)}</span>`;
+  } else {
+    fb.className = 'feedback incorrect';
+    fb.innerHTML = `Incorrect. The answer was ${data.correct_letter}: ${data.correct_text}
+      <span class="score-detail">HLCC: ${data.hlcc_score.toFixed(2)}</span>`;
+  }
+
+  // Highlight choices
+  document.querySelectorAll('.choice-btn').forEach((btn, i) => {
+    btn.classList.remove('selected');
+    if (i === data.correct_answer) btn.classList.add('correct');
+    else if (i === state.selectedAnswer && !data.is_correct) btn.classList.add('incorrect');
+  });
+
+  // Disable confidence slider
+  document.getElementById('confidence-section').style.opacity = '0.5';
+
+  // Update running stats
+  document.getElementById('stat-accuracy').textContent =
+    (data.running_accuracy * 100).toFixed(0) + '%';
+  document.getElementById('stat-hlcc').textContent =
+    (data.running_hlcc >= 0 ? '+' : '') + data.running_hlcc.toFixed(2);
+  document.getElementById('stat-progress').textContent =
+    `${state.answered}/${state.totalQuestions}`;
+
+  // Update progress bar
+  const pct = (state.answered / state.totalQuestions) * 100;
+  document.getElementById('progress-fill').style.width = pct + '%';
+
+  // Change button
+  const btn = document.getElementById('btn-submit');
+  if (data.questions_remaining > 0) {
+    btn.textContent = 'Next Question';
+    btn.onclick = () => {
+      document.getElementById('confidence-section').style.opacity = '1';
+      loadQuestion();
+    };
+  } else {
+    btn.textContent = 'See Results';
+    btn.onclick = showResults;
+  }
+}
+
+// ============================================================
+// RESULTS
+// ============================================================
+async function showResults() {
+  const resp = await fetch(`/api/results/${state.sessionId}`);
+  const data = await resp.json();
+
+  showView('view-results');
+
+  // Big score
+  const hlcc = data.mean_hlcc;
+  const bigScore = document.getElementById('final-hlcc');
+  bigScore.textContent = (hlcc >= 0 ? '+' : '') + hlcc.toFixed(3);
+  bigScore.className = 'big-score ' + (hlcc >= 0 ? 'positive' : 'negative');
+
+  // Metrics grid
+  const m = data.metrics;
+  const metricsHtml = [
+    { name: 'Accuracy', value: (m.accuracy * 100).toFixed(1) + '%' },
+    { name: 'Avg Confidence', value: (m.mean_confidence * 100).toFixed(1) + '%' },
+    { name: 'ECE', value: m.ece.toFixed(4) },
+    { name: 'Brier Score', value: m.brier.toFixed(4) },
+    { name: 'Calibration Gap', value: (m.calibration_gap * 100).toFixed(1) + '%' },
+    { name: 'Total HLCC', value: (data.total_hlcc >= 0 ? '+' : '') + data.total_hlcc.toFixed(2) },
+  ].map(item => `
+    <div class="metric-card">
+      <div class="metric-value">${item.value}</div>
+      <div class="metric-name">${item.name}</div>
+    </div>
+  `).join('');
+  document.getElementById('metrics-grid').innerHTML = metricsHtml;
+
+  // Question review
+  const reviewHtml = data.responses.map((r, i) => `
+    <div class="review-item">
+      <div class="review-num ${r.is_correct ? 'correct' : 'incorrect'}">${i + 1}</div>
+      <div class="review-detail">
+        <div class="review-q">${r.is_correct ? 'Correct' : 'Incorrect'} &mdash;
+          answered ${r.selected_letter}, correct was ${r.correct_letter}</div>
+        <div class="review-meta">
+          Confidence: ${(r.confidence * 100).toFixed(0)}% &nbsp;&bull;&nbsp;
+          HLCC: ${r.hlcc_score >= 0 ? '+' : ''}${r.hlcc_score.toFixed(2)}
+        </div>
+      </div>
+    </div>
+  `).join('');
+  document.getElementById('question-review').innerHTML = reviewHtml;
+}
+
+// ============================================================
+// LEADERBOARD
+// ============================================================
+async function loadLeaderboard() {
+  const resp = await fetch('/api/leaderboard');
+  const data = await resp.json();
+  const entries = data.entries || [];
+
+  if (entries.length === 0) {
+    document.getElementById('leaderboard-content').innerHTML =
+      '<p style="color:var(--text-dim)">No entries yet. Complete a quiz to appear here!</p>';
+    return;
+  }
+
+  let html = `<table class="leaderboard-table">
+    <thead><tr>
+      <th>#</th><th>Name</th><th>Type</th><th>Dataset</th>
+      <th>Accuracy</th><th>HLCC</th><th>ECE</th>
+    </tr></thead><tbody>`;
+
+  entries.forEach((e, i) => {
+    const type = e.type || 'llm';
+    const hlcc = e.mean_hlcc_score || 0;
+    html += `<tr class="${type === 'human' ? 'human' : ''}">
+      <td>${i + 1}</td>
+      <td>${e.model_name || 'Unknown'}</td>
+      <td><span class="type-badge ${type}">${type}</span></td>
+      <td>${e.dataset || ''}</td>
+      <td>${((e.accuracy || 0) * 100).toFixed(1)}%</td>
+      <td>${hlcc >= 0 ? '+' : ''}${hlcc.toFixed(3)}</td>
+      <td>${(e.ece || 0).toFixed(3)}</td>
+    </tr>`;
+  });
+
+  html += '</tbody></table>';
+  document.getElementById('leaderboard-content').innerHTML = html;
+}
+
+// ============================================================
+// INIT
+// ============================================================
+loadDatasets();
+</script>
+</body>
+</html>

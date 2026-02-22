@@ -1,0 +1,3 @@
+# Web server dependencies (Ubuntu server — lightweight, no ML)
+flask>=3.0
+gunicorn>=21.2

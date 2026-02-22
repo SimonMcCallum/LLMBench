@@ -1,0 +1,35 @@
+# HLCC and CBM scoring parameters
+# Single source of truth for scoring configuration
+
+hlcc:
+  # Correct predictions: R(c) = correct_base + correct_coeff * c
+  correct_base: 1.0
+  correct_coeff: 1.0    # Max reward = 2.0 at c=1.0
+  # Incorrect predictions: P(c) = incorrect_coeff * c^incorrect_power
+  incorrect_coeff: -2.0
+  incorrect_power: 2.0   # Max penalty = -2.0 at c=1.0
+  # Derived thresholds
+  crossover: 0.75        # Confidence where expected score crosses zero
+  saturation: 0.80       # Accuracy threshold for optimal c=1.0
+  safe_guess: 0.25       # Confidence that gives E[S]=0 for 4-choice random
+
+cbm:
+  # Discrete confidence-based marking matrix
+  levels:
+    1.0: { correct:  2.0, incorrect: -2.0 }  # Very confident
+    0.8: { correct:  1.5, incorrect: -1.5 }  # Confident
+    0.6: { correct:  1.0, incorrect: -1.0 }  # Somewhat confident
+    0.4: { correct:  0.5, incorrect: -0.5 }  # Uncertain
+    0.2: { correct:  0.0, incorrect:  0.0 }  # Very uncertain
+
+# Calibration metric targets
+calibration_targets:
+  ece: 0.05        # < 0.05 = excellent
+  brier: 0.20      # Lower is better
+  calibration_gap: 0.10  # |confidence - accuracy|
+
+# Ranking weights
+ranking:
+  hlcc_weight: 0.4
+  accuracy_weight: 0.3
+  calibration_weight: 0.3

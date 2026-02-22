@@ -1,0 +1,17 @@
+{
+  "updated": "2026-02-22T19:10:06.535469",
+  "datasets": [
+    {
+      "name": "arc-easy",
+      "total": 50,
+      "exported": "2026-02-22T19:10:06.510588",
+      "file": "arc-easy.json"
+    },
+    {
+      "name": "truthfulqa",
+      "total": 50,
+      "exported": "2026-02-22T19:10:03.755593",
+      "file": "truthfulqa.json"
+    }
+  ]
+}

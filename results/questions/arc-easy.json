@@ -1,0 +1,657 @@
+{
+  "dataset": "arc-easy",
+  "exported": "2026-02-22T19:10:06.510588",
+  "total": 50,
+  "questions": [
+    {
+      "question_id": "arc_easy_0",
+      "question": "Which statement best explains why photosynthesis is the foundation of most food webs?",
+      "choices": [
+        "Sunlight is the source of energy for nearly all ecosystems.",
+        "Most ecosystems are found on land instead of in water.",
+        "Carbon dioxide is more available than other gases.",
+        "The producers in all ecosystems are plants."
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_1",
+      "question": "Which piece of safety equipment is used to keep mold spores from entering the respiratory system?",
+      "choices": [
+        "safety goggles",
+        "breathing mask",
+        "rubber gloves",
+        "lead apron"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_2",
+      "question": "Meiosis is a type of cell division in which germ cells divide to produce haploid cells. Where does meiosis occur?",
+      "choices": [
+        "brain cells",
+        "bone cells",
+        "muscle cells",
+        "ovary cells"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_3",
+      "question": "Which characteristic describes the texture of a kitten's fur?",
+      "choices": [
+        "gray",
+        "warm",
+        "long",
+        "soft"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_4",
+      "question": "Which best describes the structure of an atom?",
+      "choices": [
+        "a lightweight core surrounded by neutral particles",
+        "a massive core surrounded by negatively-charged particles",
+        "a network of interacting positive and negative particles",
+        "overlapping layers of neutral, positive, and negative particles"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_5",
+      "question": "To express the distance between the Milky Way galaxy and other galaxies, the most appropriate unit of measurement is the",
+      "choices": [
+        "meter.",
+        "kilometer.",
+        "light-year.",
+        "astronomical unit."
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_6",
+      "question": "A student has just completed a laboratory activity. What is the last action that the student should perform before leaving the lab area?",
+      "choices": [
+        "wash hands",
+        "turn off all equipment",
+        "put away all glassware",
+        "wash instruments and table tops"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_7",
+      "question": "Students are investigating the effects of different fertilizers on plant growth. Which units would be best to measure the mass of the fertilizer used?",
+      "choices": [
+        "meters",
+        "centimeters",
+        "grams",
+        "milligrams"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_8",
+      "question": "Plants use sunlight to make",
+      "choices": [
+        "soil.",
+        "minerals.",
+        "food.",
+        "water."
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_9",
+      "question": "Which of these correctly identifies the way materials are transported in a plant?",
+      "choices": [
+        "Xylem carries water from the roots to the leaves.",
+        "Phloem carries minerals from the roots to the leaves.",
+        "Xylem carries sugars from the flowers to the stems.",
+        "Phloem carries water from the flowers to the stems."
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_10",
+      "question": "When trees develop leaves in the spring, 10 changes occur on the forest floor. Why does the development of leaves cause changes on the forest floor?",
+      "choices": [
+        "Rainfall increases.",
+        "Sunlight is reduced.",
+        "Wind speed increases.",
+        "Animal migration is stopped."
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_11",
+      "question": "The circulatory system and the endocrine system work together in the human body. Which describes one way in which these systems interact?",
+      "choices": [
+        "taking in oxygen and transporting it to cells of the body",
+        "releasing hormones and transporting them to cells of the body",
+        "absorbing nutrients from food and transporting them to cells in the body",
+        "collecting waste products from the cells and transporting it out of the body"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_12",
+      "question": "A student throws a ball into the air. While the ball travels up, the speed of the ball decreases. What force causes the ball to slow while traveling up?",
+      "choices": [
+        "electricity",
+        "gravity",
+        "magnetism",
+        "tension"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_13",
+      "question": "Which of these will most likely harm a habitat?",
+      "choices": [
+        "planting trees",
+        "water pollution",
+        "rainfall",
+        "sunlight"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_14",
+      "question": "All living and nonliving material is composed of",
+      "choices": [
+        "air",
+        "elements",
+        "water",
+        "soil"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_15",
+      "question": "Which process best explains how the Grand Canyon became so wide?",
+      "choices": [
+        "folding",
+        "erosion",
+        "deposition",
+        "sedimentation"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_16",
+      "question": "As global temperatures increase, certain organisms will be more affected than others. The changes associated with global warming may result in an increase in sea level. Which organisms will be affected most as a result of the change in sea level?",
+      "choices": [
+        "birds that eat fish from shallow waters",
+        "fish that live in coral reefs in shallow waters",
+        "mammals that swim in cold, deep ocean waters",
+        "crustaceans at the bottom of deep sea ocean waters"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_17",
+      "question": "A dish of sugar water was left on a window sill. One week later, there were only sugar crystals left in the dish. The water was gone. The best explanation for the appearance of sugar crystals is",
+      "choices": [
+        "some of the water was absorbed by the dish.",
+        "the air condensed.",
+        "the light shining on the window sill produced more sugar.",
+        "the water evaporated."
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_18",
+      "question": "Using a softball bat to hit a softball is an example of using which simple machine?",
+      "choices": [
+        "pulley",
+        "lever",
+        "inclined plane",
+        "wheel and axle"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_19",
+      "question": "When an igneous intrusion comes into contact with surrounding rock, the surrounding rock will",
+      "choices": [
+        "erode.",
+        "foliate.",
+        "precipitate.",
+        "recrystallize."
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_20",
+      "question": "A research scientist writes a paper on the initial regrowth of a forest after a fire has damaged the entire ecosystem. Which title would be best for the paper?",
+      "choices": [
+        "Primary Succession",
+        "Stable Communities",
+        "Climax Communities",
+        "Secondary Succession"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_21",
+      "question": "Where do plants get most of the energy they need to live and grow?",
+      "choices": [
+        "water",
+        "soil",
+        "air",
+        "sunlight"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_22",
+      "question": "Which is a statement about climate?",
+      "choices": [
+        "The average temperature yesterday was 15°C.",
+        "The temperature range today was 10°C to 20°C.",
+        "The high temperature tomorrow will be 14°C.",
+        "The average high temperature in May is 20°C."
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_23",
+      "question": "While on a movie set, a stuntman jumps off the roof of a building. As he falls toward an airbag, what is increasing?",
+      "choices": [
+        "gravity",
+        "wind velocity",
+        "kinetic energy",
+        "potential energy"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_24",
+      "question": "Jessica wants to see cells in an oak tree leaf. Which tool is best for Jessica to use to see the cells?",
+      "choices": [
+        "binoculars",
+        "microscope",
+        "reading glasses",
+        "magnifying glass"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_25",
+      "question": "Biologists conduct investigations to learn about living organisms. Which method helps reduce bias during an investigation?",
+      "choices": [
+        "developing a hypothesis after collecting data in the investigation",
+        "limiting the amount of background research before the investigation",
+        "designing an investigation with repeated trials during the investigation",
+        "obtaining other opinions concerning what should happen during the investigation"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_26",
+      "question": "Which factor is most likely to cause the number of rabbits living in an area to increase?",
+      "choices": [
+        "less water",
+        "fewer predators",
+        "lack of shelter",
+        "limited food"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_27",
+      "question": "Seeds that remain inactive until the right conditions of light, water, and soil are present are called ___.",
+      "choices": [
+        "pollen",
+        "dormant",
+        "flowers",
+        "recycled"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_28",
+      "question": "What allows a light bulb to give off light?",
+      "choices": [
+        "the current flowing through the wire to the light bulb",
+        "the light bulb giving electrical energy to the battery",
+        "the light bulb generating heat energy",
+        "the battery pushing light through the wire"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_29",
+      "question": "What causes sound?",
+      "choices": [
+        "sunlight",
+        "vibrations",
+        "x-rays",
+        "pitch"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_30",
+      "question": "Photosynthesis occurs in which of these organisms?",
+      "choices": [
+        "Sunflower plant",
+        "Mushroom",
+        "Sunfish",
+        "Luna moth"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_31",
+      "question": "In order for cells to grow at a normal rate, they must",
+      "choices": [
+        "take in light.",
+        "be specialized.",
+        "take in nutrients.",
+        "be of similar size."
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_32",
+      "question": "Marshall learned that plants need a substance from the air to make their own food. What does a plant take from the air in the presence of sunlight?",
+      "choices": [
+        "carbon dioxide",
+        "hydrogen",
+        "nitrogen",
+        "oxygen"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_33",
+      "question": "Antarctica is a continent at Earth's south pole. Fossils of tropical fern plants were discovered in Antarctica even though these plants do not grow there today. Which conclusion does the fossil evidence best support?",
+      "choices": [
+        "Millions of years ago, Antarctica was in a warmer location on Earth.",
+        "Recently, a natural disaster killed all of the fern plants in Antarctica.",
+        "Recently, birds stopped carrying the seeds of fern plants to Antarctica.",
+        "Millions of years ago, Earth's south pole was much colder than it is today."
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_34",
+      "question": "Which two theories of Moon formation propose that much or all of the material comprising the Moon came from Earth?",
+      "choices": [
+        "The Fission Theory and The Coaccretion Theory",
+        "The Coaccretion Theory and The Capture Theory",
+        "The Fission Theory and the Giant Impact Theory",
+        "The Capture Theory and the Giant Impact Theory"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_35",
+      "question": "When white, fluffy clouds appear in Massachusetts, the weather that day will MOST LIKELY be",
+      "choices": [
+        "fair.",
+        "stormy.",
+        "foggy.",
+        "rainy."
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_36",
+      "question": "Plants and animals are composed of organic compounds. Which of the following are the common elements found in organic compounds?",
+      "choices": [
+        "iron, oxygen, nickel, copper.",
+        "sodium, potassium, gold, hydrogen.",
+        "helium, neon, argon, krypton.",
+        "carbon, hydrogen, oxygen, nitrogen."
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_37",
+      "question": "New research uncovers information that proves that the data from an old theory is partially incorrect. What should the scientific community do about the old theory?",
+      "choices": [
+        "remove the old theory from historical records",
+        "change the research notes in the original theory",
+        "use the new information to update the old theory",
+        "ban the public from discussing the old theory"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_38",
+      "question": "Which is the greatest benefit of sexual reproduction?",
+      "choices": [
+        "capable of reproducing by meiosis",
+        "ability to reproduce without a mate",
+        "ability to produce genetically different offspring",
+        "capable of producing offspring genetically identical to parent"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_39",
+      "question": "The speed at which sound waves travel depends on the",
+      "choices": [
+        "distance between the vibration source and the receiver.",
+        "type of material through which the sound travels.",
+        "size of the object making the sound.",
+        "type of device making the sound."
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_40",
+      "question": "Which scientist is credited with discovering the first four moons of Jupiter?",
+      "choices": [
+        "Galileo Galilei",
+        "Albert Einstein",
+        "Charles Darwin",
+        "Sir Isaac Newton"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_41",
+      "question": "During science class, a teacher explains that the samples the students are studying are made of two or more minerals. What are the students studying?",
+      "choices": [
+        "gases",
+        "rocks",
+        "elements",
+        "molecules"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_42",
+      "question": "When the Northern Hemisphere is tilted away from the Sun causing the rays of light to hit Earth at large angles, which season occurs?",
+      "choices": [
+        "winter",
+        "spring",
+        "summer",
+        "fall"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_43",
+      "question": "A scientist found fossils of ocean shells on a mountain top. Based on this find, which statement can be made?",
+      "choices": [
+        "The climate was once colder.",
+        "The shells were carried by the wind.",
+        "The mountain was covered by water.",
+        "The shells once lived on dry land."
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_44",
+      "question": "A student sees many plants around a pond. The student can determine which plants are nonvascular by",
+      "choices": [
+        "observing if they lack true stems, roots, or leaves",
+        "examining the plants for spores",
+        "counting the number of leaves on each stalk",
+        "noticing if the plants are near rocks"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_45",
+      "question": "Darryl learns that freezing temperatures may help cause weathering. Which statement explains how freezing temperatures most likely cause weathering?",
+      "choices": [
+        "by freezing the leaves on trees",
+        "by causing rocks to stick together",
+        "by turning acid rain into acid snow",
+        "by freezing water in the cracks of rocks"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_46",
+      "question": "A bond is formed when an electron is transferred from a sodium atom to a chlorine atom. What happens to the sodium atom during this process?",
+      "choices": [
+        "The mass of the atom increases.",
+        "The atom becomes an isotope.",
+        "The atomic number decreases.",
+        "The atom becomes a positive ion."
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_47",
+      "question": "A group of fish was released into a local lake. This species of fish had never lived in the lake before. Scientists want to collect data on how the lake's ecosystem is affected by the new fish. Which method of data collection will give the most accurate results?",
+      "choices": [
+        "Measuring oxygen levels in the lake for two months",
+        "Checking the lake water for nutrient levels on one day",
+        "Sampling fish populations in the lake over several years",
+        "Observing the surface of the lake for signs of the new fish after one week"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_48",
+      "question": "On a career day at school, an X-ray technician discusses her daily work with the class. Which equipment would she most likely say she uses on a regular basis to help ensure the safety of patients?",
+      "choices": [
+        "earplugs",
+        "rubber gloves",
+        "goggles",
+        "lead aprons"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "arc_easy_49",
+      "question": "In the United States, windmills have been used for farming for hundreds of years. Which simple machine is the most important part of a windmill?",
+      "choices": [
+        "lever",
+        "pulley",
+        "inclined plane",
+        "wheel and axle"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    }
+  ]
+}

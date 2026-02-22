@@ -1,0 +1,23 @@
+# systemd service for LLM-Bench quiz server
+# Copy to /etc/systemd/system/llm-bench.service
+#
+# sudo systemctl daemon-reload
+# sudo systemctl enable llm-bench
+# sudo systemctl start llm-bench
+
+[Unit]
+Description=LLM-Bench Human Quiz Server
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/llm-bench
+ExecStart=/opt/llm-bench/venv/bin/gunicorn web.server:app -b 127.0.0.1:8080 -w 2 --timeout 120
+Restart=always
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

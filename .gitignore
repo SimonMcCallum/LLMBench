@@ -1,0 +1,58 @@
+# Data (large, local only — NOT committed)
+data/models/
+data/checkpoints/
+data/results/
+data/logs/
+
+# Node.js
+node_modules/
+package-lock.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+*.dist-info/
+pip-log.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+nul
+desktop.ini
+
+# Daemon state (local only)
+.claude/daemon_state.json
+.claude/daemon.log
+.claude/daemon_state.json.tmp
+
+# Generated / transient
+*.log
+*.pid
+
+# Keep directories tracked via .gitkeep
+!data/.gitkeep
+!data/models/.gitkeep
+!data/checkpoints/.gitkeep
+!data/results/.gitkeep
+!data/logs/.gitkeep
+!.claude/inbox/.gitkeep
+!.claude/outbox/.gitkeep
+!.claude/processing/.gitkeep
+!.claude/questions/.gitkeep
+!.claude/answers/.gitkeep
+
+# NOTE: results/ (top-level) IS committed — it contains:
+#   results/leaderboard.json    — LLM benchmark leaderboard (pushed from aroma)
+#   results/questions/          — exported MCQ questions for web server
+#   results/human/              — human quiz results
+#   results/history/            — benchmark run summaries

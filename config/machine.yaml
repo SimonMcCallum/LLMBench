@@ -1,0 +1,31 @@
+# Machine-specific configuration for aroma
+# This file should be .gitignored in production; committed here as template
+
+hostname: aroma
+gpu: "NVIDIA RTX PRO 4500 Blackwell"
+vram_gb: 32
+ram_gb: 64
+cpu: "AMD Ryzen 9"
+
+# Paths
+model_cache_dir: "D:/git/NNCONFIDENCE/data/models"
+checkpoint_dir: "D:/git/NNCONFIDENCE/data/checkpoints"
+results_dir: "D:/git/LLM-Bench/data/results"
+log_dir: "D:/git/LLM-Bench/data/logs"
+
+# Shared with NNCONFIDENCE repo
+nnconfidence_repo: "D:/git/NNCONFIDENCE"
+cbm_paper_repo: "D:/git/CBM-paper"
+
+# Daemon settings
+daemon:
+  poll_interval_seconds: 300  # 5 minutes via Task Scheduler
+  max_task_duration_seconds: 7200  # 2 hour timeout per task
+  allowed_tools: "Bash,Read,Write,Edit,Glob,Grep"
+
+# Precision strategy (auto-selected based on model size)
+precision:
+  fp16_max_params_b: 8.0      # Models <= 8B use FP16
+  int8_max_params_b: 16.0     # Models <= 16B use 8-bit
+  # Everything larger uses 4-bit NF4
+  vram_headroom_pct: 0.25     # Reserve 25% VRAM for KV cache + activations

@@ -1,0 +1,17 @@
+# Core dependencies
+pyyaml>=6.0
+numpy>=1.24
+
+# HuggingFace (for local models and datasets)
+torch>=2.0
+transformers>=4.36
+datasets>=2.16
+accelerate>=0.25
+bitsandbytes>=0.41
+
+# API clients
+aiohttp>=3.9
+anthropic>=0.40
+
+# Optional: fine-tuning
+peft>=0.7

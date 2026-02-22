@@ -1,0 +1,112 @@
+# MCQ dataset registry
+# Used by core/datasets.py
+
+datasets:
+  truthfulqa:
+    hf_path: "truthfulqa/truthful_qa"
+    hf_config: "multiple_choice"
+    split: "validation"
+    num_choices: 4-5
+    subject: "truthfulness"
+    difficulty: 0.8
+    description: "Tests overconfidence on tricky/misleading questions"
+
+  arc-easy:
+    hf_path: "allenai/ai2_arc"
+    hf_config: "ARC-Easy"
+    split: "test"
+    num_choices: 4
+    subject: "science"
+    difficulty: 0.3
+    description: "Elementary grade science reasoning"
+
+  arc-challenge:
+    hf_path: "allenai/ai2_arc"
+    hf_config: "ARC-Challenge"
+    split: "test"
+    num_choices: 4
+    subject: "science"
+    difficulty: 0.7
+    description: "Hard science reasoning"
+
+  mmlu:
+    hf_path: "cais/mmlu"
+    hf_config: "all"
+    split: "test"
+    num_choices: 4
+    subject: "multi-subject"
+    difficulty: 0.6
+    description: "57 subjects, comprehensive coverage"
+
+  hellaswag:
+    hf_path: "Rowan/hellaswag"
+    split: "validation"
+    num_choices: 4
+    subject: "commonsense"
+    difficulty: 0.7
+    description: "Commonsense sentence completion"
+
+  commonsenseqa:
+    hf_path: "tau/commonsense_qa"
+    split: "validation"
+    num_choices: 5
+    subject: "commonsense"
+    difficulty: 0.5
+    description: "5-choice commonsense reasoning"
+
+  openbookqa:
+    hf_path: "allenai/openbookqa"
+    hf_config: "main"
+    split: "test"
+    num_choices: 4
+    subject: "science"
+    difficulty: 0.5
+    description: "4-choice science with open-book context"
+
+  sciq:
+    hf_path: "allenai/sciq"
+    split: "test"
+    num_choices: 4
+    subject: "science"
+    difficulty: 0.4
+    description: "4-choice science questions with support context"
+
+  winogrande:
+    hf_path: "allenai/winogrande"
+    hf_config: "winogrande_xl"
+    split: "validation"
+    num_choices: 2
+    subject: "commonsense"
+    difficulty: 0.6
+    description: "2-choice pronoun resolution"
+
+  medmcqa:
+    hf_path: "openlifescienceai/medmcqa"
+    split: "validation"
+    num_choices: 4
+    subject: "medical"
+    difficulty: 0.7
+    description: "4-choice medical domain"
+
+  boolq:
+    hf_path: "google/boolq"
+    split: "validation"
+    num_choices: 2
+    subject: "reading_comprehension"
+    difficulty: 0.4
+    description: "2-choice True/False reading comprehension"
+
+  mmlu-pro:
+    hf_path: "TIGER-Lab/MMLU-Pro"
+    split: "test"
+    num_choices: 10
+    subject: "multi-subject"
+    difficulty: 0.8
+    description: "10-choice harder MMLU variant"
+
+# Default evaluation settings
+defaults:
+  max_examples: 100
+  method: "sequential"
+  temperatures: [0.0, 0.7, 1.0]
+  num_repetitions: 3
