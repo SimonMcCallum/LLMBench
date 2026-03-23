@@ -42,6 +42,7 @@
       padding: 32px 0 24px;
       border-bottom: 1px solid var(--border);
       margin-bottom: 32px;
+      position: relative;
     }
     header h1 {
       font-size: 1.8rem;
@@ -51,11 +52,30 @@
     header h1 span { color: var(--accent); }
     header p { color: var(--text-dim); margin-top: 6px; font-size: 0.95rem; }
 
+    .header-auth {
+      position: absolute;
+      top: 16px;
+      right: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+    }
+    .header-auth a {
+      color: var(--accent);
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .header-auth a:hover { text-decoration: underline; }
+    .header-auth .user-name {
+      color: var(--text-dim);
+    }
+
     /* ---- VIEWS ---- */
     .view { display: none; }
     .view.active { display: block; }
 
-    /* ---- SETUP ---- */
+    /* ---- CARD ---- */
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -73,7 +93,7 @@
       font-weight: 500;
     }
 
-    input[type="text"], select {
+    input[type="text"], input[type="password"], select {
       width: 100%;
       padding: 10px 14px;
       background: var(--surface2);
@@ -85,7 +105,7 @@
       outline: none;
       transition: border-color 0.2s;
     }
-    input[type="text"]:focus, select:focus {
+    input[type="text"]:focus, input[type="password"]:focus, select:focus {
       border-color: var(--accent);
     }
 
@@ -116,12 +136,31 @@
       border: 1px solid var(--border);
     }
     .btn-secondary:hover { background: var(--border); }
+    .btn-sm {
+      padding: 8px 16px;
+      font-size: 0.85rem;
+    }
 
     .btn-row {
       display: flex;
       gap: 12px;
       margin-top: 8px;
+      flex-wrap: wrap;
     }
+
+    .error-msg {
+      color: var(--red);
+      font-size: 0.85rem;
+      margin-bottom: 12px;
+      min-height: 1.2em;
+    }
+
+    .link-text {
+      color: var(--accent);
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+    .link-text:hover { text-decoration: underline; }
 
     /* ---- QUIZ ---- */
     .progress-bar-bg {
@@ -213,28 +252,28 @@
       background: var(--surface2);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 24px;
-      margin-bottom: 24px;
+      padding: 14px 20px;
+      margin-bottom: 16px;
     }
     .confidence-section h3 {
-      font-size: 0.95rem;
-      margin-bottom: 16px;
+      font-size: 0.85rem;
+      margin-bottom: 8px;
       color: var(--text-dim);
     }
 
     .confidence-display {
       text-align: center;
-      margin-bottom: 16px;
+      margin-bottom: 8px;
     }
     .confidence-value {
-      font-size: 2.4rem;
+      font-size: 1.6rem;
       font-weight: 700;
       font-variant-numeric: tabular-nums;
     }
     .confidence-label {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: var(--text-dim);
-      margin-top: 2px;
+      margin-top: 1px;
     }
 
     .slider-container { padding: 0 4px; }
@@ -351,7 +390,47 @@
       margin-top: 2px;
     }
 
+    .share-section {
+      text-align: center;
+      padding: 16px;
+      background: var(--surface2);
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .share-url {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .share-url input {
+      flex: 1;
+      margin-bottom: 0;
+      font-size: 0.85rem;
+    }
+    .copy-feedback {
+      color: var(--green);
+      font-size: 0.8rem;
+      min-height: 1.2em;
+      margin-top: 4px;
+    }
+
     /* ---- LEADERBOARD ---- */
+    .filter-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 16px;
+      align-items: center;
+    }
+    .filter-row select {
+      width: auto;
+      margin-bottom: 0;
+      min-width: 140px;
+    }
+    .filter-row label {
+      margin-bottom: 0;
+    }
+
     .leaderboard-table {
       width: 100%;
       border-collapse: collapse;
@@ -371,6 +450,7 @@
       border-bottom: 1px solid var(--border);
     }
     .leaderboard-table tr.human td { background: rgba(108, 138, 255, 0.05); }
+    .leaderboard-table tr.is-you td { background: rgba(76, 205, 138, 0.08); }
     .leaderboard-table .type-badge {
       display: inline-block;
       padding: 2px 8px;
@@ -415,10 +495,69 @@
       color: var(--text-dim);
     }
 
+    /* ---- PROFILE ---- */
+    .profile-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .history-list {
+      font-size: 0.9rem;
+    }
+    .history-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .history-item .hist-dataset {
+      font-weight: 600;
+    }
+    .history-item .hist-meta {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+    }
+    .history-item .hist-score {
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ---- AUTH FORMS ---- */
+    .auth-toggle {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+
+    /* ---- TOAST ---- */
+    .toast-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    .toast {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 20px;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+      animation: fadeIn 0.2s;
+    }
+    .toast.success { border-color: var(--green); color: var(--green); }
+    .toast.error { border-color: var(--red); color: var(--red); }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } }
+
     @media (max-width: 600px) {
       .running-stats { grid-template-columns: repeat(3, 1fr); gap: 6px; }
       .metrics-grid { grid-template-columns: 1fr; }
+      .profile-stats { grid-template-columns: 1fr; }
       .stat-box .stat-value { font-size: 1.1rem; }
+      .header-auth { position: static; justify-content: center; margin-top: 12px; }
     }
   </style>
 </head>
@@ -428,14 +567,51 @@
       <h1>LLM-<span>Bench</span></h1>
       <p>Confidence-calibrated MCQ benchmark &mdash; human edition</p>
       <a id="explore-link" href="explore" style="display:inline-block; color:var(--accent); text-decoration:none; font-size:0.85rem; margin-top:8px;">Explore AI performance &amp; confidence lab &rarr;</a>
+      <div class="header-auth" id="header-auth"></div>
     </header>
+
+    <!-- ==================== AUTH VIEW ==================== -->
+    <div id="view-auth" class="view">
+      <div class="card" id="auth-card">
+        <h2 id="auth-title">Sign In</h2>
+        <div class="error-msg" id="auth-error"></div>
+
+        <label for="auth-username">Username</label>
+        <input type="text" id="auth-username" placeholder="username" autocomplete="username">
+
+        <div id="auth-register-fields" style="display:none;">
+          <label for="auth-display-name">Display name</label>
+          <input type="text" id="auth-display-name" placeholder="Your Name" autocomplete="off">
+
+          <label for="auth-email">Email</label>
+          <input type="text" id="auth-email" placeholder="you@example.com" autocomplete="email">
+
+          <label for="auth-botcheck" id="auth-botcheck-label">What is 3 + 4?</label>
+          <input type="text" id="auth-botcheck" placeholder="Answer" autocomplete="off">
+        </div>
+
+        <label for="auth-password">Password</label>
+        <input type="password" id="auth-password" placeholder="password" autocomplete="current-password">
+
+        <div class="btn-row">
+          <button class="btn btn-primary" id="auth-submit" onclick="doAuth()">Sign In</button>
+          <button class="btn btn-secondary" onclick="showView('view-setup')">Continue as Guest</button>
+        </div>
+        <div class="auth-toggle">
+          <span id="auth-toggle-text">No account? </span>
+          <a class="link-text" id="auth-toggle-link" onclick="toggleAuthMode()">Create one</a>
+        </div>
+      </div>
+    </div>
 
     <!-- ==================== SETUP VIEW ==================== -->
     <div id="view-setup" class="view active">
       <div class="card">
         <h2>Start a Quiz</h2>
-        <label for="inp-name">Your name</label>
-        <input type="text" id="inp-name" placeholder="Anonymous" autocomplete="off">
+        <div id="guest-name-row">
+          <label for="inp-name">Your name</label>
+          <input type="text" id="inp-name" placeholder="Anonymous" autocomplete="off">
+        </div>
 
         <label for="inp-dataset">Dataset</label>
         <select id="inp-dataset"></select>
@@ -539,15 +715,46 @@
 
         <div class="metrics-grid" id="metrics-grid"></div>
 
+        <div class="share-section" id="share-section" style="display:none;">
+          <strong>Share your results</strong>
+          <div class="share-url">
+            <input type="text" id="share-url-input" readonly>
+            <button class="btn btn-sm btn-secondary" onclick="copyShareUrl()">Copy</button>
+          </div>
+          <div class="copy-feedback" id="copy-feedback"></div>
+        </div>
+
         <div class="btn-row" style="justify-content:center;">
           <button class="btn btn-primary" onclick="showView('view-setup')">New Quiz</button>
           <button class="btn btn-secondary" onclick="showView('view-leaderboard'); loadLeaderboard()">Leaderboard</button>
+          <button class="btn btn-secondary" id="btn-save-profile" style="display:none;"
+                  onclick="showView('view-auth')">Sign up to save</button>
         </div>
       </div>
 
       <div class="card">
         <h2>Question Review</h2>
         <div class="question-review" id="question-review"></div>
+      </div>
+    </div>
+
+    <!-- ==================== SHARED RESULTS VIEW ==================== -->
+    <div id="view-shared" class="view">
+      <div class="card">
+        <div class="results-header">
+          <h2 id="shared-title">Shared Results</h2>
+          <div class="big-score" id="shared-hlcc"></div>
+          <p style="color: var(--text-dim);">Average HLCC Score</p>
+        </div>
+        <div class="metrics-grid" id="shared-metrics"></div>
+        <div class="btn-row" style="justify-content:center;">
+          <button class="btn btn-primary" onclick="showView('view-setup')">Take the Quiz</button>
+          <button class="btn btn-secondary" onclick="showView('view-leaderboard'); loadLeaderboard()">Leaderboard</button>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Question Review</h2>
+        <div class="question-review" id="shared-review"></div>
       </div>
     </div>
 
@@ -558,13 +765,40 @@
         <p style="color:var(--text-dim); font-size:0.9rem; margin-bottom:16px;">
           Human participants vs. LLM models on the same MCQ benchmarks.
         </p>
+        <div class="filter-row">
+          <label>Dataset:</label>
+          <select id="lb-dataset-filter" onchange="loadLeaderboard()">
+            <option value="">All datasets</option>
+          </select>
+        </div>
         <div id="leaderboard-content"></div>
         <div class="btn-row" style="margin-top:20px;">
           <button class="btn btn-secondary" onclick="showView('view-setup')">Back</button>
         </div>
       </div>
     </div>
+
+    <!-- ==================== PROFILE VIEW ==================== -->
+    <div id="view-profile" class="view">
+      <div class="card">
+        <h2 id="profile-title">Your Profile</h2>
+        <div class="profile-stats" id="profile-stats"></div>
+      </div>
+      <div class="card">
+        <h2>Dataset Progress</h2>
+        <div id="profile-datasets"></div>
+      </div>
+      <div class="card">
+        <h2>Quiz History</h2>
+        <div class="history-list" id="profile-history"></div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-secondary" onclick="showView('view-setup')">Back</button>
+      </div>
+    </div>
   </div>
+
+  <div class="toast-container" id="toast-container"></div>
 
 <script>
 // ============================================================
@@ -580,9 +814,30 @@ let state = {
   totalQuestions: 0,
   answered: 0,
   selectedAnswer: null,
-  phase: 'choosing', // 'choosing' | 'confirming' | 'feedback'
+  phase: 'choosing',
   responses: [],
+  user: null,       // { user_id, username, display_name } or null
+  shareToken: null,
 };
+
+let authMode = 'login'; // 'login' | 'register'
+let nextTimer = null;   // countdown timer for auto-advance
+
+// Bot check: simple random math question
+const botA = Math.floor(Math.random() * 8) + 2;
+const botB = Math.floor(Math.random() * 8) + 2;
+const botAnswer = botA + botB;
+
+// ============================================================
+// TOAST
+// ============================================================
+function toast(msg, type = 'success') {
+  const el = document.createElement('div');
+  el.className = `toast ${type}`;
+  el.textContent = msg;
+  document.getElementById('toast-container').appendChild(el);
+  setTimeout(() => el.remove(), 3500);
+}
 
 // ============================================================
 // VIEW MANAGEMENT
@@ -593,30 +848,249 @@ function showView(id) {
 }
 
 // ============================================================
+// AUTH
+// ============================================================
+function updateAuthUI() {
+  const el = document.getElementById('header-auth');
+  const nameRow = document.getElementById('guest-name-row');
+
+  if (state.user) {
+    el.innerHTML = `
+      <span class="user-name">${state.user.display_name}</span>
+      <a onclick="showProfile()">Profile</a>
+      <a onclick="doLogout()">Sign out</a>
+    `;
+    if (nameRow) nameRow.style.display = 'none';
+  } else {
+    el.innerHTML = `<a onclick="showView('view-auth')">Sign in</a>`;
+    if (nameRow) nameRow.style.display = 'block';
+  }
+}
+
+function toggleAuthMode() {
+  authMode = authMode === 'login' ? 'register' : 'login';
+  const title = document.getElementById('auth-title');
+  const submit = document.getElementById('auth-submit');
+  const toggle = document.getElementById('auth-toggle-text');
+  const link = document.getElementById('auth-toggle-link');
+  const regFields = document.getElementById('auth-register-fields');
+
+  if (authMode === 'register') {
+    title.textContent = 'Create Account';
+    submit.textContent = 'Create Account';
+    toggle.textContent = 'Already have an account? ';
+    link.textContent = 'Sign in';
+    regFields.style.display = 'block';
+    document.getElementById('auth-botcheck-label').textContent = `What is ${botA} + ${botB}?`;
+  } else {
+    title.textContent = 'Sign In';
+    submit.textContent = 'Sign In';
+    toggle.textContent = 'No account? ';
+    link.textContent = 'Create one';
+    regFields.style.display = 'none';
+  }
+  document.getElementById('auth-error').textContent = '';
+}
+
+async function doAuth() {
+  const username = document.getElementById('auth-username').value.trim();
+  const password = document.getElementById('auth-password').value;
+  const errEl = document.getElementById('auth-error');
+  errEl.textContent = '';
+
+  const endpoint = authMode === 'register' ? '/api/auth/register' : '/api/auth/login';
+  const body = { username, password };
+  if (authMode === 'register') {
+    body.display_name = document.getElementById('auth-display-name').value.trim() || username;
+    body.email = document.getElementById('auth-email').value.trim();
+    if (!body.email || !body.email.includes('@')) {
+      errEl.textContent = 'Please enter a valid email address';
+      return;
+    }
+    const check = parseInt(document.getElementById('auth-botcheck').value);
+    if (check !== botAnswer) {
+      errEl.textContent = 'Incorrect answer to the math question';
+      return;
+    }
+  }
+
+  try {
+    const resp = await fetch(BASE_PATH + endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'same-origin',
+      body: JSON.stringify(body),
+    });
+    const data = await resp.json();
+    if (resp.ok && data.success) {
+      state.user = {
+        user_id: data.user_id,
+        username: data.username,
+        display_name: data.display_name,
+      };
+      updateAuthUI();
+      toast(authMode === 'register' ? 'Account created!' : 'Signed in!');
+      showView('view-setup');
+      loadDatasets();
+    } else {
+      errEl.textContent = data.error || 'Failed';
+    }
+  } catch (e) {
+    errEl.textContent = 'Connection error';
+  }
+}
+
+async function doLogout() {
+  try {
+    await fetch(BASE_PATH + '/api/auth/logout', {
+      method: 'POST',
+      credentials: 'same-origin',
+    });
+  } catch {}
+  state.user = null;
+  updateAuthUI();
+  loadDatasets();
+  toast('Signed out');
+}
+
+async function checkAuth() {
+  try {
+    const resp = await fetch(BASE_PATH + '/api/auth/me', { credentials: 'same-origin' });
+    const data = await resp.json();
+    if (!data.anonymous) {
+      state.user = {
+        user_id: data.user_id,
+        username: data.username,
+        display_name: data.display_name,
+      };
+    }
+  } catch {}
+  updateAuthUI();
+}
+
+// ============================================================
+// PROFILE
+// ============================================================
+async function showProfile() {
+  if (!state.user) { showView('view-auth'); return; }
+
+  showView('view-profile');
+  document.getElementById('profile-title').textContent =
+    `${state.user.display_name}'s Profile`;
+
+  try {
+    const resp = await fetch(BASE_PATH + '/api/auth/profile', { credentials: 'same-origin' });
+    if (!resp.ok) return;
+    const data = await resp.json();
+
+    // Summary stats
+    const statsEl = document.getElementById('profile-stats');
+    statsEl.innerHTML = [
+      { label: 'Sessions', value: data.total_sessions },
+      { label: 'Questions', value: data.total_questions },
+      { label: 'Member since', value: data.user.created_at ? data.user.created_at.split('T')[0] : '-' },
+    ].map(s => `
+      <div class="stat-box">
+        <div class="stat-value">${s.value}</div>
+        <div class="stat-label">${s.label}</div>
+      </div>
+    `).join('');
+
+    // Dataset progress
+    const dsEl = document.getElementById('profile-datasets');
+    if (data.datasets.length === 0) {
+      dsEl.innerHTML = '<p style="color:var(--text-dim)">No quizzes completed yet.</p>';
+    } else {
+      dsEl.innerHTML = data.datasets.map(d => `
+        <div class="history-item">
+          <div>
+            <div class="hist-dataset">${d.dataset}</div>
+            <div class="hist-meta">${d.sessions} session${d.sessions !== 1 ? 's' : ''} &bull;
+              ${d.total_answered} questions</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="hist-score" style="color:${d.avg_hlcc >= 0 ? 'var(--green)' : 'var(--red)'}">
+              ${d.avg_hlcc >= 0 ? '+' : ''}${(d.avg_hlcc || 0).toFixed(3)} HLCC
+            </div>
+            <div class="hist-meta">${((d.avg_accuracy || 0) * 100).toFixed(1)}% acc</div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // History
+    const histEl = document.getElementById('profile-history');
+    if (data.history.length === 0) {
+      histEl.innerHTML = '<p style="color:var(--text-dim)">No history yet.</p>';
+    } else {
+      histEl.innerHTML = data.history.slice(0, 20).map(h => `
+        <div class="history-item">
+          <div>
+            <div class="hist-dataset">${h.dataset}</div>
+            <div class="hist-meta">${h.total_questions} questions &bull;
+              ${h.finished_at ? h.finished_at.split('T')[0] : ''}</div>
+          </div>
+          <div style="text-align:right;">
+            <div class="hist-score" style="color:${h.mean_hlcc >= 0 ? 'var(--green)' : 'var(--red)'}">
+              ${h.mean_hlcc >= 0 ? '+' : ''}${(h.mean_hlcc || 0).toFixed(3)}
+            </div>
+            <div class="hist-meta">${((h.accuracy || 0) * 100).toFixed(1)}% &bull;
+              ECE ${(h.ece || 0).toFixed(3)}</div>
+          </div>
+        </div>
+      `).join('');
+    }
+  } catch (e) {
+    console.error('Profile load error:', e);
+  }
+}
+
+// ============================================================
 // SETUP
 // ============================================================
 async function loadDatasets() {
-  const resp = await fetch(BASE_PATH + '/api/datasets');
+  const resp = await fetch(BASE_PATH + '/api/datasets', { credentials: 'same-origin' });
   const data = await resp.json();
   const sel = document.getElementById('inp-dataset');
+  const lbFilter = document.getElementById('lb-dataset-filter');
   sel.innerHTML = '';
-  data.datasets.forEach(ds => {
+
+  // Keep "All" option in filter
+  lbFilter.innerHTML = '<option value="">All datasets</option>';
+
+  const datasets = data.datasets || [];
+  datasets.forEach(ds => {
+    const name = typeof ds === 'string' ? ds : ds.name;
+    const total = typeof ds === 'object' ? ds.total_questions : null;
+    const sessions = typeof ds === 'object' ? ds.sessions_completed : null;
+
     const opt = document.createElement('option');
-    opt.value = ds;
-    opt.textContent = ds;
-    if (ds === 'truthfulqa') opt.selected = true;
+    opt.value = name;
+    let label = name;
+    if (total) label += ` (${total}q)`;
+    if (sessions) label += ` - ${sessions} done`;
+    opt.textContent = label;
+    if (name === 'truthfulqa') opt.selected = true;
     sel.appendChild(opt);
+
+    const fopt = document.createElement('option');
+    fopt.value = name;
+    fopt.textContent = name;
+    lbFilter.appendChild(fopt);
   });
 }
 
 async function startQuiz() {
-  const name = document.getElementById('inp-name').value.trim() || 'Anonymous';
+  const name = state.user
+    ? state.user.display_name
+    : (document.getElementById('inp-name').value.trim() || 'Anonymous');
   const dataset = document.getElementById('inp-dataset').value;
   const count = parseInt(document.getElementById('inp-count').value);
 
   const resp = await fetch(BASE_PATH + '/api/start', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
+    credentials: 'same-origin',
     body: JSON.stringify({ participant: name, dataset, max_questions: count }),
   });
   const data = await resp.json();
@@ -627,6 +1101,11 @@ async function startQuiz() {
   state.answered = 0;
   state.responses = [];
   state.selectedAnswer = null;
+  state.shareToken = null;
+
+  // Reset stats display
+  document.getElementById('stat-accuracy').textContent = '0%';
+  document.getElementById('stat-hlcc').textContent = '0.00';
 
   showView('view-quiz');
   loadQuestion();
@@ -636,14 +1115,36 @@ async function startQuiz() {
 // QUIZ FLOW
 // ============================================================
 async function loadQuestion() {
+  if (nextTimer) { clearInterval(nextTimer); nextTimer = null; }
   state.selectedAnswer = null;
   state.phase = 'choosing';
 
-  const resp = await fetch(`${BASE_PATH}/api/question/${state.sessionId}`);
-  const data = await resp.json();
+  let data;
+  try {
+    const resp = await fetch(`${BASE_PATH}/api/question/${state.sessionId}`,
+      { credentials: 'same-origin' });
+    if (!resp.ok) {
+      const err = await resp.json().catch(() => ({}));
+      alert(err.error || 'Session expired. Please start a new quiz.');
+      showView('view-setup');
+      return;
+    }
+    data = await resp.json();
+  } catch (e) {
+    console.error('Failed to load question:', e);
+    alert('Network error loading question. Please try again.');
+    return;
+  }
 
   if (data.done) {
     showResults();
+    return;
+  }
+
+  if (!data.question || !data.choices) {
+    console.error('Invalid question data:', data);
+    alert('Error: received invalid question data from server.');
+    showView('view-setup');
     return;
   }
 
@@ -739,12 +1240,19 @@ async function submitAnswer() {
   const resp = await fetch(BASE_PATH + '/api/answer', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
+    credentials: 'same-origin',
     body: JSON.stringify({
       session_id: state.sessionId,
       selected_answer: state.selectedAnswer,
       confidence: confidence,
     }),
   });
+  if (!resp.ok) {
+    const err = await resp.json().catch(() => ({}));
+    alert(err.error || 'Session expired. Please start a new quiz.');
+    showView('view-setup');
+    return;
+  }
   const data = await resp.json();
 
   state.answered++;
@@ -785,17 +1293,36 @@ async function submitAnswer() {
   const pct = (state.answered / state.totalQuestions) * 100;
   document.getElementById('progress-fill').style.width = pct + '%';
 
-  // Change button
+  // Change button with countdown auto-advance
   const btn = document.getElementById('btn-submit');
-  if (data.questions_remaining > 0) {
-    btn.textContent = 'Next Question';
-    btn.onclick = () => {
-      document.getElementById('confidence-section').style.opacity = '1';
+  if (nextTimer) { clearInterval(nextTimer); nextTimer = null; }
+
+  const advance = () => {
+    if (nextTimer) { clearInterval(nextTimer); nextTimer = null; }
+    document.getElementById('confidence-section').style.opacity = '1';
+    if (data.questions_remaining > 0) {
       loadQuestion();
-    };
+    } else {
+      showResults();
+    }
+  };
+
+  if (data.questions_remaining > 0) {
+    let countdown = 4;
+    btn.textContent = `Next Question (${countdown})`;
+    btn.disabled = false;
+    btn.onclick = advance;
+    nextTimer = setInterval(() => {
+      countdown--;
+      if (countdown <= 0) {
+        advance();
+      } else {
+        btn.textContent = `Next Question (${countdown})`;
+      }
+    }, 1000);
   } else {
     btn.textContent = 'See Results';
-    btn.onclick = showResults;
+    btn.onclick = advance;
   }
 }
 
@@ -803,7 +1330,8 @@ async function submitAnswer() {
 // RESULTS
 // ============================================================
 async function showResults() {
-  const resp = await fetch(`${BASE_PATH}/api/results/${state.sessionId}`);
+  const resp = await fetch(`${BASE_PATH}/api/results/${state.sessionId}`,
+    { credentials: 'same-origin' });
   const data = await resp.json();
 
   showView('view-results');
@@ -831,6 +1359,18 @@ async function showResults() {
   `).join('');
   document.getElementById('metrics-grid').innerHTML = metricsHtml;
 
+  // Share section
+  if (data.share_token) {
+    state.shareToken = data.share_token;
+    const shareUrl = window.location.origin + window.location.pathname + '?share=' + data.share_token;
+    document.getElementById('share-section').style.display = 'block';
+    document.getElementById('share-url-input').value = shareUrl;
+    document.getElementById('copy-feedback').textContent = '';
+  }
+
+  // Show "sign up to save" if not logged in
+  document.getElementById('btn-save-profile').style.display = state.user ? 'none' : 'inline-flex';
+
   // Question review
   const reviewHtml = data.responses.map((r, i) => `
     <div class="review-item">
@@ -848,11 +1388,82 @@ async function showResults() {
   document.getElementById('question-review').innerHTML = reviewHtml;
 }
 
+function copyShareUrl() {
+  const input = document.getElementById('share-url-input');
+  navigator.clipboard.writeText(input.value).then(() => {
+    document.getElementById('copy-feedback').textContent = 'Copied!';
+  }).catch(() => {
+    input.select();
+    document.execCommand('copy');
+    document.getElementById('copy-feedback').textContent = 'Copied!';
+  });
+}
+
+// ============================================================
+// SHARED RESULTS (viewing someone else's shared link)
+// ============================================================
+async function loadSharedResult(token) {
+  try {
+    const resp = await fetch(`${BASE_PATH}/api/shared/${token}`);
+    if (!resp.ok) {
+      toast('Shared result not found', 'error');
+      showView('view-setup');
+      return;
+    }
+    const data = await resp.json();
+
+    showView('view-shared');
+
+    document.getElementById('shared-title').textContent =
+      `${data.display_name}'s Results - ${data.dataset}`;
+
+    const hlcc = data.mean_hlcc;
+    const bigScore = document.getElementById('shared-hlcc');
+    bigScore.textContent = (hlcc >= 0 ? '+' : '') + hlcc.toFixed(3);
+    bigScore.className = 'big-score ' + (hlcc >= 0 ? 'positive' : 'negative');
+
+    const metricsHtml = [
+      { name: 'Accuracy', value: ((data.accuracy || 0) * 100).toFixed(1) + '%' },
+      { name: 'Avg Confidence', value: ((data.mean_confidence || 0) * 100).toFixed(1) + '%' },
+      { name: 'ECE', value: (data.ece || 0).toFixed(4) },
+      { name: 'Brier Score', value: (data.brier || 0).toFixed(4) },
+      { name: 'Calibration Gap', value: ((data.calibration_gap || 0) * 100).toFixed(1) + '%' },
+      { name: 'Questions', value: data.total_questions },
+    ].map(item => `
+      <div class="metric-card">
+        <div class="metric-value">${item.value}</div>
+        <div class="metric-name">${item.name}</div>
+      </div>
+    `).join('');
+    document.getElementById('shared-metrics').innerHTML = metricsHtml;
+
+    const reviewHtml = (data.responses || []).map((r, i) => `
+      <div class="review-item">
+        <div class="review-num ${r.is_correct ? 'correct' : 'incorrect'}">${i + 1}</div>
+        <div class="review-detail">
+          <div class="review-q">${r.is_correct ? 'Correct' : 'Incorrect'} &mdash;
+            answered ${r.selected_letter}, correct was ${r.correct_letter}</div>
+          <div class="review-meta">
+            Confidence: ${(r.confidence * 100).toFixed(0)}% &nbsp;&bull;&nbsp;
+            HLCC: ${r.hlcc_score >= 0 ? '+' : ''}${r.hlcc_score.toFixed(2)}
+          </div>
+        </div>
+      </div>
+    `).join('');
+    document.getElementById('shared-review').innerHTML = reviewHtml;
+  } catch (e) {
+    console.error('Failed to load shared result:', e);
+    showView('view-setup');
+  }
+}
+
 // ============================================================
 // LEADERBOARD
 // ============================================================
 async function loadLeaderboard() {
-  const resp = await fetch(BASE_PATH + '/api/leaderboard');
+  const dataset = document.getElementById('lb-dataset-filter').value;
+  const qs = dataset ? `?dataset=${encodeURIComponent(dataset)}` : '';
+  const resp = await fetch(BASE_PATH + '/api/leaderboard' + qs);
   const data = await resp.json();
   const entries = data.entries || [];
 
@@ -868,12 +1479,25 @@ async function loadLeaderboard() {
       <th>Accuracy</th><th>HLCC</th><th>ECE</th>
     </tr></thead><tbody>`;
 
+  let humanCount = 0;
   entries.forEach((e, i) => {
     const type = e.type || 'llm';
     const hlcc = e.mean_hlcc_score || 0;
-    html += `<tr class="${type === 'human' ? 'human' : ''}">
+    let name;
+    if (type === 'human') {
+      humanCount++;
+      name = `Human #${humanCount}`;
+      // Check if this is the current user's entry
+      if (state.user && e.entry_key && e.entry_key.includes(state.user.display_name)) {
+        name += ' (you)';
+      }
+    } else {
+      name = e.model_name || 'Unknown';
+    }
+    const isYou = name.includes('(you)');
+    html += `<tr class="${type === 'human' ? 'human' : ''} ${isYou ? 'is-you' : ''}">
       <td>${i + 1}</td>
-      <td>${e.model_name || 'Unknown'}</td>
+      <td>${name}</td>
       <td><span class="type-badge ${type}">${type}</span></td>
       <td>${e.dataset || ''}</td>
       <td>${((e.accuracy || 0) * 100).toFixed(1)}%</td>
@@ -889,7 +1513,19 @@ async function loadLeaderboard() {
 // ============================================================
 // INIT
 // ============================================================
-loadDatasets();
+(async function init() {
+  // Check for shared results link
+  const params = new URLSearchParams(window.location.search);
+  const shareToken = params.get('share');
+
+  // Check auth status
+  await checkAuth();
+  await loadDatasets();
+
+  if (shareToken) {
+    loadSharedResult(shareToken);
+  }
+})();
 </script>
 </body>
 </html>

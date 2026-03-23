@@ -16,6 +16,7 @@ import json
 import os
 import sys
 import re
+import uuid
 from dataclasses import asdict
 from datetime import datetime
 from pathlib import Path
@@ -151,6 +152,12 @@ def run_benchmark(config: Dict) -> Dict:
 
     # Save results
     _save_results(all_results, summaries, timestamp, config)
+
+    # Upload to web server if configured
+    upload_url = config.get("upload_url") or os.environ.get("LLMBENCH_UPLOAD_URL")
+    upload_key = config.get("upload_key") or os.environ.get("UPLOAD_API_KEY") or os.environ.get("ADMIN_PASSWORD")
+    if upload_url and upload_key:
+        _upload_results(all_results, summaries, timestamp, config, upload_url, upload_key)
 
     return {
         "timestamp": timestamp,
@@ -313,6 +320,76 @@ def _update_leaderboard(summaries):
     print(f"Leaderboard updated: {LEADERBOARD_FILE}")
 
 
+def _upload_results(
+    results: List[BenchmarkResult],
+    summaries,
+    timestamp: str,
+    config: Dict,
+    upload_url: str,
+    upload_key: str,
+):
+    """Upload benchmark results to the LLMBench web server."""
+    import urllib.request
+    import urllib.error
+
+    # Group results by model+dataset
+    groups = {}
+    for r in results:
+        key = (r.model_name, r.dataset)
+        if key not in groups:
+            groups[key] = []
+        groups[key].append(r)
+
+    for (model_name, dataset), group_results in groups.items():
+        run_id = f"{model_name}_{dataset}_{timestamp}_{uuid.uuid4().hex[:6]}"
+
+        # Find matching summary
+        summary_dict = {}
+        for s in summaries:
+            if s.model_name == model_name and s.dataset == dataset:
+                summary_dict = asdict(s)
+                break
+
+        # Compute metrics for this group
+        confidences = np.array([r.confidence for r in group_results])
+        correct = np.array([float(r.is_correct) for r in group_results])
+        metrics = compute_all_metrics(confidences, correct)
+        summary_dict.update(metrics)
+
+        payload = {
+            "run_id": run_id,
+            "model_name": model_name,
+            "dataset": dataset,
+            "timestamp": timestamp,
+            "method": config.get("method"),
+            "temperature": config.get("temperatures", [0.0])[0] if config.get("temperatures") else 0.0,
+            "summary": summary_dict,
+            "results": [asdict(r) for r in group_results],
+        }
+
+        url = upload_url.rstrip("/") + "/api/upload_results"
+        data = json.dumps(payload).encode("utf-8")
+        req = urllib.request.Request(
+            url,
+            data=data,
+            headers={
+                "Content-Type": "application/json",
+                "X-API-Key": upload_key,
+            },
+            method="POST",
+        )
+
+        try:
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                resp_data = json.loads(resp.read())
+                print(f"  Uploaded {model_name}/{dataset}: {resp_data.get('questions_saved', 0)} questions")
+        except urllib.error.HTTPError as e:
+            body = e.read().decode() if e.fp else ""
+            print(f"  Upload failed for {model_name}/{dataset}: {e.code} {body[:200]}")
+        except Exception as e:
+            print(f"  Upload failed for {model_name}/{dataset}: {e}")
+
+
 # ============================================================
 # CLI
 # ============================================================
@@ -328,6 +405,8 @@ if __name__ == "__main__":
     parser.add_argument("--num-repetitions", type=int, default=1)
     parser.add_argument("--method", choices=["sequential", "unified"], default="sequential")
     parser.add_argument("--job-file", help="YAML/MD file with job configuration")
+    parser.add_argument("--upload-url", help="Web server URL to upload results (e.g. https://simonmccallum.org.nz/bench)")
+    parser.add_argument("--upload-key", help="API key for uploading results")
 
     args = parser.parse_args()
 
@@ -346,6 +425,11 @@ if __name__ == "__main__":
             "num_repetitions": args.num_repetitions,
             "method": args.method,
         }
+
+    if args.upload_url:
+        config["upload_url"] = args.upload_url
+    if args.upload_key:
+        config["upload_key"] = args.upload_key
 
     result = run_benchmark(config)
     print(f"\nDone. {result['total_results']} total evaluations.")

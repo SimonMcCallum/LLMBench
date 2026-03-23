@@ -35,11 +35,10 @@ desktop.ini
 .claude/daemon.log
 .claude/daemon_state.json.tmp
 
-# API keys (never commit)
+# API keys and Docker secrets (never commit)
 .env
-
-# Docker secrets (never commit actual .env)
 docker/.env
+.env
 docker/fail2ban/db/
 docker/certs/*.pem
 docker/certs/*.key
@@ -47,6 +46,11 @@ docker/certs/*.key
 # Generated / transient
 *.log
 *.pid
+
+# SQLite database (persisted via Docker volume, not in git)
+*.db
+*.db-wal
+*.db-shm
 
 # Keep directories tracked via .gitkeep
 !data/.gitkeep

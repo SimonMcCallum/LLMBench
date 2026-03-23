@@ -314,7 +314,10 @@
       <!-- Nav Tabs -->
       <div class="nav-tabs">
         <button class="nav-tab active" data-tab="tab-models" onclick="switchTab(this)">Models</button>
+        <button class="nav-tab" data-tab="tab-apikeys" onclick="switchTab(this)">API Keys</button>
         <button class="nav-tab" data-tab="tab-benchmark" onclick="switchTab(this)">Benchmark</button>
+        <button class="nav-tab" data-tab="tab-datasets" onclick="switchTab(this)">Datasets</button>
+        <button class="nav-tab" data-tab="tab-analytics" onclick="switchTab(this)">Analytics</button>
         <button class="nav-tab" data-tab="tab-results" onclick="switchTab(this)">Results</button>
         <button class="nav-tab" data-tab="tab-leaderboard" onclick="switchTab(this)">Leaderboard</button>
       </div>
@@ -415,6 +418,102 @@
         </div>
       </div>
 
+      <!-- ======== API KEYS TAB ======== -->
+      <div id="tab-apikeys" class="tab-content" style="display:none">
+        <div class="card">
+          <h3>API Key Status</h3>
+          <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:12px">
+            API keys are stored in environment variables. Edit <code>/home/simon/docker/.env</code> on the server,
+            or <code>.env</code> in your local LLMBench repo for desktop benchmarking.
+          </p>
+          <table id="apikeys-table">
+            <thead><tr><th>Vendor</th><th>Env Variable</th><th>Status</th><th>Endpoint</th><th>Models</th><th></th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <h3>Desktop Upload Key</h3>
+          <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:12px">
+            Generate an API key for the desktop benchmark runner to upload results to this server.
+          </p>
+          <div id="upload-key-info" style="margin-bottom:12px"></div>
+          <button class="btn btn-primary btn-sm" onclick="generateUploadKey()">Generate New Upload Key</button>
+          <div id="upload-key-result" style="margin-top:12px"></div>
+        </div>
+
+        <div class="card">
+          <h3>Desktop Setup Instructions</h3>
+          <div style="font-size:0.85rem;color:var(--text-dim);line-height:1.8">
+            <ol style="padding-left:20px">
+              <li>Clone the repo on your desktop machine</li>
+              <li>Copy <code>.env.example</code> to <code>.env</code> and add your API keys</li>
+              <li>Install deps: <code>pip install -r requirements.txt</code></li>
+              <li>Run: <code>./run_benchmark.sh</code></li>
+            </ol>
+            <div style="margin-top:12px;padding:12px;background:var(--surface2);border-radius:8px;font-family:monospace;font-size:0.8rem;white-space:pre-wrap"># .env example
+OPENAI_API_KEY=sk-...
+ANTHROPIC_API_KEY=sk-ant-...
+GOOGLE_API_KEY=AIza...
+DEEPSEEK_API_KEY=sk-...
+UPLOAD_API_KEY=&lt;from admin panel&gt;
+LLMBENCH_UPLOAD_URL=https://simonmccallum.org.nz/bench</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======== DATASETS TAB ======== -->
+      <div id="tab-datasets" class="tab-content" style="display:none">
+        <div class="card">
+          <h3>Dataset Registry</h3>
+          <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:12px">
+            Datasets from <code>config/datasets.yaml</code>. Exported datasets have question JSON files for the web quiz.
+          </p>
+          <table id="datasets-detail-table">
+            <thead><tr><th>Dataset</th><th>Source</th><th>Choices</th><th>Difficulty</th><th>Exported</th><th>Questions</th><th></th></tr></thead>
+            <tbody></tbody>
+          </table>
+          <div id="datasets-empty" style="text-align:center;color:var(--text-dim);padding:24px;display:none">No datasets configured</div>
+        </div>
+      </div>
+
+      <!-- ======== ANALYTICS TAB ======== -->
+      <div id="tab-analytics" class="tab-content" style="display:none">
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+            <h3 style="margin:0">Question Analytics</h3>
+            <div class="form-group" style="min-width:160px;flex:0">
+              <select id="analytics-dataset-filter" onchange="loadAnalytics()">
+                <option value="">All Datasets</option>
+              </select>
+            </div>
+          </div>
+          <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:12px">
+            Per-question performance across all models and human participants. Sorted by difficulty (hardest first).
+          </p>
+          <table id="analytics-table">
+            <thead><tr>
+              <th>Question ID</th><th>Dataset</th><th>Attempts</th>
+              <th>Overall Acc</th><th>Model Acc</th><th>Human Acc</th>
+              <th>Confidence</th><th>HLCC</th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+          <div id="analytics-empty" style="text-align:center;color:var(--text-dim);padding:24px;display:none">
+            No question data yet. Run benchmarks and have humans take quizzes to build analytics.
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Model Benchmark Runs</h3>
+          <table id="model-runs-table">
+            <thead><tr><th>Model</th><th>Dataset</th><th>Questions</th><th>Accuracy</th><th>HLCC</th><th>ECE</th><th>Date</th></tr></thead>
+            <tbody></tbody>
+          </table>
+          <div id="model-runs-empty" style="text-align:center;color:var(--text-dim);padding:24px;display:none">No model runs yet</div>
+        </div>
+      </div>
+
       <!-- ======== RESULTS TAB ======== -->
       <div id="tab-results" class="tab-content" style="display:none">
         <div class="card">
@@ -448,6 +547,8 @@
     // ============================================================
     // STATE
     // ============================================================
+    // Derive base path from URL so /bench/vet/admin.html → '/bench'
+    const BASE_PATH = window.location.pathname.replace(/\/vet\/.*$/, '').replace(/\/$/, '');
     let modelsConfig = {};
     let datasetsConfig = {};
     let authenticated = false;
@@ -497,6 +598,9 @@
       const tab = el.dataset.tab;
       if (tab === 'tab-results') loadHistory();
       if (tab === 'tab-leaderboard') loadLeaderboard();
+      if (tab === 'tab-apikeys') loadApiKeys();
+      if (tab === 'tab-datasets') loadDatasetsDetail();
+      if (tab === 'tab-analytics') loadAnalytics();
     }
 
     // ============================================================
@@ -574,10 +678,11 @@
       const apiModelCount = Object.values(api).reduce((s, v) => s + (v.models || []).length, 0);
       const vendorCount = Object.keys(api).length;
       const datasetCount = Object.keys(datasetsConfig.datasets || datasetsConfig).length;
+      const apiEnabled = Object.values(api).filter(v => v.enabled !== false).length;
 
       document.getElementById('summary-grid').innerHTML = `
         <div class="summary-card"><div class="value">${localEnabled.length}/${local.length}</div><div class="label">Local Models</div></div>
-        <div class="summary-card"><div class="value">${apiModelCount}</div><div class="label">API Models (${vendorCount} vendors)</div></div>
+        <div class="summary-card"><div class="value">${apiModelCount}</div><div class="label">API Models (${apiEnabled}/${vendorCount} vendors)</div></div>
         <div class="summary-card"><div class="value">${datasetCount}</div><div class="label">Datasets</div></div>
       `;
     }
@@ -894,6 +999,182 @@
           <td>${fmt(e.calibration_gap)}</td>
         </tr>`).join('');
       } catch (e) { console.error('Failed to load leaderboard:', e); }
+    }
+
+    // ============================================================
+    // API KEYS
+    // ============================================================
+    async function loadApiKeys() {
+      try {
+        const resp = await adminFetch('/api/keys');
+        const keys = await resp.json();
+        const tbody = document.querySelector('#apikeys-table tbody');
+        tbody.innerHTML = Object.entries(keys).map(([vendor, info]) => `<tr>
+          <td><strong>${esc(vendor)}</strong></td>
+          <td><code style="font-size:0.8rem">${esc(info.env_var)}</code></td>
+          <td>${info.is_set
+            ? '<span class="badge badge-green">Set</span>'
+            : '<span class="badge badge-red">Missing</span>'}</td>
+          <td style="font-size:0.8rem;color:var(--text-dim)">${esc(info.endpoint)}</td>
+          <td style="font-size:0.8rem">${(info.models || []).join(', ')}</td>
+          <td>
+            ${info.is_set ? `<button class="btn btn-ghost btn-sm" onclick="testApiKey('${esc(vendor)}')">Test</button>` : ''}
+          </td>
+        </tr>`).join('');
+
+        // Load env info
+        const envResp = await adminFetch('/api/keys/env_info');
+        const envInfo = await envResp.json();
+        document.getElementById('upload-key-info').innerHTML = `
+          <div style="font-size:0.85rem">
+            Upload key status: ${envInfo.env_vars.UPLOAD_API_KEY?.is_set
+              ? '<span class="badge badge-green">Set</span>'
+              : '<span class="badge badge-red">Not set</span>'}
+          </div>`;
+      } catch (e) { console.error('Failed to load API keys:', e); }
+    }
+
+    async function testApiKey(vendor) {
+      try {
+        const resp = await adminFetch(`/api/keys/${vendor}/test`, { method: 'POST' });
+        const data = await resp.json();
+        if (resp.ok) toast(`${vendor}: ${data.message}`);
+        else toast(`${vendor}: ${data.error}`, 'error');
+      } catch (e) { toast('Test failed', 'error'); }
+    }
+
+    async function generateUploadKey() {
+      try {
+        const resp = await adminFetch('/api/upload_key', { method: 'POST' });
+        const data = await resp.json();
+        document.getElementById('upload-key-result').innerHTML = `
+          <div style="padding:12px;background:var(--surface2);border-radius:8px;font-family:monospace;font-size:0.85rem;word-break:break-all">
+            <div style="color:var(--green);margin-bottom:4px">New upload key generated:</div>
+            <div>${esc(data.key)}</div>
+            <div style="margin-top:8px;color:var(--text-dim)">${esc(data.instruction)}</div>
+          </div>`;
+        toast('Upload key generated - add it to your .env');
+      } catch (e) { toast('Failed to generate key', 'error'); }
+    }
+
+    // ============================================================
+    // DATASETS DETAIL
+    // ============================================================
+    async function loadDatasetsDetail() {
+      try {
+        const resp = await adminFetch('/api/datasets/available');
+        const data = await resp.json();
+        const datasets = data.datasets || {};
+        const tbody = document.querySelector('#datasets-detail-table tbody');
+        const empty = document.getElementById('datasets-empty');
+
+        if (!Object.keys(datasets).length) {
+          tbody.innerHTML = '';
+          empty.style.display = 'block';
+          return;
+        }
+        empty.style.display = 'none';
+
+        tbody.innerHTML = Object.entries(datasets).map(([name, cfg]) => `<tr>
+          <td><strong>${esc(name)}</strong></td>
+          <td style="font-size:0.8rem;color:var(--text-dim)">${esc(cfg.hf_path || '')}</td>
+          <td>${cfg.num_choices || '?'}</td>
+          <td>${cfg.difficulty || '?'}</td>
+          <td>${cfg.exported
+            ? '<span class="badge badge-green">Yes</span>'
+            : '<span class="badge badge-dim">No</span>'}</td>
+          <td>${cfg.exported_questions || 0}</td>
+          <td><button class="btn btn-primary btn-sm" onclick="exportDataset('${esc(name)}')">
+            ${cfg.exported ? 'Re-export' : 'Export'}
+          </button></td>
+        </tr>`).join('');
+
+        // Also populate analytics filter dropdown
+        const filter = document.getElementById('analytics-dataset-filter');
+        const currentVal = filter.value;
+        filter.innerHTML = '<option value="">All Datasets</option>' +
+          Object.keys(datasets).map(name =>
+            `<option value="${esc(name)}" ${name === currentVal ? 'selected' : ''}>${esc(name)}</option>`
+          ).join('');
+      } catch (e) { console.error('Failed to load datasets:', e); }
+    }
+
+    async function exportDataset(name) {
+      const max = prompt(`Export how many questions from "${name}"?`, '50');
+      if (!max) return;
+      try {
+        const resp = await adminFetch('/api/datasets/export', {
+          method: 'POST',
+          body: { dataset: name, max_questions: parseInt(max) },
+        });
+        const data = await resp.json();
+        if (resp.ok) toast(data.message || 'Export task created');
+        else toast(data.error || 'Export failed', 'error');
+      } catch (e) { toast('Request failed', 'error'); }
+    }
+
+    // ============================================================
+    // QUESTION ANALYTICS
+    // ============================================================
+    async function loadAnalytics() {
+      try {
+        const dataset = document.getElementById('analytics-dataset-filter').value;
+        const qs = dataset ? `?dataset=${encodeURIComponent(dataset)}` : '';
+
+        const [analyticsResp, runsResp] = await Promise.all([
+          adminFetch('/api/question_analytics' + qs),
+          adminFetch('/api/model_runs' + qs),
+        ]);
+        const analyticsData = await analyticsResp.json();
+        const runsData = await runsResp.json();
+
+        // Question analytics table
+        const questions = analyticsData.questions || [];
+        const tbody = document.querySelector('#analytics-table tbody');
+        const empty = document.getElementById('analytics-empty');
+
+        if (!questions.length) {
+          tbody.innerHTML = '';
+          empty.style.display = 'block';
+        } else {
+          empty.style.display = 'none';
+          tbody.innerHTML = questions.map(q => {
+            const overconf = (q.mean_confidence || 0) - (q.overall_accuracy || 0);
+            const overconfColor = overconf > 0.2 ? 'var(--red)' : overconf > 0.1 ? 'var(--orange)' : 'var(--text)';
+            return `<tr>
+              <td style="font-size:0.8rem"><code>${esc(q.question_id)}</code></td>
+              <td>${esc(q.dataset)}</td>
+              <td>${q.total_attempts}</td>
+              <td style="color:${(q.overall_accuracy||0) < 0.5 ? 'var(--red)' : 'var(--green)'}">${fmt(q.overall_accuracy)}</td>
+              <td>${q.model_attempts > 0 ? fmt(q.model_accuracy) : '-'}</td>
+              <td>${q.human_attempts > 0 ? fmt(q.human_accuracy) : '-'}</td>
+              <td style="color:${overconfColor}">${fmt(q.mean_confidence)}</td>
+              <td>${fmt(q.mean_hlcc)}</td>
+            </tr>`;
+          }).join('');
+        }
+
+        // Model runs table
+        const runs = runsData.runs || [];
+        const runsTbody = document.querySelector('#model-runs-table tbody');
+        const runsEmpty = document.getElementById('model-runs-empty');
+
+        if (!runs.length) {
+          runsTbody.innerHTML = '';
+          runsEmpty.style.display = 'block';
+        } else {
+          runsEmpty.style.display = 'none';
+          runsTbody.innerHTML = runs.map(r => `<tr>
+            <td><strong>${esc(r.model_name)}</strong></td>
+            <td>${esc(r.dataset)}</td>
+            <td>${r.total_questions}</td>
+            <td>${fmt(r.accuracy)}</td>
+            <td>${fmt(r.mean_hlcc)}</td>
+            <td>${fmt(r.ece)}</td>
+            <td style="font-size:0.8rem;color:var(--text-dim)">${esc(r.run_timestamp || r.uploaded_at || '')}</td>
+          </tr>`).join('');
+        }
+      } catch (e) { console.error('Failed to load analytics:', e); }
     }
 
     // ============================================================

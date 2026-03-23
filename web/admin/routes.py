@@ -6,6 +6,7 @@ import hmac
 import json
 import logging
 import os
+import secrets
 import subprocess
 import time
 from datetime import datetime
@@ -33,6 +34,7 @@ from .config_manager import (
     toggle_api_vendor,
     toggle_model,
 )
+from web import database as db
 
 logger = logging.getLogger("admin.routes")
 
@@ -327,3 +329,236 @@ def get_history():
         except Exception:
             pass
     return jsonify({"runs": runs})
+
+
+# ============================================================
+# API KEY MANAGEMENT
+# ============================================================
+
+API_KEYS_FILE = REPO_ROOT / "config" / "api_keys.yaml"
+
+
+def _read_api_keys():
+    """Read API keys config (stores env var names and whether key is set)."""
+    config = read_models_config()
+    api = config.get("api_models", {})
+    keys_info = {}
+    for vendor, cfg in api.items():
+        env_var = cfg.get("api_key_env", "")
+        keys_info[vendor] = {
+            "env_var": env_var,
+            "is_set": bool(os.environ.get(env_var, "")),
+            "endpoint": cfg.get("endpoint", ""),
+            "models": cfg.get("models", []),
+            "enabled": cfg.get("enabled", True),
+        }
+    return keys_info
+
+
+@admin_bp.route("/api/keys", methods=["GET"])
+@require_admin
+def get_api_keys():
+    """Get API key status (never returns actual keys)."""
+    return jsonify(_read_api_keys())
+
+
+@admin_bp.route("/api/keys/<vendor>/test", methods=["POST"])
+@require_admin
+def test_api_key(vendor):
+    """Test if an API key works by making a simple request."""
+    config = read_models_config()
+    api = config.get("api_models", {})
+    if vendor not in api:
+        return jsonify({"error": f"Vendor '{vendor}' not found"}), 404
+
+    env_var = api[vendor].get("api_key_env", "")
+    key = os.environ.get(env_var, "")
+    if not key:
+        return jsonify({"error": f"No key set for {env_var}"}), 400
+
+    return jsonify({"success": True, "message": f"Key is set ({len(key)} chars)"})
+
+
+@admin_bp.route("/api/keys/env_info", methods=["GET"])
+@require_admin
+def get_env_info():
+    """Return which .env file to edit and what vars are needed."""
+    config = read_models_config()
+    api = config.get("api_models", {})
+    env_vars = {}
+    for vendor, cfg in api.items():
+        env_var = cfg.get("api_key_env", "")
+        env_vars[env_var] = {
+            "vendor": vendor,
+            "is_set": bool(os.environ.get(env_var, "")),
+        }
+    # Also include upload key
+    env_vars["UPLOAD_API_KEY"] = {
+        "vendor": "benchmark-upload",
+        "is_set": bool(os.environ.get("UPLOAD_API_KEY", "")),
+    }
+    return jsonify({
+        "env_file": "/home/simon/docker/.env",
+        "env_vars": env_vars,
+        "instructions": (
+            "Add API keys to /home/simon/docker/.env then rebuild the container. "
+            "For desktop benchmarking, create a .env file in your LLMBench repo root."
+        ),
+    })
+
+
+# ============================================================
+# MODEL BENCHMARK RUNS (from DB)
+# ============================================================
+
+@admin_bp.route("/api/model_runs", methods=["GET"])
+@require_admin
+def get_model_runs():
+    """Get all model benchmark runs from the database."""
+    dataset = request.args.get("dataset")
+    model = request.args.get("model")
+    runs = db.get_model_runs(dataset=dataset, model_name=model)
+    return jsonify({"runs": runs})
+
+
+@admin_bp.route("/api/model_runs/<run_id>/answers", methods=["GET"])
+@require_admin
+def get_model_run_answers(run_id):
+    """Get per-question answers for a specific model run."""
+    answers = db.get_model_answers_for_run(run_id)
+    return jsonify({"answers": answers})
+
+
+# ============================================================
+# QUESTION ANALYTICS
+# ============================================================
+
+@admin_bp.route("/api/question_analytics", methods=["GET"])
+@require_admin
+def admin_question_analytics():
+    """Get question-level analytics for admin dashboard."""
+    dataset = request.args.get("dataset")
+    dynamics = db.get_question_dynamics(dataset=dataset)
+    return jsonify({"questions": dynamics})
+
+
+@admin_bp.route("/api/hardest_questions", methods=["GET"])
+@require_admin
+def admin_hardest_questions():
+    """Get hardest questions with enriched data."""
+    dataset = request.args.get("dataset")
+    limit = int(request.args.get("limit", 50))
+    questions = db.get_hardest_questions(dataset=dataset, limit=limit)
+
+    # Enrich with question text
+    questions_dir = REPO_ROOT / "results" / "questions"
+    for q in questions:
+        q_data = _find_question(questions_dir, q["dataset"], q["question_id"])
+        if q_data:
+            q["question_text"] = q_data["question"][:200]
+    return jsonify({"questions": questions})
+
+
+def _find_question(questions_dir, dataset, question_id):
+    """Look up a question from exported JSON."""
+    filepath = questions_dir / f"{dataset}.json"
+    if not filepath.exists():
+        return None
+    try:
+        with open(filepath, "r") as f:
+            data = json.load(f)
+        for q in data.get("questions", []):
+            if q["question_id"] == question_id:
+                return q
+    except Exception:
+        pass
+    return None
+
+
+# ============================================================
+# DATASET MANAGEMENT
+# ============================================================
+
+@admin_bp.route("/api/datasets/export", methods=["POST"])
+@require_admin
+def export_dataset():
+    """Trigger export of a dataset from HuggingFace to results/questions/."""
+    data = request.json or {}
+    dataset_name = data.get("dataset", "").strip()
+    max_questions = int(data.get("max_questions", 50))
+
+    if not dataset_name:
+        return jsonify({"error": "dataset name is required"}), 400
+
+    # Check if dataset is in config
+    if DATASETS_CONFIG.exists():
+        with open(DATASETS_CONFIG, "r") as f:
+            ds_config = yaml.safe_load(f) or {}
+        datasets = ds_config.get("datasets", {})
+        if dataset_name not in datasets:
+            return jsonify({"error": f"Dataset '{dataset_name}' not in config/datasets.yaml"}), 400
+
+    # Write export task to inbox for daemon
+    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+    task_name = f"export_{dataset_name}_{ts}.md"
+    task_content = f"""---
+type: benchmark
+datasets: [{dataset_name}]
+max_examples: {max_questions}
+models: []
+---
+# Export dataset: {dataset_name}
+Export {max_questions} questions for the web quiz.
+"""
+    INBOX_DIR.mkdir(parents=True, exist_ok=True)
+    task_path = INBOX_DIR / task_name
+    task_path.write_text(task_content, encoding="utf-8")
+
+    return jsonify({
+        "success": True,
+        "message": f"Export task created for {dataset_name} ({max_questions} questions)",
+        "task_file": task_name,
+    })
+
+
+@admin_bp.route("/api/datasets/available", methods=["GET"])
+@require_admin
+def available_datasets():
+    """List all datasets from config with export status."""
+    if not DATASETS_CONFIG.exists():
+        return jsonify({"datasets": {}})
+
+    with open(DATASETS_CONFIG, "r") as f:
+        ds_config = yaml.safe_load(f) or {}
+    datasets = ds_config.get("datasets", {})
+
+    questions_dir = REPO_ROOT / "results" / "questions"
+    result = {}
+    for name, cfg in datasets.items():
+        exported_file = questions_dir / f"{name}.json"
+        exported = exported_file.exists()
+        question_count = 0
+        if exported:
+            try:
+                with open(exported_file, "r") as f:
+                    qdata = json.load(f)
+                question_count = len(qdata.get("questions", []))
+            except Exception:
+                pass
+        result[name] = {
+            **cfg,
+            "exported": exported,
+            "exported_questions": question_count,
+        }
+    return jsonify({"datasets": result})
+
+
+@admin_bp.route("/api/upload_key", methods=["POST"])
+@require_admin
+def generate_upload_key():
+    """Generate a new upload API key for desktop benchmarking."""
+    key = secrets.token_urlsafe(32)
+    return jsonify({
+        "key": key,
+        "instruction": f"Add to .env: UPLOAD_API_KEY={key}",
+    })
