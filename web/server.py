@@ -166,6 +166,11 @@ def index():
     return send_from_directory("static", "index.html")
 
 
+@app.route("/explore")
+def explore():
+    return send_from_directory("static", "explore.html")
+
+
 @app.route("/static/<path:filename>")
 def static_files(filename):
     return send_from_directory("static", filename)
@@ -174,6 +179,18 @@ def static_files(filename):
 # ============================================================
 # ROUTES — API
 # ============================================================
+
+@app.route("/api/hard-questions")
+def api_hard_questions():
+    """Serve the hard/discriminating question analysis."""
+    analysis_path = QUESTIONS_DIR / "hard_analysis.json"
+    if not analysis_path.exists():
+        return jsonify({"error": "No hard question analysis found. "
+                        "Run the analysis script first."}), 404
+    with open(analysis_path, encoding="utf-8") as f:
+        data = json.load(f)
+    return jsonify(data)
+
 
 @app.route("/api/datasets")
 def api_datasets():

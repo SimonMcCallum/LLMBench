@@ -1,0 +1,45 @@
+{
+  "timestamp": "20260403_184845",
+  "config": {
+    "models": [
+      "claude-haiku-4-5-20251001"
+    ],
+    "datasets": [
+      "hard"
+    ],
+    "max_examples": 500,
+    "temperatures": [
+      0.0
+    ],
+    "num_repetitions": 1,
+    "method": "sequential"
+  },
+  "overall_metrics": {
+    "ece": 0.28744,
+    "brier": 0.3237118,
+    "auprc": 0.5506238877444931,
+    "prr": 0.38745418749240274,
+    "accuracy": 0.36,
+    "mean_confidence": 0.6362599999999999,
+    "calibration_gap": 0.27625999999999995,
+    "acc@70%": 0.4142857142857143,
+    "acc@80%": 0.3825,
+    "acc@90%": 0.36666666666666664
+  },
+  "summaries": [
+    {
+      "model_name": "claude-haiku-4-5-20251001",
+      "model_type": "api",
+      "vendor": "anthropic",
+      "dataset": "hard",
+      "total_examples": 500,
+      "accuracy": 0.36,
+      "mean_confidence": 0.6362599999999999,
+      "calibration_gap": 0.27625999999999995,
+      "mean_hlcc_score": 0.17804040000000002,
+      "mean_cbm_score": -0.201,
+      "correct_count": 180,
+      "incorrect_count": 320
+    }
+  ]
+}

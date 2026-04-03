@@ -1,0 +1,45 @@
+{
+  "timestamp": "20260403_182515",
+  "config": {
+    "models": [
+      "claude-sonnet-4-6"
+    ],
+    "datasets": [
+      "hard"
+    ],
+    "max_examples": 500,
+    "temperatures": [
+      0.0
+    ],
+    "num_repetitions": 1,
+    "method": "sequential"
+  },
+  "overall_metrics": {
+    "ece": 0.18324000000000001,
+    "brier": 0.9512887999999998,
+    "auprc": 0.7338630073600245,
+    "prr": 0.5487758214174733,
+    "accuracy": 0.47,
+    "mean_confidence": 0.6516,
+    "calibration_gap": 0.18159999999999998,
+    "acc@70%": 0.5257142857142857,
+    "acc@80%": 0.4875,
+    "acc@90%": 0.4688888888888889
+  },
+  "summaries": [
+    {
+      "model_name": "claude-sonnet-4-6",
+      "model_type": "api",
+      "vendor": "anthropic",
+      "dataset": "hard",
+      "total_examples": 500,
+      "accuracy": 0.47,
+      "mean_confidence": 0.6516000000000001,
+      "calibration_gap": 0.1816000000000001,
+      "mean_hlcc_score": 0.5400104,
+      "mean_cbm_score": 0.129,
+      "correct_count": 235,
+      "incorrect_count": 265
+    }
+  ]
+}

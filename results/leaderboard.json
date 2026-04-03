@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-03T20:08:59.716376",
+  "updated": "2026-04-03T23:42:06.499757",
   "entries": {
     "deepseek-reasoner_gamedesign": {
       "model_name": "deepseek-reasoner",
@@ -400,6 +400,22 @@
       "incorrect_count": 23,
       "rank_score": 0.6121130194884195,
       "updated": "2026-04-02T12:44:44.453340"
+    },
+    "claude-sonnet-4-6_hard": {
+      "model_name": "claude-sonnet-4-6",
+      "model_type": "api",
+      "vendor": "anthropic",
+      "dataset": "hard",
+      "total_examples": 500,
+      "accuracy": 0.47,
+      "mean_confidence": 0.6516000000000001,
+      "calibration_gap": 0.1816000000000001,
+      "mean_hlcc_score": 0.5400104,
+      "mean_cbm_score": 0.129,
+      "correct_count": 235,
+      "incorrect_count": 265,
+      "rank_score": 0.60252416,
+      "updated": "2026-04-03T23:42:06.499757"
     },
     "phi-3-mini_medmcqa": {
       "model_name": "phi-3-mini",
@@ -848,6 +864,22 @@
       "incorrect_count": 78,
       "rank_score": 0.39678729311304256,
       "updated": "2026-04-02T12:35:52.455669"
+    },
+    "claude-haiku-4-5-20251001_hard": {
+      "model_name": "claude-haiku-4-5-20251001",
+      "model_type": "api",
+      "vendor": "anthropic",
+      "dataset": "hard",
+      "total_examples": 500,
+      "accuracy": 0.36,
+      "mean_confidence": 0.6362599999999999,
+      "calibration_gap": 0.27625999999999995,
+      "mean_hlcc_score": 0.17804040000000002,
+      "mean_cbm_score": -0.201,
+      "correct_count": 180,
+      "incorrect_count": 320,
+      "rank_score": 0.39633816,
+      "updated": "2026-04-03T23:34:29.708427"
     },
     "phi-2_truthfulqa": {
       "model_name": "phi-2",
