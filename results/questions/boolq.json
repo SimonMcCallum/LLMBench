@@ -1,0 +1,2207 @@
+{
+  "dataset": "boolq",
+  "exported": "2026-04-02T11:30:36.227601",
+  "total": 200,
+  "questions": [
+    {
+      "question_id": "boolq_0",
+      "question": "All biomass goes through at least some of these steps: it needs to be grown, collected, dried, fermented, distilled, and burned. All of these steps require resources and an infrastructure. The total amount of energy input into the process compared to the energy released by burning the resulting etha\n\nQuestion: does ethanol take more energy make that produces",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_1",
+      "question": "Property tax or 'house tax' is a local tax on buildings, along with appurtenant land. It is and imposed on the Possessor (not the custodian of property as per 1978, 44th amendment of constitution). It resembles the US-type wealth tax and differs from the excise-type UK rate. The tax power is vested \n\nQuestion: is house tax and property tax are same",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_2",
+      "question": "Phantom pain sensations are described as perceptions that an individual experiences relating to a limb or an organ that is not physically part of the body. Limb loss is a result of either removal by amputation or congenital limb deficiency. However, phantom limb sensations can also occur following n\n\nQuestion: is pain experienced in a missing body part or paralyzed area",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_3",
+      "question": "Harry Potter and the Escape from Gringotts is an indoor steel roller coaster at Universal Studios Florida, a theme park located within the Universal Orlando Resort. Similar to dark rides, the roller coaster utilizes special effects in a controlled-lighting environment and also employs motion-based 3\n\nQuestion: is harry potter and the escape from gringotts a roller coaster ride",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_4",
+      "question": "Hydroxyzine preparations require a doctor's prescription. The drug is available in two formulations, the pamoate and the dihydrochloride or hydrochloride salts. Vistaril, Equipose, Masmoran, and Paxistil are preparations of the pamoate salt, while Atarax, Alamon, Aterax, Durrax, Tran-Q, Orgatrax, Qu\n\nQuestion: is there a difference between hydroxyzine hcl and hydroxyzine pam",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_5",
+      "question": "Barq's /ˈbɑːrks/ is an American soft drink. Its brand of root beer is notable for having caffeine. Barq's, created by Edward Barq and bottled since the turn of the 20th century, is owned by the Barq family but bottled by the Coca-Cola Company. It was known as Barq's Famous Olde Tyme Root Beer until \n\nQuestion: is barq's root beer a pepsi product",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_6",
+      "question": "In mathematics, parity is the property of an integer's inclusion in one of two categories: even or odd. An integer is even if it is evenly divisible by two and odd if it is not even. For example, 6 is even because there is no remainder when dividing it by 2. By contrast, 3, 5, 7, 21 leave a remainde\n\nQuestion: can an odd number be divided by an even number",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_7",
+      "question": "Of the 71 words in this list, 67 are nouns, and most would generally be considered loanwords; the only modern-English words that contain Q not followed by U and are not borrowed from another language are qiana, qwerty, and tranq. However, all of the loanwords on this list are considered to be natura\n\nQuestion: is there a word with q without u",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_8",
+      "question": "Persons driving into Canada must have their vehicle's registration document and proof of insurance.\n\nQuestion: can u drive in canada with us license",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_9",
+      "question": "The knockout stage of the 2018 FIFA World Cup was the second and final stage of the competition, following the group stage. It began on 30 June with the round of 16 and ended on 15 July with the final match, held at the Luzhniki Stadium in Moscow. The top two teams from each group (16 in total) adva\n\nQuestion: is there a play off for third place in the world cup",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_10",
+      "question": "In response to the National Minimum Drinking Age Act in 1984, which reduced by up to 10% the federal highway funding of any state which did not have a minimum purchasing age of 21, the New York Legislature raised the drinking age from 19 to 21, effective December 1, 1985. (The drinking age had been \n\nQuestion: can minors drink with parents in new york",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_11",
+      "question": "Bloodline was announced in October 2014 as part of a partnership between Netflix and Sony Pictures Television, representing Netflix's first major deal with a major film studio for a television series. The series was created and executive produced by Todd A. Kessler, Glenn Kessler, and Daniel Zelman,\n\nQuestion: is the show bloodline based on a true story",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_12",
+      "question": "Shower gels for men may contain the ingredient menthol, which gives a cooling and stimulating sensation on the skin, and some men's shower gels are also designed specifically for use on hair and body. Shower gels contain milder surfactant bases than shampoos, and some also contain gentle conditionin\n\nQuestion: is it bad to wash your hair with shower gel",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_13",
+      "question": "The liver detoxifies and breaks down chemicals, poisons and other toxins that enter the body. For example, the liver transforms ammonia (which is poisonous) into urea in fish, amphibians and mammals, and into uric acid in birds and reptiles. Urea is filtered by the kidney into urine or through the g\n\nQuestion: is the liver part of the excretory system",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_14",
+      "question": "Fantastic Beasts and Where to Find Them is a 2016 fantasy film directed by David Yates. A joint British and American production, it is a spin-off and prequel to the Harry Potter film series, and it was produced and written by J.K. Rowling in her screenwriting debut, and inspired by her 2001 book of \n\nQuestion: is fantastic beasts and where to find them a prequel",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_15",
+      "question": "The Vampire Diaries, an American supernatural drama, was renewed for an eighth season by The CW on March 11, 2016. On July 23, 2016, the CW announced that the upcoming season would be the series' last and would consist of 16 episodes. The season premiered on October 21, 2016 and concluded on March 1\n\nQuestion: will there be a season 8 of vampire diaries",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_16",
+      "question": "The Strangers is a 2008 American slasher film written and directed by Bryan Bertino. Kristen (Liv Tyler) and James (Scott Speedman) are expecting a relaxing weekend at a family vacation home, but their stay turns out to be anything but peaceful as three masked torturers leave Kristen and James strug\n\nQuestion: was the movie strangers based on a true story",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_17",
+      "question": "In March 2012 it was announced that four universities -- Durham, Exeter, Queen Mary University of London; and York -- would become members of the Russell Group in August of the same year. All of the new members had previously been members of the 1994 Group of British universities.\n\nQuestion: is durham university part of the russell group",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_18",
+      "question": "The Resident is an American medical drama television series aired by Fox Broadcasting Company that premiered on January 21, 2018, as a mid-season replacement entry in the 2017--18 television season. The fictional series focuses on the lives and duties of staff members at Chastain Park Memorial Hospi\n\nQuestion: is the tv show the resident over for the season",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_19",
+      "question": "Magnesium citrate is a magnesium preparation in salt form with citric acid in a 1:1 ratio (1 magnesium atom per citrate molecule). The name ``magnesium citrate'' is ambiguous and sometimes may refer to other salts such as trimagnesium citrate which has a magnesium:citrate ratio of 3:2.\n\nQuestion: does magnesium citrate have citric acid in it",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_20",
+      "question": "Street Addressing will have the same street address of the post office, plus a ``unit number'' that matches the P.O. Box number. As an example, in El Centro, California, the post office is located at 1598 Main Street. Therefore, for P.O. Box 9975 (fictitious), the Street Addressing would be: 1598 Ma\n\nQuestion: does p o box come before street address",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_21",
+      "question": "A spark plug (sometimes, in British English, a sparking plug, and, colloquially, a plug) is a device for delivering electric current from an ignition system to the combustion chamber of a spark-ignition engine to ignite the compressed fuel/air mixture by an electric spark, while containing combustio\n\nQuestion: does a spark plug keep an engine running",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_22",
+      "question": "Ladies may wear a long (over the shoulders or to ankles) cloak usually called a cape, or a full-length cloak. Gentlemen wear an ankle-length or full-length cloak. Formal cloaks often have expensive, colored linings and trimmings such as silk, satin, velvet and fur.\n\nQuestion: is a cape and a cloak the same",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_23",
+      "question": "Renunciation of U.S. citizenship was free until July 2010, at which time a fee of $450 was established. An increase to $2,350, effective September 12, 2014, was justified as ``reflective of the true cost'' of processing. This followed a fee increase of approximately 220% in 2013. The increase took e\n\nQuestion: does it cost money to renounce us citizenship",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_24",
+      "question": "The Fire Tablet, formerly called the Kindle Fire, is a tablet computer developed by Amazon.com. Built with Quanta Computer, the Kindle Fire was first released in November 2011, featuring a color 7-inch multi-touch display with IPS technology and running a custom version of Google's Android operating\n\nQuestion: is a fire 7 the same as a kindle",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_25",
+      "question": "The drinking age in Wisconsin is 21. Those under the legal drinking age may be served, possess, or consume alcohol if they are with a parent, legal guardian, or spouse who is of legal drinking age. Those age 18-20 may also be served, possess or consumer alcohol if they are with a parent, legal guard\n\nQuestion: can you drink alcohol with your parents in wisconsin",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_26",
+      "question": "Contour feathers are not uniformly distributed on the skin of the bird except in some groups such as the penguins, ratites and screamers. In most birds the feathers grow from specific tracts of skin called pterylae; between the pterylae there are regions which are free of feathers called apterylae (\n\nQuestion: do penguins have feathers arising from the epidermis",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_27",
+      "question": "A new engine is broken in by following specific driving guidelines during the first few hours of its use. The focus of breaking in an engine is on the contact between the piston rings of the engine and the cylinder wall. There is no universal preparation or set of instructions for breaking in an eng\n\nQuestion: do you need to break in a car",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_28",
+      "question": "The Enchanted Forest is an amusement park located in Turner in the U.S. state of Oregon, next to Interstate 5 just south of Salem. Creator Roger Tofte opened the park in 1971 after seven years of construction. Today, the Tofte family still owns and operates the 20-acre (8.1 ha) park.\n\nQuestion: is the enchanted forest in oregon still open",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_29",
+      "question": "On the grounds of the speedway is the Indianapolis Motor Speedway Museum, which opened in 1956, and houses the Auto Racing Hall of Fame. The museum moved into its current building located in the infield in 1976. Also on the grounds is the Brickyard Crossing Golf Resort, which originally opened as th\n\nQuestion: is there a golf course at the indy 500",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_30",
+      "question": "As part of Marvel's Marvel NOW! initiative a new Deadpool ongoing series was launched, written by Brian Posehn and Gerry Duggan and illustrated by Tony Moore. He is also a member of the Thunderbolts. In the 27th issue of his new series, as part of ``All-New Marvel NOW!'', Deadpool was married for th\n\nQuestion: does deadpool have a kid in the comics",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_31",
+      "question": "Benson & Hedges is a British brand of cigarettes owned by either Philip Morris International, British American Tobacco, or Japan Tobacco, depending on the region. In the UK, they are registered in Old Bond Street in London, and are manufactured in Lisnafillan, Ballymena, Northern Ireland.\n\nQuestion: do they still make benson & hedges cigarettes",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_32",
+      "question": "The Commonwealth government has its own tax laws and Puerto Ricans are also required to pay some US federal taxes, although most residents do not have to pay the federal personal income tax. In 2009, Puerto Rico paid $3.742 billion into the US Treasury. Residents of Puerto Rico pay into Social Secur\n\nQuestion: is federal income tax the same as social security",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_33",
+      "question": "The crank sensor can be used in combination with a similar camshaft position sensor to monitor the relationship between the pistons and valves in the engine, which is particularly important in engines with variable valve timing. This method is also used to ``synchronise'' a four stroke engine upon s\n\nQuestion: is an engine speed sensor the same as a crankshaft sensor",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_34",
+      "question": "Indiana Jones and the Temple of Doom is a 1984 American action-adventure film directed by Steven Spielberg. It is the second installment in the Indiana Jones franchise and a prequel to the 1981 film Raiders of the Lost Ark, featuring Harrison Ford reprising his role as the title character. After arr\n\nQuestion: is indiana jones temple of doom a prequel",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_35",
+      "question": "The untitled Avengers film, colloquially referred to as Avengers 4, is an upcoming American superhero film based on the Marvel Comics superhero team the Avengers, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures. It is intended to be the direct sequel to 2018's Aveng\n\nQuestion: is there any next part of avengers infinity war",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_36",
+      "question": "Announced in April 2000 at the New York Auto Show and arriving in late 2000 in Japan and January 2001 in North America, the Highlander became one of the first car-based mid-size SUV or mid-size crossovers. The Highlander is the crossover counterpart to the more rugged, truck-based midsize 4Runner an\n\nQuestion: is the toyota highlander on a truck frame",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_37",
+      "question": "Since the Copyright Act of 1909, United States musicians have had the right to record a version of someone else's previously recorded and released tune, whether it is music alone or music with lyrics. A license can be negotiated between representatives of the interpreting artist and the copyright ho\n\nQuestion: is it legal to do a cover of a song",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_38",
+      "question": "The carbon-hydrogen bond (C--H bond) is a bond between carbon and hydrogen atoms that can be found in many organic compounds. This bond is a covalent bond meaning that carbon shares its outer valence electrons with up to four hydrogens. This completes both of their outer shells making them stable. C\n\nQuestion: can carbon form polar covalent bonds with hydrogen",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_39",
+      "question": "In 2011, Philip Pullman remarked at the British Humanist Association annual conference that due to the first film's disappointing sales in the United States, there would not be any sequels made.\n\nQuestion: is there a sequel to the movie the golden compass",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_40",
+      "question": "Columbus Day is a national holiday in many countries of the Americas and elsewhere which officially celebrates the anniversary of Christopher Columbus's arrival in the Americas on October 12, 1492. The landing is celebrated as ``Columbus Day'' in the United States, as ``Día de la Raza'' (``Day of th\n\nQuestion: is columbus day a national holiday in the united states",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_41",
+      "question": "New Balance maintains a manufacturing presence in the United States, as well as in the United Kingdom for the European market, where they produce some of their most popular models such as the 990 model--in contrast to its competitors, which often manufacture exclusively outside the USA and Europe. A\n\nQuestion: are new balance and nike the same company",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_42",
+      "question": "U.S. Highway 20 (US 20) is an east--west United States highway that stretches from the Pacific Northwest all the way to New England. The ``0'' in its route number indicates that US 20 is a coast-to-coast route. Spanning 3,365 miles (5,415 km), it is the longest road in the United States, and particu\n\nQuestion: is there an interstate that goes coast to coast",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_43",
+      "question": "Tomato purée is a thick liquid made by cooking and straining tomatoes. The difference between tomato paste, tomato purée, and tomato sauce is consistency; tomato puree has a thicker consistency and a deeper flavour than sauce.\n\nQuestion: is pureed tomatoes the same as tomato sauce",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_44",
+      "question": "English orthography typically represents vowel sounds with the five conventional vowel letters ⟨a, e, i, o, u⟩, as well as ⟨y⟩, which may also be a consonant depending on context. However, outside of abbreviations, there are a handful of words in English that do not have vowels, either because the v\n\nQuestion: can there be a word without a vowel",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_45",
+      "question": "Tipping Point is a British television game show which began airing on ITV on 2 July 2012, and is presented by Ben Shephard. Four contestants answer general knowledge questions to win counters which they use on a large coin pusher arcade-style machine. Only the winner at the end has a chance to take \n\nQuestion: does only the winner get money on tipping point",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_46",
+      "question": "The turkey vulture (Cathartes aura), also known in some North American regions as the turkey buzzard (or just buzzard), and in some areas of the Caribbean as the John crow or carrion crow, is the most widespread of the New World vultures. One of three species in the genus Cathartes of the family Cat\n\nQuestion: is there such a thing as a turkey vulture",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_47",
+      "question": "As of October 2008, a condor (four under par) hole-in-one on a par 5 hole had been recorded on four occasions, aided by thin air at high altitude, or by cutting the corner on a doglegged or horseshoe-shaped hole. A horseshoe-shaped par 5 hole once enabled a condor hole in one to be achieved with a 3\n\nQuestion: has anyone hit a hole in one on a par 5",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_48",
+      "question": "MetLife Stadium is an American sports stadium located in East Rutherford, New Jersey, 8 miles outside of New York City. It is part of the Meadowlands Sports Complex and serves as the home stadium for two National Football League (NFL) franchises: the New York Giants and the New York Jets. The stadiu\n\nQuestion: do the jets and giants share a stadium",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_49",
+      "question": "After the defeat in the 2016 Olympics, the USWNT underwent a year of experimentation which saw them losing 3 home games. If not for a comeback win against Brazil, the USWNT was on the brink of losing 4 home games in one year, a low never before seen by the USWNT. 2017 saw the USWNT play 12 games aga\n\nQuestion: is the us womens soccer team in the world cup",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_50",
+      "question": "Association football is the most popular sport in nearly every African country, and 13 members of the Confederation of African Football (CAF) have competed at the sport's biggest event -- the men's FIFA World Cup.\n\nQuestion: can an african team win the world cup",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_51",
+      "question": "Many martial arts employ the use of common objects as weapons; Filipino martial arts such as Eskrima include practice with machetes, canes, bamboo spears, and knives as a result of the 333 year Spanish colonization that took place in the Philippines which prohibited the ownership and use of standard\n\nQuestion: can a hammer be used as a weapon",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_52",
+      "question": "Fox hunting with hounds, as a formalised activity, originated in England in the sixteenth century, in a form very similar to that practised until February 2005, when a law banning the activity in England and Wales came into force. A ban on hunting in Scotland had been passed in 2002, but it continue\n\nQuestion: do they still have fox hunts in england",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_53",
+      "question": "The ASU includes a midnight blue coat and low waist trousers for male soldiers; and a midnight blue coat, slacks and skirt for female soldiers. The fabric for the ASU is heavier and more wrinkle resistant than previously manufactured uniforms and will consist of 55% wool and 45% polyester material. \n\nQuestion: can you wear short sleeve shirt with asu jacket",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_54",
+      "question": "This is the list of U.S. states that have participated in the Little League World Series. As of the 2018 LLWS, eight states had never reached the LLWS: Alaska, Colorado, Kansas, North Dakota, Utah, Vermont, Wisconsin, and Wyoming; additionally, the District of Columbia has never reached the LLWS.\n\nQuestion: has wisconsin ever been in the little league world series",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_55",
+      "question": "In the third season, Damon helps Elena in bringing his brother, Stefan, back to Mystic Falls after Stefan becomes Klaus' henchman. The arrangement transpired after a bargain for his blood that would cure Damon of the werewolf bite he had received from Tyler. At first, he is reluctant to involve Elen\n\nQuestion: does damon and elena get together in season 3",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_56",
+      "question": "Shaquem Alphonso Griffin /ʃəˈkiːm/ (born July 20, 1995) is an American football linebacker for the Seattle Seahawks of the National Football League (NFL). He is the twin brother of Seahawks cornerback Shaquill Griffin, and both brothers played college football for the University of Central Florida K\n\nQuestion: is there a player in the nfl missing a hand",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_57",
+      "question": "The novel was followed by a sequel called The Queen's Fool, set during the reign of Henry's daughter, Queen Mary. The Queen's Fool was followed by The Virgin's Lover, set during the early days of Queen Elizabeth I's reign.\n\nQuestion: is the other boleyn girl part of a series",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_58",
+      "question": "To promote the film prior to its release, Townsend, along with the other actors who portrayed the fictional musical quartet The Five Heartbeats (Leon Robinson, Michael Wright, Harry J. Lennix, and Tico Wells) performed in a concert with real-life Soul/R&B vocal group The Dells, one of many groups th\n\nQuestion: is there a group called the five heartbeats",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_59",
+      "question": "The Himalayan range has many of the Earth's highest peaks, including the highest, Mount Everest. The Himalayas include over fifty mountains exceeding 7,200 metres (23,600 ft) in elevation, including ten of the fourteen 8,000-metre peaks. By contrast, the highest peak outside Asia (Aconcagua, in the \n\nQuestion: is mount everest a part of the himalayas",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_60",
+      "question": "EMT-I/85 is a level of EMT-I training formulated by the National Registry of Emergency Medical Technicians in 1985. This training level includes more invasive procedures than are covered at the EMT-Basic level, including IV therapy, the use of advanced airway devices, and provides for advanced asses\n\nQuestion: can an emt-basic start an iv",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_61",
+      "question": "In April 2013, the All England Club confirmed its intention to build a retractable roof over No.1 Court. The roof is expected to be in place for the 2019 Championships.\n\nQuestion: has no 1 court at wimbledon got a roof",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_62",
+      "question": "The following is the list of teams to overcome 3--1 series deficits by winning three straight games to win a best-of-seven playoff series. In the history of major North American pro sports, teams that were down 3--1 in the series came back and won the series 52 times, more than half of them were acc\n\nQuestion: has anyone come back from 3-0 in the nba finals",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_63",
+      "question": "Radio waves are a type of electromagnetic radiation with wavelengths in the electromagnetic spectrum longer than infrared light. Radio waves have frequencies as high as 300 gigahertz (GHz) to as low as 30 hertz (Hz). At 300 GHz, the corresponding wavelength is 1 mm, and at 30 Hz is 10,000 km. Like a\n\nQuestion: do radio waves travel at the speed of light",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_64",
+      "question": "Of the 20 players on Team USA, 13 eventually played in the NHL. Five of them went on to play over 500 NHL games, and three would play over 1,000 NHL games.\n\nQuestion: did anyone from the 1980 us hockey team play in the nhl",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_65",
+      "question": "An acute triangle is a triangle with all three angles acute (less than 90°). An obtuse triangle is one with one obtuse angle (greater than 90°) and two acute angles. Since a triangle's angles must sum to 180°, no triangle can have more than one obtuse angle.\n\nQuestion: do all triangles have at least two acute angles",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_66",
+      "question": "The University of Mary Hardin--Baylor (UMHB) is a Christian co-educational institution of higher learning located in Belton, Texas, United States. UMHB was chartered by the Republic of Texas in 1845 as Baylor Female College, the female department of what is now Baylor University. It has since become\n\nQuestion: is baylor and mary hardin baylor the same school",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_67",
+      "question": "Capital punishment for juveniles in the United States existed until March 1, 2005, when the U.S. Supreme Court banned it in Roper v. Simmons.\n\nQuestion: can you get the death penalty as a minor",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_68",
+      "question": "India has never participated in the FIFA World Cup, although the team did qualify by default for the 1950 World Cup after all the other nations in their qualification group withdrew. However, India withdrew prior to the beginning of the tournament. The team has also appeared three times in the Asia'\n\nQuestion: did indian football team qualified for fifa 2018",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_69",
+      "question": "Tyrannosaurus is a genus of coelurosaurian theropod dinosaur. The species Tyrannosaurus rex (rex meaning ``king'' in Latin), often colloquially called simply T. rex or T-Rex, is one of the most well-represented of the large theropods. Tyrannosaurus lived throughout what is now western North America,\n\nQuestion: are t rex and tyrannosaurus rex the same",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_70",
+      "question": "The new locks opened for commercial traffic on 26 June 2016, and the first ship to cross the canal using the third set of locks was a modern New Panamax vessel, the Chinese-owned container ship Cosco Shipping Panama. The original locks, now over 100 years old, allow engineers greater access for main\n\nQuestion: is the old panama canal still in use",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_71",
+      "question": "A possession and acquisition licence is a licence that allows individuals in Canada to possess and acquire firearms as well as ammunition. Licences are typically valid for five years and must be renewed prior to expiry to maintain all classes. If an individual possessing a PAL is convicted of certai\n\nQuestion: do you need a pal to possess ammunition",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_72",
+      "question": "Typically, once spun, cotton candy is only marketed by color. Absent a clear name other than 'blue', the distinctive taste of the blue raspberry flavor mix has gone on to become a compound flavor that some other foods (gum, ice cream, rock candy, fluoride toothpaste) occasionally borrow (``cotton-ca\n\nQuestion: do blue and pink cotton candy taste the same",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_73",
+      "question": "The film received overwhelmingly positive reviews from critics and was a box-office success, earning more than six times its budget. The film won three Academy Awards, including Best Actor for Peck, and was nominated for eight, including Best Picture.\n\nQuestion: did to kill a mockingbird win an academy award",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_74",
+      "question": "A floating island is a mass of floating aquatic plants, mud, and peat ranging in thickness from several centimetres to a few metres. Floating islands are a common natural phenomenon that are found in many parts of the world. They exist less commonly as a man-made phenomenon. Floating islands are gen\n\nQuestion: is there such a thing as a floating island",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_75",
+      "question": "Males, if not neutered, are extremely musky. It is considered preferable to delay neutering until sexual maturity has been reached, at approximately six to eight months old, after the full descent of the testicles. Neutering the male will reduce the smell to almost nothing. The same applies for fema\n\nQuestion: do female ferrets die if they don't mate",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_76",
+      "question": "The Xbox One gaming console has received updates from Microsoft since its launch in 2013 that enable it to play select games from its two predecessor consoles, Xbox and Xbox 360. On June 15, 2015, backward compatibility with supported Xbox 360 games became available to eligible Xbox Preview program \n\nQuestion: will all xbox 360 games work on xbox one",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_77",
+      "question": "There is no brachiocephalic artery for the left side of the body. The left common carotid, and the left subclavian artery, come directly off the aortic arch. However, there are two brachiocephalic veins.\n\nQuestion: is there a right and left brachiocephalic artery",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_78",
+      "question": "The Sole Survivor receives a cash prize of $1,000,000 prior to taxes and sometimes also receives a car provided by the show's sponsor. Every player receives a prize for participating on Survivor depending on how long he or she lasts in the game. In most seasons, the runner-up receives $100,000, and \n\nQuestion: do the runners up on survivor win money",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_79",
+      "question": "Love Finds a Home is a Christian drama film, the eighth and final installment based on a series of books by Janette Oke. It aired on Hallmark Channel on September 5, 2009. The film is based on the book Love Finds a Home by Janette Oke. Sarah Jones, Haylie Duff, and Jordan Bridges reprise their roles\n\nQuestion: is there a sequel to love finds a home",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_80",
+      "question": "When asked about developing a sequel series, King stated ``I'd love to revisit Jake and Sadie, and also revisit the rabbit hole that dumps people into the past, but sometimes it's best not to go back for a second helping.''.\n\nQuestion: will there be a second season of 11.22.63",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_81",
+      "question": "Nuclear power in the United States is provided by 99 commercial reactors with a net capacity of 100,350 megawatts (MW), 65 pressurized water reactors and 34 boiling water reactors. In 2016 they produced a total of 805.3 terawatt-hours of electricity, which accounted for 19.7% of the nation's total e\n\nQuestion: are there nuclear power plants in the us",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_82",
+      "question": "The tiebreak is sometimes not employed for the final set of a match and an advantage set is used instead. Therefore, the deciding set must be played until one player or team has won two more games than the opponent. This is true in three of the four major tennis championships, all except the US Open\n\nQuestion: is there a tiebreaker in final set at wimbledon",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_83",
+      "question": "The original World Trade Center was a large complex of seven buildings in Lower Manhattan, New York City, United States. It featured the landmark Twin Towers, which opened on April 4, 1973 and were destroyed in 2001 during the September 11 attacks. At the time of their completion, the Twin Towers --\n\nQuestion: were the twin towers the world trade center",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_84",
+      "question": "Sanders played football primarily at cornerback, but also as a kick returner, punt returner, and occasionally wide receiver. He played in the National Football League (NFL) for the Atlanta Falcons, the San Francisco 49ers, the Dallas Cowboys, the Washington Redskins and the Baltimore Ravens, winning\n\nQuestion: did deion sanders ever win a world series",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_85",
+      "question": "The German Shepherd (German: Deutscher Schäferhund, German pronunciation: (ˈʃɛːfɐˌhʊnt)) is a breed of medium to large-sized working dog that originated in Germany. The breed's officially recognized name is German Shepherd Dog in the English language (sometimes abbreviated as GSD). The breed is know\n\nQuestion: is a german shepard the same as an alsatian",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_86",
+      "question": "While some 19th-century experiments suggested that the underlying premise is true if the heating is sufficiently gradual, according to contemporary biologists the premise is false: a frog that is gradually heated will jump out. Indeed, thermoregulation by changing location is a fundamentally necessa\n\nQuestion: does a frog jump out of boiling water",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_87",
+      "question": "In high-energy particle colliders, matter creation events have yielded a wide variety of exotic heavy particles precipitating out of colliding photon jets (see two-photon physics). Currently, two-photon physics studies creation of various fermion pairs both theoretically and experimentally (using pa\n\nQuestion: is it possible to create mass from energy",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_88",
+      "question": "On the film review aggregation website Rotten Tomatoes, films that all surveyed critics consider bad have a 0% rating. Some of these are often considered some of the worst films ever made.\n\nQuestion: is there a movie with 0 on rotten tomatoes",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_89",
+      "question": "From model years 1999 to 2002, the rear-wheel-drive S-Type was equipped with either a five-speed manual (Getrag 221) or a five-speed J-Gate Ford 5R55N transmission . From 2003, the S-Type was produced with either a 5-speed manual transmission or a six-speed J-Gate transmission that allows automatic \n\nQuestion: is the jaguar s type rear wheel drive",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_90",
+      "question": "As a unit of culinary measure, a level dessertspoon (dstspn.) equals two teaspoons, or 10 milliliters, whereas a U.S. tablespoon is three teaspoons (15ml or half a fluid ounce) in the U.S., and two dessertspoons, i.e. four teaspoons (20ml or two thirds of a fluid ounce) in Britain and Australia, whi\n\nQuestion: is a tablespoon bigger than a dessert spoon",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_91",
+      "question": "The series was renewed for a third season by Disney Channel on August 31, 2017. On June 1, 2018, it was announced that Peyton List, Karan Brar, Skai Jackson, and Miranda May would be returning for the third season and that Raphael Alejandro, Will Buie Jr., and Mallory Mahoney would be joining the ca\n\nQuestion: is this the last season of bunk'd",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_92",
+      "question": "The White House is the official residence and workplace of the President of the United States. It is located at 1600 Pennsylvania Avenue NW in Washington, D.C. and has been the residence of every U.S. President since John Adams in 1800. The term is often used as a metonym for the president and his a\n\nQuestion: does the president live in the white house",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_93",
+      "question": "A dorsal root ganglion (or spinal ganglion) (also known as a posterior root ganglion), is a cluster of neurons (a ganglion) in a dorsal root of a spinal nerve. The cell bodies of sensory neurons known as first-order neurons are located in the dorsal root ganglia.\n\nQuestion: does the dorsal root ganglion carry sensory input",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_94",
+      "question": "The series is filmed partially in Prince Edward Island as well as locations in Southern Ontario (including Millbrook and Caledon).\n\nQuestion: is anne with an e filmed on pei",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_95",
+      "question": "Angular frequency (or angular speed) is the magnitude of the vector quantity angular velocity. The term angular frequency vector ω → (\\displaystyle (\\vec (\\omega ))) is sometimes used as a synonym for the vector quantity angular velocity.\n\nQuestion: is angular frequency and angular velocity the same",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_96",
+      "question": "Bullets fired into the air usually fall back with terminal velocities much lower than their muzzle velocity when they leave the barrel of a firearm. Nevertheless, people can be injured, sometimes fatally, when bullets discharged into the air fall back down to the ground. Bullets fired at angles less\n\nQuestion: can someone die from a bullet shot in the air",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_97",
+      "question": "Salt Lake City (often shortened to Salt Lake and abbreviated as SLC) is the capital and the most populous municipality of the U.S. state of Utah. With an estimated population of 190,884 in 2014, the city is the core of the Salt Lake City metropolitan area, which has a population of 1,153,340 (2014 e\n\nQuestion: is salt lake city the biggest city in utah",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_98",
+      "question": "``Chasing Cars'' is a song by Northern Irish alternative rock band Snow Patrol. It was released as the second single from their fourth studio album, Eyes Open (2006). It was recorded in 2005 and released on 6 June 2006 in the United States and 24 July 2006 in the United Kingdom. The song gained sign\n\nQuestion: was chasing cars written for grey's anatomy",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_99",
+      "question": "On Isla Sorna, an island off the Pacific coast of Costa Rica, a young girl named Cathy Bowman wanders around during a family vacation, and survives an attack by a swarm of Compsognathus. Her parents file a lawsuit against the genetics company InGen, now headed by John Hammond's nephew, Peter Ludlow,\n\nQuestion: did the girl in the lost world die",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_100",
+      "question": "The result of breathing increased partial pressures of oxygen is hyperoxia, an excess of oxygen in body tissues. The body is affected in different ways depending on the type of exposure. Central nervous system toxicity is caused by short exposure to high partial pressures of oxygen at greater than a\n\nQuestion: can you have too much oxygen in your body",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_101",
+      "question": "The island is dominated by a maritime climate with quite narrow temperature differences between seasons. Politically, Great Britain is part of the United Kingdom of Great Britain and Northern Ireland, and constitutes most of its territory. Most of England, Scotland, and Wales are on the island. The \n\nQuestion: is northern ireland part of the great britain",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_102",
+      "question": "The storm brought strong winds to the Swan Islands, including hurricane-force winds on the main island. Heavy rains fell in Cuba, particularly in Pinar del Río Province, but only minor damage occurred. In Florida, storm surge and abnormally high tides caused damage along much of the state's west coa\n\nQuestion: has tampa ever been hit by a hurricane",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_103",
+      "question": "The Catholic Church sees the effects of the sacrament as follows: As the sacrament of Marriage gives grace for the married state, the sacrament of Anointing of the Sick gives grace for the state into which people enter through sickness. Through the sacrament a gift of the Holy Spirit is given, that \n\nQuestion: can anyone give last rites in an emergency",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_104",
+      "question": "Conscription in the United States, commonly known as the draft, has been employed by the federal government of the United States in five conflicts: the American Revolution, the American Civil War, World War I, World War II, and the Cold War (including both the Korean War and the Vietnam War). The th\n\nQuestion: was there a draft in the revolutionary war",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_105",
+      "question": "While it is commonly done, removing one's letter from the letter jacket upon graduation is not firmly held as protocol. Many graduates keep the letter on the jacket after graduation as a symbol of accomplishment and school pride and commitment, especially with college lettermen.\n\nQuestion: can you wear your letterman after high school",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_106",
+      "question": "Gamblers' winnings in Australia are not taxed . There are 3 main reasons for that:\n\nQuestion: do you pay tax on gambling winnings in australia",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_107",
+      "question": "After the completion of the first season titled Spartacus: Blood and Sand, production for another season was delayed because lead actor Andy Whitfield was diagnosed with early-stage non-Hodgkin lymphoma so Starz produced a six-episode prequel mini-series entitled Spartacus: Gods of the Arena. When t\n\nQuestion: will there be a new spartacus season 5",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_108",
+      "question": "Scar makes a brief cameo appearance in the film in Simba's nightmare. In the nightmare, Simba runs down the cliff where his father died, attempting to rescue him. Scar intervenes, however, and then turns into Kovu and throws Simba off the cliff. Scar makes another cameo appearance in a pool of water\n\nQuestion: is scar alive in the lion king 2",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_109",
+      "question": "Pete the Pup (original, 1924 -- June 1930; second Pete, September 9, 1929 -- January 28, 1946) was a character in Hal Roach's Our Gang comedies (later known as The Little Rascals) during the 1930s. Otherwise known as ``Pete, the Dog With the Ring Around His Eye'', or simply ``Petey'', he was well kn\n\nQuestion: is the dog from little rascals still alive",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_110",
+      "question": "Journey 2: The Mysterious Island is a 2012 American science fiction comedy adventure film directed by Brad Peyton and produced by Beau Flynn, Tripp Vinson and Charlotte Huggins. It is the sequel to Journey to the Center of the Earth (2008). Following the first film, the sequel is based on another Ju\n\nQuestion: is journey 2 the mysterious island a sequel",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_111",
+      "question": "The bank robber Clyde Barrow modified his Browning A-5 shotgun by cutting the barrel down to the same length as the magazine tube, and shortening the stock by 5 to 6 inches (125 to 150 mm) to make it more concealable. A small, 10--12-inch (250--300 mm) strap was attached to both ends of the butt of \n\nQuestion: can you cut the stock off a shotgun",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_112",
+      "question": "Time in New Zealand, by law, is divided into two standard time zones. The main islands use New Zealand Standard Time (NZST), 12 hours in advance of Coordinated Universal Time (UTC) / military M (Mike), while the outlying Chatham Islands use Chatham Standard Time (CHAST), 12 hours 45 minutes in advan\n\nQuestion: is all of new zealand in the same time zone",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_113",
+      "question": "Powdered milk or dried milk is a manufactured dairy product made by evaporating milk to dryness. One purpose of drying milk is to preserve it; milk powder has a far longer shelf life than liquid milk and does not need to be refrigerated, due to its low moisture content. Another purpose is to reduce \n\nQuestion: is powdered milk the same as milk powder",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_114",
+      "question": "The Federal Government of the United States (U.S. Federal Government) is the national government of the United States, a federal republic in North America, composed of 50 states, one district--Washington, D.C., and several territories. The federal government is composed of three distinct branches: l\n\nQuestion: does the united states have a federal system of government",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_115",
+      "question": "A parent-in-law is a person who has a legal affinity with another by being the parent of the other's spouse. Many cultures and legal systems impose duties and responsibilities on persons connected by this relationship. A person is a son-in-law or daughter-in-law to the parents of the spouse, who are\n\nQuestion: is a father in law considered a relative",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_116",
+      "question": "David Visentin (born 1965) is a Canadian actor and realtor. He is best known as one of the hosts of Love It or List It, with co-host Hilary Farr. The show is broadcast on HGTV and W Networks. He is a native citizen of Canada.\n\nQuestion: is david from love it or list it a real realtor",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_117",
+      "question": "The Capitals were founded in 1974 as an expansion franchise, alongside the Kansas City Scouts. Since purchasing the team in 1999, Leonsis revitalized the franchise by drafting star players such as Alexander Ovechkin, Nicklas Backstrom, Mike Green and Braden Holtby. The 2009--10 Capitals won the fran\n\nQuestion: have the capitals ever win the stanley cup",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_118",
+      "question": "Relations between the United States of America (US) and the European Union (EU) are the bilateral relations between that country and the supranational organization. The US and EU have been interacting for more than sixty years. US-EU relations officially started in 1953 when US ambassadors visited t\n\nQuestion: is the united states a part of the european union",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_119",
+      "question": "In the United Kingdom, there is not an equivalent of a vehicle title. Instead, there is a document known as the 'vehicle registration document', and is issued by the Driver and Vehicle Licensing Agency (DVLA). The current version has the reference number V5C. Prior to computerisation, the title docu\n\nQuestion: is a title and registration the same thing",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_120",
+      "question": "The breed is strikingly similar to the English Mastiff, with which it shares a common ancestor known as the Alpine Mastiff. The modern St. Bernard breed is radically different than the original dogs kept at the St. Bernard hospice, most notably by being much larger in size and build. Since the late \n\nQuestion: are st bernards and bernese mountain dogs related",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_121",
+      "question": "The Samjhauta Express (Hindi: समझौता एक्सप्रेस, Punjabi language: ਸਮਝੌਤਾ ਐਕਸਪ੍ਰੈਸ, Urdu: سمجھوتا اکسپريس‬‎ ) commonly called the Friend Express, is a twice-weekly train -- Wednesday and Sunday runs between Delhi and Attari in India and Lahore in Pakistan. The word Samjhauta means ``agreement'', ``ac\n\nQuestion: is there any train between india and pakistan",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_122",
+      "question": "A public limited company (legally abbreviated to plc) is a type of public company under the United Kingdom company law, some Commonwealth jurisdictions, and the Republic of Ireland. It is a limited liability company whose shares may be freely sold and traded to the public (although a plc may also be\n\nQuestion: are public limited companies in the private sector",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_123",
+      "question": "In 2013, 64% of health spending was paid for by the government, and funded via programs such as Medicare, Medicaid, the Children's Health Insurance Program, and the Veterans Health Administration. People aged under 67 acquire insurance via their or a family member's employer, by purchasing health in\n\nQuestion: is health care free in the united states",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_124",
+      "question": "Temples, houses, bridges, and roads were destroyed. It is believed that almost all buildings in the city of Pompeii were affected. In the days after the earthquake, anarchy ruled the city, where theft and starvation plagued the survivors. In the time between 62 and the eruption in 79, some rebuildin\n\nQuestion: were there any survivors in the pompeii eruption",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_125",
+      "question": "According to the current scientific theories, matter is required to travel at slower-than-light (also subluminal or STL) speed with respect to the locally distorted spacetime region. Apparent FTL is not excluded by general relativity; however, any apparent FTL physical plausibility is speculative. E\n\nQuestion: can one travel faster than the speed of light",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_126",
+      "question": "In 2011, Philip Pullman remarked at the British Humanist Association annual conference that due to the first film's disappointing sales in the United States, there would not be any sequels made.\n\nQuestion: is there going to be another golden compass movie",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_127",
+      "question": "The group winners, Serbia, qualified directly for the 2018 FIFA World Cup. The group runners-up, Republic of Ireland, advanced to the play-offs as one of the best 8 runners-up, where they lost to Denmark and thus failed to qualify.\n\nQuestion: did ireland qualify for the 2018 world cup",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_128",
+      "question": "As state law on waiting periods and background checks do not apply to sales by non-licensed sellers, the Florida Constitution, Art VIII Sec. 5(b), permits counties to enact ordinances that require a criminal history records check and a 3 to 5-day waiting period for non-licensed sellers when any part\n\nQuestion: can you sell a gun privately in florida",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_129",
+      "question": "Using the information provided by Creasy, The Voice's identity is revealed by Manzano to be Daniel Sánchez, who Mariana exposes on the front page of her newspaper. Creasy sneaks into the home of Sánchez's ex-wife and children, and is fatally shot by his brother Aurelio (Gero Camilo), whom Creasy the\n\nQuestion: does the little girl die in man on fire",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_130",
+      "question": "The heat of vaporization is temperature-dependent, though a constant heat of vaporization can be assumed for small temperature ranges and for reduced temperature T r (\\displaystyle T_(r)) ≪ 1 (\\displaystyle \\ll 1) . The heat of vaporization diminishes with increasing temperature and it vanishes comp\n\nQuestion: does latent heat of vaporization change with temperature",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_131",
+      "question": "Network-attached storage (NAS) is a file-level computer data storage server connected to a computer network providing data access to a heterogeneous group of clients. NAS is specialized for serving files either by its hardware, software, or configuration. It is often manufactured as a computer appli\n\nQuestion: can a nas be used as a server",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_132",
+      "question": "I had always had an ending to Earl and I'm sorry I didn't get the chance to see it happen. You've got a show about a guy with a list so not seeing him finish it is a bummer. But the truth is, he wasn't ever going to finish the list. The basic idea of the ending was that while he was stuck on a reall\n\nQuestion: did my name is earl finish his list",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_133",
+      "question": "The minimum Powerball bet is $2. In each game, players select five numbers from a set of 69 white balls and one number from 26 red Powerballs; the red ball number can be the same as one of the white balls. The drawing order of the five white balls is irrelevant; all tickets show the white ball numbe\n\nQuestion: do powerball matches have to be in order",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_134",
+      "question": "The Fate of the Furious premiered in Berlin on April 4, 2017, and was theatrically released in the United States on April 14, 2017, playing in 3D, IMAX 3D and 4DX internationally. The film received mixed reviews from critics, many of whom praised the action sequences and acting performances but crit\n\nQuestion: is fate and the furious the last movie",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_135",
+      "question": "Battlefield 1 received positive reviews by critics and was seen as an improvement over previous installments, Battlefield 4 and Battlefield Hardline. Most of the praise was directed towards its World War I theme, single player campaign, multiplayer modes, visuals, and sound design.\n\nQuestion: does battlefield 1 have a single player campaign",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_136",
+      "question": "The Willis Tower, built as and still commonly referred to as the Sears Tower, is a 110-story, 1,450-foot (442.1 m) skyscraper in Chicago, Illinois. At completion in 1973, it surpassed the World Trade Center towers in New York to become the tallest building in the world, a title it held for nearly 25\n\nQuestion: was the sears tower the tallest building in the world",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_137",
+      "question": "From 1976 to 1983, several states voluntarily raised their purchase ages to 19 (or, less commonly, 20 or 21), in part to combat drunk driving fatalities. In 1984, Congress passed the National Minimum Drinking Age Act, which required states to raise their ages for purchase and public possession to 21\n\nQuestion: is the drinking age different in every state",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_138",
+      "question": "Anosmia is the inability to perceive odor or a lack of functioning olfaction--the loss of the sense of smell. Anosmia may be temporary, but some forms such as from an accident, can be permanent. Anosmia is due to a number of factors, including an inflammation of the nasal mucosa, blockage of nasal p\n\nQuestion: is it possible to have no sense of smell",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_139",
+      "question": "In order to recover construction and operating costs, the bridge was electronically tolled when originally built. The toll rates increased to $1.60 for motorcycle, $3.15 for cars, $6.30 for small trucks and $9.45 for large trucks on August 15, 2015. Through increased prices and greater traffic, Tran\n\nQuestion: is the port mann bridge a toll bridge",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_140",
+      "question": "The first FA Cup Final to go to extra time and a replay was the 1875 final, between the Royal Engineers and the Old Etonians. The initial tie finished 1--1 but the Royal Engineers won the replay 2--0 in normal time. The last replayed final was the 1993 FA Cup Final, when Arsenal and Sheffield Wednes\n\nQuestion: can the fa cup final end in a tie",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_141",
+      "question": "Denatured alcohol is used as a solvent and as fuel for alcohol burners and camping stoves. Because of the diversity of industrial uses for denatured alcohol, hundreds of additives and denaturing methods have been used. The main additive has traditionally been 10% methanol, giving rise to the term ``\n\nQuestion: is denatured alcohol and acetone the same thing",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_142",
+      "question": "In mathematics, the dot product or scalar product is an algebraic operation that takes two equal-length sequences of numbers (usually coordinate vectors) and returns a single number. In Euclidean geometry, the dot product of the Cartesian coordinates of two vectors is widely used and often called in\n\nQuestion: is the dot product of two vectors a scalar",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_143",
+      "question": "Ocular dominance, sometimes called eye preference or eyedness, is the tendency to prefer visual input from one eye to the other. It is somewhat analogous to the laterality of right- or left-handedness; however, the side of the dominant eye and the dominant hand do not always match. This is because b\n\nQuestion: is there such thing as a dominant eye",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_144",
+      "question": "The Isle of Man holds neither membership nor associate membership of the European Union, and lies outside the European Economic Area (EEA). Nonetheless, Protocol 3 permits trade in Manx goods without non-EU tariffs. In conjunction with the Customs and Excise agreement with the UK, this facilitates f\n\nQuestion: is the isle of man part of the european economic area",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_145",
+      "question": "The fourth season of NCIS: New Orleans premiered on September 26, 2017 on CBS. The series continues to air following Bull, Tuesday at 10:00 p.m. (ET) and contained 24 episodes. The season concluded on May 15, 2018.\n\nQuestion: is ncis new orleans over for the season",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_146",
+      "question": "The navel (clinically known as the umbilicus, colloquially known as the belly button, or tummy button) is a hollowed or sometimes raised area on the abdomen at the attachment site of the umbilical cord. All placental mammals have a navel.\n\nQuestion: is navel and belly button the same thing",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_147",
+      "question": "The Ring, which Gollum referred to as ``my precious'' or ``precious'', extended his life far beyond natural limits. Centuries of the Ring's influence twisted Gollum's body and mind, and, by the time of the novels, he ``loved and hated (the Ring), just as he loved and hated himself.'' Throughout the \n\nQuestion: does smeagol die in lord of the rings",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_148",
+      "question": "Nine program director Hamish Turner confirmed in an interview that the show won't be returning for a third season.\n\nQuestion: will there be a season 3 of here come the habibs",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_149",
+      "question": "Majora's Mask imposes a time limit of three days (72 hours) game-time, which is about 54 minutes in real time. An on-screen clock tracks the day and time. Link can return to 6:00 am on the first day by playing the ``Song of Time'' on the Ocarina of Time. If he does not before the 72 hours expire, th\n\nQuestion: does majora's mask have a time limit",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_150",
+      "question": "The following tables list the cardinal number names and symbols for the numbers 0 through 10 in various languages and scripts of the world. Where possible, each language's native writing system is used, along with transliterations in Latin script and other important writing systems where applicable.\n\nQuestion: do numbers look the same in all languages",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_151",
+      "question": "The Marvel Cinematic Universe (MCU) television series are American superhero television shows based on characters that appear in publications by Marvel Comics. The shows have been in production since 2013, and in that time Marvel Television and ABC Studios, along with its production division ABC Sig\n\nQuestion: are the marvel tv shows in the mcu",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_152",
+      "question": "The Handmaid's Tale is a 1990 film adaptation of Margaret Atwood's novel of the same name. Directed by Volker Schlöndorff, the film stars Natasha Richardson (Kate/Offred), Faye Dunaway (Serena Joy), Robert Duvall (The Commander, Fred), Aidan Quinn (Nick), and Elizabeth McGovern (Moira). The screenpl\n\nQuestion: is there a movie the handmaid's tale",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_153",
+      "question": "The Shape of Water is a 2017 American romantic dark fantasy drama film directed by Guillermo del Toro and written by del Toro and Vanessa Taylor. It stars Sally Hawkins, Michael Shannon, Richard Jenkins, Doug Jones, Michael Stuhlbarg, and Octavia Spencer. Set in Baltimore, Maryland in 1962, the stor\n\nQuestion: is the shape of water movie based on a book",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_154",
+      "question": "EuroMillions is a transnational lottery requiring 7 correct numbers to win the jackpot . It was launched on 7 February 2004 by France's Française des Jeux, Spain's Loterías y Apuestas del Estado and the United Kingdom's Camelot. The first draw was held on Friday 13 February 2004 in Paris. Initially,\n\nQuestion: does 1 ball and 1 lucky star win euromillions",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_155",
+      "question": "The Constitution of India designates the official language of the Government of India as Hindi written in the Devanagari script, as well as English. There is no national language as declared by the Constitution of India. Hindi is used for official purposes such as parliamentary proceedings, judiciar\n\nQuestion: is hindi is our national language of india",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_156",
+      "question": "In January 2017, Luxottica announced a merger with Essilor to be completed by mid-2017, resulting in combined market capitalization of approximately €46 billion. The combined entity will command more than one quarter of global value sales of eyewear. In March 2018, the European Commission unconditio\n\nQuestion: are all eyeglasses made by the same company",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_157",
+      "question": "At San Diego Comic-Con International 2016, Marvel and Netflix revealed the series had been renewed for a third season, with the expectation that Doug Petrie and Marco Ramirez would return as showrunners from the second season. In October 2017, it was announced that Erik Oleson would replace Petrie a\n\nQuestion: is there going to be a season 3 for daredevil",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_158",
+      "question": "Trees have a wide variety of sizes and shapes and growth habits. Specimens may grow as individual trunks, multitrunk masses, coppices, clonal colonies, or even more exotic tree complexes. Most champion tree programs focus finding and measuring the largest single-trunk example of each species. There \n\nQuestion: can a tree have more than one trunk",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_159",
+      "question": "Later, at a game watched by scouts, Ethan is offered a scholarship to Michigan State, but that night a vindictive classmate named Todd throws a lit firecracker into Ethan's house as a prank, which unintentionally results in a house fire. Bailey alerts Ethan, who goes to save his mother. Unable to ge\n\nQuestion: does bailey die in a dog's purpose",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_160",
+      "question": "The film was shot in black and white in the styles and motifs of German Expressionism (bizarre shadows, stylized dialogue, distorted perspectives, surrealistic sets, odd camera angles) to create a simplified and disturbing mood that reflects the sinister character of Powell, the nightmarish fears of\n\nQuestion: is night of the hunter a film noir",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_161",
+      "question": "Ivory Coast, also known as Côte d'Ivoire and officially as the Republic of Côte d'Ivoire, is a sovereign state located in West Africa. Ivory Coast's political capital is Yamoussoukro, and its economic capital and largest city is the port city of Abidjan. Its bordering countries are Guinea and Liberi\n\nQuestion: is ivory coast and cote d ivoire the same",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_162",
+      "question": "As a good rational approximation for the square root of two, with a reasonable small denominator, the fraction 99/70 (≈ 1.4142857) is sometimes used.\n\nQuestion: can root 2 be written as a fraction",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_163",
+      "question": "Thread seal tape (also known as PTFE tape or plumber's tape) is a polytetrafluoroethylene (PTFE) film tape commonly used in plumbing for sealing pipe threads. The tape is sold cut to specific widths and wound on a spool, making it easy to wind around pipe threads. It is also known by the genericized\n\nQuestion: is thread seal tape and teflon tape the same",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_164",
+      "question": "A pitaya (/pɪˈtaɪ.ə/) or pitahaya (/ˌpɪtəˈhaɪ.ə/) is the fruit of several different cactus species indigenous to the Americas. Pitaya usually refers to fruit of the genus Stenocereus, while pitahaya or dragon fruit refers to fruit of the genus Hylocereus, both in the Cactaceae family. The dragon fru\n\nQuestion: is dragon fruit and pitaya the same thing",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_165",
+      "question": "5 A Day is any of various national campaigns in countries such as the United States, the United Kingdom, France, and Germany, to encourage the consumption of at least five portions of fruit and vegetables each day, following a recommendation by the World Health Organization that individuals consume \n\nQuestion: is it 5 portions of fruit and 5 of vegetables",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_166",
+      "question": "Production of the American version was canceled by ABC in 2003 because of low ratings, with already-produced episodes airing first-run into 2004. The ABC Family cable channel, which had been airing repeats of the show since 2002, also showed ``new'' episodes from 2005 to 2006, formed from previously\n\nQuestion: did they cancel whose line is it anyway",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_167",
+      "question": "The theme music that accompanies the title sequence was composed by Ramin Djawadi. The production team showed the title sequence they were working on to Djawadi, who was then inspired to create the music for the Game of Thrones Theme, and finished the theme music three days later. Djawadi said the s\n\nQuestion: did the game of thrones theme song change",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_168",
+      "question": "The chill-coma temperature in relation to flying insects is the temperature at which flight muscles cannot be activated. Compared to honey bees and carpenter bees, bumblebees have the lowest chill-coma temperature. Of the bumblebees Bombus bimaculatus has the lowest at 7 °C (45 °F). However, bumbleb\n\nQuestion: is a bumble bee the same as a carpenter bee",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_169",
+      "question": "Throughout the World Cup history, Brazil became the team's historical rival. The two countries have met each other five times but the Czechs (always as Czechoslovakia) never managed to win, with three victories for the Brazilian side and two draws. Two other historical opponents in the finals were (\n\nQuestion: has czech republic ever won the world cup",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_170",
+      "question": "A routing number consists of a five digit transit number (also called branch number) identifying the branch where an account is held and a three digit financial institution number corresponding to the financial institution. The number is given as one of the following forms, where XXXXX is the transi\n\nQuestion: is the routing number the same as transit number",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_171",
+      "question": "The Australian continent, being part of the Indo-Australian plate, is the lowest, flattest, and oldest landmass on Earth and it has had a relatively stable geological history. New Zealand is not part of the continent of Australia, but of the separate, submerged continent of Zealandia. New Zealand an\n\nQuestion: is new zealand on the continent of australia",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_172",
+      "question": "Shortly before the release of On Stranger Tides, it was reported that Disney was planning to shoot the fifth and the sixth films back-to-back, although it was later revealed that only the fifth film was in development. On March 4, 2017, director Joachim Rønning stated that Dead Men Tell No Tales was\n\nQuestion: is there going to be any more pirates of the caribbean films",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_173",
+      "question": "Shyamalan or Paramount/Nickelodeon did not immediately confirm the ``go-ahead'' or whether the plug will be pulled on the trilogy. While filming The Last Airbender, Shyamalan mapped out a rough draft for a second film that is ``darker'' and includes Azula, portrayed by Summer Bishil, as the main ant\n\nQuestion: is there an official release date for the last airbender 2",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_174",
+      "question": "In the latter half of the 20th century, a series of controversies arose with regard to gymnast ages, some of them leading to sanctions by FIG, and paving the way for the age requirements to be raised from 14 to 15 in 1981, and then to 16 in 1997.\n\nQuestion: is there an age limit to compete in the olympics",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_175",
+      "question": "In 2011, Polaris Industries purchased Indian Motorcycles and moved operations from North Carolina and merged them into their existing facilities in Minnesota and Iowa. Since August 2013, Polaris has marketed multiple modern Indian motorcycles that reflect Indian's traditional styling.\n\nQuestion: is the indian motorcycle made in united states",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_176",
+      "question": "All but two of the universities in the Russell Group are part of the Sutton Trust's group of 30 highly selective universities, the Sutton Trust 30 (the absent members being Queen Mary University of London and Queen's University Belfast). The Sutton 13 group of the 13 most highly selective universiti\n\nQuestion: is st andrews university in the russell group",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_177",
+      "question": "``Eye of the Tiger'' is a song by American rock band Survivor. It was released as a single from their third album of the same name Eye of the Tiger and was also the theme song for the film Rocky III, which was released a day before the single. The song was written by Survivor guitarist Frankie Sulli\n\nQuestion: was eye of the tiger written for rocky",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_178",
+      "question": "Because the courts of appeals possess only appellate jurisdiction, they do not hold trials. Only courts with original jurisdiction hold trials and thus determine punishments (in criminal cases) and remedies (in civil cases). Instead, appeals courts review decisions of trial courts for errors of law.\n\nQuestion: does the us court of appeals have original jurisdiction",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_179",
+      "question": "If a player's king is placed in check and there is no legal move that player can make to escape check, then the king is said to be checkmated, the game ends, and that player loses (Schiller 2003:20--21). Unlike other pieces, the king is never actually captured or removed from the board because check\n\nQuestion: do you win chess by taking the queen",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_180",
+      "question": "A fried egg is a cooked dish made from one or more eggs which are removed from their shells and placed into a pan, usually without breaking the yolk, and fried with minimal accompaniment. Fried eggs are traditionally eaten for breakfast in many countries but may also be served at other times of the \n\nQuestion: does a fried egg have a runny yolk",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_181",
+      "question": "In April 2012, Boo was the subject of a death hoax after #RIPBOO appeared on Facebook. Tweets followed as Gizmodo writer Sam Biddle tweeted that Boo had died. It was later confirmed by the Chronicle Book staff that Boo was alive and well.\n\nQuestion: did boo the world's cutest dog die",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_182",
+      "question": "Kelly played Laurie Forman, the older sister of Eric Forman, on That '70s Show. She abruptly left the show midway through the third season, and her character was written out of the show to ``attend beauty school''. She returned to the show in the fifth season for four episodes but was replaced with \n\nQuestion: did they change laurie in that 70s show",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_183",
+      "question": "The waterway allows passage from the Atlantic Ocean to the inland port of Duluth on Lake Superior, a distance of 2,340 miles (3,770 km) and to Chicago, on Lake Michigan, at 2,250 miles (3,620 km).\n\nQuestion: can you boat from lake michigan to atlantic ocean",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_184",
+      "question": "Scotland have never advanced beyond the first round of the finals competition. They have missed out on progressing to the second round three times on goal difference: in 1974, when Brazil edged them out; in 1978, when the Netherlands progressed; and in 1982, when the USSR went through. Although Scot\n\nQuestion: have scotland ever been in the world cup final",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_185",
+      "question": "Naval Base San Diego, which locals refer to as 32nd Street Naval Station, is the second largest Surface Ship base of the United States Navy and is located in San Diego, California. Naval Base San Diego is the principal homeport of the Pacific Fleet, consisting of over 50 ships and over 190 tenant co\n\nQuestion: is there a military base in san diego",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_186",
+      "question": "The 1966 FIFA World Cup was the eighth FIFA World Cup and was held in England from 11 to 30 July 1966. England beat West Germany 4--2 in the final, winning the Jules Rimet Trophy. It is England's only FIFA World Cup title. They were the fifth nation to win and the third host nation to win after Urug\n\nQuestion: did england host the world cup in 1966",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_187",
+      "question": "An athlete who is awarded a letter (or letters in multiple sports) is said to have ``lettered'' when they receive their letter.\n\nQuestion: can you get more than one varsity letter",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_188",
+      "question": "Most seat belt laws in the United States are left to the states. However, the first seat belt law was a federal law, Title 49 of the United States Code, Chapter 301, Motor Vehicle Safety Standard, which took effect on January 1, 1968, that required all vehicles (except buses) to be fitted with seat \n\nQuestion: are there any states that do not have a seat belt law",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_189",
+      "question": "Although it is widely believed that a worker honey bee can sting only once, this is a partial misconception: although the stinger is in fact barbed so that it lodges in the victim's skin, tearing loose from the bee's abdomen and leading to its death in minutes, this only happens if the skin of the v\n\nQuestion: do bees die if they lose their stinger",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_190",
+      "question": "The Tomb of the Unknown Soldier or the Tomb of the Unknowns is a monument dedicated to U.S. service members who have died without their remains being identified. Having no officially designated name, it is located in Arlington National Cemetery in Virginia, United States of America. The World War I \n\nQuestion: are there actual bodies in the tomb of the unknown soldier",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_191",
+      "question": "A pickled cucumber (commonly known as a pickle in the United States and Canada and a gherkin in Britain, Ireland, Australia, South Africa and New Zealand) is a cucumber that has been pickled in a brine, vinegar, or other solution and left to ferment for a period of time, by either immersing the cucu\n\nQuestion: is a pickle the same as a gherkin",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_192",
+      "question": "Stenotype keyboards enable the trained user to input text as fast as 225 wpm or faster at very high accuracy for an extended period of time, which is sufficient for real-time activities such as court reporting or closed captioning. While dropout rates are very high--in some cases, only 10% or even l\n\nQuestion: is it possible to type 200 words per minute",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_193",
+      "question": "Rampage is a 2018 American science fiction monster film directed by Brad Peyton, and loosely based on the video game series of the same name by Midway Games. The film stars Dwayne Johnson, Naomie Harris, Malin Åkerman, Jake Lacy, Joe Manganiello, and Jeffrey Dean Morgan. It follows a primatologist n\n\nQuestion: is the rampage movie based on the game",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_194",
+      "question": "Although the alligator has a heavy body and a slow metabolism, it is capable of short bursts of speed, especially in very short lunges. Alligators' main prey are smaller animals they can kill and eat with a single bite. They may kill larger prey by grabbing it and dragging it into the water to drown\n\nQuestion: do alligators drown their prey and eat it later",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_195",
+      "question": "During the summer of 1990, a group of workers from the Black Hills Institute, located in Hill City, searched for fossils at the Cheyenne River Indian Reservation in western South Dakota near the city of Faith. By the end of the summer, the group had discovered Edmontosaurus bones and was ready to le\n\nQuestion: has a t rex skull ever been found",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_196",
+      "question": "The original configuration of the Band ended its touring career in 1976 with an elaborate live ballroom performance featuring numerous musical celebrities. This performance was filmed for Martin Scorsese's 1978 documentary The Last Waltz. The Band resumed touring in 1983 without guitarist Robertson,\n\nQuestion: are all the members of the band still alive",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_197",
+      "question": "Since 22 February 2017, New Hampshire is a constitutional carry state, requiring no license to open carry or concealed carry a firearm in public. Concealed carry permits are still issued for purposes of reciprocity with other states.\n\nQuestion: do you need a permit to carry a gun in nh",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_198",
+      "question": "Situated on the continent of Antarctica, it is the site of the United States Amundsen--Scott South Pole Station, which was established in 1956 and has been permanently staffed since that year. The Geographic South Pole is distinct from the South Magnetic Pole, the position of which is defined based \n\nQuestion: is antarctica the same as the south pole",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 1,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "boolq_199",
+      "question": "Most competitive inhibitors function by binding reversibly to the active site of the enzyme. As a result, many sources state that this is the defining feature of competitive inhibitors. This, however, is a misleading oversimplification, as there are many possible mechanisms by which an enzyme may bi\n\nQuestion: do competitive inhibitors bind to the active site",
+      "choices": [
+        "True",
+        "False"
+      ],
+      "correct_answer": 0,
+      "subject": "reading_comprehension",
+      "difficulty": 0.5
+    }
+  ]
+}

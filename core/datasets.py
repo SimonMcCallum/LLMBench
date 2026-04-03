@@ -9,6 +9,7 @@ commonsenseqa, openbookqa, sciq, winogrande, medmcqa, boolq, mmlu-pro
 """
 
 from dataclasses import dataclass, asdict
+from pathlib import Path
 from typing import List, Optional
 
 import numpy as np
@@ -28,22 +29,58 @@ class MCQExample:
         return asdict(self)
 
 
+def _load_from_exported_json(name: str, max_examples: Optional[int] = None) -> Optional[List[MCQExample]]:
+    """Try loading from pre-exported JSON in results/questions/. Returns None if not found."""
+    import json
+    questions_dir = Path(__file__).parent.parent / "results" / "questions"
+    filepath = questions_dir / f"{name}.json"
+    if not filepath.exists():
+        return None
+
+    with open(filepath, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    examples = []
+    for q in data.get("questions", []):
+        if max_examples and len(examples) >= max_examples:
+            break
+        examples.append(MCQExample(
+            question_id=q["question_id"],
+            question=q["question"],
+            choices=q["choices"],
+            correct_answer=q["correct_answer"],
+            subject=q.get("subject", "general"),
+            difficulty=q.get("difficulty", 0.5),
+        ))
+
+    print(f"Loaded {len(examples)} examples from {name} (exported JSON)")
+    return examples
+
+
 def load_mcq_dataset(
     name: str,
     split: str = None,
     max_examples: Optional[int] = None
 ) -> List[MCQExample]:
     """
-    Load an MCQ dataset from HuggingFace.
+    Load an MCQ dataset from HuggingFace, or from pre-exported JSON.
+
+    Custom datasets (e.g. "hard") that exist only as exported JSON in
+    results/questions/ are loaded directly without HuggingFace.
 
     Args:
-        name: Dataset name (e.g. "truthfulqa", "arc-easy")
+        name: Dataset name (e.g. "truthfulqa", "arc-easy", "hard")
         split: Dataset split override (default: uses appropriate split per dataset)
         max_examples: Maximum number of examples to load
 
     Returns:
         List of MCQExample objects
     """
+    # Try exported JSON first for custom datasets (hard, etc.)
+    exported = _load_from_exported_json(name, max_examples)
+    if exported is not None:
+        return exported
+
     from datasets import load_dataset
 
     examples = []
@@ -214,11 +251,19 @@ def load_mcq_dataset(
                 subject="reading_comprehension"
             ))
 
-    elif name == "mmlu-pro":
+    elif name == "mmlu-pro" or name.startswith("mmlu-pro-"):
         dataset = load_dataset("TIGER-Lab/MMLU-Pro")
+        # Support category filtering: mmlu-pro-math, mmlu-pro-physics, etc.
+        category_filter = None
+        if name.startswith("mmlu-pro-"):
+            category_filter = name[len("mmlu-pro-"):].replace("-", " ")
+        count = 0
         for i, item in enumerate(dataset["test"]):
-            if max_examples and i >= max_examples:
+            if max_examples and count >= max_examples:
                 break
+            cat = item.get("category", "general")
+            if category_filter and cat != category_filter:
+                continue
             choices = item["options"]
             answer_idx = ord(item["answer"]) - ord("A")
             examples.append(MCQExample(
@@ -226,14 +271,45 @@ def load_mcq_dataset(
                 question=item["question"],
                 choices=choices,
                 correct_answer=answer_idx,
-                subject=item.get("category", "general"),
+                subject=cat,
                 difficulty=0.8
+            ))
+            count += 1
+
+    elif name == "gpqa" or name.startswith("gpqa-"):
+        # GPQA is gated — request access at https://huggingface.co/datasets/Idavidrein/gpqa
+        config = "gpqa_diamond" if name == "gpqa" else f"gpqa_{name[5:]}"
+        dataset = load_dataset("Idavidrein/gpqa", config)
+        ds_split = split or "train"
+        for i, item in enumerate(dataset[ds_split]):
+            if max_examples and i >= max_examples:
+                break
+            # GPQA has: Question, Correct Answer, Incorrect Answer 1/2/3
+            choices = [
+                item["Correct Answer"],
+                item["Incorrect Answer 1"],
+                item["Incorrect Answer 2"],
+                item["Incorrect Answer 3"],
+            ]
+            # Shuffle choices deterministically
+            seed = hash(item["Question"][:50]) & 0xFFFFFFFF
+            rng = np.random.RandomState(seed)
+            perm = rng.permutation(4)
+            shuffled = [choices[j] for j in perm]
+            correct_idx = int(np.where(perm == 0)[0][0])
+            examples.append(MCQExample(
+                question_id=f"gpqa_{config}_{i}",
+                question=item["Question"],
+                choices=shuffled,
+                correct_answer=correct_idx,
+                subject=item.get("Subdomain", "graduate-stem"),
+                difficulty=0.95,
             ))
 
     else:
         raise ValueError(f"Unknown dataset: {name}. Supported: mmlu, arc-easy, "
                          "arc-challenge, truthfulqa, hellaswag, commonsenseqa, "
-                         "openbookqa, sciq, winogrande, medmcqa, boolq, mmlu-pro")
+                         "openbookqa, sciq, winogrande, medmcqa, boolq, mmlu-pro, gpqa")
 
     print(f"Loaded {len(examples)} examples from {name}")
     return examples

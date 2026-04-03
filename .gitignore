@@ -35,6 +35,9 @@ desktop.ini
 .claude/daemon.log
 .claude/daemon_state.json.tmp
 
+# API keys (never commit)
+.env
+
 # Docker secrets (never commit actual .env)
 docker/.env
 docker/fail2ban/db/

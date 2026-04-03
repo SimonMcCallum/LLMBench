@@ -102,7 +102,58 @@ datasets:
     num_choices: 10
     subject: "multi-subject"
     difficulty: 0.8
-    description: "10-choice harder MMLU variant"
+    description: "10-choice harder MMLU variant (12K questions)"
+
+  # MMLU-Pro hard STEM categories (for frontier model testing)
+  mmlu-pro-math:
+    hf_path: "TIGER-Lab/MMLU-Pro"
+    split: "test"
+    num_choices: 10
+    subject: "math"
+    difficulty: 0.9
+    description: "MMLU-Pro math subset (1351 questions, 10-choice)"
+
+  mmlu-pro-physics:
+    hf_path: "TIGER-Lab/MMLU-Pro"
+    split: "test"
+    num_choices: 10
+    subject: "physics"
+    difficulty: 0.9
+    description: "MMLU-Pro physics subset (1299 questions, 10-choice)"
+
+  mmlu-pro-chemistry:
+    hf_path: "TIGER-Lab/MMLU-Pro"
+    split: "test"
+    num_choices: 10
+    subject: "chemistry"
+    difficulty: 0.85
+    description: "MMLU-Pro chemistry subset (1132 questions, 10-choice)"
+
+  mmlu-pro-engineering:
+    hf_path: "TIGER-Lab/MMLU-Pro"
+    split: "test"
+    num_choices: 10
+    subject: "engineering"
+    difficulty: 0.85
+    description: "MMLU-Pro engineering subset (969 questions, 10-choice)"
+
+  mmlu-pro-law:
+    hf_path: "TIGER-Lab/MMLU-Pro"
+    split: "test"
+    num_choices: 10
+    subject: "law"
+    difficulty: 0.85
+    description: "MMLU-Pro law subset (1101 questions, 10-choice)"
+
+  # GPQA — Graduate-level expert questions (gated, request access first)
+  gpqa:
+    hf_path: "Idavidrein/gpqa"
+    hf_config: "gpqa_diamond"
+    split: "train"
+    num_choices: 4
+    subject: "graduate-stem"
+    difficulty: 0.95
+    description: "198 graduate-level STEM questions — GPT-4 ~39%, experts ~65%"
 
 # Default evaluation settings
 defaults:

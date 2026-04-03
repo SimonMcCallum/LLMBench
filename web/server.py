@@ -128,7 +128,7 @@ def _load_questions(dataset_name: str) -> list:
     if not filepath.exists():
         return []
 
-    with open(filepath, "r", encoding="utf-8") as f:
+    with open(filepath, encoding="utf-8") as f:
         data = json.load(f)
 
     questions = data.get("questions", [])

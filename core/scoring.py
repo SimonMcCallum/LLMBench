@@ -72,15 +72,20 @@ class HLCCScorer:
         incorrect_part = (1.0 - accuracy) * (self.incorrect_coeff * confidence ** self.incorrect_power)
         return correct_part + incorrect_part
 
-    def optimal_confidence(self, accuracy: float) -> float:
-        """Compute optimal confidence for a given accuracy level."""
-        if accuracy >= 0.8:
-            return 1.0
-        elif accuracy <= 0.0:
+    def optimal_confidence(self, accuracy: float, bounded: bool = True) -> float:
+        """Compute optimal confidence bet for a given accuracy level.
+
+        When bounded=True (default): clamps to [0, 1] for standard HLCC.
+        When bounded=False: returns unbounded c = p/(4(1-p)) for rational betting.
+        """
+        if accuracy <= 0.0:
             return 0.0
-        else:
-            optimal = accuracy / (4.0 * (1.0 - accuracy))
+        if accuracy >= 1.0:
+            return 1.0 if bounded else float("inf")
+        optimal = accuracy / (4.0 * (1.0 - accuracy))
+        if bounded:
             return min(1.0, max(0.0, optimal))
+        return max(0.0, optimal)
 
 
 @dataclass
@@ -103,6 +108,16 @@ class BenchmarkResult:
     timestamp: str
     method: str  # "sequential", "unified", "api"
     reasoning: str = ""
+
+
+@dataclass
+class RationalBetResult(BenchmarkResult):
+    """Result for rational betting mode — includes probability and bet decomposition."""
+    probability_p: float = 0.5     # Model's stated probability of being correct
+    optimal_c: float = 0.25        # What c should be given p: p/(4(1-p))
+    stated_c: float = 0.25         # What c the model actually stated
+    betting_error: float = 0.0     # |stated_c - optimal_c|
+    computation_correct: bool = True  # Did the model compute c from p correctly?
 
 
 @dataclass

@@ -1,0 +1,45 @@
+{
+  "timestamp": "20260402_114050",
+  "config": {
+    "models": [
+      "tinyllama"
+    ],
+    "datasets": [
+      "truthfulqa"
+    ],
+    "max_examples": 20,
+    "temperatures": [
+      0.0
+    ],
+    "num_repetitions": 1,
+    "method": "sequential"
+  },
+  "overall_metrics": {
+    "ece": 0.7575953171618677,
+    "brier": 0.5823053197181827,
+    "auprc": 0.5,
+    "prr": 0.0,
+    "accuracy": 1.0,
+    "mean_confidence": 0.2424046828381324,
+    "calibration_gap": 0.7575953171618676,
+    "acc@70%": 1.0,
+    "acc@80%": 1.0,
+    "acc@90%": 1.0
+  },
+  "summaries": [
+    {
+      "model_name": "tinyllama",
+      "model_type": "local",
+      "vendor": "local",
+      "dataset": "truthfulqa",
+      "total_examples": 20,
+      "accuracy": 1.0,
+      "mean_confidence": 0.24240468283813238,
+      "calibration_gap": 0.7575953171618677,
+      "mean_hlcc_score": 1.2424046828381323,
+      "mean_cbm_score": 0.05,
+      "correct_count": 20,
+      "incorrect_count": 0
+    }
+  ]
+}

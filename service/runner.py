@@ -34,6 +34,7 @@ from core.model_loader import (
     load_local_model, unload_model, get_api_client,
     list_available_models, get_cache_dir,
 )
+from core.api_tester import BudgetExceeded
 
 
 RESULTS_DIR = Path(__file__).parent.parent / "data" / "results"
@@ -90,6 +91,9 @@ def run_benchmark(config: Dict) -> Dict:
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
+    # Track models that have failed completely — don't keep trying them
+    dead_models = set()
+
     for dataset_name in datasets:
         print(f"\n{'='*60}")
         print(f"Dataset: {dataset_name}")
@@ -101,18 +105,38 @@ def run_benchmark(config: Dict) -> Dict:
             continue
 
         for model_key in models:
+            if model_key in dead_models:
+                print(f"\nModel: {model_key}  [SKIPPED — failed on previous dataset]")
+                continue
+
             print(f"\nModel: {model_key}")
 
-            # Determine if local or API model
-            if model_key in available["local"]:
-                results = _run_local_benchmark(
-                    model_key, examples, dataset_name, method
-                )
-            else:
-                # Check API models
-                results = asyncio.run(_run_api_benchmark(
-                    model_key, examples, dataset_name, temperatures, num_repetitions
-                ))
+            try:
+                # Determine if local or API model
+                if model_key in available["local"]:
+                    results = _run_local_benchmark(
+                        model_key, examples, dataset_name, method
+                    )
+                else:
+                    # Check API models
+                    results = asyncio.run(_run_api_benchmark(
+                        model_key, examples, dataset_name, temperatures, num_repetitions
+                    ))
+            except BudgetExceeded as e:
+                print(f"\n  BUDGET EXCEEDED: {e}")
+                print(f"  Saving {len(all_results)} results collected so far...")
+                _save_results(all_results, summaries, timestamp, config)
+                return {
+                    "timestamp": timestamp,
+                    "total_results": len(all_results),
+                    "summaries": [asdict(s) for s in summaries],
+                    "stopped": "budget_exceeded",
+                }
+            except Exception as e:
+                print(f"  ERROR: {model_key} failed: {e}")
+                print(f"  Skipping to next model...")
+                dead_models.add(model_key)
+                continue
 
             if results:
                 all_results.extend(results)
@@ -120,6 +144,10 @@ def run_benchmark(config: Dict) -> Dict:
                 if summary:
                     summaries.append(summary)
                     _print_summary(summary)
+            elif model_key not in available.get("local", []):
+                # API model returned 0 results — likely auth/config issue
+                print(f"  WARNING: {model_key} returned 0 results — stopping this model")
+                dead_models.add(model_key)
 
     # Save results
     _save_results(all_results, summaries, timestamp, config)

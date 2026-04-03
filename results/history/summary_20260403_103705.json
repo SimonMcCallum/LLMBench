@@ -1,0 +1,61 @@
+{
+  "timestamp": "20260403_103705",
+  "config": {
+    "models": [
+      "gemini-2.5-flash-lite"
+    ],
+    "datasets": [
+      "gpqa",
+      "mmlu-pro",
+      "truthfulqa",
+      "medmcqa"
+    ],
+    "max_examples": 198,
+    "temperatures": [
+      0.0
+    ],
+    "num_repetitions": 1
+  },
+  "overall_metrics": {
+    "ece": 0.16306329113924048,
+    "brier": 0.20751772151898734,
+    "auprc": 0.792915628414277,
+    "prr": 0.5272169092325331,
+    "accuracy": 0.6075949367088608,
+    "mean_confidence": 0.7604303797468355,
+    "calibration_gap": 0.1528354430379747,
+    "acc@70%": 0.7427536231884058,
+    "acc@80%": 0.689873417721519,
+    "acc@90%": 0.6422535211267606
+  },
+  "summaries": [
+    {
+      "model_name": "gemini-2.5-flash-lite",
+      "model_type": "api",
+      "vendor": "gemini",
+      "dataset": "gpqa",
+      "total_examples": 197,
+      "accuracy": 0.3604060913705584,
+      "mean_confidence": 0.5599999999999999,
+      "calibration_gap": 0.19959390862944154,
+      "mean_hlcc_score": 0.15818578680203046,
+      "mean_cbm_score": -0.2614213197969543,
+      "correct_count": 71,
+      "incorrect_count": 126
+    },
+    {
+      "model_name": "gemini-2.5-flash-lite",
+      "model_type": "api",
+      "vendor": "gemini",
+      "dataset": "truthfulqa",
+      "total_examples": 198,
+      "accuracy": 0.8535353535353535,
+      "mean_confidence": 0.9598484848484847,
+      "calibration_gap": 0.10631313131313125,
+      "mean_hlcc_score": 1.416060606060606,
+      "mean_cbm_score": 1.4090909090909092,
+      "correct_count": 169,
+      "incorrect_count": 29
+    }
+  ]
+}

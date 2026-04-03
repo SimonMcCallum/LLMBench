@@ -1,0 +1,89 @@
+{
+  "timestamp": "20260403_100019",
+  "config": {
+    "models": [
+      "tinyllama",
+      "phi-3-mini"
+    ],
+    "datasets": [
+      "mmlu-pro-math",
+      "mmlu-pro-physics"
+    ],
+    "max_examples": 200,
+    "temperatures": [
+      0.0
+    ],
+    "num_repetitions": 1,
+    "method": "sequential"
+  },
+  "overall_metrics": {
+    "ece": 0.16550103944188313,
+    "brier": 0.1784136763236472,
+    "auprc": 0.3212589964550878,
+    "prr": 0.22461273877502833,
+    "accuracy": 0.1875,
+    "mean_confidence": 0.3017050351844334,
+    "calibration_gap": 0.11420503518443342,
+    "acc@70%": 0.19464285714285715,
+    "acc@80%": 0.190625,
+    "acc@90%": 0.19444444444444445
+  },
+  "summaries": [
+    {
+      "model_name": "tinyllama",
+      "model_type": "local",
+      "vendor": "local",
+      "dataset": "mmlu-pro-math",
+      "total_examples": 200,
+      "accuracy": 0.105,
+      "mean_confidence": 0.4071509233867702,
+      "calibration_gap": 0.30215092338677024,
+      "mean_hlcc_score": -0.16274672195313514,
+      "mean_cbm_score": -0.4025,
+      "correct_count": 21,
+      "incorrect_count": 179
+    },
+    {
+      "model_name": "phi-3-mini",
+      "model_type": "local",
+      "vendor": "local",
+      "dataset": "mmlu-pro-math",
+      "total_examples": 200,
+      "accuracy": 0.28,
+      "mean_confidence": 0.21095160921324524,
+      "calibration_gap": 0.06904839078675479,
+      "mean_hlcc_score": 0.29986226566248475,
+      "mean_cbm_score": 0.0325,
+      "correct_count": 56,
+      "incorrect_count": 144
+    },
+    {
+      "model_name": "tinyllama",
+      "model_type": "local",
+      "vendor": "local",
+      "dataset": "mmlu-pro-physics",
+      "total_examples": 200,
+      "accuracy": 0.125,
+      "mean_confidence": 0.3966319642811641,
+      "calibration_gap": 0.2716319642811641,
+      "mean_hlcc_score": -0.10290976625076696,
+      "mean_cbm_score": -0.36,
+      "correct_count": 25,
+      "incorrect_count": 175
+    },
+    {
+      "model_name": "phi-3-mini",
+      "model_type": "local",
+      "vendor": "local",
+      "dataset": "mmlu-pro-physics",
+      "total_examples": 200,
+      "accuracy": 0.24,
+      "mean_confidence": 0.19208564385655394,
+      "calibration_gap": 0.04791435614344605,
+      "mean_hlcc_score": 0.25554369997614984,
+      "mean_cbm_score": 0.0425,
+      "correct_count": 48,
+      "incorrect_count": 152
+    }
+  ]
+}

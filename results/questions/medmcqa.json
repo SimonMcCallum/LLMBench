@@ -1,0 +1,2607 @@
+{
+  "dataset": "medmcqa",
+  "exported": "2026-04-02T11:30:33.599286",
+  "total": 200,
+  "questions": [
+    {
+      "question_id": "medmcqa_0",
+      "question": "Which of the following is not true for myelinated nerve fibers:",
+      "choices": [
+        "Impulse through myelinated fibers is slower than non-myelinated fibers",
+        "Membrane currents are generated at nodes of Ranvier",
+        "Saltatory conduction of impulses is seen",
+        "Local anesthesia is effective only when the nerve is not covered by myelin sheath"
+      ],
+      "correct_answer": 0,
+      "subject": "Physiology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_1",
+      "question": "Which of the following is not true about glomerular capillaries')",
+      "choices": [
+        "The oncotic pressure of the fluid leaving the capillaries is less than that of fluid entering it",
+        "Glucose concentration in the capillaries is the same as that in glomerular filtrate",
+        "Constriction of afferent aeriole decreases the blood flow to the glomerulas",
+        "Hematocrit of the fluid leaving the capillaries is less than that of the fluid entering it"
+      ],
+      "correct_answer": 0,
+      "subject": "Physiology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_2",
+      "question": "A 29 yrs old woman with a pregnancy of 17 week has a 10 years old boy with down syndrome. She does not want another down syndrome kid; best advice to her is",
+      "choices": [
+        "No test is required now as her age is below 35 years",
+        "Ultra sound at this point of time will definitely tell her that next baby will be down syndromic or not",
+        "Amniotic fluid samples plus chromosomal analysis will definitely tell her that next baby will be down syndromic or not",
+        "blood screening at this point of time will clear the exact picture"
+      ],
+      "correct_answer": 2,
+      "subject": "Medicine",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_3",
+      "question": "Axonal transport is:",
+      "choices": [
+        "Antegrade",
+        "Retrograde",
+        "Antegrade and retrograde",
+        "None"
+      ],
+      "correct_answer": 2,
+      "subject": "Physiology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_4",
+      "question": "Low insulin to glucagon ratio is seen in all of these except:",
+      "choices": [
+        "Glycogen synthesis",
+        "Glycogen breakdown",
+        "Gluconeogenesis",
+        "Ketogenesis"
+      ],
+      "correct_answer": 0,
+      "subject": "Biochemistry",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_5",
+      "question": "Concentration of tropicamide:",
+      "choices": [
+        "0.01",
+        "0.02",
+        "0.03",
+        "0.04"
+      ],
+      "correct_answer": 0,
+      "subject": "Ophthalmology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_6",
+      "question": "Which of the following statements is true regarding H I N1 Influenza?",
+      "choices": [
+        "Pregnant woman with sore throat can be staed immediately on oseltamivir without diagnostic testing under category B",
+        "People on long-term steroids cannot receive Os-eltam ivir",
+        "Category B concerns with low risk cases",
+        "Category B patients have to undergo immediate testing"
+      ],
+      "correct_answer": 0,
+      "subject": "Medicine",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_7",
+      "question": "Which of the following are not a branch of external carotid Aery in Kiesselbach's plexus.",
+      "choices": [
+        "Sphenopalatine aery",
+        "Anterior ethmoidal aery",
+        "Greater palatine aery",
+        "Septal branch of superior labial aery"
+      ],
+      "correct_answer": 1,
+      "subject": "Anatomy",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_8",
+      "question": "Diagnosis of the following ECG-",
+      "choices": [
+        "Ventricular bigeminy",
+        "Electrical alternans",
+        "P pulmonale",
+        "Left ventricular failure"
+      ],
+      "correct_answer": 1,
+      "subject": "Medicine",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_9",
+      "question": "A blue new born presents with cyanosis. The X–ray chest reveal oligaemic lung field and normal sized heart. Most likely diagnosis is –",
+      "choices": [
+        "Ebstein's anomaly",
+        "Pulmonary atresia",
+        "Transposition of great arteries",
+        "Tetralogy of fallot"
+      ],
+      "correct_answer": 1,
+      "subject": "Pediatrics",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_10",
+      "question": "27.\tThe lateral spread of dental caries is facilitated mostly  by the",
+      "choices": [
+        "Enamel spindles",
+        "Dentinoenamel junction",
+        "Enamel lamellae",
+        "Striae of Retzius"
+      ],
+      "correct_answer": 1,
+      "subject": "Pathology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_11",
+      "question": "A second-year PG resident tells you to perform an ABG of a patient. All of the following are true about performing an ABG except:",
+      "choices": [
+        "Before performing the ABG, syringe should be loaded with 0.3 cc of heparin",
+        "Normal pH, HCO. and PCO, levels may not indicate absence of an acid-base imbalance",
+        "A different site should be tried i f modified Allen's test is negative",
+        "Radial aery is the preferred site"
+      ],
+      "correct_answer": 0,
+      "subject": "Medicine",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_12",
+      "question": "Respiratory rhythm generation center is located at:",
+      "choices": [
+        "Dorsal respiratory group",
+        "Pre-Botzinger complex",
+        "Ventral respiratory neurons",
+        "Pneumotaxic center"
+      ],
+      "correct_answer": 1,
+      "subject": "Physiology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_13",
+      "question": "Gait apraxia is seen in thromboembolic episode involving:",
+      "choices": [
+        "ACA",
+        "MCA",
+        "PCA",
+        "Posterior choroidal aery"
+      ],
+      "correct_answer": 0,
+      "subject": "Medicine",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_14",
+      "question": "Heavy forces on periodontal ligament causes:",
+      "choices": [
+        "Hyalinization",
+        "Osteoclastic activity around tooth",
+        "Osteoblastic activity around tooth",
+        "Crest bone resorption"
+      ],
+      "correct_answer": 0,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_15",
+      "question": "About N. gonorrhoea, all are true except",
+      "choices": [
+        "Most common cause of urethritis in male",
+        "All stains are highly susceptible to penicillin",
+        "Wide spread axoregnic stains cause disseminated gonococcal infection",
+        "Found exclusively in human beings"
+      ],
+      "correct_answer": 1,
+      "subject": "Microbiology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_16",
+      "question": "A patient who was on ventilator and being ventilated for past few days, suddenly pulls out the endotracheal tube. What is the next step of management?",
+      "choices": [
+        "Assess the patient, give bag and mask ventilation and look for spontaneous breathing",
+        "Sta bag and mask ventilation and reintubate",
+        "Sedate and reintubate",
+        "Make him sit and do physiotherapy"
+      ],
+      "correct_answer": 0,
+      "subject": "Anaesthesia",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_17",
+      "question": "In a\t6-month-old child, thick curd like white\tpatch\nappears on the buccal mucosa. On rubbing it leaves an\nerythematous patch. Most likely diagnosis is:",
+      "choices": [
+        "Tuberculosis",
+        "Lichen planus",
+        "Lupus erythematous",
+        "Candidiasis"
+      ],
+      "correct_answer": 3,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_18",
+      "question": "Characteristic of venous blood flow of lower limb in duplex Doppler is?",
+      "choices": [
+        "Monophasic",
+        "Biphasic",
+        "Triphasic",
+        "Non phasic"
+      ],
+      "correct_answer": 0,
+      "subject": "Radiology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_19",
+      "question": "The source of calcium ions of a calcific bridge in a\ntooth in which calcium hydroxide pulpotomy has been\nperformed is:",
+      "choices": [
+        "Blood vessel borne",
+        "Derided cells",
+        "Dentin",
+        "From the calcium hydroxide"
+      ],
+      "correct_answer": 0,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_20",
+      "question": "2, 3-BPG binds to sites of haemoglobin and the affinity for oxygen",
+      "choices": [
+        "4, decreases",
+        "1, decreases",
+        "4, increases",
+        "1, increases"
+      ],
+      "correct_answer": 1,
+      "subject": "Biochemistry",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_21",
+      "question": "Highest concentration of oxygen is delivered through?",
+      "choices": [
+        "Nasal cannula",
+        "Venturi mask",
+        "Bag and mask",
+        "Mask with reservoir"
+      ],
+      "correct_answer": 2,
+      "subject": "Anaesthesia",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_22",
+      "question": "Sharpest cusp is seen in",
+      "choices": [
+        "Upper Canine",
+        "Lower Canine",
+        "Upper Premolar",
+        "Lower premolar"
+      ],
+      "correct_answer": 0,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_23",
+      "question": "A mother is Hbs Ag positive and anti Hbe Ag positive. Risk of transmission of Hep. B in child is:",
+      "choices": [
+        "20%",
+        "50%",
+        "0%",
+        "90%"
+      ],
+      "correct_answer": 0,
+      "subject": "Gynaecology & Obstetrics",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_24",
+      "question": "In a patient with competent lips together at rest, the lip\nline is opposite the tips of the upper incisors. The lip line is then described as",
+      "choices": [
+        "Average",
+        "High",
+        "Incomplete",
+        "Low"
+      ],
+      "correct_answer": 3,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_25",
+      "question": "A patient presented to emergency with overdose some drug. There were increased salivation and increased bronchial secretions. On examination, blood pressure was 88/60 mmHg. RBC esterase level is 50. What should be the treatment of this person?",
+      "choices": [
+        "Neostigmine",
+        "Atropine",
+        "Flumazenil",
+        "Physostigmine"
+      ],
+      "correct_answer": 1,
+      "subject": "Pharmacology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_26",
+      "question": "The current bar clasp design used is:",
+      "choices": [
+        "Mesio-occlusal rest",
+        "Disto-occlusal rest",
+        "Mesial or distal depending on the situation",
+        "Choice of the dentist"
+      ],
+      "correct_answer": 0,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_27",
+      "question": "All of the following are true regarding Class-II inlay gingival margins preparation except?",
+      "choices": [
+        "Removal of week enamel rods",
+        "Increased metal burnishability",
+        "Lap sliding fit of metal margin",
+        "Margins of restoration in self-cleansable area"
+      ],
+      "correct_answer": 3,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_28",
+      "question": "Breakdown of periodontal fibres in periodontitis is due to bacterial enzyme: (OR) Which of the following bacterial products have been implicated in initiation of inflammatory periodontal disease?",
+      "choices": [
+        "Collagenase",
+        "Hyaluronidase",
+        "Coagulase",
+        "None of the above"
+      ],
+      "correct_answer": 0,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_29",
+      "question": "In a study, two groups of newborns are checked for their weights based on whether their mothers received food supplements or not. The appropriate test which can be used for comparing the data is:",
+      "choices": [
+        "Chi square test",
+        "Paired T-test",
+        "Student's T-test",
+        "Fischer exact test"
+      ],
+      "correct_answer": 2,
+      "subject": "Social & Preventive Medicine",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_30",
+      "question": "Which vitamin is required for glycogen Phosphorylase?",
+      "choices": [
+        "PLP",
+        "TPP",
+        "Riboflavin",
+        "Lipoic acid"
+      ],
+      "correct_answer": 0,
+      "subject": "Biochemistry",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_31",
+      "question": "A child's behaviour is traced to have dental difficulties\nfrom\this\tmother.\tThe\tmost\tsatisfactory\tmethod\tof\nhandling the situation is to:",
+      "choices": [
+        "Introduce another child as a good example",
+        "Modify his fear by familiarization",
+        "Use small amounts of barbiturates",
+        "Use firmness"
+      ],
+      "correct_answer": 1,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_32",
+      "question": "Which of the following is the only complete cailage ring in the respiratory tree?",
+      "choices": [
+        "Cricoid cailage",
+        "Thyroid cailage",
+        "Cunieform cailage",
+        "Epiglottis"
+      ],
+      "correct_answer": 0,
+      "subject": "Anatomy",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_33",
+      "question": "Steps of intubation - arrange in sequence:- a. Head extension and flexion of neck b. Introduction of laryngoscope c. Inflation of cuff d. Check breath sounds with stethoscope e. fixation of the tube to prevent dislodgement",
+      "choices": [
+        "ABCDE",
+        "DBCEA",
+        "ACBED",
+        "CBAED"
+      ],
+      "correct_answer": 0,
+      "subject": "Anaesthesia",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_34",
+      "question": "In Erythroblastosis fetalis not involved is –",
+      "choices": [
+        "Anti C",
+        "Anti D",
+        "Anti E",
+        "Anti Lewis"
+      ],
+      "correct_answer": 3,
+      "subject": "Pediatrics",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_35",
+      "question": "A dentist suffered from Hepatitis B infection 3 months back. His laboratory tests are normal, but he is not allowed by the medical board to do surgical practice. He is:",
+      "choices": [
+        "Inactive carrier",
+        "Healthy carrier",
+        "Convalescent carrier",
+        "Paradoxical carrier"
+      ],
+      "correct_answer": 2,
+      "subject": "Microbiology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_36",
+      "question": "A pediatrician in a district hospital with specialization neonatal care unit calls an ophthalmologist for consultation for which of the following?",
+      "choices": [
+        "A newborn with respiratory distress",
+        "A baby born at 28 weeks of gestation",
+        "Newborn with jaundice",
+        "A newborn with bih weight 2300 grams"
+      ],
+      "correct_answer": 1,
+      "subject": "Pediatrics",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_37",
+      "question": "In a child with active liver failure, the most important prognosis factor for death is –",
+      "choices": [
+        "Increasing transaminases",
+        "Increasing bilirubin",
+        "Increasing prothrombin time",
+        "Gram (–)ve sepsis"
+      ],
+      "correct_answer": 3,
+      "subject": "Pediatrics",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_38",
+      "question": "A patient went into shock immediately after normal delivery, likely cause:",
+      "choices": [
+        "Amniotic fluid embolism",
+        "PPH",
+        "Uterine inversion",
+        "Eclampsia"
+      ],
+      "correct_answer": 2,
+      "subject": "Gynaecology & Obstetrics",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_39",
+      "question": "A patient presented with flat topped violaceous papules, thinning of nails and onycholysis. What is the microscopic finding observed in this patient?",
+      "choices": [
+        "Prominent necrotic cell",
+        "Suprabasal split",
+        "Basal cell degeneration",
+        "Acantholysis"
+      ],
+      "correct_answer": 2,
+      "subject": "ENT",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_40",
+      "question": "Which of the following is not. true regarding myelopathy?",
+      "choices": [
+        "Sensory loss of facial area",
+        "Brisk jaw jerk",
+        "Brisk pectoral jerk",
+        "Urgency and incontinence of micturition"
+      ],
+      "correct_answer": 1,
+      "subject": "Medicine",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_41",
+      "question": "Which of the following committees has recommended a 3-year bachelor degree in medical education for rural health service?",
+      "choices": [
+        "High level expe group of universal health program for india",
+        "Central bureau of health investigation",
+        "Srivastava committee",
+        "Sundar committee"
+      ],
+      "correct_answer": 0,
+      "subject": "Social & Preventive Medicine",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_42",
+      "question": "Sequential arrangement of fetal scans -",
+      "choices": [
+        "Growth scan",
+        "Triple marker",
+        "Anomalous Scan and NT scan",
+        "All"
+      ],
+      "correct_answer": 3,
+      "subject": "Pediatrics",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_43",
+      "question": "Which one of the following is a muscle splitting incision?",
+      "choices": [
+        "Kocher's incision",
+        "Rutherford-Morrison incision",
+        "Pfannenstiel incision",
+        "Lanz incision"
+      ],
+      "correct_answer": 3,
+      "subject": "Surgery",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_44",
+      "question": "Multiple canals in mandibular premolars are seen in?",
+      "choices": [
+        "Africas",
+        "Caucians",
+        "Not Recalled",
+        "Not Recalled"
+      ],
+      "correct_answer": 0,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_45",
+      "question": "Which of the following blade angle is appropriate for scaling and root planing",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_answer": 1,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_46",
+      "question": "Which pa of brachial plexus do not give branches",
+      "choices": [
+        "Root",
+        "Division",
+        "Cord",
+        "Trunk"
+      ],
+      "correct_answer": 1,
+      "subject": "Anatomy",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_47",
+      "question": "If the Rb gene phosphorylation is defective, which of the following will happen?",
+      "choices": [
+        "Cell cycle will stop at GI phase",
+        "Cell cycle will stop at G2 phase",
+        "The cell cycle will progress and the cell will divide",
+        "There will be no effect on cell cycle as for Rb gene phosphorylation is not needed"
+      ],
+      "correct_answer": 0,
+      "subject": "Pathology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_48",
+      "question": "Cumulative index is:",
+      "choices": [
+        "Russet's periodontal index",
+        "Ramjford's periodontal index",
+        "PMA (Massler and Schlour)",
+        "Gingival index (Loe and Silness)"
+      ],
+      "correct_answer": 2,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_49",
+      "question": "The cells which will proliferate from top to bottom of villi are:",
+      "choices": [
+        "Chief cells",
+        "Goblet cells",
+        "Paneth cells",
+        "Parietal cells"
+      ],
+      "correct_answer": 2,
+      "subject": "Anatomy",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_50",
+      "question": "What is the usual weight of rabbit used in ophthalmological experiments?",
+      "choices": [
+        "0.5-1 kg",
+        "1.5-2.5 kg",
+        "5-7 kg",
+        "10-12 kg"
+      ],
+      "correct_answer": 1,
+      "subject": "Ophthalmology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_51",
+      "question": "In plasmodium vivax malaria, relapse is caused by:September 2012",
+      "choices": [
+        "Sporozoite",
+        "Schizont",
+        "Hypnozoite",
+        "Gamteocyte"
+      ],
+      "correct_answer": 2,
+      "subject": "Medicine",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_52",
+      "question": "Retraction of mandible is achieved by:",
+      "choices": [
+        "Lateral pterygoid",
+        "Temporalis",
+        "Medial pterygoid",
+        "Masseter"
+      ],
+      "correct_answer": 1,
+      "subject": "Anatomy",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_53",
+      "question": "How is modified shock index represented as?",
+      "choices": [
+        "HR/MAP",
+        "MAP/HR",
+        "HR/SBP",
+        "HR/DBP"
+      ],
+      "correct_answer": 0,
+      "subject": "Medicine",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_54",
+      "question": "A 3 week neonate with ambiguous genitalia presented with Na+ 127 meq/L, K+ 7.2 meq/L wit BP 52/24 mm Hg and he was managed with IV fluids. What is the next step of management?",
+      "choices": [
+        "Spironolactone",
+        "Hydrocoisone administration",
+        "Broad spectrum antibiotics",
+        "Calcium gluconate"
+      ],
+      "correct_answer": 1,
+      "subject": "Pediatrics",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_55",
+      "question": "Base pairs in DNA",
+      "choices": [
+        "1.5 billion",
+        "46 billions",
+        "3.2 billion",
+        "100 billion"
+      ],
+      "correct_answer": 2,
+      "subject": "Pathology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_56",
+      "question": "Which of the following is a solid solution?",
+      "choices": [
+        "Amalgam",
+        "Cobalt-chromium",
+        "Silver-palladium",
+        "Gallium-silver"
+      ],
+      "correct_answer": 2,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_57",
+      "question": "Tracheal secretions should be suctioned for:",
+      "choices": [
+        "10-15 seconds",
+        "60 seconds",
+        "30 seconds",
+        "3 minutes"
+      ],
+      "correct_answer": 0,
+      "subject": "Anaesthesia",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_58",
+      "question": "A patient presents with carcinoma of the larynx involving the left false cords, left arytenoid and the left aryepiglottic folds with bilateral mobile true cords. Treatment of choice is -",
+      "choices": [
+        "Vertical hemilaryngectomy",
+        "Horizontal partial hemilaryngectomy",
+        "Total laryngectomy",
+        "Radiotherapy followed by chemotherapy"
+      ],
+      "correct_answer": 0,
+      "subject": "ENT",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_59",
+      "question": "Which of the following lipoproteins does not move towards charged end in electrophoresis?",
+      "choices": [
+        "VLDL",
+        "LDL",
+        "HDL",
+        "Chylomicrons"
+      ],
+      "correct_answer": 3,
+      "subject": "Biochemistry",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_60",
+      "question": "A 60 years old male presented with fever, chills and dysuria. Patient was hospitalized in emergency for 5 days. PSA level was 7.4. Next best step in this patient:",
+      "choices": [
+        "Repeat PSA",
+        "TURP",
+        "TRUS guided biopsy",
+        "Antibiotics and admit"
+      ],
+      "correct_answer": 3,
+      "subject": "Surgery",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_61",
+      "question": "Name the structure marked with arrow",
+      "choices": [
+        "Mitochondria",
+        "Golgi bodies",
+        "Secretory vesicles",
+        "Rough Endoplasmic reticulum"
+      ],
+      "correct_answer": 2,
+      "subject": "Physiology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_62",
+      "question": "A patient from,nqh-eastern states was diagnosed to have infection with P. falciparum malaria. What is the most appropriate drug for this patient?",
+      "choices": [
+        "Aemether plus lumefantrine",
+        "Sulfadoxine plus pyrimethamine",
+        "Chloroquine",
+        "Mefloquine"
+      ],
+      "correct_answer": 0,
+      "subject": "Pharmacology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_63",
+      "question": "Iron is present in all, EXCEPT",
+      "choices": [
+        "Myoglobin",
+        "Cytochrome",
+        "Catalase",
+        "Pyruvate kinase"
+      ],
+      "correct_answer": 3,
+      "subject": "Biochemistry",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_64",
+      "question": "The most common bone tumor that occurs in children is:",
+      "choices": [
+        "Osteosarcoma",
+        "Ewing's sarcoma",
+        "Metastatic carcinoma",
+        "Multiple myeloma"
+      ],
+      "correct_answer": 0,
+      "subject": "Pathology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_65",
+      "question": "In a couple for treatment of infeility from the last four years, female paner is normal. Male paner has 0.8 ml semen volume per ejaculate on two repeated samples and absent fructose, with no sperms on examination under microscope. What is the next line of management?",
+      "choices": [
+        "Per-rectal examination to check ejaculatory duct obstruction",
+        "Give antioxidants",
+        "Testicular biopsy",
+        "Transrectal ultrasound to detect duct obstruction"
+      ],
+      "correct_answer": 3,
+      "subject": "Surgery",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_66",
+      "question": "The zygomatic bone does not articulate with:",
+      "choices": [
+        "Frontal bone",
+        "Maxillary bone",
+        "Nasal bone",
+        "Temporal bone"
+      ],
+      "correct_answer": 2,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_67",
+      "question": "Which of the following statements is true regarding medical aboion?",
+      "choices": [
+        "Ultrasound should be done in all cases",
+        "If the patient has an IUCD in-situ, it doesn't need to be removed",
+        "Can only be done up to 72 days",
+        "Only a person ceified under MTP act can perform medical termination of pregnancy"
+      ],
+      "correct_answer": 3,
+      "subject": "Gynaecology & Obstetrics",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_68",
+      "question": "Calcium ions triggers muscle contraction by binding to:",
+      "choices": [
+        "Actin",
+        "Myosin",
+        "Troponin",
+        "Tropomyosin"
+      ],
+      "correct_answer": 2,
+      "subject": "Physiology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_69",
+      "question": "SD plasma destroys lipid enveloped virus. On SD plasma transfusion, which of the following infection is the likely possibility?",
+      "choices": [
+        "HIV",
+        "HAV",
+        "HBV",
+        "HCV"
+      ],
+      "correct_answer": 1,
+      "subject": "Microbiology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_70",
+      "question": "According to the intelligence quotient classification, a score of 90-110 is:",
+      "choices": [
+        "Low average.",
+        "Average",
+        "Superior",
+        "Mentally retarded."
+      ],
+      "correct_answer": 1,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_71",
+      "question": "Due to which of the following enzyme deficiency, vitamin C cannot be synthesised in humans?",
+      "choices": [
+        "L-Glucuronic acid oxidase",
+        "L-Gulonic acid reductase",
+        "L-Gulonolactone oxidase",
+        "L-Gulonolactone reductase"
+      ],
+      "correct_answer": 2,
+      "subject": "Biochemistry",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_72",
+      "question": "In a patient of heart disease antibiotic prophylaxis for dental extraction is:",
+      "choices": [
+        "Amoxicillin.",
+        "Imipenem.",
+        "Gentamicin.",
+        "Erythromycin."
+      ],
+      "correct_answer": 0,
+      "subject": "Medicine",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_73",
+      "question": "Which of the following type of failure may occur, if the coefficient of thermal expansion of ceramic is much lower than that of metal?",
+      "choices": [
+        "Cohesive failure of ceramic",
+        "Adhesive failure of metal ceramic bond",
+        "Cohesive failure of metal",
+        "Cohesive failure of metal ceramic bond"
+      ],
+      "correct_answer": 1,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_74",
+      "question": "Anti monsoon curve seen in :",
+      "choices": [
+        "Premolar",
+        "Molar",
+        "Anterior",
+        "All of the above."
+      ],
+      "correct_answer": 3,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_75",
+      "question": "A 10 years old child has lytic lesions in upper femur, the differential diagnosis can be all except :",
+      "choices": [
+        "Plasmacytoma",
+        "Browns tumour",
+        "Metastasis",
+        "Histiocytosis"
+      ],
+      "correct_answer": 0,
+      "subject": "Pediatrics",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_76",
+      "question": "During periradicular surgery bone is removed with?",
+      "choices": [
+        "Round burr",
+        "Double inverted cone burr",
+        "Fissure burr",
+        "Taper Burr"
+      ],
+      "correct_answer": 0,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_77",
+      "question": "The primary function of the dental pulp is:",
+      "choices": [
+        "Nutritive",
+        "Production of dentin",
+        "Production of enamel",
+        "Vascular supply to the teeth"
+      ],
+      "correct_answer": 1,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_78",
+      "question": "Which of the following increases callus formation:",
+      "choices": [
+        "Rigid immobilization",
+        "Movement at fracture site",
+        "Compression plating",
+        "Intraosseous nailing"
+      ],
+      "correct_answer": 1,
+      "subject": "Gynaecology & Obstetrics",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_79",
+      "question": "Child of Vasanthi was weaned from breast milk on the 5th day and was given sugarcane juice the child developed hypoglycemia and hepatomegaly biochemical examination showed hypophosphatemia and enzyme deficiencies–reducing substances in urine. The child is probably suffering from which of the following enzyme deficiencies –",
+      "choices": [
+        "Fructokinase",
+        "Aldolase B",
+        "Glucose 6 Phosphatase",
+        "Beta galactosidase"
+      ],
+      "correct_answer": 1,
+      "subject": "Pediatrics",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_80",
+      "question": "Skeletal muscles",
+      "choices": [
+        "Contracts when calcium is taken up by sarcoplasmic reticulum",
+        "Contracts when actin and myosin filaments shorten",
+        "Contraction is initiated by calcium binding to troponin",
+        "Contraction is initiated by calcium binding to tropomyosin"
+      ],
+      "correct_answer": 2,
+      "subject": "Physiology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_81",
+      "question": "Which of the following is most effective for gluconeogenesis in starvation?",
+      "choices": [
+        "Acetyl Co-A stimulation of pyruvate carboxylase",
+        "Fructose-1, 6-biphosphate stimulation of phosphofructokinase-1",
+        "Citrate stimulation of acetyl carboxylase",
+        "Fructose-2, 6-biphosphate stimulation of phosphofructokinase-2"
+      ],
+      "correct_answer": 0,
+      "subject": "Biochemistry",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_82",
+      "question": "Which is not involved in iron metabolism?",
+      "choices": [
+        "Transthyretin",
+        "Ceruloplasmin",
+        "Hepcidin",
+        "Ferropoin"
+      ],
+      "correct_answer": 0,
+      "subject": "Biochemistry",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_83",
+      "question": "A 14 year girl presented with absent thelarche.On examination uterus was present. Investigations showed high FSH. karyotype is XY.What is the probable diagnosis?",
+      "choices": [
+        "Gonadal dysgenesis",
+        "Kallman syndrome",
+        "Androgen insensitivity syndrome",
+        "Adrenal hyperplasia"
+      ],
+      "correct_answer": 0,
+      "subject": "Gynaecology & Obstetrics",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_84",
+      "question": "Reciprocal arm taper in",
+      "choices": [
+        "1 dimension",
+        "2 dimension",
+        "3 dimension",
+        "Not tapered"
+      ],
+      "correct_answer": 0,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_85",
+      "question": "Bluegrass appliance is used to treat:",
+      "choices": [
+        "Thumb sucking.",
+        "Tongue thrusting.",
+        "Both",
+        "Mouth breathing."
+      ],
+      "correct_answer": 2,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_86",
+      "question": "On a primary 2nd molar caries occur most commonly on",
+      "choices": [
+        "Occlusal pit and fissures",
+        "Proximal caries below contact point",
+        "Buccal surface",
+        "Promixal caries above contact point"
+      ],
+      "correct_answer": 0,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_87",
+      "question": "Waldeyer's lymphatic chain is formed by all except",
+      "choices": [
+        "Palatine tonsils",
+        "Pharyngeal tonsils",
+        "Tubal and lingual tonsils",
+        "Post auricular nodes"
+      ],
+      "correct_answer": 3,
+      "subject": "Anatomy",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_88",
+      "question": "Polydactyly, craniosynostosis, Late closure of fontanelles is a feature of:",
+      "choices": [
+        "Apert's syndrome",
+        "Crouton's syndrome",
+        "Pierre robin syndrome",
+        "Down' syndrome"
+      ],
+      "correct_answer": 0,
+      "subject": "Pathology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_89",
+      "question": "Physiological changes seen in laparoscopy include all except:",
+      "choices": [
+        "Increased ICP",
+        "Decreased FRC",
+        "Increased CVP",
+        "Increased pH"
+      ],
+      "correct_answer": 3,
+      "subject": "Surgery",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_90",
+      "question": "Which of the following nerve fibre types is least susceptible to LA blockade?",
+      "choices": [
+        "A beta",
+        "A alpha",
+        "B fibers",
+        "C fibers"
+      ],
+      "correct_answer": 1,
+      "subject": "Anaesthesia",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_91",
+      "question": "A child born with multiple congenital defect including cleft palate, neural tube defect, atrial septal defect and microcephaly which of the following drug is used by mother during pregnancy:",
+      "choices": [
+        "Erythromycin",
+        "Isotretinoin",
+        "Ibuprofen",
+        "Metronidazole"
+      ],
+      "correct_answer": 1,
+      "subject": "Gynaecology & Obstetrics",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_92",
+      "question": "Incorporation of peripheral seal in an impression is necessary to obtain;",
+      "choices": [
+        "Stability",
+        "Functionally moulded periphery",
+        "Harmonious occlusion",
+        "Posterior palatal seal"
+      ],
+      "correct_answer": 1,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_93",
+      "question": "Increase in height of mandible with increase in interdental spaces in elderly man",
+      "choices": [
+        "Hyperpituitarism",
+        "Hyperthyroidism",
+        "Hypopituitarism",
+        "Hyperparathyroidism"
+      ],
+      "correct_answer": 0,
+      "subject": "Pathology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_94",
+      "question": "A patient has seasonal allergic rhinitis and is on terfenadine. He develops cardiac arrhythmias after a course of antibiotics. Which of the following antibiotic could have been given:",
+      "choices": [
+        "Ampicillin",
+        "Tetracycline",
+        "Erythromycin",
+        "Co-trimoxazole"
+      ],
+      "correct_answer": 2,
+      "subject": "Pharmacology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_95",
+      "question": "Modulus of elasticity means:",
+      "choices": [
+        "Rigidity or stiffness of the material",
+        "Ability to be stretched with permanent deformation",
+        "Ductility of a material",
+        "Malleability of the metal"
+      ],
+      "correct_answer": 0,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_96",
+      "question": "Vwf factor is produced by:",
+      "choices": [
+        "Platelets",
+        "Endothelial cells",
+        "Neutrophils",
+        "Monocytes"
+      ],
+      "correct_answer": 1,
+      "subject": "Pathology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_97",
+      "question": "Which of the following statement is false statement about snake-bites?",
+      "choices": [
+        "Anti-venom is not effective in humpnosed pit viper bite",
+        "Cobra venom is neurotoxic",
+        "Atropine premedication should be used before administering Neostigmine",
+        "Neostigmine has a role in krait bite."
+      ],
+      "correct_answer": 3,
+      "subject": "Forensic Medicine",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_98",
+      "question": "A prosthetic appliance given to cover the palatal defect in patients with cleft palate is called",
+      "choices": [
+        "Artificial velum",
+        "Obturator",
+        "Removable prosthetic appliance",
+        "None of the above"
+      ],
+      "correct_answer": 1,
+      "subject": "Surgery",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_99",
+      "question": "Biofilm forming bacteria causes antimicrobial resist-ance by all of the following except:",
+      "choices": [
+        "Mechanical barrier",
+        "Increased excretion of antibiotics",
+        "Altered metabolism",
+        "Adherence"
+      ],
+      "correct_answer": 3,
+      "subject": "Microbiology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_100",
+      "question": "Which of these drugs is an antidote for fibrinolytic therapy?",
+      "choices": [
+        "Epsilon aminocaproic acid",
+        "Protamine",
+        "Heparin",
+        "Streptokinase"
+      ],
+      "correct_answer": 0,
+      "subject": "Pharmacology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_101",
+      "question": "Which facial bone is most prone to fracture?",
+      "choices": [
+        "Mandible",
+        "Nasal",
+        "Zygoma",
+        "Frontal"
+      ],
+      "correct_answer": 1,
+      "subject": "Surgery",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_102",
+      "question": "To check objective pain response, which is best used method",
+      "choices": [
+        "Facial pain scale",
+        "Knee jerk reflex",
+        "H - Reflex",
+        "R III Reflex"
+      ],
+      "correct_answer": 0,
+      "subject": "Physiology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_103",
+      "question": "A one year old child, who is earlier normal, is suffering from copious nasal discharge, coarse facial features, large tongue, bulging head and flattened nose. He is also having enlarged spleen and liver. What may be the cause?",
+      "choices": [
+        "Hypothyroidism",
+        "Beckwith widman syndrome",
+        "Proteus syndrome",
+        "Hurler syndrome"
+      ],
+      "correct_answer": 3,
+      "subject": "Pathology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_104",
+      "question": "The resolution of IOPA is about:",
+      "choices": [
+        "10 Lp/mm",
+        "16 Lp/mm",
+        "28 Lp/mm",
+        "30 Lp/mm"
+      ],
+      "correct_answer": 1,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_105",
+      "question": "A patient diagnosed with carcinoma of lung presented with a serum calcium level of 16.4 mmol/L. What will be the first step in management?",
+      "choices": [
+        "IV fluids and furosemide",
+        "Immediate hemodialysis",
+        "Bisphosphonates",
+        "Chemotherapy with gemcitabine and carboplatin"
+      ],
+      "correct_answer": 0,
+      "subject": "Medicine",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_106",
+      "question": "The following test may be abnormal in disseminated intravascular coagulation except:",
+      "choices": [
+        "Prothrombin",
+        "Activated partial thromboplastin time",
+        "D-timer levels",
+        "Clot solubility."
+      ],
+      "correct_answer": 3,
+      "subject": "Gynaecology & Obstetrics",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_107",
+      "question": "In Xerostomia the salivary pH is:",
+      "choices": [
+        "Unaffected",
+        "Low",
+        "High",
+        "increased in morning & decreases in day"
+      ],
+      "correct_answer": 1,
+      "subject": "Pathology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_108",
+      "question": "Which of the following is not true about stamp cusp?",
+      "choices": [
+        "Maintain vertical height of face",
+        "Facial incline might contact in MI",
+        "Sharp cusps and prominent ridges are present",
+        "Not recalled"
+      ],
+      "correct_answer": 2,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_109",
+      "question": "Sugar restricted to diet was beneficial in presence of unfavorable hygiene was from which study?",
+      "choices": [
+        "Hopewood",
+        "Experimental",
+        "Vipeholm",
+        "Turku"
+      ],
+      "correct_answer": 0,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_110",
+      "question": "Alginate at 20 degrees, the gel is formed in",
+      "choices": [
+        "3-4 mins.",
+        "6-8 mins.",
+        "15-16 mins.",
+        "1-2 min."
+      ],
+      "correct_answer": 0,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_111",
+      "question": "Most common tumor of lacrimal gland:",
+      "choices": [
+        "Trans-scaphoid perilunate fracture",
+        "Scaphoid fracture",
+        "Distal radius fracture",
+        "Hamate fracture"
+      ],
+      "correct_answer": 3,
+      "subject": "Ophthalmology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_112",
+      "question": "Percentage of carbon in carbon steel hand instruments is",
+      "choices": [
+        "1-1.2%",
+        "10-12%",
+        "0.6 to 0.8%",
+        "6 to 8%"
+      ],
+      "correct_answer": 0,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_113",
+      "question": "Topical administration of I% Pilocarpine failed to produce pupillary constriction in a patient who had a large, dilated pupil What should be the most probable reason?",
+      "choices": [
+        "Adie's tonic pupil",
+        "Diabetic III nerve palsy",
+        "Pharmacological blockade",
+        "Uncal herniation"
+      ],
+      "correct_answer": 2,
+      "subject": "Ophthalmology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_114",
+      "question": "Pregnancy gingivitis is caused by:",
+      "choices": [
+        "Bacteriodes melaninogenicus",
+        "Actinobacillus actinomycetemcomitans",
+        "Streptococcus sanguis",
+        "Fusobacterium"
+      ],
+      "correct_answer": 0,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_115",
+      "question": "Artery palpable at the anterior border of the masseter is :",
+      "choices": [
+        "Superficial temporal artery",
+        "Facial artery",
+        "Lingual artery",
+        "Maxillary artery"
+      ],
+      "correct_answer": 1,
+      "subject": "Anatomy",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_116",
+      "question": "In DIC following are seen except",
+      "choices": [
+        "Fibrinogen decreased",
+        "Thrombocytopenia",
+        "Normal APTT",
+        "PT elevation"
+      ],
+      "correct_answer": 2,
+      "subject": "Medicine",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_117",
+      "question": "Absorption of which of the following drugs is increased after a fatty meal?",
+      "choices": [
+        "Amphotericin B",
+        "Griseofulvin",
+        "Ampicillin",
+        "Aspirin"
+      ],
+      "correct_answer": 1,
+      "subject": "Pharmacology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_118",
+      "question": "What is the basis of behavior shaping:",
+      "choices": [
+        "Stimulus response theory",
+        "Social learning principle.",
+        "Hierarchy of needs",
+        "None of the above."
+      ],
+      "correct_answer": 0,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_119",
+      "question": "Shortest root of maxillary 1st molar",
+      "choices": [
+        "Distobuccal",
+        "Mesiobuccal",
+        "Palatal",
+        "All are equal"
+      ],
+      "correct_answer": 0,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_120",
+      "question": "Malaria relapse common with which type plasmodium species?",
+      "choices": [
+        "Plasmodium malariae and vivax",
+        "Plasmodium falciparum and vivax",
+        "Plasmodium vivax and ovale",
+        "Plasmodium ovale and malariae"
+      ],
+      "correct_answer": 2,
+      "subject": "Microbiology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_121",
+      "question": "Which of the following constituents is common in occlusal sealants, bonding agents, composite resins?",
+      "choices": [
+        "BIS GMA",
+        "Polymethyl methacrylate",
+        "Benzoin methyl ether",
+        "Silica filter"
+      ],
+      "correct_answer": 0,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_122",
+      "question": "Which primary tooth resemble premolar",
+      "choices": [
+        "Upper 1st molar",
+        "Lower 1st molar",
+        "Upper 2nd molar",
+        "Lower 2nd molar"
+      ],
+      "correct_answer": 0,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_123",
+      "question": "According to Transplantation of Human Organs Act, which of the following doctors is/are not authorized to declare brainstem death?",
+      "choices": [
+        "RMP incharge of the hospital",
+        "Treating physician",
+        "Neurosurgeon",
+        "Surgeon doing liver transplant"
+      ],
+      "correct_answer": 3,
+      "subject": "Forensic Medicine",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_124",
+      "question": "Which of the following types of lipase is controlled by glucagon?",
+      "choices": [
+        "Lipoprotein lipase",
+        "Hormone-sensitive lipase",
+        "Gastric lipase",
+        "Pancreatic lipase"
+      ],
+      "correct_answer": 1,
+      "subject": "Biochemistry",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_125",
+      "question": "In dentistry which sedatives are generally used:",
+      "choices": [
+        "Benzodiazepines",
+        "Morphine",
+        "NSAID",
+        "Pethidine"
+      ],
+      "correct_answer": 0,
+      "subject": "Surgery",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_126",
+      "question": "In case of Fracture of mandible; alveolar border experiences which force",
+      "choices": [
+        "Tension",
+        "Compression",
+        "Torsion",
+        "Rotation"
+      ],
+      "correct_answer": 0,
+      "subject": "Surgery",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_127",
+      "question": "The hormone having the maximum effect on granulation wound healing is:",
+      "choices": [
+        "Thyroxine",
+        "Cortisone",
+        "Parathormone",
+        "Epinephrine"
+      ],
+      "correct_answer": 1,
+      "subject": "Physiology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_128",
+      "question": "The clot formed is not stable unless extensive cross-linking occurs. This extensive cross-linking of blood clot is done by:",
+      "choices": [
+        "Plasmin",
+        "Thrombin",
+        "HMWK",
+        "Factor XIII"
+      ],
+      "correct_answer": 3,
+      "subject": "Physiology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_129",
+      "question": "Pre-carve burnishing is useful for all except:",
+      "choices": [
+        "Bring further excess mercury to surface",
+        "Increase surface hardness",
+        "Decrease number and size of voids",
+        "Marginal adaptation"
+      ],
+      "correct_answer": 1,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_130",
+      "question": "A neonate is being investigated for jaundice. A liver biopsy shows features of a \"Giant Cell/Neonatal hepatitis\". Which one of the following conditions usually results in this case –",
+      "choices": [
+        "Congenital hepatic fibrosis",
+        "Hemochromatosis",
+        "Alpha–1–antitrypsin deficiency",
+        "Glycogen storage disease Type 1"
+      ],
+      "correct_answer": 2,
+      "subject": "Pediatrics",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_131",
+      "question": "Ammonia from brain is removed as:",
+      "choices": [
+        "Urea",
+        "Alanine",
+        "Glutamate",
+        "Glutamine"
+      ],
+      "correct_answer": 3,
+      "subject": "Biochemistry",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_132",
+      "question": "Use of lithium during pregnancy increases the risk of development of which of the following malformations in the baby?",
+      "choices": [
+        "Facial defects",
+        "Cardiac defects",
+        "Neural tube defects",
+        "Urogenital defects"
+      ],
+      "correct_answer": 1,
+      "subject": "Pharmacology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_133",
+      "question": "Most common presentation of abdominal desmoids tumor is?",
+      "choices": [
+        "Abdominal pain",
+        "Abdominal mass",
+        "Fever",
+        "Urinary retention"
+      ],
+      "correct_answer": 1,
+      "subject": "Surgery",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_134",
+      "question": "Noise induced hearing toss inosto affects:",
+      "choices": [
+        "Inner hair cell",
+        "Outer hair cell",
+        "Macula",
+        "Cupula"
+      ],
+      "correct_answer": 1,
+      "subject": "ENT",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_135",
+      "question": "Replacing amino acid will not change its functions",
+      "choices": [
+        "Glutamine to Asparagine",
+        "Aspaate and Glutamate",
+        "Alanine to tryptophan",
+        "None of these"
+      ],
+      "correct_answer": 0,
+      "subject": "Biochemistry",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_136",
+      "question": "A 75 year old chronic smoker who is diabetic and edentulous for the last 30 years has a bilateral body fracture, best treatment modality is",
+      "choices": [
+        "ORIF with reconstruction plate",
+        "Gunning splints",
+        "Two mini plates",
+        "Wire osteosynthesis"
+      ],
+      "correct_answer": 1,
+      "subject": "Surgery",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_137",
+      "question": "Which of the following is used as, surface hardener in Impression material?",
+      "choices": [
+        "2% potassium sulfate",
+        "0.2% potassium sulfate",
+        "2% sodium sulfate",
+        "4% potassium sulfate"
+      ],
+      "correct_answer": 0,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_138",
+      "question": "A 59-year-old female presents with gingival condition punched out crater-like depression covered with membrane which can be pulled off painlessly?",
+      "choices": [
+        "Diphtheritic lesion",
+        "Acute herpetic gingivostomatitis",
+        "ANUG",
+        "Syphilitic lesion"
+      ],
+      "correct_answer": 2,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_139",
+      "question": "Visual cortex is present in the:",
+      "choices": [
+        "Occipital lobe",
+        "Temporal lobe",
+        "Frontal lobe",
+        "Parietal lobe"
+      ],
+      "correct_answer": 0,
+      "subject": "Anatomy",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_140",
+      "question": "Bartholins duct is the name of :",
+      "choices": [
+        "Parotid duct",
+        "Submandibular gland",
+        "Sublingual duct",
+        "Lacrimal duct"
+      ],
+      "correct_answer": 2,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_141",
+      "question": "Which of the following exists as yeast at 37deg and hyphae at 25deg?",
+      "choices": [
+        "Histoplasma capsulatum",
+        "Sporothrix globosa",
+        "Candida albicans",
+        "Cryptococcus neoformans"
+      ],
+      "correct_answer": 0,
+      "subject": "Microbiology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_142",
+      "question": "Pulsatile varicose veins in lower limbs is seen in –",
+      "choices": [
+        "Klippel trenaunay syndrome",
+        "TR",
+        "RV failure",
+        "Carcinoid stenosis of tricuspid"
+      ],
+      "correct_answer": 0,
+      "subject": "Pediatrics",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_143",
+      "question": "The number of dental caries cases reported during last 10 years are given below 250, 320, 190, 300, 5000, 100, 260, 350, 320 and 160. The epidemiologist wants to find out average number of caries cases reported in that town for last 10 yrs. The most appropriate average per this data will be",
+      "choices": [
+        "Arithmetic mean",
+        "Mode",
+        "Median",
+        "Geometric mean"
+      ],
+      "correct_answer": 2,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_144",
+      "question": "The most common bone cancer is:",
+      "choices": [
+        "Osteosarcoma",
+        "Metastatic bone cancer",
+        "Multiple myelonia",
+        "Squamous cell carcinoma"
+      ],
+      "correct_answer": 1,
+      "subject": "Pathology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_145",
+      "question": "Which is the ligand for receptors present in liver for uptake of LDL?",
+      "choices": [
+        "Apo B-100",
+        "Apo B-48",
+        "Apo E and Apo B-100",
+        "Apo A-I"
+      ],
+      "correct_answer": 0,
+      "subject": "Biochemistry",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_146",
+      "question": "Amyloid protein in Hemodialysis associated with amyloidosis is-",
+      "choices": [
+        "AA",
+        "A b",
+        "b- 2 microglobulin",
+        "Transthyretin"
+      ],
+      "correct_answer": 2,
+      "subject": "Pathology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_147",
+      "question": "Teeth that erupt in 30 days of birth",
+      "choices": [
+        "Neonatal teeth",
+        "Natal teeth",
+        "Premature teeth",
+        "None"
+      ],
+      "correct_answer": 0,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_148",
+      "question": "Arrange the following in the sequence of closure :",
+      "choices": [
+        "Umbilical Aery",
+        "Umbilical Vein",
+        "Ductus venosus and Foramen ovale",
+        "All"
+      ],
+      "correct_answer": 3,
+      "subject": "Pediatrics",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_149",
+      "question": "Drug adveisement letter is a necessary component of each drug formulation and contains various information about the drug like drug dosing, frequency and half-life. Which of the following information need not be given in the drug adveisement letter?",
+      "choices": [
+        "Research papers and other aicles proving efficacy of the drug",
+        "Date of expiry of the drug",
+        "Rare, but serious life threatening adverse-effects",
+        "Common, not so serious adverse-effects"
+      ],
+      "correct_answer": 1,
+      "subject": "Pharmacology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_150",
+      "question": "In a patient with fresh blow out fracture of the orbit, best immediate management is",
+      "choices": [
+        "Wait & watch",
+        "Antral pack",
+        "Titanium Mesh",
+        "Glass bead mesh"
+      ],
+      "correct_answer": 0,
+      "subject": "Surgery",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_151",
+      "question": "Which of the following drugs can be stopped abruptly without any withdrawal symptoms?",
+      "choices": [
+        "Esctilaopram",
+        "Fluoxetine",
+        "Fluvoxamine",
+        "Seraline"
+      ],
+      "correct_answer": 1,
+      "subject": "Pharmacology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_152",
+      "question": "Keyhole-shaped visual field defect is seen in lesion involving which of the following regions?",
+      "choices": [
+        "Optic disk",
+        "Optic chiasma",
+        "Lateral geniculate body",
+        "Occipital lobe"
+      ],
+      "correct_answer": 2,
+      "subject": "Ophthalmology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_153",
+      "question": "The soft tissue tooth interface that forms after flap surgery in a previously denuded area is",
+      "choices": [
+        "Long junctional epithelium",
+        "Collagen adhesion",
+        "Scar tissue attachment",
+        "Connective tissue attachment"
+      ],
+      "correct_answer": 0,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_154",
+      "question": "The test done for a statistically significant change in cholesterol values in a group of patients following an interventional programme is:",
+      "choices": [
+        "Chi square test",
+        "Paired \"t\" test",
+        "Unpaired \"t\" test",
+        "Fisher test"
+      ],
+      "correct_answer": 1,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_155",
+      "question": "Mw vaccine is prepared from:",
+      "choices": [
+        "Mycobacterium bovis",
+        "Mycobacterium indicus pranii",
+        "Mycobacterium welchii",
+        "Mycobacterium tuberculosis"
+      ],
+      "correct_answer": 1,
+      "subject": "Microbiology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_156",
+      "question": "Guiding planes are:",
+      "choices": [
+        "Located adjacent to the edentulous area",
+        "Located far anterior to the edentulous area",
+        "Helps in the stability of the denture",
+        "Provides a different path of insertion and removal"
+      ],
+      "correct_answer": 0,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_157",
+      "question": "Reflex which never disappear:",
+      "choices": [
+        "Walking and stepping reflex",
+        "Limb placement reflex",
+        "Parachute reflex",
+        "All of the above"
+      ],
+      "correct_answer": 3,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_158",
+      "question": "Vitamin D toxicity is treated with",
+      "choices": [
+        "Chloroquine",
+        "Hydroxycholoquine",
+        "Dexamethasone",
+        "Ketoconazole"
+      ],
+      "correct_answer": 2,
+      "subject": "Pharmacology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_159",
+      "question": "Which of the following is not the component of qSOFA?",
+      "choices": [
+        "Respiratory rate >22/min",
+        "Systolic BP<100 mmHg",
+        "Altered mental status",
+        "Unequally dilated pupils"
+      ],
+      "correct_answer": 3,
+      "subject": "Surgery",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_160",
+      "question": "How much hone can be stretched at a time before it fractures:",
+      "choices": [
+        "1%",
+        "2%",
+        "6%",
+        "8%"
+      ],
+      "correct_answer": 1,
+      "subject": "Surgery",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_161",
+      "question": "Tonsils developed from:",
+      "choices": [
+        "Ventral part of 3rd pouch.",
+        "Ventral part of 2nd pouch.",
+        "Dorsal part of 2nd pouch.",
+        "Ventral part of 3rd pouch."
+      ],
+      "correct_answer": 1,
+      "subject": "Anatomy",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_162",
+      "question": "Gutta Percha can effectively be sterilized by?",
+      "choices": [
+        "Hot salt sterilizer",
+        "Chemical solutions",
+        "Autoclaving",
+        "Dry heat"
+      ],
+      "correct_answer": 1,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_163",
+      "question": "Which of these conditions  does not require SABE prophylaxis",
+      "choices": [
+        "MR",
+        "ASD",
+        "MS",
+        "CABG"
+      ],
+      "correct_answer": 3,
+      "subject": "Surgery",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_164",
+      "question": "Motor supply of infrahyoid muscle is:",
+      "choices": [
+        "Branches of cervical plexus",
+        "Vagus nerve",
+        "Glossopharyngeal nerve",
+        "Mandibular nerve"
+      ],
+      "correct_answer": 0,
+      "subject": "Anatomy",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_165",
+      "question": "This direction of force can cause:",
+      "choices": [
+        "Reduce overbite",
+        "Worsen open bite",
+        "Both",
+        "None"
+      ],
+      "correct_answer": 2,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_166",
+      "question": "Cystinuria is characterised by –",
+      "choices": [
+        "Generalised aminoaciduria",
+        "Systemic acidosis",
+        "Deposition of cystine crystals in Renal tubular cells",
+        "Recurrent urinary caliculi"
+      ],
+      "correct_answer": 3,
+      "subject": "Pediatrics",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_167",
+      "question": "Patient with PPF transfusion complaint of breathing difficulty, tachycardic, tachypnia, Had Batwing sign present in X-ray. What will be the possible reason?",
+      "choices": [
+        "Transfusion related lung injury",
+        "Due to overload of PPF",
+        "Acute renal tubular acidosis",
+        "Hemoglobinuria"
+      ],
+      "correct_answer": 1,
+      "subject": "Medicine",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_168",
+      "question": "Which of these is not a theory of TMJ ankylosis?",
+      "choices": [
+        "Calcification in the soft tissues around the joint space",
+        "Synovial fluid attracting calcium ions",
+        "Lateral displacement of fracture condyle with fusion  with zygomatic bone",
+        "Condylar burst"
+      ],
+      "correct_answer": 1,
+      "subject": "Surgery",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_169",
+      "question": "Fingerprinting (FINDER) involves recording prints of 8 fingers. Which finger pair is excluded?",
+      "choices": [
+        "Ring finger",
+        "Thumb",
+        "Little finger",
+        "Middle finger"
+      ],
+      "correct_answer": 2,
+      "subject": "Forensic Medicine",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_170",
+      "question": "Impression compound is characterized by all the following except:",
+      "choices": [
+        "Warps at room temperature",
+        "Is a thermoset material",
+        "Shows increased flow when kneaded with water",
+        "Low coefficient of thermal conductivity"
+      ],
+      "correct_answer": 1,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_171",
+      "question": "In Galactorrhoea--amenorrhea syndromes, which is the investigation you should advise (apa from serum prolactin)?",
+      "choices": [
+        "TSH",
+        "LH",
+        "hCG",
+        "Urinary ketosteroids"
+      ],
+      "correct_answer": 0,
+      "subject": "Gynaecology & Obstetrics",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_172",
+      "question": "What is common in class I cavity preparation for amalgam and gold inlay?",
+      "choices": [
+        "Buccolingually divergent walls",
+        "Mesiodistally divergent walls",
+        "Maximum depth is needed in both cases to provide sufficient thickness",
+        "All of the above"
+      ],
+      "correct_answer": 1,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_173",
+      "question": "Periodontal surgery is best performed",
+      "choices": [
+        "4 weeks after completion of the hygienic phase",
+        "8 weeks after the completion of the restorative phase",
+        "4 weeks before completion of occlusal adjustments",
+        "Immediately after the completion of the hygienic phase"
+      ],
+      "correct_answer": 0,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_174",
+      "question": "Endocrine glands that are not influenced by the pituitary gland include the:",
+      "choices": [
+        "Thyroid gland, testes, and adrenal medulla",
+        "Adrenal medulla, parathyroids, and the islets of langerhans",
+        "Adrenal cortex, parathyroids and ovaries",
+        "Pancreas, adrenal medulla and thyroid gland"
+      ],
+      "correct_answer": 1,
+      "subject": "Physiology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_175",
+      "question": "Rooting reflex also known as search reflex disappears:",
+      "choices": [
+        "2 month",
+        "3 month",
+        "4 month",
+        "5 month"
+      ],
+      "correct_answer": 2,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_176",
+      "question": "Migratory motor complexes in the gut reappear after intervals of:",
+      "choices": [
+        "60 minutes",
+        "90 minutes",
+        "120 minutes",
+        "150 minutes"
+      ],
+      "correct_answer": 1,
+      "subject": "Physiology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_177",
+      "question": "IV ultrashort acting barbiturate:",
+      "choices": [
+        "Meprobamate",
+        "Pentobarbitone",
+        "Thiopentone",
+        "Phenobarbitone"
+      ],
+      "correct_answer": 2,
+      "subject": "Pharmacology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_178",
+      "question": "The component that sensitizes bacteria and virus to UV irradiation",
+      "choices": [
+        "Lipids",
+        "Carbohydrates",
+        "Inorganic salts",
+        "Nucleic acids"
+      ],
+      "correct_answer": 3,
+      "subject": "Microbiology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_179",
+      "question": "All these are Included In active tissue engineering, except",
+      "choices": [
+        "Antigens fibroblasts",
+        "Bilayered cell therapy",
+        "Enamel matrix derivative",
+        "Acellular dermal matrix"
+      ],
+      "correct_answer": 3,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_180",
+      "question": "For which of the following is PPV-23 is most beneficial:",
+      "choices": [
+        "Cystic fibrosis patient",
+        "Sickle cell anemia patient",
+        "Patient with recurrent rhinitis and sinusitis",
+        "Child less than 2 years"
+      ],
+      "correct_answer": 1,
+      "subject": "Microbiology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_181",
+      "question": "Characteristic histopathological feature of basal cell car cinoma is",
+      "choices": [
+        "Nuclear palisading",
+        "Keratin pearls",
+        "Psammoma bodies",
+        "Foam cells"
+      ],
+      "correct_answer": 0,
+      "subject": "Pathology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_182",
+      "question": "Most common mediastinal tumor:",
+      "choices": [
+        "Neurogenic tumor",
+        "Thymoma",
+        "Lymphoma",
+        "Bronchogenic cyst"
+      ],
+      "correct_answer": 0,
+      "subject": "Surgery",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_183",
+      "question": "All are the branches of ECA that supply nasal septum except:",
+      "choices": [
+        "Anterior ethmoidal aery",
+        "Sphenopalatine aery",
+        "Facial aery",
+        "Superior labial aery"
+      ],
+      "correct_answer": 0,
+      "subject": "ENT",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_184",
+      "question": "All of these are continuous variables except:",
+      "choices": [
+        "Height in cms",
+        "Weight in kg",
+        "Blood groups A. B. ABO",
+        "Age in years and months"
+      ],
+      "correct_answer": 2,
+      "subject": "Social & Preventive Medicine",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_185",
+      "question": "Which of the following type of tongue thrusting has the worst prognosis?",
+      "choices": [
+        "Simple",
+        "Complex",
+        "Retained infantile swallow",
+        "All of the above"
+      ],
+      "correct_answer": 2,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_186",
+      "question": "CYP50 inhibition is least by:",
+      "choices": [
+        "Pantoprazole",
+        "Rabeprazole",
+        "Lansoprazole",
+        "Omeprazole"
+      ],
+      "correct_answer": 1,
+      "subject": "Pharmacology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_187",
+      "question": "Which of the following is a component of Pentalogy of Fallot –",
+      "choices": [
+        "Atrial septal Defect (ASD)",
+        "Patent Ductus Arteriosus (PDA)",
+        "Coarctation of Aorta (COA)",
+        "Left Ventricular Hypertrophy (LVH)"
+      ],
+      "correct_answer": 0,
+      "subject": "Pediatrics",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_188",
+      "question": "The contractile element in a skeletal muscle is present in:",
+      "choices": [
+        "Sarcolemma",
+        "Sarcoplasm",
+        "Myofibril",
+        "Endomysium"
+      ],
+      "correct_answer": 2,
+      "subject": "Physiology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_189",
+      "question": "Cherry red spot and Hollenhorst plaque are seen in:",
+      "choices": [
+        "CRAO",
+        "CRVO",
+        "Branch RAO",
+        "Branch RVO"
+      ],
+      "correct_answer": 0,
+      "subject": "Ophthalmology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_190",
+      "question": "Optimal location for intra osseous anesthesia for mandibular second molars is",
+      "choices": [
+        "Distal to the molar",
+        "Mesial to the molar",
+        "In the furcation area",
+        "Apical perforation and injection"
+      ],
+      "correct_answer": 1,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_191",
+      "question": "Which statements is true regarding VENTOUSE :",
+      "choices": [
+        "Minor scalp abrasions and subgaleal hematomas in new born are more frequent than forceps",
+        "Can be applied when foetal head is above the level of ischial spine",
+        "Maternal trauma is more frequent than forceps",
+        "Can not be used when fetal head is not fully rotated"
+      ],
+      "correct_answer": 0,
+      "subject": "Gynaecology & Obstetrics",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_192",
+      "question": "After cleaning and pumicing the tooth surface, plaque formation takes place within",
+      "choices": [
+        "A few minutes",
+        "1/2 to 1 hour",
+        "2 to 4 hour",
+        "After 1 hour"
+      ],
+      "correct_answer": 1,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_193",
+      "question": "Which of the following structure is not present on floor of third ventricle?",
+      "choices": [
+        "Optic stalk",
+        "Third nerve",
+        "Infundibulum",
+        "Mammillary body"
+      ],
+      "correct_answer": 1,
+      "subject": "Anatomy",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_194",
+      "question": "Speech problems in cleft palate patients are due to",
+      "choices": [
+        "Lisping of tongue",
+        "Inability of soft palate to stop air to go into nasopharynx",
+        "Inability of learning process",
+        "All of the above"
+      ],
+      "correct_answer": 1,
+      "subject": "Surgery",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_195",
+      "question": "According to the WHO definition of hearing loss, what is the value to classify as profound hearing loss?",
+      "choices": [
+        "61-71 dB",
+        ">81 dB",
+        ">91 dB",
+        ">101 dB"
+      ],
+      "correct_answer": 1,
+      "subject": "ENT",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_196",
+      "question": "What we will define it \"ratio of no. of death under 1 year of age to total live birth per 1000 live births per year\"?",
+      "choices": [
+        "Infant mortality rate",
+        "Child mortality rate",
+        "Child morbidity rate",
+        "Life expectancy rate"
+      ],
+      "correct_answer": 0,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_197",
+      "question": "The necrotising pressure areas, undergoing bone resorption and endosteal bone formation",
+      "choices": [
+        "Juvenile periodontitis",
+        "Occlusal trauma",
+        "Chronic suppurative periodontitis",
+        "ANUG"
+      ],
+      "correct_answer": 1,
+      "subject": "Dental",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_198",
+      "question": "CLED is better medium than MacConkey medium for processing of urine samples",
+      "choices": [
+        "It differentiate LF from NLF Bacteria",
+        "Prevents swarming of proteus",
+        "Identifies pseudomonas",
+        "Allows staphylococcus,Streptococcus and candida to grow"
+      ],
+      "correct_answer": 3,
+      "subject": "Microbiology",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "medmcqa_199",
+      "question": "Pre-maturity in edge to edge position is relieved by reducing:",
+      "choices": [
+        "Mandibular incisal edge.",
+        "Maxillary lingual fossa.",
+        "Both AB",
+        "Either AB"
+      ],
+      "correct_answer": 0,
+      "subject": "Dental",
+      "difficulty": 0.5
+    }
+  ]
+}

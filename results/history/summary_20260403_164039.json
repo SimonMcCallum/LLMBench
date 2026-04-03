@@ -1,0 +1,60 @@
+{
+  "timestamp": "20260403_164039",
+  "config": {
+    "models": [
+      "gpt-4.1",
+      "gpt-4.1-mini"
+    ],
+    "datasets": [
+      "hard"
+    ],
+    "max_examples": 500,
+    "temperatures": [
+      0.0
+    ],
+    "num_repetitions": 1,
+    "method": "sequential"
+  },
+  "overall_metrics": {
+    "ece": 0.52714,
+    "brier": 0.5392985,
+    "auprc": 0.4517049685404405,
+    "prr": 0.14861474699317256,
+    "accuracy": 0.389,
+    "mean_confidence": 0.91319,
+    "calibration_gap": 0.5241899999999999,
+    "acc@70%": 0.43142857142857144,
+    "acc@80%": 0.42625,
+    "acc@90%": 0.4122222222222222
+  },
+  "summaries": [
+    {
+      "model_name": "gpt-4.1",
+      "model_type": "api",
+      "vendor": "openai",
+      "dataset": "hard",
+      "total_examples": 500,
+      "accuracy": 0.352,
+      "mean_confidence": 0.92536,
+      "calibration_gap": 0.57336,
+      "mean_hlcc_score": -0.41289479999999995,
+      "mean_cbm_score": -0.519,
+      "correct_count": 176,
+      "incorrect_count": 324
+    },
+    {
+      "model_name": "gpt-4.1-mini",
+      "model_type": "api",
+      "vendor": "openai",
+      "dataset": "hard",
+      "total_examples": 500,
+      "accuracy": 0.426,
+      "mean_confidence": 0.9010199999999999,
+      "calibration_gap": 0.47501999999999994,
+      "mean_hlcc_score": -0.21629440000000003,
+      "mean_cbm_score": -0.235,
+      "correct_count": 213,
+      "incorrect_count": 287
+    }
+  ]
+}

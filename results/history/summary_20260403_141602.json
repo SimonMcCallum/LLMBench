@@ -1,0 +1,60 @@
+{
+  "timestamp": "20260403_141602",
+  "config": {
+    "models": [
+      "gemini-2.5-pro",
+      "o4-mini"
+    ],
+    "datasets": [
+      "hard"
+    ],
+    "max_examples": 100,
+    "temperatures": [
+      0.0
+    ],
+    "num_repetitions": 1,
+    "method": "sequential"
+  },
+  "overall_metrics": {
+    "ece": 0.13645833333333335,
+    "brier": 0.19107569444444447,
+    "auprc": 0.8403806378492162,
+    "prr": 0.47475162258882186,
+    "accuracy": 0.7152777777777778,
+    "mean_confidence": 0.8297916666666667,
+    "calibration_gap": 0.11451388888888892,
+    "acc@70%": 0.83,
+    "acc@80%": 0.7913043478260869,
+    "acc@90%": 0.7596899224806202
+  },
+  "summaries": [
+    {
+      "model_name": "gemini-2.5-pro",
+      "model_type": "api",
+      "vendor": "gemini",
+      "dataset": "hard",
+      "total_examples": 44,
+      "accuracy": 0.7045454545454546,
+      "mean_confidence": 0.8945454545454545,
+      "calibration_gap": 0.18999999999999995,
+      "mean_hlcc_score": 1.0156818181818181,
+      "mean_cbm_score": 0.9659090909090909,
+      "correct_count": 31,
+      "incorrect_count": 13
+    },
+    {
+      "model_name": "o4-mini",
+      "model_type": "api",
+      "vendor": "openai",
+      "dataset": "hard",
+      "total_examples": 100,
+      "accuracy": 0.72,
+      "mean_confidence": 0.8012999999999999,
+      "calibration_gap": 0.08129999999999993,
+      "mean_hlcc_score": 1.000134,
+      "mean_cbm_score": 0.805,
+      "correct_count": 72,
+      "incorrect_count": 28
+    }
+  ]
+}

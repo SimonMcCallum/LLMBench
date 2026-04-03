@@ -1,0 +1,135 @@
+{
+  "timestamp": "20260403_101539",
+  "config": {
+    "models": [
+      "tinyllama",
+      "qwen2-1.5b",
+      "phi-2",
+      "phi-3-mini",
+      "mistral-7b",
+      "qwen2.5-7b",
+      "llama3.1-8b"
+    ],
+    "datasets": [
+      "gpqa"
+    ],
+    "max_examples": 198,
+    "temperatures": [
+      0.0
+    ],
+    "num_repetitions": 1,
+    "method": "sequential"
+  },
+  "overall_metrics": {
+    "ece": 0.2040099957690311,
+    "brier": 0.26253300075537295,
+    "auprc": 0.33943392873416356,
+    "prr": 0.08836755842163946,
+    "accuracy": 0.30303030303030304,
+    "mean_confidence": 0.20221850020579912,
+    "calibration_gap": 0.10081180282450392,
+    "acc@70%": 0.30927835051546393,
+    "acc@80%": 0.30685920577617326,
+    "acc@90%": 0.30473135525260625
+  },
+  "summaries": [
+    {
+      "model_name": "tinyllama",
+      "model_type": "local",
+      "vendor": "local",
+      "dataset": "gpqa",
+      "total_examples": 198,
+      "accuracy": 0.32323232323232326,
+      "mean_confidence": 0.24278967003456145,
+      "calibration_gap": 0.08044265319776181,
+      "mean_hlcc_score": 0.30018025429910583,
+      "mean_cbm_score": -0.05555555555555555,
+      "correct_count": 64,
+      "incorrect_count": 134
+    },
+    {
+      "model_name": "qwen2-1.5b",
+      "model_type": "local",
+      "vendor": "local",
+      "dataset": "gpqa",
+      "total_examples": 198,
+      "accuracy": 0.2727272727272727,
+      "mean_confidence": 0.29526327412359193,
+      "calibration_gap": 0.022536001396319227,
+      "mean_hlcc_score": 0.19544370729702057,
+      "mean_cbm_score": -0.09595959595959595,
+      "correct_count": 54,
+      "incorrect_count": 144
+    },
+    {
+      "model_name": "phi-2",
+      "model_type": "local",
+      "vendor": "local",
+      "dataset": "gpqa",
+      "total_examples": 198,
+      "accuracy": 0.29292929292929293,
+      "mean_confidence": 0.08810427438834298,
+      "calibration_gap": 0.20482501854094995,
+      "mean_hlcc_score": 0.29325262427327453,
+      "mean_cbm_score": -0.010101010101010102,
+      "correct_count": 58,
+      "incorrect_count": 140
+    },
+    {
+      "model_name": "phi-3-mini",
+      "model_type": "local",
+      "vendor": "local",
+      "dataset": "gpqa",
+      "total_examples": 198,
+      "accuracy": 0.30303030303030304,
+      "mean_confidence": 0.24253526263534944,
+      "calibration_gap": 0.0604950403949536,
+      "mean_hlcc_score": 0.268318947107007,
+      "mean_cbm_score": -0.05555555555555555,
+      "correct_count": 60,
+      "incorrect_count": 138
+    },
+    {
+      "model_name": "mistral-7b",
+      "model_type": "local",
+      "vendor": "local",
+      "dataset": "gpqa",
+      "total_examples": 198,
+      "accuracy": 0.29797979797979796,
+      "mean_confidence": 0.014989327361334548,
+      "calibration_gap": 0.2829904706184634,
+      "mean_hlcc_score": 0.30956186798660057,
+      "mean_cbm_score": 0.017676767676767676,
+      "correct_count": 59,
+      "incorrect_count": 139
+    },
+    {
+      "model_name": "qwen2.5-7b",
+      "model_type": "local",
+      "vendor": "local",
+      "dataset": "gpqa",
+      "total_examples": 198,
+      "accuracy": 0.3282828282828283,
+      "mean_confidence": 0.45516125888991726,
+      "calibration_gap": 0.12687843060708898,
+      "mean_hlcc_score": 0.11495198362612118,
+      "mean_cbm_score": -0.16161616161616163,
+      "correct_count": 65,
+      "incorrect_count": 133
+    },
+    {
+      "model_name": "llama3.1-8b",
+      "model_type": "local",
+      "vendor": "local",
+      "dataset": "gpqa",
+      "total_examples": 198,
+      "accuracy": 0.30303030303030304,
+      "mean_confidence": 0.07668643400749642,
+      "calibration_gap": 0.22634386902280662,
+      "mean_hlcc_score": 0.2697519213423032,
+      "mean_cbm_score": -0.03787878787878788,
+      "correct_count": 60,
+      "incorrect_count": 138
+    }
+  ]
+}

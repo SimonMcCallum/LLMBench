@@ -1,0 +1,2207 @@
+{
+  "dataset": "winogrande",
+  "exported": "2026-04-02T11:30:30.730327",
+  "total": 200,
+  "questions": [
+    {
+      "question_id": "winogrande_0",
+      "question": "Sarah was a much better surgeon than Maria so _ always got the easier cases.",
+      "choices": [
+        "Sarah",
+        "Maria"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_1",
+      "question": "Sarah was a much better surgeon than Maria so _ always got the harder cases.",
+      "choices": [
+        "Sarah",
+        "Maria"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_2",
+      "question": "They were worried the wine would ruin the bed and the blanket, but the _ was't ruined.",
+      "choices": [
+        "blanket",
+        "bed"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_3",
+      "question": "Terry tried to bake the eggplant in the toaster oven but the _ was too big.",
+      "choices": [
+        "eggplant",
+        "toaster"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_4",
+      "question": "At night, Jeffrey always stays up later than Hunter to watch TV because _ wakes up late.",
+      "choices": [
+        "Jeffrey",
+        "Hunter"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_5",
+      "question": "The cat of Sarah has some mouth problems, so she takes it to see Maria. _ is a responsible cat owner.",
+      "choices": [
+        "Sarah",
+        "Maria"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_6",
+      "question": "The home that my parents had when I was in school was a lot nicer than my house now because the _ was sophisticated.",
+      "choices": [
+        "home",
+        "house"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_7",
+      "question": "The home that my parents had when I was in school was a lot nicer than my house now because the _ is trashy.",
+      "choices": [
+        "home",
+        "house"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_8",
+      "question": "Natalie has a rich husband and lots of money, Jennifer is poor _ needs to make her clothes.",
+      "choices": [
+        "Natalie",
+        "Jennifer"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_9",
+      "question": "Joe immediately went to bakery before the bank because the _ had a limited supply of what he wanted.",
+      "choices": [
+        "bakery",
+        "bank"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_10",
+      "question": "Joe immediately went to bakery before the bank because the _ had a substantial supply of what he wanted.",
+      "choices": [
+        "bakery",
+        "bank"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_11",
+      "question": "I had to read an entire story for class tomorrow. Luckily, the _ was canceled.",
+      "choices": [
+        "story",
+        "class"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_12",
+      "question": "I had to read an entire story for class tomorrow. Luckily, the _ was short.",
+      "choices": [
+        "story",
+        "class"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_13",
+      "question": "He had enough time between classes to go to a cafe or to the library. He went to the _ because his paper could wait.",
+      "choices": [
+        "cafe",
+        "library"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_14",
+      "question": "He had enough time between classes to go to a cafe or to the library. He went to the _ because his paper was due soon.",
+      "choices": [
+        "cafe",
+        "library"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_15",
+      "question": "Lindsey like to read graphic novels but Natalie liked classic literature to read. _ bought the new Frank Miller comic at the book store.",
+      "choices": [
+        "Lindsey",
+        "Natalie"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_16",
+      "question": "Michael just bought brand new wheels for his truck unlike Leslie because _ wheels were new and perfect.",
+      "choices": [
+        "Michael",
+        "Leslie"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_17",
+      "question": "Michael just bought brand new wheels for his truck unlike Leslie because _ wheels were old and used.",
+      "choices": [
+        "Michael",
+        "Leslie"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_18",
+      "question": "Leslie was nervous around parrots but Neil was not, since _ was bitten by a bird early in life.",
+      "choices": [
+        "Leslie",
+        "Neil"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_19",
+      "question": "Christmas was a special holiday to Eric but not Adam since _ was a Jew.",
+      "choices": [
+        "Eric",
+        "Adam"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_20",
+      "question": "To make frosting I needed pudding that was at a store 15 minutes away but pre-made frosting was at a store 5 minutes away.  The _ was closer.",
+      "choices": [
+        "pudding",
+        "frosting"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_21",
+      "question": "Benjamin was chosen instead of Brett to be the makeup artist for the play because _ was less experienced.",
+      "choices": [
+        "Benjamin",
+        "Brett"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_22",
+      "question": "Cynthia violated the rights of Amy, because _ had too much passivity with other people.",
+      "choices": [
+        "Cynthia",
+        "Amy"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_23",
+      "question": "They had to eat a lot to gain the strength they had lost and be able to work, the _ was too much.",
+      "choices": [
+        "work",
+        "strength"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_24",
+      "question": "They had to eat a lot to gain the strength they had lost and be able to work, the _ was too little.",
+      "choices": [
+        "work",
+        "strength"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_25",
+      "question": "The roof of Rachel's home is old and falling apart, while Betty's is new. The home value of _ is lower.",
+      "choices": [
+        "Rachel",
+        "Betty"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_26",
+      "question": "All the clutter in the house excited Leslie but not Derrick because cleaning energized _ very much.",
+      "choices": [
+        "Leslie",
+        "Derrick"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_27",
+      "question": "The portions of food today were bigger than the sizes yesterday because the _ fed more people.",
+      "choices": [
+        "portions",
+        "sizes"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_28",
+      "question": "Since Craig threw aluminum cans in the trash and Benjamin recycled, _ was environmentally irresponsible.",
+      "choices": [
+        "Craig",
+        "Benjamin"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_29",
+      "question": "Christine was going to Jessica's house to do some cleaning in the kitchen, because _ was a energetic person.",
+      "choices": [
+        "Christine",
+        "Jessica"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_30",
+      "question": "The students were at their desks taking tests with pencils, they used the _ to hold the papers.",
+      "choices": [
+        "desks",
+        "pencils"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_31",
+      "question": "Mary thought poodles were a cool dog but Rachel thought Great Danes were cooler. _ bought a small dog bed for their pet.",
+      "choices": [
+        "Mary",
+        "Rachel"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_32",
+      "question": "Mary thought poodles were a cool dog but Rachel thought Great Danes were cooler. _ bought a gigantic dog bed for their pet.",
+      "choices": [
+        "Mary",
+        "Rachel"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_33",
+      "question": "Leslie had a lot of issues that Kyle was tired of dealing with, so _ felt abandoned when they finally moved out.",
+      "choices": [
+        "Leslie",
+        "Kyle"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_34",
+      "question": "Jessica enjoyed a simple, basic life with Betty, but _ was bored having a quiet existence.",
+      "choices": [
+        "Jessica",
+        "Betty"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_35",
+      "question": "I wanted to build a bathroom on the third floor of the house but I couldn't because the _ would be too full.",
+      "choices": [
+        "bathroom",
+        "floor"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_36",
+      "question": "Joel researched laws and helped to open a preschool for Eric. Because _ is very good with kids.",
+      "choices": [
+        "Joel",
+        "Eric"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_37",
+      "question": "Tanya told Emily she couldn't come to work because her cat had an infection, but _ was lying.",
+      "choices": [
+        "Tanya",
+        "Emily"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_38",
+      "question": "Angela thinks her husband might be cheating with Lindsey, and _ confesses at the dinner party.",
+      "choices": [
+        "Angela",
+        "Lindsey"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_39",
+      "question": "Donald's understanding of math isn't as good as Joseph's, so _ is more likely a professor.",
+      "choices": [
+        "Donald",
+        "Joseph"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_40",
+      "question": "Brian was jealous of Brett's new car because _ couldn't afford to buy a new car.",
+      "choices": [
+        "Brian",
+        "Brett"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_41",
+      "question": "The man used  his eyes to read the letters but the _ were too small.",
+      "choices": [
+        "letters",
+        "eyes"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_42",
+      "question": "Jill was on a budget so she only bought a new dress for the ceremony and wore an old hat. She figured the _ would be less noticeable.",
+      "choices": [
+        "dress",
+        "hat"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_43",
+      "question": "Jill was on a budget so she only bought a new dress for the ceremony and wore an old hat. She figured the _ would be more noticeable.",
+      "choices": [
+        "dress",
+        "hat"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_44",
+      "question": "On Monday, Patricia made Felicia eggs for an early breakfast, but _ does not like fried eggs.",
+      "choices": [
+        "Patricia",
+        "Felicia"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_45",
+      "question": "Since Craig wears clear contacts and William wears colored ones, it is safe to assume that _ loves the color of their eyes.",
+      "choices": [
+        "Craig",
+        "William"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_46",
+      "question": "Since Craig wears clear contacts and William wears colored ones, it is safe to assume that _ dislikes the color of their eyes.",
+      "choices": [
+        "Craig",
+        "William"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_47",
+      "question": "It was easy for Angela to become a vegetarian although Kayla couldn't do it. _ really missed the taste of chicken.",
+      "choices": [
+        "Angela",
+        "Kayla"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_48",
+      "question": "Hunter was a better baker than Logan so _ made the kitchen a mess when they tried to make an apple pie.",
+      "choices": [
+        "Hunter",
+        "Logan"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_49",
+      "question": "Tanya spent more on the children's birthday party than Amy. _ thought a magician was a good use of funds.",
+      "choices": [
+        "Tanya",
+        "Amy"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_50",
+      "question": "Judy bought new brushes to paint the etched glasses crack but it didn't fit. The _ was too wide.",
+      "choices": [
+        "brush",
+        "crack"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_51",
+      "question": "Judy bought new brushes to paint the etched glasses crack but it didn't fit. The _ was too narrow.",
+      "choices": [
+        "brush",
+        "crack"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_52",
+      "question": "I look forward to the Sunday newspaper so I can look at the comics.  This is the only reason I still get the _ in this day and age.",
+      "choices": [
+        "newspaper",
+        "comics"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_53",
+      "question": "Jennifer was more of a morning person than Natalie although _ always went to bed early and got a good night's rest.",
+      "choices": [
+        "Jennifer",
+        "Natalie"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_54",
+      "question": "Jennifer was more of a morning person than Natalie because _ always went to bed early and got a good night's rest.",
+      "choices": [
+        "Jennifer",
+        "Natalie"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_55",
+      "question": "Alcohol is a love of Matthew's, but Ryan can't stand the stuff because _ is a sober alcoholic.",
+      "choices": [
+        "Matthew",
+        "Ryan"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_56",
+      "question": "Joe brought the horse out to the country quite a distance and gave him food but the _ was too much.",
+      "choices": [
+        "food",
+        "distance"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_57",
+      "question": "Randy gave their heart to Brian, and _ soon told them that they should have kept their heart to themselves.",
+      "choices": [
+        "Randy",
+        "Brian"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_58",
+      "question": "Nick wanted to play a game on the floor, but Dennis was hesitant because of his knees. _ was disappointed.",
+      "choices": [
+        "Nick",
+        "Dennis"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_59",
+      "question": "Although she was being prosecuted, Monica was welcomed into the sanctuary of the church by Samantha because _ was a sinful criminal.",
+      "choices": [
+        "Monica",
+        "Samantha"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_60",
+      "question": "The battle was less fierce than the great war, because the _ lasted one year.",
+      "choices": [
+        "battle",
+        "war"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_61",
+      "question": "Laura used too much super glue on Erins hands, so _ needed to get to the doctor to separate their hands.",
+      "choices": [
+        "Laura",
+        "Erin"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_62",
+      "question": "James panicked when his phone fell on the table thinking it will break but the _ is soft.",
+      "choices": [
+        "phone",
+        "table"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_63",
+      "question": "James panicked when his phone fell on the table thinking it will break but the _ is strong.",
+      "choices": [
+        "phone",
+        "table"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_64",
+      "question": "John cannot touch the cup as it was just brought out of the refrigerator. He wanted some air to blow around it. The _ is very warm.",
+      "choices": [
+        "cup",
+        "air"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_65",
+      "question": "The fireman used several rags to polish the nozzles on the fire hose; when he was done the _ were dirty.",
+      "choices": [
+        "nozzles",
+        "rags"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_66",
+      "question": "Mary wanted to get another piercing in her ear, but the _ was much too tiny.",
+      "choices": [
+        "ear",
+        "piercing"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_67",
+      "question": "Mary wanted to get another piercing in her ear, but the _ was much too huge.",
+      "choices": [
+        "ear",
+        "piercing"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_68",
+      "question": "Laura just loved the taste of green beans but Felicia hated the taste of them. _ didn't have a second serving.",
+      "choices": [
+        "Laura",
+        "Felicia"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_69",
+      "question": "The bartender cut Carrie off but continued to serve Emily because _ was too drunk.",
+      "choices": [
+        "Carrie",
+        "Emily"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_70",
+      "question": "Blaze always wore a t-shirt instead of a shirt because he thought that the _ was stuffy and old fashioned.",
+      "choices": [
+        "shirt",
+        "t-shirt"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_71",
+      "question": "The paint would melt in the sun, so we used a varnish instead, since the _ was susceptible to heat.",
+      "choices": [
+        "paint",
+        "varnish"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_72",
+      "question": "I tried to make mini lamps by using glow sticks in mason jars, but had to get larger jars because the _ were too big.",
+      "choices": [
+        "glow sticks",
+        "jars"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_73",
+      "question": "Joel always liked to turn the heater up higher than Joseph did for the reason that _ was never cold.",
+      "choices": [
+        "Joel",
+        "Joseph"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_74",
+      "question": "Joel always liked to turn the heater up higher than Joseph did for the reason that _ was always cold.",
+      "choices": [
+        "Joel",
+        "Joseph"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_75",
+      "question": "The teen found the new hat was no substitute for his cool shirt.  The _ was just cool to wear to school.",
+      "choices": [
+        "hat",
+        "shirt"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_76",
+      "question": "Mary was helping Patricia's daughter put on makeup but  _ watches a lot of makeup tutorials.",
+      "choices": [
+        "Mary",
+        "Patricia"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_77",
+      "question": "Mary was helping Patricia's daughter put on makeup because _ watches a lot of makeup tutorials.",
+      "choices": [
+        "Mary",
+        "Patricia"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_78",
+      "question": "He wanted to kill time at the house instead of the playground, because everyone at the _ was fun.",
+      "choices": [
+        "playground",
+        "house"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_79",
+      "question": "Aaron didn't know Dennis had a peanut allergy, so when _ made peanut chicken an ambulance was called.",
+      "choices": [
+        "Aaron",
+        "Dennis"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_80",
+      "question": "Aaron didn't know Dennis had a peanut allergy, so when _ ate peanut chicken an ambulance was called.",
+      "choices": [
+        "Aaron",
+        "Dennis"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_81",
+      "question": "God liked to control the day and the night, but the _ was too bright.",
+      "choices": [
+        "day",
+        "night"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_82",
+      "question": "Brett asked Joel for advice and guidance about waxing his mustache, and afterwards _ felt burdened.",
+      "choices": [
+        "Brett",
+        "Joel"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_83",
+      "question": "The filter in the living room needed to be changed more often than the one in the bedroom because the _ was dirtier.",
+      "choices": [
+        "living room",
+        "bedroom"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_84",
+      "question": "The filter in the living room needed to be changed more often than the one in the bedroom because the _ was cleaner.",
+      "choices": [
+        "living room",
+        "bedroom"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_85",
+      "question": "Amy went over to the waiting room at the hospital to calm Samantha because _ was placid.",
+      "choices": [
+        "Amy",
+        "Samantha"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_86",
+      "question": "Megan forgot to buy deodorant at the store so they borrowed Jessica's deodorant and _ never found out.",
+      "choices": [
+        "Megan",
+        "Jessica"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_87",
+      "question": "Megan forgot to buy deodorant at the store so they borrowed Jessica's deodorant and _ hoped they never found out.",
+      "choices": [
+        "Megan",
+        "Jessica"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_88",
+      "question": "Amy thought she was the mirror image of Natalie , but _ could not be convinced to see the similarity.",
+      "choices": [
+        "Amy",
+        "Natalie"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_89",
+      "question": "Amy thought she was the mirror image of Natalie , but _ could not persuade her to see the similarity.",
+      "choices": [
+        "Amy",
+        "Natalie"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_90",
+      "question": "I helped my sister find her gold necklace. She couldn't wear her woven necklace to the ball because the _ was so casual.",
+      "choices": [
+        "woven necklace",
+        "ball"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_91",
+      "question": "Emily never had as much money to spend as Carrie, because _ had a good job.",
+      "choices": [
+        "Emily",
+        "Carrie"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_92",
+      "question": "The wooden doors at my friends work are worse than the wooden desks at my work, because the _ material is cheaper.",
+      "choices": [
+        "doors",
+        "desks"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_93",
+      "question": "The wooden doors at my friends work are worse than the wooden desks at my work, because the _ material is stronger.",
+      "choices": [
+        "doors",
+        "desks"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_94",
+      "question": "The arrow stuck to the bark but not the stone because the _ was flimsy.",
+      "choices": [
+        "bark",
+        "stone"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_95",
+      "question": "The arrow stuck to the bark but not the stone because the _ was hard.",
+      "choices": [
+        "bark",
+        "stone"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_96",
+      "question": "The leg of the pig body stuck out of the grave where it was buried because the _ is large.",
+      "choices": [
+        "body",
+        "grave"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_97",
+      "question": "The sheet recovered can easily be hiding between the space in the door. The _ is thin.",
+      "choices": [
+        "sheet",
+        "space"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_98",
+      "question": "The sheet recovered can easily be hiding between the space in the door. The _ is wide.",
+      "choices": [
+        "sheet",
+        "space"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_99",
+      "question": "Mike doesn't like the table in his living room as much as the couch. The _ resonates with the other decorations.",
+      "choices": [
+        "table",
+        "couch"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_100",
+      "question": "Steven believes they can buy happiness but Craig thinks otherwise as _ is very realistic.",
+      "choices": [
+        "Steven",
+        "Craig"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_101",
+      "question": "Steven believes they can buy happiness but Craig thinks otherwise as _ is very materialistic.",
+      "choices": [
+        "Steven",
+        "Craig"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_102",
+      "question": "They brought the cornhole supplies to the camp site so they could play while adults cooked dinner.  The boys really enjoyed the _ after the game.",
+      "choices": [
+        "cornhole",
+        "dinner"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_103",
+      "question": "The game of chess was easy to play for Angela but not Rebecca because _ had a analytical mind.",
+      "choices": [
+        "Angela",
+        "Rebecca"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_104",
+      "question": "The game of chess was easy to play for Angela but not Rebecca because  _ did not have an analytical mind.",
+      "choices": [
+        "Angela",
+        "Rebecca"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_105",
+      "question": "To pay for dinner, he used the credit card rather than cash. The _ was not available.",
+      "choices": [
+        "cash",
+        "card"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_106",
+      "question": "The plan devised by Christine to get Kayla to like them failed, as _ did not really try it.",
+      "choices": [
+        "Christine",
+        "Kayla"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_107",
+      "question": "Since the diabetic woman had to limit her sugar intake, she ignored the pie and had a cookie instead because the _ was full of sugar.",
+      "choices": [
+        "pie",
+        "cookie"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_108",
+      "question": "The doctor offered to treat the patient's illness quickly with surgery or slowly with diet, and the patient refused the _ because he felt it was dangerous.",
+      "choices": [
+        "diet",
+        "surgery"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_109",
+      "question": "Throughout the practice Rachel pushed the limits of Megan to get ready for the game because _ was the coach.",
+      "choices": [
+        "Rachel",
+        "Megan"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_110",
+      "question": "Throughout the practice Rachel pushed the limits of Megan to get ready for the game because _ was the athlete.",
+      "choices": [
+        "Rachel",
+        "Megan"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_111",
+      "question": "Sarah was quickly promoted to manager over Kayla, because _ excelled at angering other people.",
+      "choices": [
+        "Sarah",
+        "Kayla"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_112",
+      "question": "Brett was browsing the internet while he found the information unlike Randy, _ prefers using books.",
+      "choices": [
+        "Brett",
+        "Randy"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_113",
+      "question": "Dennis knows that Jeffrey is an animal lover and _ knows he wants to go to the zoo to see them.",
+      "choices": [
+        "Dennis",
+        "Jeffrey"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_114",
+      "question": "Betty drank chocolate shakes while Elena drank carrot juice, and _ had a very healthy diet.",
+      "choices": [
+        "Betty",
+        "Elena"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_115",
+      "question": "Betty drank chocolate shakes while Elena drank carrot juice, and _ had a very unhealthy diet.",
+      "choices": [
+        "Betty",
+        "Elena"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_116",
+      "question": "Carrie posted their sofa for sale on Craigslist, and had received an offer they had to decline because the _ is valuable.",
+      "choices": [
+        "offer",
+        "sofa"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_117",
+      "question": "I picked up some leaves to put in the books and dry, but they didn't fit because the _ were too small.",
+      "choices": [
+        "leaves",
+        "books"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_118",
+      "question": "I picked up some leaves to put in the books and dry, but they didn't fit because the _ were too massive.",
+      "choices": [
+        "leaves",
+        "books"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_119",
+      "question": "The president had their speech at the auditorium rather than the park because the _ was bigger.",
+      "choices": [
+        "auditorium",
+        "park"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_120",
+      "question": "The president had their speech at the auditorium rather than the park because the _ was smaller.",
+      "choices": [
+        "auditorium",
+        "park"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_121",
+      "question": "When Steven found that their T-shirt had shrunk in the laundry, Robert's first reaction was to laugh, and _ then became angry.",
+      "choices": [
+        "Steven",
+        "Robert"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_122",
+      "question": "When Steven found that their T-shirt had shrunk in the laundry, Robert's first reaction was to laugh, and _ became apologetic.",
+      "choices": [
+        "Steven",
+        "Robert"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_123",
+      "question": "She counted her calories for her diet and found she needed more so she ate a brownie instead of an apple since the _ has fewer.",
+      "choices": [
+        "apple",
+        "brownie"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_124",
+      "question": "Felicia liked wearing glasses more than braces because she could take the _ off after two years.",
+      "choices": [
+        "glasses",
+        "braces"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_125",
+      "question": "Felicia liked wearing glasses more than braces because she could take the _ off every day.",
+      "choices": [
+        "glasses",
+        "braces"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_126",
+      "question": "Randy's hair is dry when compared to Ian's due to _ using a strong conditioner.",
+      "choices": [
+        "Randy",
+        "Ian"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_127",
+      "question": "Adam was a crook and not a law-abiding citizen like Joseph, so it was surprising that _ was the one with a restraining order against him.",
+      "choices": [
+        "Adam",
+        "Joseph"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_128",
+      "question": "Adam was law-abiding and not a crook like Joseph, so it was surprising that _ was the one with a restraining order against him.",
+      "choices": [
+        "Adam",
+        "Joseph"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_129",
+      "question": "The wages at the factory were lower than the wages at the plant since it was more safe to work at the _ .",
+      "choices": [
+        "plant",
+        "factory"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_130",
+      "question": "The health of Joel was stronger than that of William due to _ being a cigar smoker.",
+      "choices": [
+        "Joel",
+        "William"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_131",
+      "question": "It was easy for Amy but not Rachel to create a meal because _ had taken woodshop in school.",
+      "choices": [
+        "Amy",
+        "Rachel"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_132",
+      "question": "Ann's babies were crying, and she could give them a bottle or a rattle.  She tried the _ first in case they were bored.",
+      "choices": [
+        "bottle",
+        "rattle"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_133",
+      "question": "Rebecca thought Disney movies were the best thing to watch but Samantha like horror movies better. _ rented Saw from Redbox.",
+      "choices": [
+        "Rebecca",
+        "Samantha"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_134",
+      "question": "The house of Aaron took some damage from the storm but not Michael's house, because _ lived farther away.",
+      "choices": [
+        "Aaron",
+        "Michael"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_135",
+      "question": "Jennifer dragged Felicia along to a self help workshop about how to succeed, because _ wanted some company.",
+      "choices": [
+        "Jennifer",
+        "Felicia"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_136",
+      "question": "Mary can read the clock in the room at night without the light even though the _ is dark.",
+      "choices": [
+        "clock",
+        "room"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_137",
+      "question": "Logan reads a lot, while Donald almost never picks up a book because _ is a plumber.",
+      "choices": [
+        "Logan",
+        "Donald"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_138",
+      "question": "Logan reads a lot, while Donald almost never picks up a book because _ is a student.",
+      "choices": [
+        "Logan",
+        "Donald"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_139",
+      "question": "Kyle wanted to crush Ryan 's dreams of becoming a movie actor. _ was a threat to him.",
+      "choices": [
+        "Kyle",
+        "Ryan"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_140",
+      "question": "The wind during the last hurricane tried to knock over their new house, but the _ was too strong.",
+      "choices": [
+        "house",
+        "wind"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_141",
+      "question": "Betty made the choice to reduce Samantha's salary after _ started cutting back on efficiency.",
+      "choices": [
+        "Betty",
+        "Samantha"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_142",
+      "question": "During the rescue mission, Maria pulled Rebecca away from the minefield since _ was a civilian.",
+      "choices": [
+        "Maria",
+        "Rebecca"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_143",
+      "question": "The jewelry sold for less than the baseball card did since the _ was very common.",
+      "choices": [
+        "card",
+        "jewelry"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_144",
+      "question": "Laura brought extensions to Monica at the salon, so that _ could get their dreads treated professionally.",
+      "choices": [
+        "Laura",
+        "Monica"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_145",
+      "question": "Laura brought extensions to Monica at the salon, so that _ could treat their dreads professionally.",
+      "choices": [
+        "Laura",
+        "Monica"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_146",
+      "question": "The installation process was simpler for the cable over the internet because the man had never installed the _ previously.",
+      "choices": [
+        "cable",
+        "internet"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_147",
+      "question": "The installation process was simpler for the cable over the internet because the man had already installed the _ previously.",
+      "choices": [
+        "cable",
+        "internet"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_148",
+      "question": "Jessica wanted Mary to help them decorate their new house because _ asked them not to do it alone.",
+      "choices": [
+        "Jessica",
+        "Mary"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_149",
+      "question": "William went on the ride more than Matthew did because _ thought it was scary.",
+      "choices": [
+        "William",
+        "Matthew"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_150",
+      "question": "Megan took Monica to a wood shack in the mountains, because _ was a kidnapper trying to hide.",
+      "choices": [
+        "Megan",
+        "Monica"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_151",
+      "question": "At the beauty salon, Angela preferred to work on her eyebrows instead of her eyelashes because the _ were already worked on.",
+      "choices": [
+        "eyebrows",
+        "eyelashes"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_152",
+      "question": "Samuel tried unsuccessfully to get Brett to skip school because _ was a truant that didn't follow the rules.",
+      "choices": [
+        "Samuel",
+        "Brett"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_153",
+      "question": "Kayla prepared a foot soak bath for Cynthia for their birthday so _ is pouring in water.",
+      "choices": [
+        "Kayla",
+        "Cynthia"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_154",
+      "question": "The man looked at the sundial since a watch or clocktower was not at his disposal, having lost the _ .",
+      "choices": [
+        "watch",
+        "clocktower"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_155",
+      "question": "Hunter chose to eat a banana for breakfast every morning but Michael did not because _ is unconcerned about their health.",
+      "choices": [
+        "Hunter",
+        "Michael"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_156",
+      "question": "The IRS sent Tim a letter informing him of the audit, which could occure at the house or the office.  Tim chose a comfortable setting of the _ .",
+      "choices": [
+        "office",
+        "house"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_157",
+      "question": "Patricia decided to buy Felicia dinner because they had been through a lot and _ just inherited some money.",
+      "choices": [
+        "Patricia",
+        "Felicia"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_158",
+      "question": "Patricia decided to buy Felicia dinner because they had been through a lot and _ just lost some money.",
+      "choices": [
+        "Patricia",
+        "Felicia"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_159",
+      "question": "Sarah thought that Elena was overpacking for Hawaii, because _ had a very full suitcase.",
+      "choices": [
+        "Sarah",
+        "Elena"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_160",
+      "question": "William liked to be outside more than Kyle so _ spent time arguing against getting a pool.",
+      "choices": [
+        "William",
+        "Kyle"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_161",
+      "question": "William liked to be outside more than Kyle so _ spent time arguing for getting a pool.",
+      "choices": [
+        "William",
+        "Kyle"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_162",
+      "question": "John never mentioned his canoe, but had a long conversation with Ron about the raft, because John rarely used the _ .",
+      "choices": [
+        "canoe",
+        "raft"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_163",
+      "question": "Monica gives Jessica a book about posture, because _ has been trying to get better at ballet dancing.",
+      "choices": [
+        "Monica",
+        "Jessica"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_164",
+      "question": "My gun was inspected with a cloth to make sure it worked fine. The _ was hard.",
+      "choices": [
+        "cloth",
+        "gun"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_165",
+      "question": "My gun was inspected with a cloth to make sure it worked fine. The _ was soft.",
+      "choices": [
+        "cloth",
+        "gun"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_166",
+      "question": "At the estate sale, John saw the hammer was more affordable than the screwdriver, because the _ was used.",
+      "choices": [
+        "hammer",
+        "screwdriver"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_167",
+      "question": "At the estate sale, John saw the hammer was more affordable than the screwdriver, because the _ was brand new.",
+      "choices": [
+        "hammer",
+        "screwdriver"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_168",
+      "question": "The temperature in winter is much different than summer,  the _  is always lower.",
+      "choices": [
+        "summer",
+        "winter"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_169",
+      "question": "The sliding glass door was broken when Eric pushed Ian through it because _ is a pushover.",
+      "choices": [
+        "Eric",
+        "Ian"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_170",
+      "question": "The woman used a gentle technique when painting the urn but applied more pressure when painting the vase, because the _ was less fragile.",
+      "choices": [
+        "Urn",
+        "Vase"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_171",
+      "question": "The woman used a gentle technique when painting the urn but applied more pressure when painting the vase, because the _ was more fragile.",
+      "choices": [
+        "Urn",
+        "Vase"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_172",
+      "question": "Tina made a schedule to keep track of her work and school obligations.  She preferred to focus on the _ because she wanted to learn.",
+      "choices": [
+        "school",
+        "work"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_173",
+      "question": "Jessica wants to protect herself from infectious diseases so she goes to doctor Samantha, because _ is careful.",
+      "choices": [
+        "Jessica",
+        "Samantha"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_174",
+      "question": "Kerry was running later when he took his car to work than when he took a taxi because he ran into more traffic in the _ .",
+      "choices": [
+        "car",
+        "taxi"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_175",
+      "question": "The history of the village is more intriguing than the history of the city because the _ is very new.",
+      "choices": [
+        "village",
+        "city"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_176",
+      "question": "Rachel told Patricia to pick up some baby powder at the store because _ had sweaty feet.",
+      "choices": [
+        "Rachel",
+        "Patricia"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_177",
+      "question": "Rachel told Patricia to pick up some baby powder at the store but _ had sweaty feet too.",
+      "choices": [
+        "Rachel",
+        "Patricia"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_178",
+      "question": "Neil looked all over the neighborhood for their missing dog until Samuel called and _ got their dog back.",
+      "choices": [
+        "Neil",
+        "Samuel"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_179",
+      "question": "I did not buy the color pink rose flowers  for my wedding because the _ is too bright.",
+      "choices": [
+        "color",
+        "wedding"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_180",
+      "question": "I started playing drums young.  Sometimes I played in the garage and sometimes my room, but my parents preferred knowing I was in the  _  .",
+      "choices": [
+        "garage",
+        "room"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_181",
+      "question": "At work, Mary uses a broiler a lot, but Rebecca uses a chainsaw. That's because _ is a tree cutter.",
+      "choices": [
+        "Mary",
+        "Rebecca"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_182",
+      "question": "The sand and water in the fish tank were very dirty, so the _ needed to be filtered.",
+      "choices": [
+        "water",
+        "sand"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_183",
+      "question": "The sand and water in the fish tank were very dirty, so the _ needed to be scrubbed.",
+      "choices": [
+        "water",
+        "sand"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_184",
+      "question": "Warts appeared on Jerry's limbs after he went through the jungle because the _ were infectious.",
+      "choices": [
+        "warts",
+        "limbs"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_185",
+      "question": "Pete preferred to use the sheet to the blanket, because the _ was much hotter.",
+      "choices": [
+        "sheet",
+        "blanket"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_186",
+      "question": "She preferred a globe of the world made of PVC instead of plastic, because the _ made it look expensive.",
+      "choices": [
+        "plastic",
+        "PVC"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_187",
+      "question": "People think _ is embarassed, because Samantha made snide comments about the shirt Rebecca was wearing.",
+      "choices": [
+        "Samantha",
+        "Rebecca"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_188",
+      "question": "Adam's mindset was a lot stronger than William's because _ was able to control it.",
+      "choices": [
+        "Adam",
+        "William"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_189",
+      "question": "The puncture healed quicker than the cut because the _ was a more superficial wound.",
+      "choices": [
+        "cut",
+        "puncture"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_190",
+      "question": "At the beach, Emily collected some seashells for her mother Maria. _ polished the seashells before giving them away.",
+      "choices": [
+        "Emily",
+        "Maria"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_191",
+      "question": "Using a needle to sew together both the leather and silk was difficult.  The _ was hard get through.",
+      "choices": [
+        "leather",
+        "silk"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_192",
+      "question": "The maid took away a cozy blanket from Lawrence but not Nick because _ was very hot.",
+      "choices": [
+        "Lawrence",
+        "Nick"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_193",
+      "question": "The maid took away a cozy blanket from Lawrence but not Nick because _ was very cold.",
+      "choices": [
+        "Lawrence",
+        "Nick"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_194",
+      "question": "The photo came out of the Polaroid camera and fell onto the tray, so now the _ is lighter.",
+      "choices": [
+        "camera",
+        "tray"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_195",
+      "question": "Brett asked Nelson where they were because _ had no idea after he fell asleep.",
+      "choices": [
+        "Brett",
+        "Nelson"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_196",
+      "question": "Brett asked Nelson where they were because _ had had been driving after he fell asleep.",
+      "choices": [
+        "Brett",
+        "Nelson"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_197",
+      "question": "Leslie coughed more when they were eating their food than Adam although there was more seasoning in the food of _ .",
+      "choices": [
+        "Leslie",
+        "Adam"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_198",
+      "question": "Craig gifted Eric a new picnic table, because _ borrowed some money a while ago.",
+      "choices": [
+        "Craig",
+        "Eric"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "winogrande_199",
+      "question": "Craig gifted Eric a new picnic table, because _ lent him some money a while ago.",
+      "choices": [
+        "Craig",
+        "Eric"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    }
+  ]
+}

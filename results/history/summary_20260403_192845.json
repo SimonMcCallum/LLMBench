@@ -1,0 +1,60 @@
+{
+  "timestamp": "20260403_192845",
+  "config": {
+    "models": [
+      "tinyllama",
+      "phi-3-mini"
+    ],
+    "datasets": [
+      "gamedesign"
+    ],
+    "max_examples": 10,
+    "temperatures": [
+      0.0
+    ],
+    "num_repetitions": 1,
+    "method": "sequential"
+  },
+  "overall_metrics": {
+    "ece": 0.16577616221585387,
+    "brier": 0.38502127835414607,
+    "auprc": 0.3122570881499453,
+    "prr": -0.11343563561681723,
+    "accuracy": 0.35,
+    "mean_confidence": 0.2657761622158539,
+    "calibration_gap": 0.0842238377841461,
+    "acc@70%": 0.35714285714285715,
+    "acc@80%": 0.4375,
+    "acc@90%": 0.3888888888888889
+  },
+  "summaries": [
+    {
+      "model_name": "tinyllama",
+      "model_type": "local",
+      "vendor": "local",
+      "dataset": "gamedesign",
+      "total_examples": 10,
+      "accuracy": 0.2,
+      "mean_confidence": 0.5315523244317076,
+      "calibration_gap": 0.3315523244317076,
+      "mean_hlcc_score": -0.1463691517817603,
+      "mean_cbm_score": -0.6,
+      "correct_count": 2,
+      "incorrect_count": 8
+    },
+    {
+      "model_name": "phi-3-mini",
+      "model_type": "local",
+      "vendor": "local",
+      "dataset": "gamedesign",
+      "total_examples": 10,
+      "accuracy": 0.5,
+      "mean_confidence": 0.0,
+      "calibration_gap": 0.5,
+      "mean_hlcc_score": 0.5,
+      "mean_cbm_score": 0.0,
+      "correct_count": 5,
+      "incorrect_count": 5
+    }
+  ]
+}

@@ -137,8 +137,13 @@ def load_local_model(
             bnb_4bit_use_double_quant=True,
         )
 
+    # Only use trust_remote_code for models that require it (e.g. Qwen).
+    # Models with native transformers support (Phi-3, Llama, Mistral, Gemma)
+    # can break when their cached custom code is stale.
+    needs_remote_code = any(x in model_path.lower() for x in ["qwen", "deepseek"])
+
     tokenizer = AutoTokenizer.from_pretrained(
-        model_path, cache_dir=cache_dir, trust_remote_code=True
+        model_path, cache_dir=cache_dir, trust_remote_code=needs_remote_code
     )
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
@@ -146,7 +151,7 @@ def load_local_model(
     load_kwargs = {
         "cache_dir": cache_dir,
         "device_map": device_map,
-        "trust_remote_code": True,
+        "trust_remote_code": needs_remote_code,
     }
     if quant_config is not None:
         load_kwargs["quantization_config"] = quant_config

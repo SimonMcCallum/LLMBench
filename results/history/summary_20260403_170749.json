@@ -1,0 +1,62 @@
+{
+  "timestamp": "20260403_170749",
+  "config": {
+    "models": [
+      "claude-sonnet-4-6",
+      "claude-haiku-4-5-20251001",
+      "deepseek-chat",
+      "deepseek-reasoner"
+    ],
+    "datasets": [
+      "gamedesign"
+    ],
+    "max_examples": 10,
+    "temperatures": [
+      0.0
+    ],
+    "num_repetitions": 1,
+    "method": "sequential"
+  },
+  "overall_metrics": {
+    "ece": 0.0888888888888889,
+    "brier": 0.13055555555555556,
+    "auprc": 0.8993621846563024,
+    "prr": 0.375806795206334,
+    "accuracy": 0.8333333333333334,
+    "mean_confidence": 0.8944444444444445,
+    "calibration_gap": 0.061111111111111116,
+    "acc@70%": 0.8333333333333334,
+    "acc@80%": 0.8571428571428571,
+    "acc@90%": 0.875
+  },
+  "summaries": [
+    {
+      "model_name": "deepseek-chat",
+      "model_type": "api",
+      "vendor": "deepseek",
+      "dataset": "gamedesign",
+      "total_examples": 9,
+      "accuracy": 0.6666666666666666,
+      "mean_confidence": 0.8999999999999999,
+      "calibration_gap": 0.23333333333333328,
+      "mean_hlcc_score": 0.7983333333333333,
+      "mean_cbm_score": 0.7222222222222222,
+      "correct_count": 6,
+      "incorrect_count": 3
+    },
+    {
+      "model_name": "deepseek-reasoner",
+      "model_type": "api",
+      "vendor": "deepseek",
+      "dataset": "gamedesign",
+      "total_examples": 9,
+      "accuracy": 1.0,
+      "mean_confidence": 0.8888888888888888,
+      "calibration_gap": 0.11111111111111116,
+      "mean_hlcc_score": 1.8888888888888888,
+      "mean_cbm_score": 1.8333333333333333,
+      "correct_count": 9,
+      "incorrect_count": 0
+    }
+  ]
+}

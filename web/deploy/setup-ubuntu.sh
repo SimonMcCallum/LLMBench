@@ -13,9 +13,9 @@
 
 set -e
 
-REPO_URL="${1:-git@github.com:SimonMcCallum/LLM-Bench.git}"  # Change to your repo
+REPO_URL="${1:-git@github.com:SimonMcCallum/LLM-Bench.git}"
 INSTALL_DIR="/opt/llm-bench"
-DOMAIN="${2:-llm-bench.example.com}"  # Change to your domain
+DOMAIN="${2:-bench.simonmccallum.org.nz}"
 
 echo "============================================"
 echo "LLM-Bench Ubuntu Server Setup"

@@ -1,0 +1,120 @@
+{
+  "timestamp": "20260403_141603",
+  "config": {
+    "models": [
+      "gpt-4.1",
+      "gpt-4.1-mini",
+      "gemini-2.5-pro",
+      "gemini-2.5-flash",
+      "deepseek-chat",
+      "o4-mini"
+    ],
+    "datasets": [
+      "gamedesign"
+    ],
+    "max_examples": 10,
+    "temperatures": [
+      0.0
+    ],
+    "num_repetitions": 1,
+    "method": "sequential"
+  },
+  "overall_metrics": {
+    "ece": 0.11152542372881359,
+    "brier": 0.13861016949152546,
+    "auprc": 0.924636791171115,
+    "prr": 0.7256141349345114,
+    "accuracy": 0.7457627118644068,
+    "mean_confidence": 0.8555932203389831,
+    "calibration_gap": 0.10983050847457632,
+    "acc@70%": 0.8780487804878049,
+    "acc@80%": 0.8723404255319149,
+    "acc@90%": 0.8113207547169812
+  },
+  "summaries": [
+    {
+      "model_name": "gpt-4.1",
+      "model_type": "api",
+      "vendor": "openai",
+      "dataset": "gamedesign",
+      "total_examples": 10,
+      "accuracy": 0.7,
+      "mean_confidence": 0.923,
+      "calibration_gap": 0.2230000000000001,
+      "mean_hlcc_score": 0.8875,
+      "mean_cbm_score": 0.85,
+      "correct_count": 7,
+      "incorrect_count": 3
+    },
+    {
+      "model_name": "gpt-4.1-mini",
+      "model_type": "api",
+      "vendor": "openai",
+      "dataset": "gamedesign",
+      "total_examples": 10,
+      "accuracy": 0.9,
+      "mean_confidence": 0.915,
+      "calibration_gap": 0.015000000000000013,
+      "mean_hlcc_score": 1.563,
+      "mean_cbm_score": 1.6,
+      "correct_count": 9,
+      "incorrect_count": 1
+    },
+    {
+      "model_name": "gemini-2.5-pro",
+      "model_type": "api",
+      "vendor": "gemini",
+      "dataset": "gamedesign",
+      "total_examples": 10,
+      "accuracy": 0.9,
+      "mean_confidence": 0.86,
+      "calibration_gap": 0.040000000000000036,
+      "mean_hlcc_score": 1.7600000000000002,
+      "mean_cbm_score": 1.8,
+      "correct_count": 9,
+      "incorrect_count": 1
+    },
+    {
+      "model_name": "gemini-2.5-flash",
+      "model_type": "api",
+      "vendor": "gemini",
+      "dataset": "gamedesign",
+      "total_examples": 10,
+      "accuracy": 0.4,
+      "mean_confidence": 0.65,
+      "calibration_gap": 0.25,
+      "mean_hlcc_score": 0.45,
+      "mean_cbm_score": 0.1,
+      "correct_count": 4,
+      "incorrect_count": 6
+    },
+    {
+      "model_name": "deepseek-chat",
+      "model_type": "api",
+      "vendor": "deepseek",
+      "dataset": "gamedesign",
+      "total_examples": 9,
+      "accuracy": 0.6666666666666666,
+      "mean_confidence": 0.8999999999999999,
+      "calibration_gap": 0.23333333333333328,
+      "mean_hlcc_score": 0.7983333333333333,
+      "mean_cbm_score": 0.7222222222222222,
+      "correct_count": 6,
+      "incorrect_count": 3
+    },
+    {
+      "model_name": "o4-mini",
+      "model_type": "api",
+      "vendor": "openai",
+      "dataset": "gamedesign",
+      "total_examples": 10,
+      "accuracy": 0.9,
+      "mean_confidence": 0.89,
+      "calibration_gap": 0.010000000000000009,
+      "mean_hlcc_score": 1.5379999999999998,
+      "mean_cbm_score": 1.45,
+      "correct_count": 9,
+      "incorrect_count": 1
+    }
+  ]
+}

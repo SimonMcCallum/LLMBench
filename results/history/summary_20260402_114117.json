@@ -1,0 +1,147 @@
+{
+  "timestamp": "20260402_114117",
+  "config": {
+    "models": [
+      "tinyllama",
+      "qwen2-1.5b",
+      "phi-2",
+      "phi-3-mini"
+    ],
+    "datasets": [
+      "truthfulqa",
+      "arc-challenge"
+    ],
+    "max_examples": 50,
+    "temperatures": [
+      0.0
+    ],
+    "num_repetitions": 1,
+    "method": "sequential"
+  },
+  "overall_metrics": {
+    "ece": 0.22090125233753086,
+    "brier": 0.2740548030675562,
+    "auprc": 0.7571540502652173,
+    "prr": 0.4934362168078373,
+    "accuracy": 0.565,
+    "mean_confidence": 0.37425317147999465,
+    "calibration_gap": 0.1907468285200053,
+    "acc@70%": 0.6535714285714286,
+    "acc@80%": 0.628125,
+    "acc@90%": 0.6055555555555555
+  },
+  "summaries": [
+    {
+      "model_name": "tinyllama",
+      "model_type": "local",
+      "vendor": "local",
+      "dataset": "truthfulqa",
+      "total_examples": 50,
+      "accuracy": 1.0,
+      "mean_confidence": 0.22522607606551875,
+      "calibration_gap": 0.7747739239344813,
+      "mean_hlcc_score": 1.2252260760655187,
+      "mean_cbm_score": 0.06,
+      "correct_count": 50,
+      "incorrect_count": 0
+    },
+    {
+      "model_name": "qwen2-1.5b",
+      "model_type": "local",
+      "vendor": "local",
+      "dataset": "truthfulqa",
+      "total_examples": 50,
+      "accuracy": 0.48,
+      "mean_confidence": 0.5926845842194657,
+      "calibration_gap": 0.1126845842194657,
+      "mean_hlcc_score": 0.5203038270467011,
+      "mean_cbm_score": 0.29,
+      "correct_count": 24,
+      "incorrect_count": 26
+    },
+    {
+      "model_name": "phi-2",
+      "model_type": "local",
+      "vendor": "local",
+      "dataset": "truthfulqa",
+      "total_examples": 50,
+      "accuracy": 0.16,
+      "mean_confidence": 0.1529497167238386,
+      "calibration_gap": 0.00705028327616139,
+      "mean_hlcc_score": 0.12579298068620137,
+      "mean_cbm_score": -0.04,
+      "correct_count": 8,
+      "incorrect_count": 42
+    },
+    {
+      "model_name": "phi-3-mini",
+      "model_type": "local",
+      "vendor": "local",
+      "dataset": "truthfulqa",
+      "total_examples": 50,
+      "accuracy": 0.54,
+      "mean_confidence": 0.41514110043752006,
+      "calibration_gap": 0.12485889956247997,
+      "mean_hlcc_score": 0.6664371787561033,
+      "mean_cbm_score": 0.22,
+      "correct_count": 27,
+      "incorrect_count": 23
+    },
+    {
+      "model_name": "tinyllama",
+      "model_type": "local",
+      "vendor": "local",
+      "dataset": "arc-challenge",
+      "total_examples": 50,
+      "accuracy": 0.2,
+      "mean_confidence": 0.10586687265270832,
+      "calibration_gap": 0.09413312734729169,
+      "mean_hlcc_score": 0.19587752751129492,
+      "mean_cbm_score": -0.01,
+      "correct_count": 10,
+      "incorrect_count": 40
+    },
+    {
+      "model_name": "qwen2-1.5b",
+      "model_type": "local",
+      "vendor": "local",
+      "dataset": "arc-challenge",
+      "total_examples": 50,
+      "accuracy": 0.64,
+      "mean_confidence": 0.6638298141282672,
+      "calibration_gap": 0.023829814128267235,
+      "mean_hlcc_score": 0.8928925528111554,
+      "mean_cbm_score": 0.65,
+      "correct_count": 32,
+      "incorrect_count": 18
+    },
+    {
+      "model_name": "phi-2",
+      "model_type": "local",
+      "vendor": "local",
+      "dataset": "arc-challenge",
+      "total_examples": 50,
+      "accuracy": 0.72,
+      "mean_confidence": 0.14473864593504362,
+      "calibration_gap": 0.5752613540649564,
+      "mean_hlcc_score": 0.8433752017300642,
+      "mean_cbm_score": 0.07,
+      "correct_count": 36,
+      "incorrect_count": 14
+    },
+    {
+      "model_name": "phi-3-mini",
+      "model_type": "local",
+      "vendor": "local",
+      "dataset": "arc-challenge",
+      "total_examples": 50,
+      "accuracy": 0.78,
+      "mean_confidence": 0.6935885616775949,
+      "calibration_gap": 0.08641143832240517,
+      "mean_hlcc_score": 1.3225229813381247,
+      "mean_cbm_score": 1.05,
+      "correct_count": 39,
+      "incorrect_count": 11
+    }
+  ]
+}

@@ -57,7 +57,7 @@ def export_manifest():
         if f.name == "manifest.json":
             continue
         try:
-            with open(f, "r") as fh:
+            with open(f, "r", encoding="utf-8") as fh:
                 data = json.load(fh)
             datasets.append({
                 "name": data["dataset"],

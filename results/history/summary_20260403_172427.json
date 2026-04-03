@@ -1,0 +1,60 @@
+{
+  "timestamp": "20260403_172427",
+  "config": {
+    "models": [
+      "claude-sonnet-4-6",
+      "claude-haiku-4-5-20251001"
+    ],
+    "datasets": [
+      "gamedesign"
+    ],
+    "max_examples": 10,
+    "temperatures": [
+      0.0
+    ],
+    "num_repetitions": 1,
+    "method": "sequential"
+  },
+  "overall_metrics": {
+    "ece": 0.10700000000000008,
+    "brier": 0.14257999999999998,
+    "auprc": 0.9177610146622752,
+    "prr": 0.7351032346915576,
+    "accuracy": 0.7,
+    "mean_confidence": 0.7419999999999999,
+    "calibration_gap": 0.041999999999999926,
+    "acc@70%": 0.7857142857142857,
+    "acc@80%": 0.8125,
+    "acc@90%": 0.7777777777777778
+  },
+  "summaries": [
+    {
+      "model_name": "claude-sonnet-4-6",
+      "model_type": "api",
+      "vendor": "anthropic",
+      "dataset": "gamedesign",
+      "total_examples": 10,
+      "accuracy": 0.7,
+      "mean_confidence": 0.686,
+      "calibration_gap": 0.013999999999999901,
+      "mean_hlcc_score": 1.10824,
+      "mean_cbm_score": 0.95,
+      "correct_count": 7,
+      "incorrect_count": 3
+    },
+    {
+      "model_name": "claude-haiku-4-5-20251001",
+      "model_type": "api",
+      "vendor": "anthropic",
+      "dataset": "gamedesign",
+      "total_examples": 10,
+      "accuracy": 0.7,
+      "mean_confidence": 0.798,
+      "calibration_gap": 0.09800000000000009,
+      "mean_hlcc_score": 0.9841199999999999,
+      "mean_cbm_score": 0.8,
+      "correct_count": 7,
+      "incorrect_count": 3
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "timestamp": "20260403_131049",
+  "config": {
+    "models": [
+      "gemini-2.5-pro",
+      "gpt-4.1",
+      "gpt-4.1-mini",
+      "o4-mini",
+      "deepseek-chat"
+    ],
+    "datasets": [
+      "hard"
+    ],
+    "max_examples": 3,
+    "temperatures": [
+      0.0
+    ],
+    "num_repetitions": 1,
+    "method": "sequential"
+  },
+  "overall_metrics": {
+    "ece": 0.45333333333333337,
+    "brier": 0.454,
+    "auprc": 0.49312473241044663,
+    "prr": 0.04653493754662494,
+    "accuracy": 0.4666666666666667,
+    "mean_confidence": 0.92,
+    "calibration_gap": 0.45333333333333337,
+    "acc@70%": 0.4,
+    "acc@80%": 0.4166666666666667,
+    "acc@90%": 0.46153846153846156
+  },
+  "summaries": [
+    {
+      "model_name": "gemini-2.5-pro",
+      "model_type": "api",
+      "vendor": "gemini",
+      "dataset": "hard",
+      "total_examples": 3,
+      "accuracy": 0.6666666666666666,
+      "mean_confidence": 0.9499999999999998,
+      "calibration_gap": 0.2833333333333332,
+      "mean_hlcc_score": 0.6983333333333333,
+      "mean_cbm_score": 0.6666666666666666,
+      "correct_count": 2,
+      "incorrect_count": 1
+    },
+    {
+      "model_name": "gpt-4.1",
+      "model_type": "api",
+      "vendor": "openai",
+      "dataset": "hard",
+      "total_examples": 3,
+      "accuracy": 0.6666666666666666,
+      "mean_confidence": 0.9,
+      "calibration_gap": 0.2333333333333334,
+      "mean_hlcc_score": 0.7266666666666666,
+      "mean_cbm_score": 0.5,
+      "correct_count": 2,
+      "incorrect_count": 1
+    },
+    {
+      "model_name": "gpt-4.1-mini",
+      "model_type": "api",
+      "vendor": "openai",
+      "dataset": "hard",
+      "total_examples": 3,
+      "accuracy": 0.3333333333333333,
+      "mean_confidence": 0.9333333333333332,
+      "calibration_gap": 0.5999999999999999,
+      "mean_hlcc_score": -0.4916666666666667,
+      "mean_cbm_score": -0.6666666666666666,
+      "correct_count": 1,
+      "incorrect_count": 2
+    },
+    {
+      "model_name": "o4-mini",
+      "model_type": "api",
+      "vendor": "openai",
+      "dataset": "hard",
+      "total_examples": 3,
+      "accuracy": 0.3333333333333333,
+      "mean_confidence": 0.9166666666666666,
+      "calibration_gap": 0.5833333333333333,
+      "mean_hlcc_score": -0.5083333333333334,
+      "mean_cbm_score": -0.6666666666666666,
+      "correct_count": 1,
+      "incorrect_count": 2
+    },
+    {
+      "model_name": "deepseek-chat",
+      "model_type": "api",
+      "vendor": "deepseek",
+      "dataset": "hard",
+      "total_examples": 3,
+      "accuracy": 0.3333333333333333,
+      "mean_confidence": 0.9,
+      "calibration_gap": 0.5666666666666667,
+      "mean_hlcc_score": -0.44666666666666677,
+      "mean_cbm_score": -0.6666666666666666,
+      "correct_count": 1,
+      "incorrect_count": 2
+    }
+  ]
+}

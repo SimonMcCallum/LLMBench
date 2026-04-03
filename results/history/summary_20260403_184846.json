@@ -1,0 +1,45 @@
+{
+  "timestamp": "20260403_184846",
+  "config": {
+    "models": [
+      "deepseek-reasoner"
+    ],
+    "datasets": [
+      "hard"
+    ],
+    "max_examples": 100,
+    "temperatures": [
+      0.0
+    ],
+    "num_repetitions": 1,
+    "method": "sequential"
+  },
+  "overall_metrics": {
+    "ece": 0.2,
+    "brier": 0.1738888888888889,
+    "auprc": 0.9587585034013606,
+    "prr": 0.8127250900360143,
+    "accuracy": 0.7777777777777778,
+    "mean_confidence": 0.9222222222222223,
+    "calibration_gap": 0.1444444444444445,
+    "acc@70%": 0.8333333333333334,
+    "acc@80%": 0.8571428571428571,
+    "acc@90%": 0.875
+  },
+  "summaries": [
+    {
+      "model_name": "deepseek-reasoner",
+      "model_type": "api",
+      "vendor": "deepseek",
+      "dataset": "hard",
+      "total_examples": 9,
+      "accuracy": 0.7777777777777778,
+      "mean_confidence": 0.9222222222222223,
+      "calibration_gap": 0.1444444444444445,
+      "mean_hlcc_score": 1.165,
+      "mean_cbm_score": 1.1666666666666667,
+      "correct_count": 7,
+      "incorrect_count": 2
+    }
+  ]
+}

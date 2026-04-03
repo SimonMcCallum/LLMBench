@@ -1,0 +1,2807 @@
+{
+  "dataset": "commonsenseqa",
+  "exported": "2026-04-02T11:30:22.124158",
+  "total": 200,
+  "questions": [
+    {
+      "question_id": "commonsenseqa_0",
+      "question": "A revolving door is convenient for two direction travel, but it also serves as a security measure at a what?",
+      "choices": [
+        "bank",
+        "library",
+        "department store",
+        "mall",
+        "new york"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_1",
+      "question": "What do people aim to do at work?",
+      "choices": [
+        "complete job",
+        "learn from each other",
+        "kill animals",
+        "wear hats",
+        "talk to each other"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_2",
+      "question": "Where would you find magazines along side many other printed works?",
+      "choices": [
+        "doctor",
+        "bookstore",
+        "market",
+        "train station",
+        "mortuary"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_3",
+      "question": "Where are  you likely to find a hamburger?",
+      "choices": [
+        "fast food restaurant",
+        "pizza",
+        "ground up dead cows",
+        "mouth",
+        "cow carcus"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_4",
+      "question": "James was looking for a good place to buy farmland.  Where might he look?",
+      "choices": [
+        "midwest",
+        "countryside",
+        "estate",
+        "farming areas",
+        "illinois"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_5",
+      "question": "What island country is ferret popular?",
+      "choices": [
+        "own home",
+        "north carolina",
+        "great britain",
+        "hutch",
+        "outdoors"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_6",
+      "question": "In what Spanish speaking North American country can you get a great cup of coffee?",
+      "choices": [
+        "mildred's coffee shop",
+        "mexico",
+        "diner",
+        "kitchen",
+        "canteen"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_7",
+      "question": "What do animals do when an enemy is approaching?",
+      "choices": [
+        "feel pleasure",
+        "procreate",
+        "pass water",
+        "listen to each other",
+        "sing"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_8",
+      "question": "Reading newspaper one of many ways to practice your what?",
+      "choices": [
+        "literacy",
+        "knowing how to read",
+        "money",
+        "buying",
+        "money bank"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_9",
+      "question": "What do people typically do while playing guitar?",
+      "choices": [
+        "cry",
+        "hear sounds",
+        "singing",
+        "arthritis",
+        "making music"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_10",
+      "question": "What would vinyl be an odd thing to replace?",
+      "choices": [
+        "pants",
+        "record albums",
+        "record store",
+        "cheese",
+        "wallpaper"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_11",
+      "question": "If you want harmony, what is something you should try to do with the world?",
+      "choices": [
+        "take time",
+        "make noise",
+        "make war",
+        "make peace",
+        "make haste"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_12",
+      "question": "Where does a heifer's master live?",
+      "choices": [
+        "farm house",
+        "barnyard",
+        "stockyard",
+        "slaughter house",
+        "eat cake"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_13",
+      "question": "Aside from water and nourishment what does your dog need?",
+      "choices": [
+        "bone",
+        "charm",
+        "petted",
+        "lots of attention",
+        "walked"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_14",
+      "question": "Janet was watching the film because she liked what?",
+      "choices": [
+        "erection",
+        "laughter",
+        "being entertained",
+        "fear",
+        "bordem"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_15",
+      "question": "What are you waiting alongside with when you're in a reception area?",
+      "choices": [
+        "motel",
+        "chair",
+        "hospital",
+        "people",
+        "hotels"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_16",
+      "question": "When drinking booze what can you do to stay busy?",
+      "choices": [
+        "reach tentative agreement",
+        "stay in bed",
+        "stop bicycle",
+        "examine thing",
+        "suicide"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_17",
+      "question": "A fencing thrust with a sharp sword towards a person would result in what?",
+      "choices": [
+        "injury",
+        "small cuts",
+        "fever",
+        "competition",
+        "puncture wound"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_18",
+      "question": "Unlike a spider and his many sight seers, people only have what?",
+      "choices": [
+        "tongues",
+        "names",
+        "brains",
+        "feelings",
+        "two eyes"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_19",
+      "question": "Where do adults use glue sticks?",
+      "choices": [
+        "classroom",
+        "desk drawer",
+        "at school",
+        "office",
+        "kitchen drawer"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_20",
+      "question": "What could go on top of wood?",
+      "choices": [
+        "lumberyard",
+        "synagogue",
+        "floor",
+        "carpet",
+        "hardware store"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_21",
+      "question": "The artist was sitting quietly pondering, then suddenly he began to paint when what struck him?",
+      "choices": [
+        "sadness",
+        "anxiety",
+        "inspiration",
+        "discomfort",
+        "insights"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_22",
+      "question": "Though the thin film seemed fragile, for it's intended purpose it was actually nearly what?",
+      "choices": [
+        "indestructible",
+        "durable",
+        "undestroyable",
+        "indestructible",
+        "unbreakable"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_23",
+      "question": "Where could you find a toilet that only friends can use?",
+      "choices": [
+        "rest area",
+        "school",
+        "stadium",
+        "apartment",
+        "hospital"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_24",
+      "question": "What is someone who isn't clever, bright, or competent called?",
+      "choices": [
+        "clumsy",
+        "ineffectual",
+        "dull",
+        "clumsy",
+        "stupid"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_25",
+      "question": "When wildlife reproduce we often refer to what comes out as what?",
+      "choices": [
+        "raise children",
+        "have children",
+        "photo copy",
+        "offspring",
+        "accidently got pregnant somehow"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_26",
+      "question": "The weasel was becoming a problem, it kept getting into the chicken eggs kept in the what?",
+      "choices": [
+        "forrest",
+        "barn",
+        "public office",
+        "out of doors",
+        "freezer"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_27",
+      "question": "Blue read material outside of his comfort zone because he wanted to gain what?",
+      "choices": [
+        "new perspective",
+        "entertained",
+        "understanding",
+        "hunger",
+        "tired eyes"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_28",
+      "question": "After he got hired he hoped for success at his what?",
+      "choices": [
+        "vocation",
+        "new job",
+        "michigan",
+        "working hard",
+        "manual"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_29",
+      "question": "Committing perjury is a serious what?",
+      "choices": [
+        "indictment",
+        "crime",
+        "violence",
+        "lie",
+        "go to jail"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_30",
+      "question": "If you are prone to postpone work what will you have to do in order to finish on time?",
+      "choices": [
+        "eat",
+        "hasten",
+        "antedate",
+        "bring forward",
+        "advance"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_31",
+      "question": "James wanted to find an old underground map from the 50s.  Where might he look for one?",
+      "choices": [
+        "library",
+        "subway station",
+        "county engineer's office",
+        "super market",
+        "home"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_32",
+      "question": "Sean was in a rush to get home, but the light turned yellow and he was forced to do what?",
+      "choices": [
+        "take time",
+        "dawdle",
+        "go slowly",
+        "ocean",
+        "slow down"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_33",
+      "question": "Where would a person be doing when having to wait their turn?",
+      "choices": [
+        "have patience",
+        "get in line",
+        "sing",
+        "stand in line",
+        "turn left"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_34",
+      "question": "She was always helping at the senior center, it brought her what?",
+      "choices": [
+        "satisfaction",
+        "heart",
+        "feel better",
+        "pay",
+        "happiness"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_35",
+      "question": "The lock kept the steering wheel from moving, but the thief still took his chances and began to work on the what?",
+      "choices": [
+        "keep cloesd",
+        "train",
+        "ignition switch",
+        "drawer",
+        "firearm"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_36",
+      "question": "Who is a police officer likely to work for?",
+      "choices": [
+        "beat",
+        "direct traffic",
+        "city",
+        "street",
+        "president"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_37",
+      "question": "If you have leftover cake, where would you put it?",
+      "choices": [
+        "quandry",
+        "refrigerator",
+        "oven",
+        "night stand",
+        "bakery"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_38",
+      "question": "A human wants to submerge himself in water, what should he use?",
+      "choices": [
+        "whirlpool bath",
+        "coffee cup",
+        "cup",
+        "soft drink",
+        "puddle"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_39",
+      "question": "Where is a doormat likely to be in front of?",
+      "choices": [
+        "facade",
+        "front door",
+        "doorway",
+        "entrance porch",
+        "hallway"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_40",
+      "question": "Bob the lizard lives in a warm place with lots of water.  Where does he probably live?",
+      "choices": [
+        "rock",
+        "tropical rainforest",
+        "jazz club",
+        "new mexico",
+        "rocky places"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_41",
+      "question": "August needed  money because he was afraid that he'd be kicked out of his house.  What did he need money to do?",
+      "choices": [
+        "control people",
+        "pay bills",
+        "hurt people",
+        "buy food",
+        "get things"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_42",
+      "question": "He needed more information to fix it, so he consulted the what?",
+      "choices": [
+        "chickens",
+        "google",
+        "newspaper",
+        "online",
+        "manual"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_43",
+      "question": "Where can you put a picture frame when it's not hung vertically?",
+      "choices": [
+        "art show",
+        "wall",
+        "newspaper",
+        "car",
+        "table"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_44",
+      "question": "James knew that he shouldn't have been buying beer for minors.  He didn't even get paid for it.  Why was this bad?",
+      "choices": [
+        "lose money",
+        "fun",
+        "have no money",
+        "broken law",
+        "relaxation"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_45",
+      "question": "What is the result of applying for  job?",
+      "choices": [
+        "anxiety and fear",
+        "increased workload",
+        "praise",
+        "less sleep",
+        "being employed"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_46",
+      "question": "What must someone do before they shop?",
+      "choices": [
+        "get money",
+        "have money",
+        "bring cash",
+        "go to market",
+        "bring cash"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_47",
+      "question": "Because John was first violin, he had to bring something important to work ever day. What did he need to bring to work?",
+      "choices": [
+        "music store",
+        "obesity",
+        "symphony orchestra",
+        "ochestra",
+        "violin case"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_48",
+      "question": "What is a place that usually does not have an elevator and that sometimes has a telephone book?",
+      "choices": [
+        "at hotel",
+        "kitchen",
+        "library",
+        "telephone booth",
+        "house"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_49",
+      "question": "Who is likely to be excited about a crab?",
+      "choices": [
+        "fish market",
+        "pet shop",
+        "fishmongers",
+        "intertidal zone",
+        "obesity"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_50",
+      "question": "Where can a human find clothes that aren't pants?",
+      "choices": [
+        "pants shop",
+        "on planet earth",
+        "dress shop",
+        "school",
+        "train wreck"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_51",
+      "question": "If I was getting drunk, and people couldn't understand me, what might I be having?",
+      "choices": [
+        "a seizure",
+        "slurred speech",
+        "death",
+        "forgetfulness",
+        "pass out"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_52",
+      "question": "When a person is beginning work, what are they building?",
+      "choices": [
+        "time",
+        "accomplishing",
+        "working",
+        "momentum",
+        "tiredness"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_53",
+      "question": "A child wants to play, what would they likely want?",
+      "choices": [
+        "fall down",
+        "breathe",
+        "play tag",
+        "be dismembered by a chainsaw",
+        "become adult"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_54",
+      "question": "Talking to the same person about the same thing over and over again is something someone can what?",
+      "choices": [
+        "social life",
+        "friendship",
+        "eye contact",
+        "get tired of",
+        "learn lessons from"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_55",
+      "question": "The teacher doesn't tolerate noise during a test in their what?",
+      "choices": [
+        "movie theatre",
+        "bowling alley",
+        "factory",
+        "store",
+        "classroom"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_56",
+      "question": "The freeway had no traffic and few buildings, where is it?",
+      "choices": [
+        "california",
+        "countryside",
+        "big town",
+        "florida",
+        "america"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_57",
+      "question": "Where would you go if you wanted to have fun with a few people?",
+      "choices": [
+        "watching television",
+        "good",
+        "cinema",
+        "friend's house",
+        "fairgrounds"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_58",
+      "question": "If there is a place that is hot and arid, what could it be?",
+      "choices": [
+        "bland",
+        "lifeless",
+        "sandy",
+        "neutral",
+        "freezing"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_59",
+      "question": "What is likely to satisfy someone's curiosity?",
+      "choices": [
+        "hear news",
+        "read book",
+        "see favorite show",
+        "comedy show",
+        "go somewhere"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_60",
+      "question": "If you are in a bar in a glove shaped state where are you?",
+      "choices": [
+        "in my pocket",
+        "michigan",
+        "new york city",
+        "restaurant",
+        "public house"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_61",
+      "question": "Where would a computer user be using their own computer?",
+      "choices": [
+        "hell",
+        "school",
+        "indoors",
+        "internet cafe",
+        "house"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_62",
+      "question": "Crabs live in what sort of environment?",
+      "choices": [
+        "maritime",
+        "bodies of water",
+        "saltwater",
+        "galapagos",
+        "fish market"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_63",
+      "question": "Where can you find a snake in tall grass?",
+      "choices": [
+        "tree",
+        "in a jar",
+        "pet shops",
+        "feild",
+        "tropical forest"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_64",
+      "question": "What is a place that has a bench nestled in trees?",
+      "choices": [
+        "state park",
+        "bus stop",
+        "bus depot",
+        "statue",
+        "train station"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_65",
+      "question": "Where is a human likely to go as a result of being hungry?",
+      "choices": [
+        "eat in restaurant",
+        "make bread",
+        "have lunch",
+        "cook dinner",
+        "friends house"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_66",
+      "question": "He was beginning to regret taking the fight when he saw how what his opponent was?",
+      "choices": [
+        "fun",
+        "joy",
+        "satisfaction",
+        "confident",
+        "pride"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_67",
+      "question": "Where would you find a single shower curtain being used?",
+      "choices": [
+        "bathtub",
+        "washing area",
+        "hotel",
+        "shower stall",
+        "department store"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_68",
+      "question": "Where is a good idea but not required to have a fire extinguisher?",
+      "choices": [
+        "school bus",
+        "boat",
+        "house",
+        "hospital",
+        "school"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_69",
+      "question": "What continent has the most castles?",
+      "choices": [
+        "fairy tale",
+        "edinburgh",
+        "germany",
+        "europe",
+        "antarctica"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_70",
+      "question": "If you have to read a book that is very dry and long you may become what?",
+      "choices": [
+        "have time",
+        "boring",
+        "learn new",
+        "enjoyable",
+        "bored"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_71",
+      "question": "Sally used a clipboard to hold her papers while she read off names at the beginning of the day.  Where might she work?",
+      "choices": [
+        "desk",
+        "windows 95",
+        "office supply store",
+        "see work",
+        "school"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_72",
+      "question": "The kids didn't clean up after they had done what?",
+      "choices": [
+        "learn things",
+        "play games",
+        "disneyland",
+        "play with toys",
+        "talking"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_73",
+      "question": "Despite the name a pawn can be quite versatile, all the parts are important in a what?",
+      "choices": [
+        "chess game",
+        "scheme",
+        "chess set",
+        "checkers",
+        "north carolina"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_74",
+      "question": "What would not be true about a basketball if it had a hole in it but it did not lose its general shape?",
+      "choices": [
+        "punctured",
+        "popular in america",
+        "full of air",
+        "gone",
+        "round"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_75",
+      "question": "If you are awaking multiple times throughout the night because a lot is on your mind, what is a likely cause?",
+      "choices": [
+        "irritability",
+        "depression",
+        "getting out of bed",
+        "happiness",
+        "discomfort"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_76",
+      "question": "Where does a wild bird usually live?",
+      "choices": [
+        "cage",
+        "sky",
+        "countryside",
+        "desert",
+        "windowsill"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_77",
+      "question": "Where would you expect to find white mice?",
+      "choices": [
+        "bell cat",
+        "bush",
+        "attic",
+        "countryside",
+        "laboratory"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_78",
+      "question": "John felt that his actions were fate.   Harry said that he could have always made a different what?",
+      "choices": [
+        "free will",
+        "choice",
+        "will",
+        "alcohol",
+        "freedom"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_79",
+      "question": "What could committing murder prevent someone from doing?",
+      "choices": [
+        "go to jail",
+        "cry",
+        "find god",
+        "guilty conscience",
+        "problems"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_80",
+      "question": "George didn't have a car, but he still had his two feet.   His socks were smelly and his soles were blistered, but that didn't matter.  He could still do what?",
+      "choices": [
+        "michigan",
+        "walk",
+        "stay still",
+        "stink",
+        "hands"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_81",
+      "question": "A crane uses many a steel cable when working a what?",
+      "choices": [
+        "abaft",
+        "ship",
+        "winch",
+        "construction site",
+        "building"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_82",
+      "question": "What is the main purpose of farmers?",
+      "choices": [
+        "raise cattle",
+        "grow corn",
+        "farm land",
+        "drive tractors",
+        "supply food"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_83",
+      "question": "Where can I put this penny to save for later?",
+      "choices": [
+        "piggy bank",
+        "wallet",
+        "toy",
+        "ground",
+        "pocket"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_84",
+      "question": "Where would you put uncooked crab meat?",
+      "choices": [
+        "wharf",
+        "red lobster",
+        "tidepools",
+        "boss's office",
+        "stew pot"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_85",
+      "question": "The man had a fear of illness, so he never visited friends who were a what?",
+      "choices": [
+        "sick person",
+        "hospital",
+        "elderly person",
+        "graveyard",
+        "doctor's office"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_86",
+      "question": "Where would you put pans if you want to bring them with you?",
+      "choices": [
+        "cooking",
+        "cook food",
+        "kitchen",
+        "backpack",
+        "drawer"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_87",
+      "question": "If you're remembering something, it's because of your what of it to begin with?",
+      "choices": [
+        "knowledge",
+        "knowing",
+        "forgetful",
+        "pleasure",
+        "depression"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_88",
+      "question": "Which large land mass is home to the most monkeys?",
+      "choices": [
+        "amazon basin",
+        "friend's house",
+        "lift number 3",
+        "research laboratory",
+        "african continent"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_89",
+      "question": "Friday was James's 5th Anniversary.  They planned on going to bed early so that they could spend a long time doing what?",
+      "choices": [
+        "rest",
+        "insomnia",
+        "making love",
+        "sleeping in",
+        "texting"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_90",
+      "question": "The teens were trying to hide that they get drink, but when they walked in the door their what gave it away?",
+      "choices": [
+        "health",
+        "fall down",
+        "stagger",
+        "get arrested",
+        "vomit"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_91",
+      "question": "You'll find a landing at the top of what?",
+      "choices": [
+        "ocean",
+        "apartment building",
+        "stairwell",
+        "airport",
+        "room"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_92",
+      "question": "Anybody could be hired in the kitchen, what was needed of them?",
+      "choices": [
+        "forget",
+        "oil squeaky hinge",
+        "question authority",
+        "wash dishes",
+        "oik squeaky hinge"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_93",
+      "question": "Where can you find a number of wind instruments together in public?",
+      "choices": [
+        "music store",
+        "create music",
+        "zoo",
+        "music room",
+        "symphony"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_94",
+      "question": "A mountie got off at a subway stop.  What city might he be in?",
+      "choices": [
+        "urban area",
+        "metropolis",
+        "chicago",
+        "new york city",
+        "toronto"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_95",
+      "question": "What do you want someone to do when you illustrate point?",
+      "choices": [
+        "did not understand",
+        "accepting",
+        "make clear",
+        "understood",
+        "understanding"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_96",
+      "question": "Billy set aside a block of time for having fun after work. Why might he do this?",
+      "choices": [
+        "happiness",
+        "stress relief",
+        "pleasure",
+        "ocean",
+        "may laugh"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_97",
+      "question": "The man in the white suit was very lazy.  He did nothing useful.  Meanwhile, the ban in the blue had put in effort and was very what?",
+      "choices": [
+        "restless",
+        "active",
+        "lazybutt",
+        "productive",
+        "hard work"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_98",
+      "question": "What would you be unable to do if you have too much greed?",
+      "choices": [
+        "keep things",
+        "make friends",
+        "play poker",
+        "conquer opponent",
+        "lie"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_99",
+      "question": "It was a long trip from the farm, so he stayed in a hotel when he arrived at the what?",
+      "choices": [
+        "bed away from home",
+        "wwii bunker",
+        "resort",
+        "las vegas",
+        "city"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_100",
+      "question": "I did not need a servant.  I was not a what?",
+      "choices": [
+        "freedom",
+        "rich person",
+        "hired help",
+        "in charge",
+        "busy"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_101",
+      "question": "How would you get from one side of a canal to another?",
+      "choices": [
+        "michigan",
+        "amsterdam",
+        "venice",
+        "bridge",
+        "barges to travel on"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_102",
+      "question": "When learning about the world and different cultures, what is important if you are committed to eliminating preconceived notions",
+      "choices": [
+        "newness",
+        "loss of innocence",
+        "enlightenment",
+        "open mind",
+        "smartness"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_103",
+      "question": "An underrated thing about computers is how they manage workflow, at one time it was a big deal when they could first do what?",
+      "choices": [
+        "share files",
+        "do arithmetic",
+        "turn on",
+        "cost money",
+        "multitask"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_104",
+      "question": "Obstructing justice is sometimes an excuse used for police brutality which causes what in people?",
+      "choices": [
+        "committing perjury",
+        "prosecution",
+        "attack",
+        "getting hurt",
+        "riot"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_105",
+      "question": "While washing clothes they became what when caught on the sharp object?",
+      "choices": [
+        "damaged",
+        "wet clothes",
+        "wear out",
+        "torn",
+        "have fun"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_106",
+      "question": "Seafood restaurants are used to draw tourists where?",
+      "choices": [
+        "maine",
+        "shoe shop",
+        "city",
+        "boston",
+        "coastal cities"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_107",
+      "question": "James's nice asked him about her grandfather. She was interested in learning about what?",
+      "choices": [
+        "family tree",
+        "family reunion",
+        "babysitting",
+        "brother's house",
+        "heirlooms"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_108",
+      "question": "James looked up and saw the start twinkling in the black yonder.  He marveled the sheer number of them and the size of what?",
+      "choices": [
+        "universe",
+        "orbit",
+        "night sky",
+        "outer space",
+        "his wallet"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_109",
+      "question": "What would encourage someone to continue playing tennis?",
+      "choices": [
+        "becoming tired",
+        "tennis elbow",
+        "exercise",
+        "hunger",
+        "victory"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_110",
+      "question": "James found the sound relaxing.   It was so relaxing he almost did what despite his efforts?",
+      "choices": [
+        "deep breathing",
+        "worried",
+        "fall asleep",
+        "invigorating",
+        "feeling good"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_111",
+      "question": "What regions of a town would you have found a dime store?",
+      "choices": [
+        "commercial building",
+        "old movie",
+        "small neighborhood",
+        "past",
+        "mall"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_112",
+      "question": "Where might an unused chess set be stored?",
+      "choices": [
+        "toy store",
+        "michigan",
+        "living room",
+        "attic",
+        "cupboard"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_113",
+      "question": "james told his son to settle down and be careful.  There were many frogs mating in the area, and James didn't want his son to do what to them?",
+      "choices": [
+        "wander",
+        "migrate",
+        "scare",
+        "disturb",
+        "agitate"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_114",
+      "question": "A man wants air conditioning while we watches the game on Saturday, where will it likely be installed?",
+      "choices": [
+        "car",
+        "house",
+        "offices",
+        "park",
+        "movie theatre"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_115",
+      "question": "What could be playing a balailaika?",
+      "choices": [
+        "movie dr",
+        "orchestra",
+        "music store",
+        "cat",
+        "symphony"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_116",
+      "question": "Sailors drive many different types of boats, what type of boat involves their namesake.",
+      "choices": [
+        "coming home",
+        "row boat",
+        "board ship",
+        "inflatable raft",
+        "sail boat"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_117",
+      "question": "Where could a person avoid the rain?",
+      "choices": [
+        "bus stop",
+        "tunnel",
+        "synagogue",
+        "fairy tale",
+        "street corner"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_118",
+      "question": "Why would a person like to have a large house?",
+      "choices": [
+        "have choice",
+        "mentally challenged",
+        "own house",
+        "obesity",
+        "lots of space"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_119",
+      "question": "Where will a cheap book be found?",
+      "choices": [
+        "bookstore",
+        "classroom",
+        "discount store",
+        "school room",
+        "bedside table"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_120",
+      "question": "John and James are idiots. They bought two tickets to the Falcons vs the Jets even though neither wanted to see the what?",
+      "choices": [
+        "internet cafe",
+        "sporting event",
+        "pressing wrong buttons",
+        "obesity",
+        "hockey game"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_121",
+      "question": "James noticed that his penis was bigger. .  How might he act toward his plastic surgeon?",
+      "choices": [
+        "accidental",
+        "detestable",
+        "effusive",
+        "enabled",
+        "apathetic"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_122",
+      "question": "Who do professors work with?",
+      "choices": [
+        "methods of facts",
+        "teach courses",
+        "wear wrinkled tweed jackets",
+        "school students",
+        "state facts"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_123",
+      "question": "Colorful anemone look somewhat like what object you find on window sills?",
+      "choices": [
+        "intertidal zone",
+        "coral sea",
+        "under water",
+        "flower bed",
+        "florida keys"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_124",
+      "question": "From where do aliens arrive?",
+      "choices": [
+        "outer space",
+        "weekly world news",
+        "roswell",
+        "universe",
+        "mars"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_125",
+      "question": "The hikers stopped to have a drink, simply put they what?",
+      "choices": [
+        "had a party",
+        "were thirsty",
+        "refreshment",
+        "getting drunk",
+        "celebrating"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_126",
+      "question": "When you get up in the morning before you begin work you should do what?",
+      "choices": [
+        "apply for job",
+        "sleep",
+        "concentrate",
+        "shower",
+        "just do"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_127",
+      "question": "The kitten had nothing to dig it's claws into, so when it tried to stop it slid across what?",
+      "choices": [
+        "living room",
+        "floor",
+        "warm place",
+        "carpet",
+        "farmhouse"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_128",
+      "question": "If a person is trying to keep something in their hand what should they do?",
+      "choices": [
+        "complete collection",
+        "own house",
+        "procrastinate",
+        "explode",
+        "have to hold"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_129",
+      "question": "Where could you find hundreds of thousands of home?",
+      "choices": [
+        "field",
+        "neighborhood",
+        "star can",
+        "city or town",
+        "apartment building"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_130",
+      "question": "Playing baseball is a lot like any other sport, there is always a risk of what?",
+      "choices": [
+        "sore muscles",
+        "errors",
+        "happiness",
+        "injury",
+        "fun"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_131",
+      "question": "If I want to watch a movie without leaving my home what might I use?",
+      "choices": [
+        "drive in movie",
+        "drive in movie",
+        "television",
+        "video store",
+        "show"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_132",
+      "question": "The victim was to take stand today, they were going to do what?",
+      "choices": [
+        "testify",
+        "runaway",
+        "witness",
+        "tell truth",
+        "go home"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_133",
+      "question": "What does a successful dog grooming session likely to make a owner feel?",
+      "choices": [
+        "cleanliness",
+        "mistakes",
+        "growth",
+        "satisfaction",
+        "late"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_134",
+      "question": "The runner was in third place, but he pushed harder and thought he might be able to reach second.  What was beginning to do?",
+      "choices": [
+        "near finish line",
+        "finish",
+        "get tired",
+        "gain ground",
+        "trip over"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_135",
+      "question": "The tourist entered Mammoth cave, what state were they in?",
+      "choices": [
+        "west virginia",
+        "kentucky",
+        "rocky hills",
+        "scotland",
+        "canyon"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_136",
+      "question": "What does someone typically feel when applying for a job?",
+      "choices": [
+        "horror",
+        "anxiety and fear",
+        "rejection",
+        "increased workload",
+        "being employed"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_137",
+      "question": "He was on trial for obstructing justice, during which he made a questionable comment and was also found guilty of what?",
+      "choices": [
+        "prosecution",
+        "getting hurt",
+        "sweat",
+        "steam",
+        "committing perjury"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_138",
+      "question": "What kind of feelings does buying presents for others create?",
+      "choices": [
+        "tears",
+        "please",
+        "like",
+        "thank",
+        "make happy"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_139",
+      "question": "What green area is a marmot likely to be found in?",
+      "choices": [
+        "countryside",
+        "great plains",
+        "encyclopedia",
+        "jungle",
+        "north america"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_140",
+      "question": "Jan tested the current, and noticed that it was high.  He thought that the wires might have too much what?",
+      "choices": [
+        "later",
+        "updated",
+        "still",
+        "resistance",
+        "now"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_141",
+      "question": "What does a kindergarten teacher do before nap time?",
+      "choices": [
+        "lower expectations",
+        "encourage",
+        "fear",
+        "time test",
+        "tell story"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_142",
+      "question": "Sam was a stranger.  Even so, Mark treated him like what?",
+      "choices": [
+        "friend",
+        "family",
+        "known person",
+        "park",
+        "outsider"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_143",
+      "question": "Bob's only light source was a small bulb.  There were four walls, if there was a door he couldn't see it.  What was Bob in?",
+      "choices": [
+        "closed room",
+        "sky",
+        "dard",
+        "his grave",
+        "house"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_144",
+      "question": "James thought of criminal justice like a computer program.  It need to work right.   What ideas might James not like?",
+      "choices": [
+        "manual",
+        "process information",
+        "power down",
+        "control model",
+        "reason exists"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_145",
+      "question": "With the card slot lit up he knew how to get started finding his balance with what?",
+      "choices": [
+        "slot machine",
+        "ticket machine",
+        "bank machine",
+        "telephone",
+        "automated teller"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_146",
+      "question": "To play sports professionally you must do what very often?",
+      "choices": [
+        "wash your clothes",
+        "get in shape",
+        "practice",
+        "take off uniform",
+        "stretch"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_147",
+      "question": "Some people prefer releasing energy through work while others prefer to release it through what?",
+      "choices": [
+        "motion",
+        "stretch",
+        "exercise",
+        "movement",
+        "muscles"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_148",
+      "question": "What will a person going for a jog likely be wearing?",
+      "choices": [
+        "grope",
+        "acknowledgment",
+        "comfortable clothes",
+        "ipod",
+        "passionate kisses"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_149",
+      "question": "The child pretended he was reading newspaper, he couldn't actually do it without what?",
+      "choices": [
+        "patience",
+        "falling down",
+        "literacy",
+        "buying",
+        "knowing how to read"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_150",
+      "question": "Jenny enjoyed helping people.  It brought her a great deal of what?",
+      "choices": [
+        "satisfaction",
+        "complications",
+        "train",
+        "feel good about yourself",
+        "enjoyment"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_151",
+      "question": "What might someone believe in if they are cleaning clothes?",
+      "choices": [
+        "feminism",
+        "sanitation",
+        "ruined",
+        "wrinkles",
+        "buttons to fall off"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_152",
+      "question": "Where would you find a basement that can be accessed with an elevator?",
+      "choices": [
+        "eat cake",
+        "closet",
+        "church",
+        "office building",
+        "own house"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_153",
+      "question": "In order to learn to program from another person you can do what?",
+      "choices": [
+        "learn how to",
+        "have a friend",
+        "knowledge",
+        "take class",
+        "have computer"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_154",
+      "question": "He was at the gym trying to build muscle, what is it called that he is trying to build muscle on?",
+      "choices": [
+        "body of animal",
+        "arm",
+        "bodybuilder",
+        "body of dog",
+        "human body"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_155",
+      "question": "What part of plants is pretty?",
+      "choices": [
+        "dirt",
+        "no neurons in",
+        "millions of cells",
+        "flowers on",
+        "roots"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_156",
+      "question": "The man was going fishing instead of work, what is he seeking?",
+      "choices": [
+        "food",
+        "relaxation",
+        "killing",
+        "missing morning cartoons",
+        "boredom"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_157",
+      "question": "What could you get an unsmooth pit from?",
+      "choices": [
+        "backyard",
+        "rock",
+        "mine",
+        "cherry",
+        "peach"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_158",
+      "question": "The man tried to reply to the woman, but he had difficulty keeping track of conversations that he didn't do what to?",
+      "choices": [
+        "initiate",
+        "ignore",
+        "question",
+        "answer",
+        "ask"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_159",
+      "question": "I couldn't find anybody who recalled the event, what were they adroit at doing?",
+      "choices": [
+        "question authority",
+        "act fool",
+        "wash dishes",
+        "act innocent",
+        "forget"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_160",
+      "question": "Where would you find a large dining room containing a fancy chandelier?",
+      "choices": [
+        "mansion",
+        "every house",
+        "own home",
+        "table",
+        "restaurant"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_161",
+      "question": "The extremely large cargo plane could only land at a specialized runway, these were only located at a what?",
+      "choices": [
+        "back yard",
+        "bowling alley",
+        "city",
+        "military base",
+        "fashion show"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_162",
+      "question": "The carpet was smelly and discouraged the league from playing there, where was this smelly carpet installed?",
+      "choices": [
+        "bedroom",
+        "movie theater",
+        "bowling alley",
+        "church",
+        "office"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_163",
+      "question": "How can someone be let into a brownstone?",
+      "choices": [
+        "brooklyn",
+        "ring",
+        "subdivision",
+        "bricks",
+        "new york city"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_164",
+      "question": "Where would someone purchase an upright piano?",
+      "choices": [
+        "music class",
+        "college",
+        "music store",
+        "music room",
+        "music band"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_165",
+      "question": "Where would you keep an ottoman near your front door?",
+      "choices": [
+        "living room",
+        "parlor",
+        "furniture store",
+        "basement",
+        "kitchen"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_166",
+      "question": "Diving into backyard pools can be very dangerous and can lead to serious head and what?",
+      "choices": [
+        "going somewhere",
+        "splats",
+        "cancer",
+        "getting wet",
+        "spinal injuries"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_167",
+      "question": "Where would one find a snake in a cage?",
+      "choices": [
+        "tropical forest",
+        "oregon",
+        "woods",
+        "pet store",
+        "louisiana"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_168",
+      "question": "Where are people likely to become impatient?",
+      "choices": [
+        "end of line",
+        "buildings",
+        "apartment",
+        "neighbor's house",
+        "address"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_169",
+      "question": "When you fail to finish something, you failed at doing what to it",
+      "choices": [
+        "winning",
+        "passing",
+        "completing",
+        "do well",
+        "succeeding"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_170",
+      "question": "John didn't care about style.  He felt that form was less important than what?",
+      "choices": [
+        "shapeless",
+        "quality",
+        "function",
+        "change shape",
+        "chaos"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_171",
+      "question": "When you get together with friends to watch film, you might do plenty of this?",
+      "choices": [
+        "see what happens",
+        "enjoy stories",
+        "pass time",
+        "have fun",
+        "interesting"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_172",
+      "question": "A supermarket is uncommon in what type of collection of shops?",
+      "choices": [
+        "strip mall",
+        "city or town",
+        "shoppingcentre",
+        "boutique",
+        "vermont"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_173",
+      "question": "Bill puts meat on the scale, where does Bill work?",
+      "choices": [
+        "music store",
+        "assay office",
+        "tidal wave",
+        "butcher shop",
+        "bathroom"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_174",
+      "question": "I'm having some food at my party, what will I need to serve it?",
+      "choices": [
+        "zoo",
+        "pan",
+        "bowl",
+        "kitchen",
+        "spoon"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_175",
+      "question": "Before racers start to run they must do what at the starting line?",
+      "choices": [
+        "learn to walk",
+        "walking",
+        "walk slowly",
+        "breathe",
+        "stand still"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_176",
+      "question": "What does an actor do when they are bored of their roles?",
+      "choices": [
+        "mask",
+        "branch out",
+        "wear costume",
+        "pretend",
+        "sing songs"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_177",
+      "question": "What is a person called who doesn't have immortality?",
+      "choices": [
+        "mortal",
+        "dying",
+        "death",
+        "dead",
+        "mortal"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_178",
+      "question": "Why would you be watching tv instead of doing something else?",
+      "choices": [
+        "headache",
+        "laughter",
+        "laziness",
+        "erections",
+        "wasting time"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_179",
+      "question": "If chewing food is difficult for you, what is a possible reason?",
+      "choices": [
+        "broken jaw",
+        "sore mouth",
+        "eating",
+        "good digestion",
+        "avoiding choking"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_180",
+      "question": "He had to wear a tuxedo while playing the keyboard instrument, so did the other hundred members of the what?",
+      "choices": [
+        "music store",
+        "band",
+        "medium",
+        "orchestra",
+        "piano store"
+      ],
+      "correct_answer": 3,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_181",
+      "question": "Where do you find the most amount of leafs?",
+      "choices": [
+        "floral arrangement",
+        "ground",
+        "forrest",
+        "field",
+        "compost pile"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_182",
+      "question": "Where can children play with animals?",
+      "choices": [
+        "meadow",
+        "play room",
+        "surface of earth",
+        "zoos",
+        "fairgrounds"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_183",
+      "question": "What kind of tale might feature a talking weasel?",
+      "choices": [
+        "mulberry bush",
+        "animated film",
+        "chicken coop",
+        "history book",
+        "children's story"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_184",
+      "question": "What kind of status is the bald eagle given?",
+      "choices": [
+        "outside",
+        "world",
+        "protection",
+        "colorado",
+        "america"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_185",
+      "question": "Why do most people take a quick rest during the day?",
+      "choices": [
+        "need to",
+        "hungry",
+        "feel more energetic",
+        "weak",
+        "regenerate"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_186",
+      "question": "What could suddenly stop someone when he or she is running?",
+      "choices": [
+        "mushroom",
+        "falling down",
+        "sweating",
+        "exhaustion",
+        "getting tired"
+      ],
+      "correct_answer": 1,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_187",
+      "question": "Where would you find a monkey in the wild?",
+      "choices": [
+        "zoo",
+        "barrel",
+        "research laboratory",
+        "captivity",
+        "thailand"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_188",
+      "question": "Where could a sloth live?",
+      "choices": [
+        "tropical jungle",
+        "manual",
+        "work",
+        "transit",
+        "countryside"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_189",
+      "question": "A gentleman is carrying equipment for golf, what is he likely to have?",
+      "choices": [
+        "club",
+        "assembly hall",
+        "meditation center",
+        "meeting",
+        "church"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_190",
+      "question": "If you have a home with a courtyard, what's one thing you probably don't have to care for any longer?",
+      "choices": [
+        "lawn",
+        "kids",
+        "asshole",
+        "spain",
+        "office complex"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_191",
+      "question": "The computer was difficult for he to understand at the store, so what did she sign up for to learn more?",
+      "choices": [
+        "classroom",
+        "facebook",
+        "school",
+        "apartment",
+        "demonstration"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_192",
+      "question": "If you take the risk buying a used car, you still hope it can what?",
+      "choices": [
+        "go fast",
+        "start running",
+        "going too fast",
+        "look good",
+        "last several years"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_193",
+      "question": "Dan was ditting quietly on the couch with a book in his hand.  Laurie thought that he was just focused on what he was doing, but he actually did what?",
+      "choices": [
+        "eat",
+        "think",
+        "reading",
+        "meditate",
+        "fall asleep"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_194",
+      "question": "What is the primary purpose of cars?",
+      "choices": [
+        "cost money",
+        "slow down",
+        "move people",
+        "turn right",
+        "get girls"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_195",
+      "question": "Alabama is full of different people, but they are all citizens of what?",
+      "choices": [
+        "united states",
+        "deep south",
+        "floribama",
+        "gulf states",
+        "florabama"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_196",
+      "question": "They were hoping their campaign would create a rise in awareness of the problem and hopefully do what to its effect?",
+      "choices": [
+        "set",
+        "fall",
+        "park",
+        "descend",
+        "reduce"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_197",
+      "question": "What do airplanes do as they are arriving at the gate?",
+      "choices": [
+        "slow down",
+        "crash",
+        "speed up",
+        "land",
+        "carry people"
+      ],
+      "correct_answer": 0,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_198",
+      "question": "If a person with mental illness stops treatment what will likely happen?",
+      "choices": [
+        "managed",
+        "dancing",
+        "recur",
+        "effectively treated",
+        "cause suffering"
+      ],
+      "correct_answer": 2,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "commonsenseqa_199",
+      "question": "The gimmicky low brow TV show was about animals when they what?",
+      "choices": [
+        "sick",
+        "mammals",
+        "males",
+        "bite",
+        "attack"
+      ],
+      "correct_answer": 4,
+      "subject": "commonsense",
+      "difficulty": 0.5
+    }
+  ]
+}

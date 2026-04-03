@@ -1,0 +1,1865 @@
+{
+  "source": "CBM-paper/CBM_Assessment.csv",
+  "dataset": "gamedesign",
+  "description": "AI models tested on same questions as students (original CBM paper data)",
+  "total_models": 16,
+  "imported": "2026-04-03T17:12:29.908638",
+  "results": [
+    {
+      "participant": "Claude 3.5 sonnet 20240107",
+      "dataset": "gamedesign",
+      "total_questions": 10,
+      "metrics": {
+        "accuracy": 0.7,
+        "mean_confidence": 1.0,
+        "calibration_gap": 0.3
+      },
+      "mean_hlcc": 0.8,
+      "mean_cbm": 0.8,
+      "total_hlcc": 8.0,
+      "total_cbm": 8.0,
+      "responses": [
+        {
+          "question_id": "gamedesign_1",
+          "selected_answer": 3,
+          "correct_answer": 3,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_2",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_3",
+          "selected_answer": 1,
+          "correct_answer": 4,
+          "is_correct": false,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": -2.0,
+          "cbm_score": -2.0
+        },
+        {
+          "question_id": "gamedesign_4",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_5",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_6",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_7",
+          "selected_answer": 2,
+          "correct_answer": 4,
+          "is_correct": false,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": -2.0,
+          "cbm_score": -2.0
+        },
+        {
+          "question_id": "gamedesign_8",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_9",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_10",
+          "selected_answer": 3,
+          "correct_answer": 2,
+          "is_correct": false,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": -2.0,
+          "cbm_score": -2.0
+        }
+      ]
+    },
+    {
+      "participant": "Claude 3 opus 20240107",
+      "dataset": "gamedesign",
+      "total_questions": 10,
+      "metrics": {
+        "accuracy": 0.6,
+        "mean_confidence": 0.95,
+        "calibration_gap": 0.35
+      },
+      "mean_hlcc": 0.55,
+      "mean_cbm": 0.55,
+      "total_hlcc": 5.5,
+      "total_cbm": 5.5,
+      "responses": [
+        {
+          "question_id": "gamedesign_1",
+          "selected_answer": 3,
+          "correct_answer": 3,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_2",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_3",
+          "selected_answer": 1,
+          "correct_answer": 4,
+          "is_correct": false,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": -0.5,
+          "cbm_score": -0.5
+        },
+        {
+          "question_id": "gamedesign_4",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_5",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_6",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_7",
+          "selected_answer": 2,
+          "correct_answer": 4,
+          "is_correct": false,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": -2.0,
+          "cbm_score": -2.0
+        },
+        {
+          "question_id": "gamedesign_8",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_9",
+          "selected_answer": 3,
+          "correct_answer": 4,
+          "is_correct": false,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": -2.0,
+          "cbm_score": -2.0
+        },
+        {
+          "question_id": "gamedesign_10",
+          "selected_answer": 3,
+          "correct_answer": 2,
+          "is_correct": false,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": -2.0,
+          "cbm_score": -2.0
+        }
+      ]
+    },
+    {
+      "participant": "ChatGPT 4o1",
+      "dataset": "gamedesign",
+      "total_questions": 10,
+      "metrics": {
+        "accuracy": 1.0,
+        "mean_confidence": 1.0,
+        "calibration_gap": 0.0
+      },
+      "mean_hlcc": 2.0,
+      "mean_cbm": 2.0,
+      "total_hlcc": 20.0,
+      "total_cbm": 20.0,
+      "responses": [
+        {
+          "question_id": "gamedesign_1",
+          "selected_answer": 3,
+          "correct_answer": 3,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_2",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_3",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_4",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_5",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_6",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_7",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_8",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_9",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_10",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        }
+      ]
+    },
+    {
+      "participant": "ChatGPT 4o",
+      "dataset": "gamedesign",
+      "total_questions": 10,
+      "metrics": {
+        "accuracy": 0.8,
+        "mean_confidence": 0.85,
+        "calibration_gap": 0.05
+      },
+      "mean_hlcc": 1.45,
+      "mean_cbm": 1.45,
+      "total_hlcc": 14.5,
+      "total_cbm": 14.5,
+      "responses": [
+        {
+          "question_id": "gamedesign_1",
+          "selected_answer": 3,
+          "correct_answer": 3,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_2",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_3",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_4",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_5",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_6",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_7",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_8",
+          "selected_answer": 4,
+          "correct_answer": 0,
+          "is_correct": false,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": -0.5,
+          "cbm_score": -0.5
+        },
+        {
+          "question_id": "gamedesign_9",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": 1.5,
+          "cbm_score": 1.5
+        },
+        {
+          "question_id": "gamedesign_10",
+          "selected_answer": 4,
+          "correct_answer": 2,
+          "is_correct": false,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": -0.5,
+          "cbm_score": -0.5
+        }
+      ]
+    },
+    {
+      "participant": "ChatGPT 4",
+      "dataset": "gamedesign",
+      "total_questions": 10,
+      "metrics": {
+        "accuracy": 0.8,
+        "mean_confidence": 0.9,
+        "calibration_gap": 0.1
+      },
+      "mean_hlcc": 1.3,
+      "mean_cbm": 1.3,
+      "total_hlcc": 13.0,
+      "total_cbm": 13.0,
+      "responses": [
+        {
+          "question_id": "gamedesign_1",
+          "selected_answer": 4,
+          "correct_answer": 3,
+          "is_correct": false,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": -2.0,
+          "cbm_score": -2.0
+        },
+        {
+          "question_id": "gamedesign_2",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_3",
+          "selected_answer": 1,
+          "correct_answer": 4,
+          "is_correct": false,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": -0.5,
+          "cbm_score": -0.5
+        },
+        {
+          "question_id": "gamedesign_4",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_5",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_6",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_7",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_8",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_9",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": 1.5,
+          "cbm_score": 1.5
+        },
+        {
+          "question_id": "gamedesign_10",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        }
+      ]
+    },
+    {
+      "participant": "Gemini 2.0 Advanced",
+      "dataset": "gamedesign",
+      "total_questions": 10,
+      "metrics": {
+        "accuracy": 0.9,
+        "mean_confidence": 1.0,
+        "calibration_gap": 0.1
+      },
+      "mean_hlcc": 1.6,
+      "mean_cbm": 1.6,
+      "total_hlcc": 16.0,
+      "total_cbm": 16.0,
+      "responses": [
+        {
+          "question_id": "gamedesign_1",
+          "selected_answer": 4,
+          "correct_answer": 3,
+          "is_correct": false,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": -2.0,
+          "cbm_score": -2.0
+        },
+        {
+          "question_id": "gamedesign_2",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_3",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_4",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_5",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_6",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_7",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_8",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_9",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_10",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        }
+      ]
+    },
+    {
+      "participant": "Gemini 1.5 Pro",
+      "dataset": "gamedesign",
+      "total_questions": 10,
+      "metrics": {
+        "accuracy": 0.8,
+        "mean_confidence": 1.0,
+        "calibration_gap": 0.2
+      },
+      "mean_hlcc": 1.2,
+      "mean_cbm": 1.2,
+      "total_hlcc": 12.0,
+      "total_cbm": 12.0,
+      "responses": [
+        {
+          "question_id": "gamedesign_1",
+          "selected_answer": 3,
+          "correct_answer": 3,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_2",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_3",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_4",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_5",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_6",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_7",
+          "selected_answer": 3,
+          "correct_answer": 4,
+          "is_correct": false,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": -2.0,
+          "cbm_score": -2.0
+        },
+        {
+          "question_id": "gamedesign_8",
+          "selected_answer": 4,
+          "correct_answer": 0,
+          "is_correct": false,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": -2.0,
+          "cbm_score": -2.0
+        },
+        {
+          "question_id": "gamedesign_9",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_10",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        }
+      ]
+    },
+    {
+      "participant": "DeepSeek",
+      "dataset": "gamedesign",
+      "total_questions": 10,
+      "metrics": {
+        "accuracy": 0.9,
+        "mean_confidence": 0.9,
+        "calibration_gap": 0.0
+      },
+      "mean_hlcc": 1.5,
+      "mean_cbm": 1.5,
+      "total_hlcc": 15.0,
+      "total_cbm": 15.0,
+      "responses": [
+        {
+          "question_id": "gamedesign_1",
+          "selected_answer": 3,
+          "correct_answer": 3,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_2",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": 1.5,
+          "cbm_score": 1.5
+        },
+        {
+          "question_id": "gamedesign_3",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_4",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_5",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_6",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_7",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_8",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": 1.5,
+          "cbm_score": 1.5
+        },
+        {
+          "question_id": "gamedesign_9",
+          "selected_answer": 2,
+          "correct_answer": 4,
+          "is_correct": false,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": -2.0,
+          "cbm_score": -2.0
+        },
+        {
+          "question_id": "gamedesign_10",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        }
+      ]
+    },
+    {
+      "participant": "DeepSeek R1",
+      "dataset": "gamedesign",
+      "total_questions": 10,
+      "metrics": {
+        "accuracy": 1.0,
+        "mean_confidence": 1.0,
+        "calibration_gap": 0.0
+      },
+      "mean_hlcc": 2.0,
+      "mean_cbm": 2.0,
+      "total_hlcc": 20.0,
+      "total_cbm": 20.0,
+      "responses": [
+        {
+          "question_id": "gamedesign_1",
+          "selected_answer": 3,
+          "correct_answer": 3,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_2",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_3",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_4",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_5",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_6",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_7",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_8",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_9",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_10",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        }
+      ]
+    },
+    {
+      "participant": "Claude 3.5 sonnet 20240107 - combined",
+      "dataset": "gamedesign",
+      "total_questions": 10,
+      "metrics": {
+        "accuracy": 0.9,
+        "mean_confidence": 0.8,
+        "calibration_gap": 0.1
+      },
+      "mean_hlcc": 1.6,
+      "mean_cbm": 1.6,
+      "total_hlcc": 16.0,
+      "total_cbm": 16.0,
+      "responses": [
+        {
+          "question_id": "gamedesign_1",
+          "selected_answer": 3,
+          "correct_answer": 3,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_2",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_3",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": 1.5,
+          "cbm_score": 1.5
+        },
+        {
+          "question_id": "gamedesign_4",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_5",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_6",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_7",
+          "selected_answer": 3,
+          "correct_answer": 4,
+          "is_correct": false,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": -0.5,
+          "cbm_score": -0.5
+        },
+        {
+          "question_id": "gamedesign_8",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_9",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": 1.5,
+          "cbm_score": 1.5
+        },
+        {
+          "question_id": "gamedesign_10",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": 1.5,
+          "cbm_score": 1.5
+        }
+      ]
+    },
+    {
+      "participant": "Claude 3 opus 20240107 - combined",
+      "dataset": "gamedesign",
+      "total_questions": 10,
+      "metrics": {
+        "accuracy": 0.9,
+        "mean_confidence": 0.55,
+        "calibration_gap": 0.35
+      },
+      "mean_hlcc": 1.45,
+      "mean_cbm": 1.45,
+      "total_hlcc": 14.5,
+      "total_cbm": 14.5,
+      "responses": [
+        {
+          "question_id": "gamedesign_1",
+          "selected_answer": 3,
+          "correct_answer": 3,
+          "is_correct": true,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": 1.5,
+          "cbm_score": 1.5
+        },
+        {
+          "question_id": "gamedesign_2",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_3",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 0.0,
+          "confidence_level_cbm": 1,
+          "hlcc_score": 1.0,
+          "cbm_score": 1.0
+        },
+        {
+          "question_id": "gamedesign_4",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_5",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": 1.5,
+          "cbm_score": 1.5
+        },
+        {
+          "question_id": "gamedesign_6",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_7",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": 1.5,
+          "cbm_score": 1.5
+        },
+        {
+          "question_id": "gamedesign_8",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": 1.5,
+          "cbm_score": 1.5
+        },
+        {
+          "question_id": "gamedesign_9",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": 1.5,
+          "cbm_score": 1.5
+        },
+        {
+          "question_id": "gamedesign_10",
+          "selected_answer": 1,
+          "correct_answer": 2,
+          "is_correct": false,
+          "confidence": 0.0,
+          "confidence_level_cbm": 1,
+          "hlcc_score": -0.0,
+          "cbm_score": 0.0
+        }
+      ]
+    },
+    {
+      "participant": "ChatGPT 4o1 - combined",
+      "dataset": "gamedesign",
+      "total_questions": 10,
+      "metrics": {
+        "accuracy": 0.9,
+        "mean_confidence": 0.95,
+        "calibration_gap": 0.05
+      },
+      "mean_hlcc": 1.75,
+      "mean_cbm": 1.75,
+      "total_hlcc": 17.5,
+      "total_cbm": 17.5,
+      "responses": [
+        {
+          "question_id": "gamedesign_1",
+          "selected_answer": 3,
+          "correct_answer": 3,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_2",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_3",
+          "selected_answer": 1,
+          "correct_answer": 4,
+          "is_correct": false,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": -0.5,
+          "cbm_score": -0.5
+        },
+        {
+          "question_id": "gamedesign_4",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_5",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_6",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_7",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_8",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_9",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_10",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        }
+      ]
+    },
+    {
+      "participant": "ChatGPT 4o - combined",
+      "dataset": "gamedesign",
+      "total_questions": 10,
+      "metrics": {
+        "accuracy": 0.8,
+        "mean_confidence": 0.95,
+        "calibration_gap": 0.15
+      },
+      "mean_hlcc": 1.35,
+      "mean_cbm": 1.35,
+      "total_hlcc": 13.5,
+      "total_cbm": 13.5,
+      "responses": [
+        {
+          "question_id": "gamedesign_1",
+          "selected_answer": 3,
+          "correct_answer": 3,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_2",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_3",
+          "selected_answer": 1,
+          "correct_answer": 4,
+          "is_correct": false,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": -2.0,
+          "cbm_score": -2.0
+        },
+        {
+          "question_id": "gamedesign_4",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_5",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_6",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_7",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_8",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_9",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_10",
+          "selected_answer": 1,
+          "correct_answer": 2,
+          "is_correct": false,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": -0.5,
+          "cbm_score": -0.5
+        }
+      ]
+    },
+    {
+      "participant": "ChatGPT 4 - combined",
+      "dataset": "gamedesign",
+      "total_questions": 10,
+      "metrics": {
+        "accuracy": 0.8,
+        "mean_confidence": 0.7,
+        "calibration_gap": 0.1
+      },
+      "mean_hlcc": 1.3,
+      "mean_cbm": 1.3,
+      "total_hlcc": 13.0,
+      "total_cbm": 13.0,
+      "responses": [
+        {
+          "question_id": "gamedesign_1",
+          "selected_answer": 4,
+          "correct_answer": 3,
+          "is_correct": false,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": -0.5,
+          "cbm_score": -0.5
+        },
+        {
+          "question_id": "gamedesign_2",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": 1.5,
+          "cbm_score": 1.5
+        },
+        {
+          "question_id": "gamedesign_3",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": 1.5,
+          "cbm_score": 1.5
+        },
+        {
+          "question_id": "gamedesign_4",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_5",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_6",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_7",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": 1.5,
+          "cbm_score": 1.5
+        },
+        {
+          "question_id": "gamedesign_8",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_9",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": 1.5,
+          "cbm_score": 1.5
+        },
+        {
+          "question_id": "gamedesign_10",
+          "selected_answer": 1,
+          "correct_answer": 2,
+          "is_correct": false,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": -0.5,
+          "cbm_score": -0.5
+        }
+      ]
+    },
+    {
+      "participant": "Gemini 2.0 Advanced - combined",
+      "dataset": "gamedesign",
+      "total_questions": 10,
+      "metrics": {
+        "accuracy": 0.8,
+        "mean_confidence": 0.8,
+        "calibration_gap": 0.0
+      },
+      "mean_hlcc": 1.2,
+      "mean_cbm": 1.2,
+      "total_hlcc": 12.0,
+      "total_cbm": 12.0,
+      "responses": [
+        {
+          "question_id": "gamedesign_1",
+          "selected_answer": 4,
+          "correct_answer": 3,
+          "is_correct": false,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": -0.5,
+          "cbm_score": -0.5
+        },
+        {
+          "question_id": "gamedesign_2",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_3",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": 1.5,
+          "cbm_score": 1.5
+        },
+        {
+          "question_id": "gamedesign_4",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_5",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_6",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_7",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_8",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": 1.5,
+          "cbm_score": 1.5
+        },
+        {
+          "question_id": "gamedesign_9",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": 1.5,
+          "cbm_score": 1.5
+        },
+        {
+          "question_id": "gamedesign_10",
+          "selected_answer": 1,
+          "correct_answer": 2,
+          "is_correct": false,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": -2.0,
+          "cbm_score": -2.0
+        }
+      ]
+    },
+    {
+      "participant": "DeepSeek R1",
+      "dataset": "gamedesign",
+      "total_questions": 10,
+      "metrics": {
+        "accuracy": 1.0,
+        "mean_confidence": 0.85,
+        "calibration_gap": 0.15
+      },
+      "mean_hlcc": 1.85,
+      "mean_cbm": 1.85,
+      "total_hlcc": 18.5,
+      "total_cbm": 18.5,
+      "responses": [
+        {
+          "question_id": "gamedesign_1",
+          "selected_answer": 3,
+          "correct_answer": 3,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_2",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_3",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": 1.5,
+          "cbm_score": 1.5
+        },
+        {
+          "question_id": "gamedesign_4",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_5",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_6",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_7",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": 1.5,
+          "cbm_score": 1.5
+        },
+        {
+          "question_id": "gamedesign_8",
+          "selected_answer": 0,
+          "correct_answer": 0,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_9",
+          "selected_answer": 4,
+          "correct_answer": 4,
+          "is_correct": true,
+          "confidence": 1.0,
+          "confidence_level_cbm": 3,
+          "hlcc_score": 2.0,
+          "cbm_score": 2.0
+        },
+        {
+          "question_id": "gamedesign_10",
+          "selected_answer": 2,
+          "correct_answer": 2,
+          "is_correct": true,
+          "confidence": 0.5,
+          "confidence_level_cbm": 2,
+          "hlcc_score": 1.5,
+          "cbm_score": 1.5
+        }
+      ]
+    }
+  ]
+}

@@ -1,17 +1,119 @@
 {
-  "updated": "2026-02-22T19:10:06.535469",
+  "updated": "2026-04-03T10:14:46.001762",
   "datasets": [
     {
+      "name": "arc-challenge",
+      "total": 200,
+      "exported": "2026-04-02T11:30:13.718354",
+      "file": "arc-challenge.json"
+    },
+    {
       "name": "arc-easy",
-      "total": 50,
-      "exported": "2026-02-22T19:10:06.510588",
+      "total": 200,
+      "exported": "2026-04-02T11:30:12.042752",
       "file": "arc-easy.json"
     },
     {
+      "name": "boolq",
+      "total": 200,
+      "exported": "2026-04-02T11:30:36.227601",
+      "file": "boolq.json"
+    },
+    {
+      "name": "commonsenseqa",
+      "total": 200,
+      "exported": "2026-04-02T11:30:22.124158",
+      "file": "commonsenseqa.json"
+    },
+    {
+      "name": "gpqa",
+      "total": 198,
+      "exported": "2026-04-03T10:14:45.778457",
+      "file": "gpqa.json"
+    },
+    {
+      "name": "hard",
+      "total": 500,
+      "exported": "2026-04-03T10:02:13.734803",
+      "file": "hard.json"
+    },
+    {
+      "name": "hellaswag",
+      "total": 200,
+      "exported": "2026-04-02T11:30:19.356778",
+      "file": "hellaswag.json"
+    },
+    {
+      "name": "medmcqa",
+      "total": 200,
+      "exported": "2026-04-02T11:30:33.599286",
+      "file": "medmcqa.json"
+    },
+    {
+      "name": "mmlu-pro-chemistry",
+      "total": 500,
+      "exported": "2026-04-03T10:00:10.328269",
+      "file": "mmlu-pro-chemistry.json"
+    },
+    {
+      "name": "mmlu-pro-engineering",
+      "total": 500,
+      "exported": "2026-04-03T10:00:12.342146",
+      "file": "mmlu-pro-engineering.json"
+    },
+    {
+      "name": "mmlu-pro-law",
+      "total": 500,
+      "exported": "2026-04-03T10:00:13.939734",
+      "file": "mmlu-pro-law.json"
+    },
+    {
+      "name": "mmlu-pro-math",
+      "total": 500,
+      "exported": "2026-04-03T10:00:06.663122",
+      "file": "mmlu-pro-math.json"
+    },
+    {
+      "name": "mmlu-pro-physics",
+      "total": 500,
+      "exported": "2026-04-03T10:00:08.594813",
+      "file": "mmlu-pro-physics.json"
+    },
+    {
+      "name": "mmlu-pro",
+      "total": 200,
+      "exported": "2026-04-02T11:30:42.218596",
+      "file": "mmlu-pro.json"
+    },
+    {
+      "name": "mmlu",
+      "total": 200,
+      "exported": "2026-04-02T11:30:09.112889",
+      "file": "mmlu.json"
+    },
+    {
+      "name": "openbookqa",
+      "total": 200,
+      "exported": "2026-04-02T11:30:25.031009",
+      "file": "openbookqa.json"
+    },
+    {
+      "name": "sciq",
+      "total": 200,
+      "exported": "2026-04-02T11:30:27.826371",
+      "file": "sciq.json"
+    },
+    {
       "name": "truthfulqa",
-      "total": 50,
-      "exported": "2026-02-22T19:10:03.755593",
+      "total": 200,
+      "exported": "2026-04-02T11:30:16.646524",
       "file": "truthfulqa.json"
+    },
+    {
+      "name": "winogrande",
+      "total": 200,
+      "exported": "2026-04-02T11:30:30.730327",
+      "file": "winogrande.json"
     }
   ]
 }

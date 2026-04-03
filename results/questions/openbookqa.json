@@ -1,0 +1,2607 @@
+{
+  "dataset": "openbookqa",
+  "exported": "2026-04-02T11:30:25.031009",
+  "total": 200,
+  "questions": [
+    {
+      "question_id": "openbookqa_0",
+      "question": "A person wants to start saving money so that they can afford a nice vacation at the end of the year. After looking over their budget and expenses, they decide the best way to save money is to",
+      "choices": [
+        "make more phone calls",
+        "quit eating lunch out",
+        "buy less with monopoly money",
+        "have lunch with friends"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_1",
+      "question": "There is most likely going to be fog around:",
+      "choices": [
+        "a marsh",
+        "a tundra",
+        "the plains",
+        "a desert"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_2",
+      "question": "Predators eat",
+      "choices": [
+        "lions",
+        "humans",
+        "bunnies",
+        "grass"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_3",
+      "question": "Oak tree seeds are planted and a sidewalk is paved right next to that spot, until eventually, the tree is tall and the roots must extend past the sidewalk, which means",
+      "choices": [
+        "roots may be split",
+        "roots may begin to die",
+        "parts may break the concrete",
+        "roots may fall apart"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_4",
+      "question": "An electric car runs on electricity via",
+      "choices": [
+        "gasoline",
+        "a power station",
+        "electrical conductors",
+        "fuel"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_5",
+      "question": "As the rain forest is deforested the atmosphere will increase with",
+      "choices": [
+        "oxygen",
+        "nitrogen",
+        "carbon",
+        "rain"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_6",
+      "question": "an electric car contains a motor that runs on",
+      "choices": [
+        "gas",
+        "hydrogen",
+        "ions",
+        "plutonium"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_7",
+      "question": "The middle of the day usually involves the bright star nearest to the earth to be straight overhead why?",
+      "choices": [
+        "moons gravity",
+        "human planet rotation",
+        "global warming",
+        "moon rotation"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_8",
+      "question": "The summer solstice in the northern hemisphere is four months before",
+      "choices": [
+        "May",
+        "July",
+        "April",
+        "October"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_9",
+      "question": "The main component in dirt is",
+      "choices": [
+        "microorganisms",
+        "broken stones",
+        "pollution",
+        "bacteria"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_10",
+      "question": "It's easier for human's to survive in:",
+      "choices": [
+        "a cave",
+        "the ocean.",
+        "a town",
+        "alone"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_11",
+      "question": "A cactus stem is used to store",
+      "choices": [
+        "fruit",
+        "liquid",
+        "food",
+        "spines"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_12",
+      "question": "A red-tailed hawk is searching for prey. It is most likely to swoop down on",
+      "choices": [
+        "an eagle",
+        "a cow",
+        "a gecko",
+        "a deer"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_13",
+      "question": "The chance of wildfires is increased by",
+      "choices": [
+        "parched foliage",
+        "torrential rain",
+        "lush foliage",
+        "careful fire maintenance"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_14",
+      "question": "A positive effect of burning biofuel is",
+      "choices": [
+        "shortage of crops for the food supply",
+        "an increase in air pollution",
+        "powering the lights in a home",
+        "deforestation in the amazon to make room for crops"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_15",
+      "question": "As gasoline costs rise, alternative fuels are being used, which means that",
+      "choices": [
+        "wind power will be expensive",
+        "gas costs will rise",
+        "oil costs will be maintained",
+        "gasoline will be needed less"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_16",
+      "question": "A person wants to be able to have more natural power in their home. They choose to cease using a traditional electric company to source this electricity, and so decide to install",
+      "choices": [
+        "sun grafts",
+        "sunlight shields",
+        "panels collecting sunlight",
+        "solar bees"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_17",
+      "question": "A Mola Mola might live where?",
+      "choices": [
+        "Lake Michigan",
+        "The Mississippi River",
+        "Bay of Bengal",
+        "Lake Eerie"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_18",
+      "question": "Which requires energy to move?",
+      "choices": [
+        "weasel",
+        "willow",
+        "mango",
+        "poison ivy"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_19",
+      "question": "An animal that only eats plants is a",
+      "choices": [
+        "rat",
+        "moth",
+        "chimpanzee",
+        "pig"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_20",
+      "question": "There was a lot more water vapor in the air when we went on a trip to",
+      "choices": [
+        "Hanoi",
+        "Athens",
+        "Baghdad",
+        "Phoenix"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_21",
+      "question": "An example of conservation is avoiding the use of",
+      "choices": [
+        "gasoline",
+        "air",
+        "snow",
+        "clothes"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_22",
+      "question": "What can feathers on Spheniscidae be used for?",
+      "choices": [
+        "keeping warm",
+        "flying",
+        "sleeping",
+        "eating"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_23",
+      "question": "Overpopulation can cause",
+      "choices": [
+        "More fresh water for people to drink",
+        "Lower Life Expectancy in Countries",
+        "More food for more people",
+        "More space for places to people to live"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_24",
+      "question": "Shining a light through a diamond can",
+      "choices": [
+        "make a lot of bright lights shine",
+        "summon a brilliant wave of color",
+        "heat up a room",
+        "make a lot of money"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_25",
+      "question": "If you were attacked by a shark and had to punch it sharply where it pulls in air from, you'd use your hand to make contact with",
+      "choices": [
+        "its snout",
+        "its gills",
+        "its nose",
+        "its belly"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_26",
+      "question": "which of these would stop a car quicker?",
+      "choices": [
+        "a wheel with wet brake pads",
+        "a wheel without brake pads",
+        "a wheel with worn brake pads",
+        "a wheel with dry brake pads"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_27",
+      "question": "what system is needed for a body to get its needed supply of the gas humans breathe in?",
+      "choices": [
+        "the circulatory system",
+        "the digestive system",
+        "the school system",
+        "central nervous system"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_28",
+      "question": "Every evening a child can look into the night sky and see that the moon is",
+      "choices": [
+        "gone",
+        "breaking",
+        "falling",
+        "moving upwards"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_29",
+      "question": "When it's flying, a plane has no friction with the",
+      "choices": [
+        "wings",
+        "ground",
+        "air",
+        "clouds"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_30",
+      "question": "To grow plants require",
+      "choices": [
+        "acid rain",
+        "pesticides",
+        "shafts of sunlight",
+        "moonbeam rays"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_31",
+      "question": "What is the best way to guess a babies eye color?",
+      "choices": [
+        "The surroundings they are born in.",
+        "Their parents usual diet.",
+        "Just take a random guess.",
+        "The genealogy records of their family."
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_32",
+      "question": "What animal eats plants?",
+      "choices": [
+        "eagles",
+        "robins",
+        "owls",
+        "leopards"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_33",
+      "question": "Which of these is a hypothesis?",
+      "choices": [
+        "The ice caps will completely melt if global warming continues",
+        "The earth is round",
+        "The earth revolves around the sun",
+        "Gravity causes objects to fall"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_34",
+      "question": "What explains the characteristic lunar formations?",
+      "choices": [
+        "remains of ancient ponds",
+        "many collisions that have occured",
+        "volcanic explosions over millions of years",
+        "sink holes due to the moons porous nature"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_35",
+      "question": "Tadpoles start their lives as",
+      "choices": [
+        "Water animals",
+        "Frogs",
+        "Ants",
+        "College Students"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_36",
+      "question": "If a person puts out four apples around their home on the same day, the molecules in which apple would be moving the most rapidly?",
+      "choices": [
+        "the apple sitting on a sunny sidewalk",
+        "the apple in the freezer",
+        "the apple sitting on the shaded stoop",
+        "the apple in a closet"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_37",
+      "question": "What is used for sensing visual things?",
+      "choices": [
+        "nerves",
+        "tibia",
+        "nostril",
+        "cornea"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_38",
+      "question": "They studied the soil by using",
+      "choices": [
+        "plants",
+        "a telescope",
+        "roots",
+        "a microscope"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_39",
+      "question": "Bill's arm got cold when he put it inside the",
+      "choices": [
+        "refrigerator",
+        "room",
+        "jacket",
+        "oven"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_40",
+      "question": "A recyclable material can be",
+      "choices": [
+        "transformed",
+        "traded",
+        "thrown away",
+        "used more times"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_41",
+      "question": "What is different about birth in humans and chickens?",
+      "choices": [
+        "Mother",
+        "Fertilization",
+        "Father",
+        "the hard shell"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_42",
+      "question": "Which of these situations is an example of pollutants?",
+      "choices": [
+        "plastic bags floating in the ocean",
+        "mallard ducks floating on a lake",
+        "cottonwood seeds floating in the air",
+        "cirrus clouds floating in the sky"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_43",
+      "question": "Human reproduction requires",
+      "choices": [
+        "eggs with shells",
+        "nest incubation",
+        "a nest",
+        "a womb"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_44",
+      "question": "Thermometers",
+      "choices": [
+        "can help you monitor a fever",
+        "indicate levels of mercury in the blood",
+        "read exactly at 98.6 degrees",
+        "are used only for babies"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_45",
+      "question": "if the earth was a living room, what can be done to melt the glaciers?",
+      "choices": [
+        "someone would turn up the room heater",
+        "someone would turn up the air conditioner",
+        "someone would turn up the music",
+        "someone would turn on the light"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_46",
+      "question": "What would happen when balloons heat up?",
+      "choices": [
+        "they get bigger",
+        "they get smaller",
+        "nothing happens",
+        "they fall down"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_47",
+      "question": "A balloon is filled with helium for a party. After the party, the balloons are left in the living room, where a fireplace is heating the room. The balloons",
+      "choices": [
+        "expand",
+        "melt",
+        "shrink",
+        "fall"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_48",
+      "question": "Seals are most likely to be found in what type of environment?",
+      "choices": [
+        "desert",
+        "arctic",
+        "Mediterranean",
+        "tropical"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_49",
+      "question": "When the eggs hatch, the offspring are",
+      "choices": [
+        "killed",
+        "hurt",
+        "born",
+        "cold"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_50",
+      "question": "Some berries may be eaten by",
+      "choices": [
+        "a bear or person",
+        "a bear or shark",
+        "a bear or lion",
+        "a bear or wolf"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_51",
+      "question": "A person has a chance to experience an equinox",
+      "choices": [
+        "weekly",
+        "monthly",
+        "annually",
+        "biannually"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_52",
+      "question": "Overpopulation of an organism can",
+      "choices": [
+        "strain the resources of an ecosystem",
+        "cause boundless growth of resources",
+        "lead to extinction of the organism",
+        "cause the ecosystem to flourish"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_53",
+      "question": "To improve health, what is a good strategy?",
+      "choices": [
+        "high risk lifestyle",
+        "restaurant food",
+        "business trip",
+        "a spa trip"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_54",
+      "question": "A girl and her mom have the same",
+      "choices": [
+        "date of birth",
+        "shirt",
+        "number of toenails",
+        "hair length"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_55",
+      "question": "The transportation with the most mass is likely a",
+      "choices": [
+        "commercial plane",
+        "private plane",
+        "bus",
+        "private car"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_56",
+      "question": "A rabbit may enjoy",
+      "choices": [
+        "meat",
+        "compost",
+        "peas",
+        "pebbles"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_57",
+      "question": "A construction group wants to put a shopping center in town, but the only place available is a small nature park with a trail. Deer and other wildlife frequent the park, since it is the only place in the city where trees and fresh water are available for them. The construction group decides to build the shopping center, which means that",
+      "choices": [
+        "the deer are moved to a zoo",
+        "the trail is expanded",
+        "the mall has a nature park in it",
+        "the wildlife environment is destroyed"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_58",
+      "question": "Owls are likely to hunt at",
+      "choices": [
+        "3pm",
+        "2am",
+        "6pm",
+        "7am"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_59",
+      "question": "What could be a positive aspect of a tree being cut down?",
+      "choices": [
+        "the plants that were under the tree will have access to more light",
+        "the squirrels that were in that tree will have an easier time getting to their home",
+        "Plants under the tree will get cooled off by the shade",
+        "The sun will shine brighter than before"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_60",
+      "question": "Birds carrying away fruit helps the tree",
+      "choices": [
+        "grow",
+        "fertilize",
+        "reproduce",
+        "conquer"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_61",
+      "question": "If a UFO is flying overhead and looks small, then large, then",
+      "choices": [
+        "the UFO is calling",
+        "the UFO had been close",
+        "the UFO is approaching",
+        "the UFO is leaving"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_62",
+      "question": "Inherited behavior is exhibited when",
+      "choices": [
+        "bears take a long winter sleep",
+        "dogs sit on command",
+        "seals clap for their trainers",
+        "rats navigate thru a maze"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_63",
+      "question": "What likely explains deforestation?",
+      "choices": [
+        "Increased insect populations",
+        "Clearing for farming",
+        "reduction in rainfall",
+        "More carbon dioxide"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_64",
+      "question": "Mosquitoes enjoy all the people at a BBQ in the summer for what reason?",
+      "choices": [
+        "steak",
+        "blood",
+        "nice weather",
+        "taking food"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_65",
+      "question": "The surface of the moon contains",
+      "choices": [
+        "dogs",
+        "water",
+        "high peaks",
+        "humans"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_66",
+      "question": "A tool used to identify the percent chance of a trait being passed down has at least",
+      "choices": [
+        "four boxes",
+        "eight boxes",
+        "two boxes",
+        "six boxes"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_67",
+      "question": "A prisoner is kept in a stone room, unable to see the sun. The prisoner knows that he needs vitamin D to survive, so he",
+      "choices": [
+        "asks for milk",
+        "asks for television",
+        "asks for water",
+        "asks for sleep"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_68",
+      "question": "When trying to pull a rose out of the ground why do you encounter resistance?",
+      "choices": [
+        "roots",
+        "tensile strength",
+        "plant temperature",
+        "plant color"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_69",
+      "question": "A bat flew through the sky without hitting anything due to which of these?",
+      "choices": [
+        "rainy sky to fly in",
+        "fast truck to drive",
+        "a car with gasoline",
+        "surfaces to reflect sound off"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_70",
+      "question": "How can we see that the coloration of fur is an inherited characteristic?",
+      "choices": [
+        "puppies have soft fur",
+        "kittens look like their parents",
+        "all mammals are born with fur",
+        "baby rats are mostly bald"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_71",
+      "question": "Decaying vegetation is part of the process that",
+      "choices": [
+        "enables nuclear power to function",
+        "enables to emitting of light beams",
+        "enables gas powered motors to operate",
+        "enables windmills to power electric grids"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_72",
+      "question": "After a torrential downpour over a week, a man notices that the pond in his backyard is",
+      "choices": [
+        "melted",
+        "dehydrated",
+        "bloated",
+        "salted"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_73",
+      "question": "The amount of friction and the speed of an object have what kind of relationship?",
+      "choices": [
+        "inverse",
+        "reverse",
+        "direct",
+        "equal"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_74",
+      "question": "A fallen leaf",
+      "choices": [
+        "will turn into a tree",
+        "will become bright green",
+        "will begin to recycle the nutrients that made up its structure",
+        "is likely to continue to grow"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_75",
+      "question": "Over a period of time the weather can change",
+      "choices": [
+        "The color of my hair",
+        "The way I walk",
+        "The size of a statue",
+        "The sound a computer makes"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_76",
+      "question": "Plant growth may cause",
+      "choices": [
+        "an uptick in the number of leaves",
+        "a surge in leaf disease",
+        "a gradual decrease in leaves",
+        "a rapid decline of the leaves"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_77",
+      "question": "The man's heart skipped a beat and he felt pain after touching which of these?",
+      "choices": [
+        "ice cube",
+        "water",
+        "electrical transformer",
+        "grass"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_78",
+      "question": "Which substance is capable of dripping?",
+      "choices": [
+        "Oxygen",
+        "Juice",
+        "Wood",
+        "Lightning"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_79",
+      "question": "If bacon is left too long on a hot stove top",
+      "choices": [
+        "it will be cooked perfectly",
+        "it will be bacteria laden",
+        "it will become blackened",
+        "it will be left raw"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_80",
+      "question": "the dashboard reading in a jaguar would likely be set to which of these?",
+      "choices": [
+        "set to calories",
+        "set to volume",
+        "set to kilometers",
+        "set to width"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_81",
+      "question": "are explosions safe?",
+      "choices": [
+        "they could harm living things",
+        "they are very safe",
+        "they cause nothing serious",
+        "none of these"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_82",
+      "question": "The lowest temperature on the trip was at",
+      "choices": [
+        "the mountain pass",
+        "the plain",
+        "the large hill",
+        "the canyon"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_83",
+      "question": "What is the benefit to using a frosted window film over a non treated windows?",
+      "choices": [
+        "they are easier to make",
+        "they let in less light",
+        "they are cheaper to produce",
+        "they are much stronger"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_84",
+      "question": "Ocean water contains",
+      "choices": [
+        "copious amounts of seltzer",
+        "scant amounts of sodium chloride",
+        "scant amounts of carbonation",
+        "copious amounts of the combination of Na and Cl"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_85",
+      "question": "A cheetah that runs all day will find it has lost a lot of",
+      "choices": [
+        "blood",
+        "water",
+        "prey",
+        "spots"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_86",
+      "question": "Beak shape can influence a bird's ability",
+      "choices": [
+        "to give birth to live young",
+        "to mate with it's partner",
+        "to fly to warmer climates",
+        "to chew up certain worms"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_87",
+      "question": "Some blind people have demonstrated bat-like skills by:",
+      "choices": [
+        "sensing shapes by light and shadows",
+        "having a unusually strong sense of smell",
+        "sensing nearby objects by temperature change",
+        "using sound to 'see'"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_88",
+      "question": "December 21st through March 20 is a three month period which is an example of what?",
+      "choices": [
+        "A session",
+        "A Match",
+        "A Season",
+        "Autumn"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_89",
+      "question": "Seeds provide new plants with",
+      "choices": [
+        "life sustaining elements",
+        "essentials for photosynthesis",
+        "water and hydrogen",
+        "storage for roots"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_90",
+      "question": "What is a more comfortable color to have for your automobile upholstery if living in a desert?",
+      "choices": [
+        "ecru",
+        "red",
+        "black",
+        "navy"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_91",
+      "question": "The salamander could eat a large amounts of what?",
+      "choices": [
+        "fettuccine if left around",
+        "waxy leaves from certain plants",
+        "dead carcass meat from livestock",
+        "six legged winged organisms"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_92",
+      "question": "A person can see",
+      "choices": [
+        "a radio recording",
+        "an emotion",
+        "a written message",
+        "an abstract idea"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_93",
+      "question": "When looking for good soil for plants, typically what is optimal?",
+      "choices": [
+        "malleable and nutritious",
+        "dry and sandy",
+        "grainy and bitter",
+        "compact and hard"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_94",
+      "question": "Animals are drawn to",
+      "choices": [
+        "gold",
+        "houses",
+        "feeders",
+        "Carbon Dioxide"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_95",
+      "question": "Squirrels spend their fall",
+      "choices": [
+        "looking for pretty leaves to collect",
+        "stockpiling rocks for fighting in the winter",
+        "stockpiling pecans for the frigid months",
+        "collecting twigs to keep warm"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_96",
+      "question": "Rainbows are always found after what?",
+      "choices": [
+        "A fire",
+        "A tornado",
+        "Rainfall",
+        "Cereal"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_97",
+      "question": "Crop rotation has a positive impact on what?",
+      "choices": [
+        "government mentality",
+        "dirt quality",
+        "town economies",
+        "crop watering"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_98",
+      "question": "the best method for detecting texture is",
+      "choices": [
+        "rubbing it",
+        "seeing it",
+        "hearing it",
+        "tasting it"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_99",
+      "question": "Cold-blooded animals are often",
+      "choices": [
+        "fast",
+        "large",
+        "hairless",
+        "slow"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_100",
+      "question": "Grey clouds can bring",
+      "choices": [
+        "sunlight",
+        "falling water molecules",
+        "blooming flowers",
+        "drought conditions"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_101",
+      "question": "Which animal is considered a predator?",
+      "choices": [
+        "ant",
+        "snake",
+        "elephant",
+        "giraffe"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_102",
+      "question": "Pollinators",
+      "choices": [
+        "enable plants to continue flourishing",
+        "play an unimportant role in the reproduction process",
+        "are useless to plants",
+        "are considered unwanted pests"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_103",
+      "question": "A farmer harvests seeds from some plants, such as tomatoes, in order to plant them later on. These seeds, once planted",
+      "choices": [
+        "have their own dirt",
+        "have their own sunlight",
+        "have a lot of sand",
+        "contain their necessary nutrition"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_104",
+      "question": "What type of characteristics are people not born with?",
+      "choices": [
+        "genetics",
+        "skills",
+        "physical attributes",
+        "height"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_105",
+      "question": "A spinning object is used to make",
+      "choices": [
+        "steam",
+        "heat",
+        "water",
+        "electricity"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_106",
+      "question": "One of the negative consequences of offshore oil platforms is",
+      "choices": [
+        "evaporation of the surrounding water",
+        "discharge of liquid petroleum in the surrounding sea",
+        "improvement in the conditions of sea life",
+        "increase in the birthrate of sea birds"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_107",
+      "question": "The unit of measure derived from French word millilitre is a unit used for measuring volume generally used for values between 1 and",
+      "choices": [
+        "1000",
+        "250",
+        "5000",
+        "300"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_108",
+      "question": "A man's child runs through the yard in the sprinklers, getting mud all over their feet. The child then runs around on the porch, tracking mud everywhere. While the mud is still wet, the man decides to clean off the porch by",
+      "choices": [
+        "getting a new child",
+        "yelling at the mud",
+        "asking the child to stop",
+        "turning on the hose"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_109",
+      "question": "Earthquakes",
+      "choices": [
+        "only happen in California",
+        "cause solar and lunar eclipses",
+        "will break your vases",
+        "make bridges much safer"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_110",
+      "question": "A seismograph can accurately describe",
+      "choices": [
+        "how rough the footing will be",
+        "how bad the weather will be",
+        "how stable the ground will be",
+        "how shaky the horse will be"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_111",
+      "question": "Light from further away may appear to be less bright than other, closer sources, such as in which instance?",
+      "choices": [
+        "the sun is always bright",
+        "the moon is brighter than stars",
+        "the moon is brighter than a floodlight",
+        "the sun is darker than the moon"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_112",
+      "question": "A plant needs a specific climate to grow and",
+      "choices": [
+        "wither",
+        "persist",
+        "die",
+        "decay"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_113",
+      "question": "Banging on a drum causes",
+      "choices": [
+        "music to be loud",
+        "music to be appealing",
+        "reverberations to strike the eardrum",
+        "concerts to sell out"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_114",
+      "question": "What may have been formed by a volcano?",
+      "choices": [
+        "Mt. McKinley",
+        "Lake Pontchartrain",
+        "The great lakes",
+        "Niagara Falls"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_115",
+      "question": "Humans, cats, dogs, and elephants are known as mammals because their kids are born alive. Non-mammalian babies are born",
+      "choices": [
+        "old",
+        "dead",
+        "in an egg",
+        "big"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_116",
+      "question": "Wind can cause",
+      "choices": [
+        "basements to flood due to weather",
+        "small birds to kill large birds",
+        "waterfalls to flow backwards",
+        "stones to weather down to pebbles"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_117",
+      "question": "Inherited characteristics",
+      "choices": [
+        "include mice being able to navigate a maze",
+        "include learning to sit on command",
+        "include dolphins doing tricks for their trainers",
+        "include spots on a ladybug"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_118",
+      "question": "How could we determine approximately how far a bird is from the ground?",
+      "choices": [
+        "Measure the altitude of the bird using a reference point, such as a tall building.",
+        "Identify the species of bird",
+        "Ask the bird how high it was when it returns back to earth",
+        "Measure the bird's mass"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_119",
+      "question": "Endangered pandas are sometimes",
+      "choices": [
+        "accidentally dropped into volcanoes",
+        "confined to enclosures to be viewed by the public",
+        "found eating corn in the middle of North America",
+        "made into delicious rare steaks"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_120",
+      "question": "Algae can be found in",
+      "choices": [
+        "reservoir",
+        "meat",
+        "street",
+        "tree"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_121",
+      "question": "A toaster converts electrical energy into heat energy for toasting much like",
+      "choices": [
+        "a campfire toasts bread",
+        "a microwave heats soup",
+        "a fire burns paper",
+        "a small oven works"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_122",
+      "question": "An octopus, when in danger and unable to swim to safety, may find itself",
+      "choices": [
+        "mimicking other things",
+        "melting into sand",
+        "creating new homes",
+        "mocking other fish"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_123",
+      "question": "What does someone do when creating music?",
+      "choices": [
+        "hit a toy baseball with a bat",
+        "shake a baby rattle with your hand",
+        "bang the wall with your fist",
+        "pluck the strings of a fingerboard with your fingers"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_124",
+      "question": "The pull the human planet space rock orbiter has on certain bodies of dihydrogen monooxide results in?",
+      "choices": [
+        "telescope views",
+        "water level fluctuations",
+        "animal",
+        "plant harvesting"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_125",
+      "question": "Since density = mass / volume, denser liquids such as water sink more than",
+      "choices": [
+        "baby oil",
+        "corn syrup or",
+        "milk",
+        "honey"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_126",
+      "question": "Photosynthesis can be performed by",
+      "choices": [
+        "a cabbage cell",
+        "a bee cell",
+        "a bear cell",
+        "a cat cell"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_127",
+      "question": "The force exerted on an object and distance traveled have what kind of relationship?",
+      "choices": [
+        "reverse",
+        "inverse",
+        "equal",
+        "direct"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_128",
+      "question": "all cells use cellular respiration to",
+      "choices": [
+        "photosynthesize",
+        "release waste",
+        "perform meiosis",
+        "release energy"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_129",
+      "question": "The viewing oriented sensor of a prairie creature are for what?",
+      "choices": [
+        "reproductive purposes",
+        "viewing sounds",
+        "sensing views",
+        "sensing tastes"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_130",
+      "question": "A dog is going to have to corral sheep for the afternoon, so it needs to prepare its body for the enormous workload ahead of it. The dog is",
+      "choices": [
+        "breaks for birds on the road",
+        "given a large breakfast",
+        "eats a few corn cobs",
+        "given two apples to watch"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_131",
+      "question": "A woman sells bracelets that she makes. The bracelets gain popularity, and the woman makes incredibly large amounts of money from the sales. After a while, very few people are still buying the bracelets, so",
+      "choices": [
+        "the woman makes more money",
+        "the woman makes the same amount of money",
+        "the woman spends more money",
+        "the woman makes less money"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_132",
+      "question": "A desert environment is",
+      "choices": [
+        "dry, grass covered, and humid",
+        "lush, green, and tropical",
+        "arid, parched, and sun-baked",
+        "dry, damp, and lush"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_133",
+      "question": "Seasons are caused by what rotating on its axis?",
+      "choices": [
+        "Our Planet",
+        "The Atmosphere",
+        "The Equator",
+        "The Sun"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_134",
+      "question": "Which is best an letting electricity pass through?",
+      "choices": [
+        "tile flooring",
+        "human flesh",
+        "hockey stick",
+        "a steak knife"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_135",
+      "question": "Asteroids crashing on planets can leave behind",
+      "choices": [
+        "large, bowl-shaped cavities in the ground",
+        "aliens and foreign foods",
+        "small dents in the planet's core",
+        "lakes filled with salty water"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_136",
+      "question": "What is the formula of the substance which best helps plants grow",
+      "choices": [
+        "NH4",
+        "C4H4",
+        "CO2",
+        "H2O"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_137",
+      "question": "You can experience a change of pressure when",
+      "choices": [
+        "Yelling really loud",
+        "Soaring the skies",
+        "Going walking",
+        "riding a bike"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_138",
+      "question": "A small creek absorbing heat energy can result in",
+      "choices": [
+        "the creek water getting colder",
+        "a parched creek bed",
+        "tributaries branching off from the creek",
+        "a runoff of extra water"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_139",
+      "question": "Summertime  happens during June in all but which location?",
+      "choices": [
+        "Australia",
+        "in Canada",
+        "United States",
+        "Europe"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_140",
+      "question": "It takes more water to fill a bathtub than a",
+      "choices": [
+        "lake",
+        "pool",
+        "stomach",
+        "holding tank"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_141",
+      "question": "The eighth month of the year is winter in",
+      "choices": [
+        "Brazil",
+        "Indiana",
+        "London",
+        "Canada"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_142",
+      "question": "birds use their peckers to catch",
+      "choices": [
+        "dogs",
+        "a tan",
+        "a ball",
+        "bees"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_143",
+      "question": "transplanting seedling oaks has a positive impact on",
+      "choices": [
+        "fuel costs",
+        "the economy",
+        "housing value",
+        "the environment"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_144",
+      "question": "What is an example of hunting?",
+      "choices": [
+        "humans throwing a spear through an animal",
+        "humans chewing on boiled animal muscles",
+        "humans gathering animals in a gate",
+        "humans plucking fruit from a tree"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_145",
+      "question": "Which of these has shape that changes depending on the container which it resides within?",
+      "choices": [
+        "paper",
+        "wood",
+        "stone",
+        "orange juice"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_146",
+      "question": "What would be the flavor if you ate the item that fell and is thought to have hit Sir Issac Newton's head",
+      "choices": [
+        "Sweet",
+        "Salty",
+        "bitter",
+        "sour"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_147",
+      "question": "Earth's four layers are comprised mainly of",
+      "choices": [
+        "stone",
+        "bacteria",
+        "water",
+        "air"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_148",
+      "question": "if coffee sits in the fridge and loses its liquid form, what is that point known as?",
+      "choices": [
+        "the freezing point",
+        "the prime point",
+        "the boiling point",
+        "the melting point"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_149",
+      "question": "Mammals give birth to live",
+      "choices": [
+        "children",
+        "birds",
+        "fish",
+        "insects"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_150",
+      "question": "If a battery in an electromagnet is active, then what will happen to a nail in that electromagnet?",
+      "choices": [
+        "it loses its magnetization",
+        "it loses its charge",
+        "it may become magnetized",
+        "it gains a charge"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_151",
+      "question": "Which of these is a factor in the shape of a fern's seed?",
+      "choices": [
+        "luck",
+        "humans",
+        "gold",
+        "inheritance"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_152",
+      "question": "Which is recyclable?",
+      "choices": [
+        "An Elephant",
+        "A school notebook",
+        "A boat",
+        "A lake"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_153",
+      "question": "if the population in a habitat is on a steady decline, what condition is the habitat?",
+      "choices": [
+        "it is a place to emigrate from",
+        "it is an ideal habitat",
+        "it is an unsustainable habitat",
+        "it is a thriving abode"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_154",
+      "question": "A teacher wants to show how to combine two substances together. The two things that he can use in order to mix them completely are",
+      "choices": [
+        "water and soda",
+        "water and oil",
+        "sand and rocks",
+        "salt and bark"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_155",
+      "question": "Medicine is used to cure but can cause people to have allergic reactions such as",
+      "choices": [
+        "spider bites",
+        "vomiting",
+        "placebo effect",
+        "dance fever"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_156",
+      "question": "Lightning may lead to",
+      "choices": [
+        "damage to local foliage",
+        "rainbows across the sky",
+        "growth of local flora",
+        "firefighters getting the night off"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_157",
+      "question": "When would a nocturnal predator most likely hunt?",
+      "choices": [
+        "5 p.m.",
+        "12 p.m.",
+        "3 a.m.",
+        "10 a.m."
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_158",
+      "question": "Where water be located in its gas form?",
+      "choices": [
+        "inside a disc golf driver",
+        "inside of a brass pipe",
+        "a mile up in the sky",
+        "inside a leather baseball"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_159",
+      "question": "Green parts of a life form absorb",
+      "choices": [
+        "carbon dioxide",
+        "light",
+        "oxygen",
+        "water"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_160",
+      "question": "If a new species of predator joins a community",
+      "choices": [
+        "the new species will become herbivores",
+        "prey will experience an increase in population",
+        "prey will experience a drop in population",
+        "the old species will die out"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_161",
+      "question": "Why would a perennial plant with an elongated stem a frequently used for lumber fall to the ground?",
+      "choices": [
+        "It's dead",
+        "For water",
+        "For food",
+        "For sun"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_162",
+      "question": "I'm an animal with a white fur and a large fluffy tail that lives in arctic regions; what am I?",
+      "choices": [
+        "weasel",
+        "snow fox",
+        "wolf",
+        "polar bear"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_163",
+      "question": "Dairy is a source of",
+      "choices": [
+        "a vitamin that prevents blood loss",
+        "a vitamin that treats amino acid deficiency",
+        "a group of fat-soluble secosteroids",
+        "a vitamin that helps treat liver problems"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_164",
+      "question": "Atomic 26 is drawn to a device, it could be",
+      "choices": [
+        "magnetized",
+        "Na",
+        "compass",
+        "K"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_165",
+      "question": "why do tadpoles change into frogs?",
+      "choices": [
+        "tadpoles change to different animals",
+        "tadpoles are really just fish",
+        "they are young frogs still growing",
+        "none of these"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_166",
+      "question": "What do cows eat?",
+      "choices": [
+        "Chickpeas",
+        "Chocolate",
+        "Steak",
+        "Poultry"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_167",
+      "question": "Which object conducts electricity?",
+      "choices": [
+        "Window",
+        "Rubik's Cube",
+        "Ship Anchor",
+        "Boulder"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_168",
+      "question": "Glucose travels",
+      "choices": [
+        "from roots to leaves of a daffodil",
+        "from a rose's leaves to the atmosphere",
+        "from a daisy's leaves into it's underground support system",
+        "from the sun to a sunflower's buds"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_169",
+      "question": "Evaporation",
+      "choices": [
+        "only happens in the summer",
+        "is like nature's disappearing water trick",
+        "is caused by snow",
+        "involves the disappearance of sunlight"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_170",
+      "question": "In order for crops to grow food safely, pesticides are used on them. When it floods, this causes t he what to be poisonous?",
+      "choices": [
+        "air",
+        "Corn",
+        "Runoff",
+        "farmers"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_171",
+      "question": "The boy was able to warm the fireplace without a lighter thanks to what?",
+      "choices": [
+        "friction",
+        "metal",
+        "wishing",
+        "magic"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_172",
+      "question": "Where would a duck like to live?",
+      "choices": [
+        "the Sahara",
+        "Antarctica",
+        "the Appalachian mountains",
+        "Death Valley"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_173",
+      "question": "What do tuna eat?",
+      "choices": [
+        "Atlantic menhaden",
+        "Swedish fish",
+        "gummy fish",
+        "laminariales"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_174",
+      "question": "A woman notices that she is depressed every autumn, and wonders why. A friend suggests to her that perhaps certain changes that take place as seasons move from warm to cold may be having an effect on her. When pressed for an example of these changes, the friend cites",
+      "choices": [
+        "flowers blooming",
+        "grass turning brown",
+        "trees growing",
+        "blossoms blooming"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_175",
+      "question": "is it normal for an adult animal to lay eggs?",
+      "choices": [
+        "it has never happened",
+        "yes it is standard",
+        "it is abnormal and weird",
+        "all of these"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_176",
+      "question": "If your dog is overweight",
+      "choices": [
+        "add more fat to their diet",
+        "cut back their caloric intake",
+        "let them sleep more",
+        "increase their caloric intake"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_177",
+      "question": "Eyes allow humans",
+      "choices": [
+        "to detect when a traffic light changes",
+        "detect sour flavors in candy",
+        "hear music at concerts",
+        "detect acrid odors in the air"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_178",
+      "question": "Organisms covered by layers of sediment",
+      "choices": [
+        "become fossils over night",
+        "may end up reanimated over time",
+        "develop characteristics for survival",
+        "may end up fueling a car"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_179",
+      "question": "The winter solstice is on December 21st in the",
+      "choices": [
+        "counties",
+        "north of equator",
+        "states",
+        "southern hemisphere"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_180",
+      "question": "A lake environment is a good setup for what to happen to organic remains?",
+      "choices": [
+        "bleaching",
+        "burning",
+        "fossilization",
+        "drying"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_181",
+      "question": "were there fossil fuels in the ground when humans evolved?",
+      "choices": [
+        "this was only created by humans",
+        "humans predate fossil fuel formation",
+        "significant supplies accumulated prior",
+        "none of these"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_182",
+      "question": "The Grand Canyon is massive, with large, high peaks and very deep lows, which was formed when",
+      "choices": [
+        "some water is around it",
+        "water rained on it",
+        "natural waters weathered it",
+        "a pool was opened"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_183",
+      "question": "What type of useful product can be made from the moving winds?",
+      "choices": [
+        "wood",
+        "bananas",
+        "electricity",
+        "metal"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_184",
+      "question": "The sides of the canyon are",
+      "choices": [
+        "metal",
+        "water",
+        "rivers",
+        "stone"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_185",
+      "question": "which of these people would have the worst air quality at their residence?",
+      "choices": [
+        "a man who lives next to a landfill",
+        "a man who lives in a city with the best air quality",
+        "none of these",
+        "a man who lives in a great suburb"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_186",
+      "question": "What is a stopwatch used for?",
+      "choices": [
+        "to rewind 5 minutes",
+        "to tell what will happen 5 minutes from now",
+        "to voice the time",
+        "to measure minutes and hours"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_187",
+      "question": "As a drought worsens the level at an aquifer will",
+      "choices": [
+        "stay the same",
+        "fluctuate wildly",
+        "decrease",
+        "increase"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_188",
+      "question": "Wind frequently helps transport from one place to another",
+      "choices": [
+        "marble statues",
+        "molten magma",
+        "subterranean termites",
+        "exposed topsoil"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_189",
+      "question": "When a kid slams on the brakes on their bike what is caused?",
+      "choices": [
+        "bike helmet",
+        "avoiding accidents",
+        "friction",
+        "gearing"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_190",
+      "question": "Sources of spices have",
+      "choices": [
+        "crystals",
+        "feathers",
+        "cell walls",
+        "craters"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_191",
+      "question": "Conservation",
+      "choices": [
+        "leads to longer drought of resources",
+        "leads to longer availability of resources",
+        "leads to more consumption",
+        "leads to short supply of resources"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_192",
+      "question": "A tree is not the habitat of a",
+      "choices": [
+        "squirrel",
+        "woodpecker",
+        "monkey",
+        "lion"
+      ],
+      "correct_answer": 3,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_193",
+      "question": "Erosion could lead to",
+      "choices": [
+        "a change in the direction of a stream",
+        "a change in ocean temperatures",
+        "an increase in rainy weather",
+        "an increase in plants and animals"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_194",
+      "question": "A hemisphere experiences summer when",
+      "choices": [
+        "it's tilted towards Jupiter",
+        "it's angled towards the moon",
+        "it's angled towards the largest star in the solar system",
+        "it spins counter clockwise on Earth's axis"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_195",
+      "question": "What date is the amount of daylight minimized",
+      "choices": [
+        "Jul 4th",
+        "Feb 29th",
+        "May 3rd",
+        "Sep 1st"
+      ],
+      "correct_answer": 1,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_196",
+      "question": "Which term is involved with protection by skin?",
+      "choices": [
+        "Eucerin pH5 range",
+        "Sagittal plane",
+        "pyogenic vibrio",
+        "popliteus"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_197",
+      "question": "The reason Earth is so sturdy is because",
+      "choices": [
+        "It is made from rock",
+        "It eats three meals a day",
+        "It has a loving family",
+        "It is made from metal"
+      ],
+      "correct_answer": 0,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_198",
+      "question": "A plant left in the dark",
+      "choices": [
+        "produces fruit",
+        "grows faster",
+        "fails to grow",
+        "gets greener"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    },
+    {
+      "question_id": "openbookqa_199",
+      "question": "A boy wants to use his Walkman so that he can listen to some music. When he tries to turn it on, it us unable to, and the boy realizes that he will need",
+      "choices": [
+        "heat",
+        "metal",
+        "lithium-ion",
+        "plastic"
+      ],
+      "correct_answer": 2,
+      "subject": "science",
+      "difficulty": 0.5
+    }
+  ]
+}

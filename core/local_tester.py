@@ -239,10 +239,10 @@ def evaluate_sequential(
 
     inputs = tokenizer(prompt, return_tensors="pt").to(device)
 
-    need_hidden = confidence_head is not None
-
+    # Always request hidden states — needed for both trained NormShift heads
+    # and the activation-based heuristic confidence (norm-shift + magnitude)
     with torch.no_grad():
-        outputs = model(**inputs, output_hidden_states=need_hidden)
+        outputs = model(**inputs, output_hidden_states=True)
         logits = outputs.logits[0, -1, :]
 
     # Get logits for each letter token
@@ -260,12 +260,55 @@ def evaluate_sequential(
     probs = F.softmax(choice_logits, dim=0)
     selected_answer = probs.argmax().item()
 
-    # Confidence: use trained head if available, otherwise entropy
+    # Confidence priority:
+    #   1. Trained NormShift head (calibrated, best quality)
+    #   2. Activation-based heuristic (norm-shift signals + entropy, no trained head)
+    #   3. Raw entropy fallback (weakest)
     if confidence_head is not None and hasattr(outputs, "hidden_states") and outputs.hidden_states is not None:
         with torch.no_grad():
             confidence = confidence_head(outputs.hidden_states).item()
         confidence = max(0.0, min(1.0, confidence))
-        confidence_method = "norm_shift_head"
+        confidence_method = "NormShift head"
+    elif hasattr(outputs, "hidden_states") and outputs.hidden_states is not None:
+        # Activation-based confidence: combine norm-shift signals with entropy
+        # This gives better calibration than entropy alone for models without
+        # trained heads, by using the pre-norm magnitude as a familiarity signal.
+        # See: activation-forensics project (AUC 0.994 for answerability)
+        ns_signals = _extract_norm_shift_signals(outputs.hidden_states)
+        ns_last = ns_signals[0, -1, :]  # (n_layers,) — last token
+
+        # Norm-shift signals vary in scale across architectures.
+        # Normalize to [0, 1] per-model using sigmoid on the mean.
+        ns_mean_raw = ns_last.mean().item()
+        ns_std_raw = ns_last.std().item()
+        # sigmoid centers around 0 — positive ns_mean = familiar, negative = unfamiliar
+        ns_familiarity = 1.0 / (1.0 + np.exp(-ns_mean_raw))  # sigmoid
+
+        # Layer consistency: low std across layers = consistent processing
+        # Normalize via sigmoid (typical std range 0.5–5.0, center at 2.0)
+        ns_consistency = 1.0 / (1.0 + np.exp(ns_std_raw - 2.0))
+
+        # Pre-norm magnitude of final layer: large = confident internal state
+        final_hidden = outputs.hidden_states[-1][0, -1, :].float()
+        pre_norm_mag = final_hidden.norm().item()
+        # Sigmoid normalization (typical range 10-200, center at 50)
+        mag_signal = 1.0 / (1.0 + np.exp(-(pre_norm_mag - 50.0) / 20.0))
+
+        # Entropy from answer logits
+        entropy = -(probs * (probs + 1e-10).log()).sum()
+        max_entropy = np.log(len(example.choices))
+        entropy_conf = float(1.0 - (entropy.item() / max_entropy))
+
+        # Combine: entropy (answer certainty) + norm-shift (familiarity) + magnitude
+        # Weights tuned from activation-forensics findings
+        confidence = float(
+            0.4 * entropy_conf +       # How peaked is the answer distribution
+            0.3 * ns_familiarity +     # Norm-shift familiarity (sigmoid-normalized)
+            0.2 * mag_signal +         # Pre-norm magnitude (energy = confidence)
+            0.1 * ns_consistency       # Consistency across layers
+        )
+        confidence = max(0.0, min(1.0, confidence))
+        confidence_method = "activation"
     else:
         entropy = -(probs * (probs + 1e-10).log()).sum()
         max_entropy = np.log(len(example.choices))

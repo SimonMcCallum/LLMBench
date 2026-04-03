@@ -1,0 +1,90 @@
+{
+  "timestamp": "20260403_101544",
+  "config": {
+    "models": [
+      "tinyllama",
+      "qwen2-1.5b",
+      "phi-2",
+      "phi-3-mini"
+    ],
+    "datasets": [
+      "gamedesign"
+    ],
+    "max_examples": 10,
+    "temperatures": [
+      0.0
+    ],
+    "num_repetitions": 1,
+    "method": "sequential"
+  },
+  "overall_metrics": {
+    "ece": 0.18722185460765492,
+    "brier": 0.2470570068770736,
+    "auprc": 0.4330993874491813,
+    "prr": 0.25644691975819955,
+    "accuracy": 0.325,
+    "mean_confidence": 0.26959194935299363,
+    "calibration_gap": 0.05540805064700638,
+    "acc@70%": 0.39285714285714285,
+    "acc@80%": 0.375,
+    "acc@90%": 0.3611111111111111
+  },
+  "summaries": [
+    {
+      "model_name": "tinyllama",
+      "model_type": "local",
+      "vendor": "local",
+      "dataset": "gamedesign",
+      "total_examples": 10,
+      "accuracy": 0.2,
+      "mean_confidence": 0.08813224245501117,
+      "calibration_gap": 0.11186775754498884,
+      "mean_hlcc_score": 0.19268668059015331,
+      "mean_cbm_score": -0.05,
+      "correct_count": 2,
+      "incorrect_count": 8
+    },
+    {
+      "model_name": "qwen2-1.5b",
+      "model_type": "local",
+      "vendor": "local",
+      "dataset": "gamedesign",
+      "total_examples": 10,
+      "accuracy": 0.3,
+      "mean_confidence": 0.570226600290972,
+      "calibration_gap": 0.27022660029097206,
+      "mean_hlcc_score": -0.0965394927694511,
+      "mean_cbm_score": -0.35,
+      "correct_count": 3,
+      "incorrect_count": 7
+    },
+    {
+      "model_name": "phi-2",
+      "model_type": "local",
+      "vendor": "local",
+      "dataset": "gamedesign",
+      "total_examples": 10,
+      "accuracy": 0.3,
+      "mean_confidence": 0.09774382238783216,
+      "calibration_gap": 0.20225617761216783,
+      "mean_hlcc_score": 0.3217609034476408,
+      "mean_cbm_score": 0.05,
+      "correct_count": 3,
+      "incorrect_count": 7
+    },
+    {
+      "model_name": "phi-3-mini",
+      "model_type": "local",
+      "vendor": "local",
+      "dataset": "gamedesign",
+      "total_examples": 10,
+      "accuracy": 0.5,
+      "mean_confidence": 0.32226513227815917,
+      "calibration_gap": 0.17773486772184083,
+      "mean_hlcc_score": 0.6605848903142034,
+      "mean_cbm_score": 0.25,
+      "correct_count": 5,
+      "incorrect_count": 5
+    }
+  ]
+}
