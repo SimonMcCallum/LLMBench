@@ -33,6 +33,12 @@ app.secret_key = os.environ.get("SECRET_KEY", os.urandom(32))
 app.config["SESSION_COOKIE_SAMESITE"] = "Lax"
 app.config["SESSION_COOKIE_HTTPONLY"] = True
 
+# Support serving under a URL prefix (e.g. /bench on simonmccallum.org.nz/bench/)
+# Set URL_PREFIX env var or --prefix CLI arg. Nginx strips the prefix before proxying,
+# so Flask routes stay clean — but we also support direct proxying where the prefix
+# is passed through, using APPLICATION_ROOT + DispatcherMiddleware.
+_url_prefix = os.environ.get("URL_PREFIX", "")  # e.g. "/bench"
+
 # Register admin panel blueprint
 from web.admin import admin_bp  # noqa: E402
 
@@ -46,6 +52,7 @@ REPO_ROOT = Path(__file__).parent.parent
 QUESTIONS_DIR = REPO_ROOT / "results" / "questions"
 LEADERBOARD_FILE = REPO_ROOT / "results" / "leaderboard.json"
 HUMAN_RESULTS_DIR = REPO_ROOT / "results" / "human"
+BENCHMARK_RESULTS_DIR = REPO_ROOT / "data" / "results"
 
 # ============================================================
 # INLINE HLCC/CBM SCORING (no core/ dependency)
@@ -179,6 +186,149 @@ def static_files(filename):
 # ============================================================
 # ROUTES — API
 # ============================================================
+
+_benchmark_cache = None
+_benchmark_cache_mtime = 0
+
+
+def _load_all_benchmarks():
+    """Load and consolidate all benchmark results. Cached until files change."""
+    global _benchmark_cache, _benchmark_cache_mtime
+    if not BENCHMARK_RESULTS_DIR.exists():
+        return {"results": [], "models": [], "datasets": []}
+
+    # Check if any file is newer than cache
+    latest_mtime = max(
+        (f.stat().st_mtime for f in BENCHMARK_RESULTS_DIR.glob("*.json")),
+        default=0,
+    )
+    if _benchmark_cache and latest_mtime <= _benchmark_cache_mtime:
+        return _benchmark_cache
+
+    all_results = []
+    for fpath in sorted(BENCHMARK_RESULTS_DIR.glob("*.json")):
+        if fpath.name == ".gitkeep":
+            continue
+        try:
+            with open(fpath, encoding="utf-8") as f:
+                data = json.load(f)
+            for r in data.get("results", []):
+                all_results.append(r)
+        except Exception:
+            pass
+
+    # Deduplicate: keep latest result per (model, dataset, question_id, method)
+    seen = {}
+    for r in all_results:
+        key = (r.get("model_name"), r.get("dataset"), r.get("question_id"),
+               r.get("method", "sequential"))
+        seen[key] = r  # later files overwrite earlier
+    deduped = list(seen.values())
+
+    models = sorted(set(r.get("model_name", "?") for r in deduped))
+    datasets = sorted(set(r.get("dataset", "?") for r in deduped))
+
+    _benchmark_cache = {
+        "total_results": len(deduped),
+        "models": models,
+        "datasets": datasets,
+        "results": deduped,
+    }
+    _benchmark_cache_mtime = latest_mtime
+    return _benchmark_cache
+
+
+@app.route("/api/benchmark-results")
+def api_benchmark_results():
+    """Consolidated benchmark results with optional filters.
+
+    Query params:
+        model: filter by model name
+        dataset: filter by dataset
+        question_id: filter by question ID
+        method: filter by method (sequential, api, rational)
+        summary: if "true", return per-model-dataset summaries instead of raw results
+    """
+    data = _load_all_benchmarks()
+    results = data["results"]
+
+    # Apply filters
+    model = request.args.get("model")
+    dataset = request.args.get("dataset")
+    qid = request.args.get("question_id")
+    method = request.args.get("method")
+
+    if model:
+        results = [r for r in results if r.get("model_name") == model]
+    if dataset:
+        results = [r for r in results if r.get("dataset") == dataset]
+    if qid:
+        results = [r for r in results if r.get("question_id") == qid]
+    if method:
+        results = [r for r in results if r.get("method") == method]
+
+    # Summary mode: aggregate per model-dataset
+    if request.args.get("summary") == "true":
+        from collections import defaultdict
+        groups = defaultdict(list)
+        for r in results:
+            groups[(r.get("model_name"), r.get("dataset"), r.get("method"))].append(r)
+
+        summaries = []
+        for (m, d, meth), rlist in sorted(groups.items()):
+            n = len(rlist)
+            correct = sum(1 for r in rlist if r.get("is_correct"))
+            confs = [r.get("confidence", 0) for r in rlist]
+            hlccs = [r.get("hlcc_score", 0) for r in rlist]
+            summaries.append({
+                "model_name": m, "dataset": d, "method": meth,
+                "total": n, "correct": correct,
+                "accuracy": correct / n if n else 0,
+                "mean_confidence": sum(confs) / n if n else 0,
+                "mean_hlcc": sum(hlccs) / n if n else 0,
+                "calibration_gap": abs(sum(confs) / n - correct / n) if n else 0,
+            })
+        return jsonify({
+            "models": data["models"], "datasets": data["datasets"],
+            "summaries": summaries,
+        })
+
+    return jsonify({
+        "total": len(results),
+        "models": data["models"], "datasets": data["datasets"],
+        "results": results,
+    })
+
+
+@app.route("/api/question-detail/<question_id>")
+def api_question_detail(question_id):
+    """All model answers for a specific question, plus the question text."""
+    data = _load_all_benchmarks()
+    answers = [r for r in data["results"] if r.get("question_id") == question_id]
+
+    # Try to get question text
+    question_text = None
+    for ds_file in QUESTIONS_DIR.glob("*.json"):
+        if ds_file.name in ("manifest.json", "hard_analysis.json"):
+            continue
+        try:
+            with open(ds_file, encoding="utf-8") as f:
+                qs = json.load(f).get("questions", [])
+            for q in qs:
+                if q.get("question_id") == question_id:
+                    question_text = q
+                    break
+            if question_text:
+                break
+        except Exception:
+            pass
+
+    return jsonify({
+        "question_id": question_id,
+        "question": question_text,
+        "answers": answers,
+    })
+
 
 @app.route("/api/hard-questions")
 def api_hard_questions():

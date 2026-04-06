@@ -199,14 +199,78 @@
   <header>
     <h1>LLM-<span>Bench</span></h1>
     <p>AI Performance &amp; Confidence Calibration Explorer</p>
-    <a href="/" class="back-link">&larr; Take the quiz</a>
+    <a class="back-link" id="back-to-quiz">&larr; Take the quiz</a>
   </header>
 
   <div class="tabs">
+    <button class="tab" onclick="switchTab('results-explorer')">Results Explorer</button>
     <button class="tab active" onclick="switchTab('hard-bench')">Hard Bench</button>
     <button class="tab" onclick="switchTab('human-vs-ai')">Human vs AI</button>
     <button class="tab" onclick="switchTab('confidence-quiz')">Confidence Quiz</button>
     <button class="tab" onclick="switchTab('confidence-lab')">Confidence Lab</button>
+  </div>
+
+  <!-- ==================== TAB 0: RESULTS EXPLORER ==================== -->
+  <div id="tab-results-explorer" class="tab-content">
+    <div class="card">
+      <h2>Results Explorer</h2>
+      <p>Browse all benchmark results. Select a model and dataset to see per-question performance,
+         or click any question to see how every model answered it.</p>
+    </div>
+
+    <!-- Summary view -->
+    <div class="filter-bar">
+      <select id="re-filter-dataset" onchange="renderResultsSummary()">
+        <option value="all">All datasets</option>
+      </select>
+      <select id="re-filter-method" onchange="renderResultsSummary()">
+        <option value="all">All methods</option>
+        <option value="sequential">Local (sequential)</option>
+        <option value="api">API (inline confidence)</option>
+        <option value="rational">Rational (unbounded)</option>
+      </select>
+    </div>
+
+    <!-- Model comparison chart area -->
+    <div class="card" id="re-chart-card">
+      <h3 style="margin-bottom: 16px;">Model Accuracy vs Confidence</h3>
+      <canvas id="re-scatter-chart" height="320"></canvas>
+      <div style="font-size:0.75rem; color:var(--text-dim); margin-top:8px; text-align:center;">
+        X = Accuracy, Y = Mean Confidence. Diagonal = perfect calibration. Bubble size = HLCC score.
+      </div>
+    </div>
+
+    <!-- Summary table -->
+    <div class="card">
+      <h3 style="margin-bottom: 12px;">Per-Model Summary</h3>
+      <div style="overflow-x:auto;">
+        <table id="re-summary-table" class="lb-table">
+          <thead><tr>
+            <th>Model</th><th>Dataset</th><th>Method</th><th>N</th>
+            <th>Accuracy</th><th>Confidence</th><th>HLCC</th><th>Cal. Gap</th><th></th>
+          </tr></thead>
+          <tbody id="re-summary-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Per-question drill-down (shown when a row is expanded) -->
+    <div class="card" id="re-detail-card" style="display:none;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+        <h3 id="re-detail-title">Questions</h3>
+        <button class="btn btn-secondary" onclick="document.getElementById('re-detail-card').style.display='none';" style="padding:6px 16px; font-size:0.8rem;">Close</button>
+      </div>
+      <div id="re-detail-content"></div>
+    </div>
+
+    <!-- Single question cross-model view -->
+    <div class="card" id="re-question-card" style="display:none;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+        <h3 id="re-question-title">Question Detail</h3>
+        <button class="btn btn-secondary" onclick="document.getElementById('re-question-card').style.display='none';" style="padding:6px 16px; font-size:0.8rem;">Close</button>
+      </div>
+      <div id="re-question-content"></div>
+    </div>
   </div>
 
   <!-- ==================== TAB 1: HARD BENCH ==================== -->
@@ -534,6 +598,7 @@
 const BASE = window.location.pathname.replace(/\/[^/]*$/, '').replace(/\/$/, '');
 let hardData = null;
 let leaderboardData = null;
+let resultsSummaryData = null;
 
 // ============================================================
 // TAB MANAGEMENT
@@ -547,9 +612,239 @@ function switchTab(id) {
     if (t.getAttribute('onclick').includes(id)) t.classList.add('active');
   });
   // Lazy-load data
+  if (id === 'results-explorer' && !resultsSummaryData) loadResultsSummary();
   if (id === 'hard-bench' && !hardData) loadHardBench();
   if (id === 'human-vs-ai' && !leaderboardData) loadLeaderboardData();
   if (id === 'confidence-lab') { updateLab(); drawLabChart(); }
+}
+
+// ============================================================
+// TAB 0: RESULTS EXPLORER
+// ============================================================
+async function loadResultsSummary() {
+  try {
+    const resp = await fetch(BASE + '/api/benchmark-results?summary=true');
+    resultsSummaryData = await resp.json();
+    // Populate filters
+    const dsSel = document.getElementById('re-filter-dataset');
+    resultsSummaryData.datasets.forEach(ds => {
+      const opt = document.createElement('option');
+      opt.value = ds; opt.textContent = ds;
+      dsSel.appendChild(opt);
+    });
+    renderResultsSummary();
+  } catch (e) {
+    console.error('Failed to load results:', e);
+  }
+}
+
+function renderResultsSummary() {
+  if (!resultsSummaryData) return;
+  let sums = resultsSummaryData.summaries;
+  const dsF = document.getElementById('re-filter-dataset').value;
+  const methF = document.getElementById('re-filter-method').value;
+  if (dsF !== 'all') sums = sums.filter(s => s.dataset === dsF);
+  if (methF !== 'all') sums = sums.filter(s => s.method === methF);
+  sums.sort((a, b) => b.mean_hlcc - a.mean_hlcc);
+
+  const tbody = document.getElementById('re-summary-body');
+  tbody.innerHTML = sums.map(s => {
+    const hlcc = s.mean_hlcc;
+    const methBadge = s.method === 'rational' ? '<span class="badge" style="background:rgba(86,212,232,0.15);color:var(--cyan);">rational</span>'
+      : s.method === 'api' ? '<span class="badge badge-llm">api</span>'
+      : '<span class="badge" style="background:rgba(76,205,138,0.15);color:var(--green);">local</span>';
+    return `<tr>
+      <td><strong>${s.model_name}</strong></td>
+      <td>${s.dataset}</td>
+      <td>${methBadge}</td>
+      <td>${s.total}</td>
+      <td>${(s.accuracy * 100).toFixed(1)}%</td>
+      <td>${(s.mean_confidence * 100).toFixed(1)}%</td>
+      <td style="color:${hlcc >= 0 ? 'var(--green)' : 'var(--red)'}">${hlcc >= 0 ? '+' : ''}${hlcc.toFixed(3)}</td>
+      <td>${(s.calibration_gap * 100).toFixed(1)}%</td>
+      <td><button class="btn btn-secondary" style="padding:4px 12px;font-size:0.75rem;" onclick="drillDown('${s.model_name}','${s.dataset}','${s.method}')">Inspect</button></td>
+    </tr>`;
+  }).join('');
+
+  drawScatterChart(sums);
+}
+
+function drawScatterChart(sums) {
+  const canvas = document.getElementById('re-scatter-chart');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const dpr = window.devicePixelRatio || 1;
+  const W = canvas.offsetWidth;
+  const H = 320;
+  canvas.width = W * dpr; canvas.height = H * dpr;
+  canvas.style.height = H + 'px';
+  ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, W, H);
+
+  const pad = { top: 20, right: 30, bottom: 40, left: 60 };
+  const pw = W - pad.left - pad.right, ph = H - pad.top - pad.bottom;
+  function toX(v) { return pad.left + v * pw; }
+  function toY(v) { return pad.top + ph - v * ph; }
+
+  // Grid
+  ctx.strokeStyle = '#2e3345'; ctx.lineWidth = 1;
+  for (let i = 0; i <= 10; i++) {
+    const v = i / 10;
+    ctx.beginPath(); ctx.moveTo(toX(v), pad.top); ctx.lineTo(toX(v), pad.top + ph); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(pad.left, toY(v)); ctx.lineTo(pad.left + pw, toY(v)); ctx.stroke();
+    ctx.fillStyle = '#8b90a5'; ctx.font = '10px sans-serif';
+    ctx.textAlign = 'center'; ctx.fillText((v * 100).toFixed(0) + '%', toX(v), H - pad.bottom + 16);
+    ctx.textAlign = 'right'; ctx.fillText((v * 100).toFixed(0) + '%', pad.left - 8, toY(v) + 4);
+  }
+
+  // Diagonal (perfect calibration)
+  ctx.strokeStyle = '#4a5568'; ctx.lineWidth = 1; ctx.setLineDash([4, 4]);
+  ctx.beginPath(); ctx.moveTo(toX(0), toY(0)); ctx.lineTo(toX(1), toY(1)); ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle = '#4a5568'; ctx.font = '10px sans-serif'; ctx.textAlign = 'left';
+  ctx.fillText('Perfect calibration', toX(0.52), toY(0.55));
+
+  // Axis labels
+  ctx.fillStyle = '#8b90a5'; ctx.font = '12px sans-serif';
+  ctx.textAlign = 'center'; ctx.fillText('Accuracy', W / 2, H - 4);
+  ctx.save(); ctx.translate(14, H / 2); ctx.rotate(-Math.PI / 2);
+  ctx.fillText('Mean Confidence', 0, 0); ctx.restore();
+
+  // Color by method
+  const methodColors = { sequential: '#4ccd8a', api: '#6c8aff', rational: '#56d4e8' };
+
+  sums.forEach(s => {
+    const x = toX(s.accuracy);
+    const y = toY(s.mean_confidence);
+    const r = Math.max(4, Math.min(18, Math.abs(s.mean_hlcc) * 10));
+    const color = methodColors[s.method] || '#f0a44b';
+
+    ctx.globalAlpha = 0.6;
+    ctx.fillStyle = color;
+    ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
+    ctx.globalAlpha = 1.0;
+    ctx.strokeStyle = color; ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.stroke();
+
+    // Label
+    ctx.fillStyle = '#e4e7ef'; ctx.font = '9px sans-serif'; ctx.textAlign = 'left';
+    const label = s.model_name.length > 15 ? s.model_name.slice(0, 14) + '…' : s.model_name;
+    ctx.fillText(label, x + r + 3, y + 3);
+  });
+}
+
+async function drillDown(model, dataset, method) {
+  const resp = await fetch(`${BASE}/api/benchmark-results?model=${encodeURIComponent(model)}&dataset=${encodeURIComponent(dataset)}&method=${encodeURIComponent(method)}`);
+  const data = await resp.json();
+  const results = data.results;
+
+  const card = document.getElementById('re-detail-card');
+  card.style.display = 'block';
+  document.getElementById('re-detail-title').textContent = `${model} on ${dataset} (${method}) — ${results.length} questions`;
+
+  const letters = 'ABCDEFGHIJ';
+  // Sort by question_id
+  results.sort((a, b) => {
+    const na = parseInt((a.question_id || '').replace(/\D/g, '')) || 0;
+    const nb = parseInt((b.question_id || '').replace(/\D/g, '')) || 0;
+    return na - nb;
+  });
+
+  let html = '<table class="lb-table"><thead><tr><th>Q</th><th>Correct?</th><th>Answer</th><th>Correct</th><th>Confidence</th><th>HLCC</th><th></th></tr></thead><tbody>';
+  results.forEach(r => {
+    const icon = r.is_correct ? '<span style="color:var(--green)">&#10003;</span>' : '<span style="color:var(--red)">&#10007;</span>';
+    const conf = (r.confidence * 100).toFixed(0);
+    const hlcc = r.hlcc_score;
+    const selLetter = r.selected_answer < letters.length ? letters[r.selected_answer] : '?';
+    const corLetter = r.correct_answer < letters.length ? letters[r.correct_answer] : '?';
+    // Extra columns for rational mode
+    let extra = '';
+    if (r.probability_p !== undefined) {
+      extra = ` (p=${(r.probability_p * 100).toFixed(0)}%, c=${(r.stated_c || 0).toFixed(2)})`;
+    }
+    html += `<tr>
+      <td><a href="#" onclick="showQuestionDetail('${r.question_id}'); return false;" style="color:var(--accent);">${r.question_id}</a></td>
+      <td>${icon}</td>
+      <td>${selLetter}</td>
+      <td>${corLetter}</td>
+      <td>${conf}%${extra}</td>
+      <td style="color:${hlcc >= 0 ? 'var(--green)' : 'var(--red)'}">${hlcc >= 0 ? '+' : ''}${hlcc.toFixed(2)}</td>
+      <td><a href="#" onclick="showQuestionDetail('${r.question_id}'); return false;" style="color:var(--accent); font-size:0.75rem;">all models</a></td>
+    </tr>`;
+  });
+  html += '</tbody></table>';
+
+  // Quick stats bar
+  const correct = results.filter(r => r.is_correct).length;
+  const meanConf = results.reduce((s, r) => s + r.confidence, 0) / results.length;
+  const meanHlcc = results.reduce((s, r) => s + r.hlcc_score, 0) / results.length;
+  const statsHtml = `<div class="stats-row" style="margin-bottom:16px;">
+    <div class="stat-box"><div class="stat-value" style="color:var(--green)">${(correct/results.length*100).toFixed(1)}%</div><div class="stat-label">Accuracy</div></div>
+    <div class="stat-box"><div class="stat-value">${(meanConf*100).toFixed(1)}%</div><div class="stat-label">Mean Confidence</div></div>
+    <div class="stat-box"><div class="stat-value" style="color:${meanHlcc>=0?'var(--green)':'var(--red)'}">${meanHlcc>=0?'+':''}${meanHlcc.toFixed(3)}</div><div class="stat-label">Mean HLCC</div></div>
+  </div>`;
+
+  document.getElementById('re-detail-content').innerHTML = statsHtml + html;
+  card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+async function showQuestionDetail(questionId) {
+  const resp = await fetch(`${BASE}/api/question-detail/${encodeURIComponent(questionId)}`);
+  const data = await resp.json();
+
+  const card = document.getElementById('re-question-card');
+  card.style.display = 'block';
+  document.getElementById('re-question-title').textContent = questionId;
+
+  const letters = 'ABCDEFGHIJ';
+  let html = '';
+
+  // Question text
+  if (data.question) {
+    const q = data.question;
+    html += `<div class="q-card">
+      <div class="q-text">${q.question}</div>
+      <div class="q-choices">`;
+    (q.choices || []).forEach((c, i) => {
+      const isCor = i === q.correct_answer;
+      html += `<div class="q-choice ${isCor ? 'is-correct' : ''}"><span class="letter">${letters[i] || '?'}</span><span>${c}</span></div>`;
+    });
+    html += `</div>
+      <div style="font-size:0.8rem; color:var(--text-dim);">Subject: ${q.subject || '?'} | Correct: <strong>${letters[q.correct_answer] || '?'}</strong></div>
+    </div>`;
+  }
+
+  // All model answers
+  const answers = data.answers || [];
+  answers.sort((a, b) => (a.model_name || '').localeCompare(b.model_name || ''));
+
+  html += '<table class="lb-table"><thead><tr><th>Model</th><th>Method</th><th>Answer</th><th>Correct?</th><th>Confidence</th><th>HLCC</th></tr></thead><tbody>';
+  answers.forEach(r => {
+    const icon = r.is_correct ? '<span style="color:var(--green)">&#10003;</span>' : '<span style="color:var(--red)">&#10007;</span>';
+    const selLetter = r.selected_answer < letters.length ? letters[r.selected_answer] : '?';
+    const conf = (r.confidence * 100).toFixed(0);
+    const hlcc = r.hlcc_score;
+    let confExtra = '';
+    if (r.probability_p !== undefined) {
+      confExtra = ` <span style="color:var(--text-dim);font-size:0.75rem;">(p=${(r.probability_p*100).toFixed(0)}% c=${(r.stated_c||0).toFixed(2)})</span>`;
+    }
+    html += `<tr>
+      <td><strong>${r.model_name}</strong></td>
+      <td><span class="badge badge-llm">${r.method || '?'}</span></td>
+      <td>${selLetter}</td>
+      <td>${icon}</td>
+      <td>${conf}%${confExtra}</td>
+      <td style="color:${hlcc >= 0 ? 'var(--green)' : 'var(--red)'}">${hlcc >= 0 ? '+' : ''}${hlcc.toFixed(2)}</td>
+    </tr>`;
+  });
+  html += '</tbody></table>';
+
+  if (answers.length === 0) {
+    html += '<p style="color:var(--text-dim);">No model answers recorded for this question.</p>';
+  }
+
+  document.getElementById('re-question-content').innerHTML = html;
+  card.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 // ============================================================
@@ -1078,6 +1373,9 @@ async function init() {
       sel.appendChild(opt);
     });
   } catch (e) {}
+
+  // Set back link using base path
+  document.getElementById('back-to-quiz').href = BASE + '/';
 
   // Load hard bench by default
   loadHardBench();
