@@ -452,6 +452,9 @@
     let datasetsConfig = {};
     let authenticated = false;
 
+    // Base path for admin — works at both / and /bench/
+    const ADMIN_BASE = window.location.pathname.replace(/\/[^/]*$/, '').replace(/\/$/, '');
+
     // ============================================================
     // FETCH WRAPPER
     // ============================================================
@@ -468,7 +471,7 @@
       if (options.body && typeof options.body === 'object' && !(options.body instanceof FormData)) {
         merged.body = JSON.stringify(options.body);
       }
-      const resp = await fetch('/vet' + path, merged);
+      const resp = await fetch(ADMIN_BASE + '/vet' + path, merged);
       if (resp.status === 401) {
         showView('view-login');
         throw new Error('Not authenticated');
@@ -515,7 +518,7 @@
       const errEl = document.getElementById('login-error');
       errEl.textContent = '';
       try {
-        const resp = await fetch('/vet/login', {
+        const resp = await fetch(ADMIN_BASE + '/vet/login', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           credentials: 'same-origin',
@@ -913,7 +916,7 @@
     // ============================================================
     (async function init() {
       try {
-        const resp = await fetch('/vet/api/models', {
+        const resp = await fetch(ADMIN_BASE + '/vet/api/models', {
           headers: { 'X-Requested-With': 'XMLHttpRequest' },
           credentials: 'same-origin',
         });
@@ -921,7 +924,7 @@
           authenticated = true;
           showView('view-main');
           modelsConfig = await resp.json();
-          const dsResp = await fetch('/vet/api/datasets', {
+          const dsResp = await fetch(ADMIN_BASE + '/vet/api/datasets', {
             headers: { 'X-Requested-With': 'XMLHttpRequest' },
             credentials: 'same-origin',
           });

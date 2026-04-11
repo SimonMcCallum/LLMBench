@@ -203,11 +203,55 @@
   </header>
 
   <div class="tabs">
+    <button class="tab active" onclick="switchTab('model-comparison')">Model Comparison</button>
     <button class="tab" onclick="switchTab('results-explorer')">Results Explorer</button>
-    <button class="tab active" onclick="switchTab('hard-bench')">Hard Bench</button>
+    <button class="tab" onclick="switchTab('hard-bench')">Hard Bench</button>
     <button class="tab" onclick="switchTab('human-vs-ai')">Human vs AI</button>
     <button class="tab" onclick="switchTab('confidence-quiz')">Confidence Quiz</button>
     <button class="tab" onclick="switchTab('confidence-lab')">Confidence Lab</button>
+  </div>
+
+  <!-- ==================== TAB -1: MODEL COMPARISON ==================== -->
+  <div id="tab-model-comparison" class="tab-content">
+    <div class="card">
+      <h2>Model Performance Comparison</h2>
+      <p>Accuracy and HLCC score across all models. Dot on the line shows accuracy;
+         the line connects to the HLCC score, revealing the cost of miscalibrated confidence.
+         Models above the dot are well-calibrated; below means overconfidence is hurting their score.</p>
+    </div>
+
+    <div class="filter-bar">
+      <select id="mc-dataset" onchange="renderModelComparison()">
+        <option value="all">All datasets</option>
+      </select>
+      <select id="mc-sort" onchange="renderModelComparison()">
+        <option value="size">Sort by model size</option>
+        <option value="hlcc">Sort by HLCC</option>
+        <option value="accuracy">Sort by accuracy</option>
+      </select>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-bottom:4px;">Accuracy vs HLCC by Model</h3>
+      <p style="font-size:0.78rem; color:var(--text-dim); margin-bottom:12px;">
+        <span style="color:var(--green);">&#9679; Accuracy</span> &nbsp;
+        <span style="color:var(--accent);">&#9679; HLCC Score</span> &nbsp;
+        Line connects them &mdash; longer line = worse calibration
+      </p>
+      <canvas id="mc-lollipop" height="500"></canvas>
+    </div>
+
+    <div class="card">
+      <h2>Human vs AI: Game Design Questions</h2>
+      <p>18 university game design students compared against frontier AI models on the same 10-question quiz.
+         Humans used discrete 3-level confidence (1/2/3); AI models used continuous confidence via API prompting.</p>
+      <canvas id="mc-gamedesign" height="420"></canvas>
+      <div style="font-size:0.75rem; color:var(--text-dim); margin-top:8px; text-align:center;">
+        <span style="color:var(--cyan);">&#9632; Human students</span> &nbsp;
+        <span style="color:var(--accent);">&#9632; LLM-Bench API models</span> &nbsp;
+        <span style="color:var(--orange);">&#9632; CBM paper models</span>
+      </div>
+    </div>
   </div>
 
   <!-- ==================== TAB 0: RESULTS EXPLORER ==================== -->
@@ -274,7 +318,7 @@
   </div>
 
   <!-- ==================== TAB 1: HARD BENCH ==================== -->
-  <div id="tab-hard-bench" class="tab-content active">
+  <div id="tab-hard-bench" class="tab-content">
     <div class="card">
       <h2>Hard Questions Benchmark</h2>
       <p>These are questions that defeated all 7 local models tested (TinyLlama through Qwen2.5-7B).
@@ -599,6 +643,7 @@ const BASE = window.location.pathname.replace(/\/[^/]*$/, '').replace(/\/$/, '')
 let hardData = null;
 let leaderboardData = null;
 let resultsSummaryData = null;
+let comparisonData = null;
 
 // ============================================================
 // TAB MANAGEMENT
@@ -612,10 +657,258 @@ function switchTab(id) {
     if (t.getAttribute('onclick').includes(id)) t.classList.add('active');
   });
   // Lazy-load data
+  if (id === 'model-comparison' && !comparisonData) loadComparison();
   if (id === 'results-explorer' && !resultsSummaryData) loadResultsSummary();
   if (id === 'hard-bench' && !hardData) loadHardBench();
   if (id === 'human-vs-ai' && !leaderboardData) loadLeaderboardData();
   if (id === 'confidence-lab') { updateLab(); drawLabChart(); }
+}
+
+// ============================================================
+// TAB -1: MODEL COMPARISON
+// ============================================================
+async function loadComparison() {
+  try {
+    const resp = await fetch(BASE + '/api/comparison');
+    comparisonData = await resp.json();
+    // Populate dataset filter
+    const datasets = new Set();
+    comparisonData.entries.forEach(e => { if (e.dataset) datasets.add(e.dataset); });
+    const sel = document.getElementById('mc-dataset');
+    [...datasets].sort().forEach(ds => {
+      const opt = document.createElement('option'); opt.value = ds; opt.textContent = ds;
+      sel.appendChild(opt);
+    });
+    renderModelComparison();
+    renderGameDesignChart();
+  } catch(e) { console.error('Comparison load failed:', e); }
+}
+
+function renderModelComparison() {
+  if (!comparisonData) return;
+  const dsF = document.getElementById('mc-dataset').value;
+  const sortBy = document.getElementById('mc-sort').value;
+
+  // Filter to LLM entries, aggregate across datasets if "all"
+  let entries = comparisonData.entries.filter(e => e.type === 'llm');
+  if (dsF !== 'all') entries = entries.filter(e => e.dataset === dsF);
+
+  // Aggregate by model name (across datasets and methods)
+  const byModel = {};
+  entries.forEach(e => {
+    if (!byModel[e.name]) byModel[e.name] = { name: e.name, params_b: e.params_b, totalN: 0, totalCorrect: 0, totalHlcc: 0 };
+    byModel[e.name].totalN += e.n;
+    byModel[e.name].totalCorrect += e.correct;
+    byModel[e.name].totalHlcc += e.mean_hlcc * e.n;
+    byModel[e.name].params_b = Math.max(byModel[e.name].params_b, e.params_b);
+  });
+
+  let models = Object.values(byModel).filter(m => m.totalN > 0).map(m => ({
+    name: m.name, params_b: m.params_b,
+    accuracy: m.totalCorrect / m.totalN,
+    mean_hlcc: m.totalHlcc / m.totalN,
+    n: m.totalN,
+  }));
+
+  if (sortBy === 'size') models.sort((a, b) => a.params_b - b.params_b);
+  else if (sortBy === 'hlcc') models.sort((a, b) => b.mean_hlcc - a.mean_hlcc);
+  else models.sort((a, b) => b.accuracy - a.accuracy);
+
+  drawLollipopChart(models);
+}
+
+function drawLollipopChart(models) {
+  const canvas = document.getElementById('mc-lollipop');
+  if (!canvas || models.length === 0) return;
+  const ctx = canvas.getContext('2d');
+  const dpr = window.devicePixelRatio || 1;
+  const W = canvas.offsetWidth;
+  const rowH = Math.max(22, Math.min(32, 500 / models.length));
+  const H = Math.max(300, models.length * rowH + 80);
+  canvas.width = W * dpr; canvas.height = H * dpr;
+  canvas.style.height = H + 'px';
+  ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, W, H);
+
+  const pad = { top: 30, right: 30, bottom: 30, left: 180 };
+  const pw = W - pad.left - pad.right;
+
+  // X axis: 0 to 2.0 (covers accuracy 0-1 and HLCC -2 to +2)
+  const xMin = -0.5, xMax = 2.0;
+  function toX(v) { return pad.left + (v - xMin) / (xMax - xMin) * pw; }
+
+  // Grid lines
+  ctx.strokeStyle = '#2e3345'; ctx.lineWidth = 1;
+  for (let v = 0; v <= 2.0; v += 0.5) {
+    const x = toX(v);
+    ctx.beginPath(); ctx.moveTo(x, pad.top - 10); ctx.lineTo(x, H - pad.bottom); ctx.stroke();
+    ctx.fillStyle = '#8b90a5'; ctx.font = '10px sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText(v.toFixed(1), x, pad.top - 14);
+  }
+  // Zero line
+  ctx.strokeStyle = '#4a5568'; ctx.lineWidth = 1;
+  ctx.beginPath(); ctx.moveTo(toX(0), pad.top - 10); ctx.lineTo(toX(0), H - pad.bottom); ctx.stroke();
+
+  // Header labels
+  ctx.fillStyle = '#4ccd8a'; ctx.font = 'bold 10px sans-serif'; ctx.textAlign = 'center';
+  ctx.fillText('Accuracy', toX(0.5), 12);
+  ctx.fillStyle = '#6c8aff';
+  ctx.fillText('HLCC Score', toX(1.5), 12);
+
+  // Draw each model
+  models.forEach((m, i) => {
+    const y = pad.top + i * rowH + rowH / 2;
+
+    // Model label
+    ctx.fillStyle = '#e4e7ef'; ctx.font = '11px sans-serif'; ctx.textAlign = 'right';
+    let label = m.name;
+    if (label.length > 22) label = label.slice(0, 21) + '…';
+    ctx.fillText(label, pad.left - 8, y + 4);
+
+    // Size badge
+    if (m.params_b > 0) {
+      ctx.fillStyle = '#4a5568'; ctx.font = '9px sans-serif';
+      const sizeLabel = m.params_b >= 100 ? '~' + m.params_b + 'B' : m.params_b + 'B';
+      ctx.fillText(sizeLabel, pad.left - 8, y + 14);
+    }
+
+    // Line between accuracy and HLCC
+    const xAcc = toX(m.accuracy);
+    const xHlcc = toX(m.mean_hlcc);
+
+    // Line
+    ctx.strokeStyle = m.mean_hlcc >= m.accuracy ? 'rgba(76,205,138,0.3)' : 'rgba(239,95,107,0.3)';
+    ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(xAcc, y); ctx.lineTo(xHlcc, y); ctx.stroke();
+
+    // Accuracy dot (green)
+    ctx.fillStyle = '#4ccd8a';
+    ctx.beginPath(); ctx.arc(xAcc, y, 5, 0, Math.PI * 2); ctx.fill();
+
+    // HLCC dot (blue)
+    ctx.fillStyle = '#6c8aff';
+    ctx.beginPath(); ctx.arc(xHlcc, y, 5, 0, Math.PI * 2); ctx.fill();
+
+    // Value labels
+    ctx.font = '9px sans-serif'; ctx.textAlign = 'left';
+    ctx.fillStyle = '#4ccd8a';
+    ctx.fillText((m.accuracy * 100).toFixed(0) + '%', xAcc + 8, y - 3);
+    ctx.fillStyle = '#6c8aff';
+    const hlccLabel = (m.mean_hlcc >= 0 ? '+' : '') + m.mean_hlcc.toFixed(2);
+    ctx.fillText(hlccLabel, xHlcc + 8, y + 11);
+  });
+}
+
+function renderGameDesignChart() {
+  if (!comparisonData) return;
+
+  // Collect all gamedesign entries
+  const gd = comparisonData.entries.filter(e => e.dataset === 'gamedesign');
+
+  // Separate into groups
+  const humans = gd.filter(e => e.type === 'human' && e.n > 0 && e.method === 'human');
+  const llmBench = gd.filter(e => e.type === 'llm' && e.method === 'api');
+  const cbmPaper = gd.filter(e => e.type === 'human' && e.method !== 'human'); // CBM paper AIs come through as "human" type in comparison data
+
+  // Actually, CBM paper models are in a separate file. Let me check what we have
+  // The human file has both students AND CBM-paper AIs
+  // Students have numeric names (60-77), CBM models have text names
+
+  const students = humans.filter(e => /^\d+$/.test(e.name));
+  const cbmModels = humans.filter(e => !/^\d+$/.test(e.name) && e.name !== '?');
+
+  const canvas = document.getElementById('mc-gamedesign');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const dpr = window.devicePixelRatio || 1;
+  const W = canvas.offsetWidth;
+  const H = 420;
+  canvas.width = W * dpr; canvas.height = H * dpr;
+  canvas.style.height = H + 'px';
+  ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, W, H);
+
+  const pad = { top: 30, right: 30, bottom: 50, left: 60 };
+  const pw = W - pad.left - pad.right, ph = H - pad.top - pad.bottom;
+
+  function toX(v) { return pad.left + v * pw; }
+  function toY(v) { return pad.top + ph - v * ph; }
+
+  // Grid
+  ctx.strokeStyle = '#2e3345'; ctx.lineWidth = 1;
+  for (let i = 0; i <= 10; i++) {
+    const v = i / 10;
+    ctx.beginPath(); ctx.moveTo(toX(v), pad.top); ctx.lineTo(toX(v), pad.top + ph); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(pad.left, toY(v * 2.5)); ctx.lineTo(pad.left + pw, toY(v * 2.5)); ctx.stroke();
+  }
+
+  // Axis labels
+  ctx.fillStyle = '#8b90a5'; ctx.font = '10px sans-serif';
+  for (let v = 0; v <= 1; v += 0.2) {
+    ctx.textAlign = 'center'; ctx.fillText((v * 100).toFixed(0) + '%', toX(v), H - pad.bottom + 16);
+  }
+  for (let v = -0.5; v <= 2.0; v += 0.5) {
+    ctx.textAlign = 'right'; ctx.fillText(v.toFixed(1), pad.left - 8, toY(v / 2.5) + 4);
+  }
+  ctx.textAlign = 'center'; ctx.font = '12px sans-serif';
+  ctx.fillText('Accuracy', W / 2, H - 6);
+  ctx.save(); ctx.translate(14, H / 2); ctx.rotate(-Math.PI / 2);
+  ctx.fillText('HLCC Score', 0, 0); ctx.restore();
+
+  // Zero line
+  ctx.strokeStyle = '#4a5568'; ctx.lineWidth = 1; ctx.setLineDash([4, 4]);
+  ctx.beginPath(); ctx.moveTo(pad.left, toY(0)); ctx.lineTo(pad.left + pw, toY(0)); ctx.stroke();
+  ctx.setLineDash([]);
+
+  function drawPoint(e, color, shape, size) {
+    const x = toX(e.accuracy);
+    const y = toY(e.mean_hlcc / 2.5);
+    ctx.fillStyle = color; ctx.globalAlpha = 0.7;
+    if (shape === 'circle') {
+      ctx.beginPath(); ctx.arc(x, y, size, 0, Math.PI * 2); ctx.fill();
+    } else if (shape === 'diamond') {
+      ctx.beginPath(); ctx.moveTo(x, y - size); ctx.lineTo(x + size, y);
+      ctx.lineTo(x, y + size); ctx.lineTo(x - size, y); ctx.closePath(); ctx.fill();
+    } else { // square
+      ctx.fillRect(x - size, y - size, size * 2, size * 2);
+    }
+    ctx.globalAlpha = 1.0;
+    return { x, y };
+  }
+
+  // Draw students (cyan circles)
+  students.forEach(e => {
+    const pos = drawPoint(e, '#56d4e8', 'circle', 5);
+  });
+
+  // Draw LLM-Bench API models (blue diamonds, labeled)
+  llmBench.forEach(e => {
+    const pos = drawPoint(e, '#6c8aff', 'diamond', 6);
+    ctx.fillStyle = '#e4e7ef'; ctx.font = '9px sans-serif'; ctx.textAlign = 'left';
+    let label = e.name.replace('claude-', 'cl-').replace('-20251001', '').replace('-20250514', '');
+    if (label.length > 18) label = label.slice(0, 17) + '…';
+    ctx.fillText(label, pos.x + 9, pos.y + 3);
+  });
+
+  // Draw CBM paper models (orange squares, labeled)
+  cbmModels.forEach(e => {
+    const pos = drawPoint(e, '#f0a44b', 'square', 5);
+    ctx.fillStyle = '#e4e7ef'; ctx.font = '9px sans-serif'; ctx.textAlign = 'left';
+    let label = e.name;
+    if (label.length > 18) label = label.slice(0, 17) + '…';
+    ctx.fillText(label, pos.x + 8, pos.y + 3);
+  });
+
+  // Draw student average
+  if (students.length > 0) {
+    const avgAcc = students.reduce((s, e) => s + e.accuracy, 0) / students.length;
+    const avgHlcc = students.reduce((s, e) => s + e.mean_hlcc, 0) / students.length;
+    const ax = toX(avgAcc), ay = toY(avgHlcc / 2.5);
+    ctx.strokeStyle = '#56d4e8'; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.arc(ax, ay, 10, 0, Math.PI * 2); ctx.stroke();
+    ctx.fillStyle = '#56d4e8'; ctx.font = 'bold 10px sans-serif'; ctx.textAlign = 'left';
+    ctx.fillText('Student avg', ax + 14, ay + 4);
+  }
 }
 
 // ============================================================
@@ -1377,8 +1670,8 @@ async function init() {
   // Set back link using base path
   document.getElementById('back-to-quiz').href = BASE + '/';
 
-  // Load hard bench by default
-  loadHardBench();
+  // Load model comparison by default (first tab)
+  loadComparison();
 
   // Handle resize for chart
   window.addEventListener('resize', () => { if (document.getElementById('tab-confidence-lab').classList.contains('active')) drawLabChart(); });

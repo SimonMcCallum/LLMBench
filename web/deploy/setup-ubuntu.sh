@@ -39,7 +39,7 @@ fi
 echo "Setting up Python virtual environment..."
 python3 -m venv venv
 venv/bin/pip install --upgrade pip
-venv/bin/pip install flask gunicorn
+venv/bin/pip install -r web/requirements.txt
 
 # 3. Systemd service
 echo "Installing systemd service..."

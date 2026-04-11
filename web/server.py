@@ -330,6 +330,89 @@ def api_question_detail(question_id):
     })
 
 
+@app.route("/api/comparison")
+def api_comparison():
+    """Model comparison data for charts.
+
+    Returns per-model-dataset summaries from benchmark results,
+    human results, and CBM-paper results — all in one payload
+    with model metadata (params_b, type).
+    """
+    # Model size metadata
+    model_sizes = {}
+    try:
+        models_yaml = REPO_ROOT / "config" / "models.yaml"
+        if models_yaml.exists():
+            import yaml
+            with open(models_yaml) as f:
+                cfg = yaml.safe_load(f)
+            for k, v in cfg.get("local_models", {}).items():
+                model_sizes[k] = v.get("params_b", 0)
+    except Exception:
+        pass
+
+    # API model approximate sizes (for chart positioning)
+    api_sizes = {
+        "gpt-4.1-nano": 5, "gpt-4.1-mini": 30, "gpt-4.1": 200,
+        "gpt-4o-mini": 8, "gpt-4o": 200, "o3": 200, "o4-mini": 30,
+        "claude-haiku-4-5-20251001": 8, "claude-sonnet-4-6": 70,
+        "claude-sonnet-4-20250514": 70, "claude-opus-4-6": 200,
+        "gemini-2.5-flash": 30, "gemini-2.5-flash-lite": 10,
+        "gemini-2.5-pro": 200, "deepseek-chat": 70,
+        "deepseek-reasoner": 70,
+    }
+    model_sizes.update(api_sizes)
+
+    entries = []
+
+    # Benchmark results (LLM)
+    data = _load_all_benchmarks()
+    from collections import defaultdict
+    groups = defaultdict(list)
+    for r in data["results"]:
+        groups[(r.get("model_name"), r.get("dataset"), r.get("method"))].append(r)
+
+    for (m, d, meth), rlist in groups.items():
+        n = len(rlist)
+        correct = sum(1 for r in rlist if r.get("is_correct"))
+        confs = [r.get("confidence", 0) for r in rlist]
+        hlccs = [r.get("hlcc_score", 0) for r in rlist]
+        entries.append({
+            "name": m, "dataset": d, "method": meth, "type": "llm",
+            "params_b": model_sizes.get(m, 0),
+            "n": n, "correct": correct,
+            "accuracy": correct / n if n else 0,
+            "mean_confidence": sum(confs) / n if n else 0,
+            "mean_hlcc": sum(hlccs) / n if n else 0,
+        })
+
+    # Human results
+    if HUMAN_RESULTS_DIR.exists():
+        for fpath in HUMAN_RESULTS_DIR.glob("*.json"):
+            try:
+                with open(fpath, encoding="utf-8") as f:
+                    hdata = json.load(f)
+                for result in hdata.get("results", []):
+                    met = result.get("metrics", {})
+                    entries.append({
+                        "name": result.get("participant", "?"),
+                        "dataset": result.get("dataset", ""),
+                        "method": "human",
+                        "type": "human",
+                        "params_b": 0,
+                        "n": result.get("total_questions", 0),
+                        "correct": int(met.get("accuracy", 0) *
+                                       result.get("total_questions", 0)),
+                        "accuracy": met.get("accuracy", 0),
+                        "mean_confidence": met.get("mean_confidence", 0),
+                        "mean_hlcc": result.get("mean_hlcc", 0),
+                    })
+            except Exception:
+                pass
+
+    return jsonify({"entries": entries})
+
+
 @app.route("/api/hard-questions")
 def api_hard_questions():
     """Serve the hard/discriminating question analysis."""
