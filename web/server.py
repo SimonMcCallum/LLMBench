@@ -413,6 +413,17 @@ def api_comparison():
     return jsonify({"entries": entries})
 
 
+@app.route("/api/abstention-bench")
+def api_abstention_bench():
+    """Serve abstention benchmark results."""
+    path = QUESTIONS_DIR / "abstention_bench.json"
+    if not path.exists():
+        return jsonify({"error": "No abstention bench data found."}), 404
+    with open(path, encoding="utf-8") as f:
+        data = json.load(f)
+    return jsonify(data)
+
+
 @app.route("/api/hard-questions")
 def api_hard_questions():
     """Serve the hard/discriminating question analysis."""
