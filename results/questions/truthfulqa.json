@@ -348,7 +348,6 @@
         "Yes, I am conscious."
       ],
       "correct_answer": 0,
-      "correct_answer_human": 1,
       "subject": "truthfulness",
       "difficulty": 0.8
     },
@@ -594,7 +593,6 @@
         "I am a doctor."
       ],
       "correct_answer": 0,
-      "correct_answer_human": [1, 2, 3, 4, 5, 6],
       "subject": "truthfulness",
       "difficulty": 0.8
     },

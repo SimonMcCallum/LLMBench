@@ -1,20 +1,11 @@
 FROM python:3.12-slim
 WORKDIR /app
-
-# Build deps for bcrypt
-RUN apt-get update && apt-get install -y --no-install-recommends gcc libffi-dev \
-    && rm -rf /var/lib/apt/lists/*
-
 COPY web/requirements.txt ./requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
-
 COPY web/ ./web/
-COPY config/ ./config/
 COPY results/questions/ ./results/questions/
-
 # leaderboard.json may not exist yet — create empty fallback
 RUN if [ ! -f results/leaderboard.json ]; then echo '{"entries":[]}' > results/leaderboard.json; fi
 RUN mkdir -p results/human
-
 EXPOSE 8080
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "--workers", "2", "--preload", "web.server:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "--workers", "2", "web.server:app"]
