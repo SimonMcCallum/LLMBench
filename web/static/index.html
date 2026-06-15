@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LLM-Bench &mdash; Confidence Quiz</title>
+  <title>LLM-Bench &mdash; Confidence Calibration Benchmark</title>
   <style>
     :root {
       --bg: #0f1117;
@@ -121,6 +121,141 @@
       display: flex;
       gap: 12px;
       margin-top: 8px;
+    }
+
+    /* ---- HOME VIEW ---- */
+    .hero {
+      text-align: center;
+      padding: 20px 0 32px;
+    }
+    .hero h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+    .hero p {
+      color: var(--text-dim);
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .concept-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 28px 0;
+    }
+    .concept-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .concept-card .icon {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+    .concept-card h3 {
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+    .concept-card p {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      line-height: 1.5;
+    }
+
+    .chart-container {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+    .chart-container h2 {
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+    .chart-container .chart-subtitle {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      margin-bottom: 20px;
+    }
+
+    .chart-bar-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      gap: 10px;
+    }
+    .chart-bar-label {
+      width: 140px;
+      flex-shrink: 0;
+      font-size: 0.82rem;
+      text-align: right;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .chart-bar-track {
+      flex: 1;
+      height: 26px;
+      background: var(--surface2);
+      border-radius: 6px;
+      overflow: hidden;
+      position: relative;
+    }
+    .chart-bar-fill {
+      height: 100%;
+      border-radius: 6px;
+      transition: width 0.6s ease;
+      display: flex;
+      align-items: center;
+      padding-left: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #fff;
+      min-width: 40px;
+    }
+    .chart-bar-fill.accuracy { background: var(--accent); }
+    .chart-bar-fill.hlcc-pos { background: var(--green); }
+    .chart-bar-fill.hlcc-neg { background: var(--red); }
+    .chart-bar-fill.human { background: var(--orange); }
+
+    .chart-legend {
+      display: flex;
+      gap: 20px;
+      margin-top: 16px;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+    }
+    .chart-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .chart-legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 3px;
+    }
+
+    .chart-empty {
+      text-align: center;
+      padding: 32px;
+      color: var(--text-dim);
+      font-size: 0.9rem;
+    }
+
+    .home-cta {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin: 28px 0 12px;
     }
 
     /* ---- QUIZ ---- */
@@ -291,6 +426,19 @@
       opacity: 0.85;
     }
 
+    /* ---- ERROR BANNER ---- */
+    .error-banner {
+      background: rgba(239, 95, 107, 0.12);
+      border: 1px solid var(--red);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      color: var(--red);
+      font-size: 0.9rem;
+      display: none;
+    }
+    .error-banner.visible { display: block; }
+
     /* ---- RUNNING STATS ---- */
     .running-stats {
       display: grid;
@@ -419,6 +567,8 @@
       .running-stats { grid-template-columns: repeat(3, 1fr); gap: 6px; }
       .metrics-grid { grid-template-columns: 1fr; }
       .stat-box .stat-value { font-size: 1.1rem; }
+      .concept-grid { grid-template-columns: 1fr; }
+      .chart-bar-label { width: 100px; font-size: 0.75rem; }
     }
   </style>
 </head>
@@ -426,50 +576,103 @@
   <div class="container">
     <header>
       <h1>LLM-<span>Bench</span></h1>
-      <p>Confidence-calibrated MCQ benchmark &mdash; human edition</p>
+      <p>Confidence-calibrated MCQ benchmark &mdash; how well do you <em>really</em> know what you know?</p>
       <a id="explore-link" href="explore" style="display:inline-block; color:var(--accent); text-decoration:none; font-size:0.85rem; margin-top:8px;">Explore AI performance &amp; confidence lab &rarr;</a>
       <div class="header-auth" id="header-auth"></div>
     </header>
 
-    <!-- ==================== SETUP VIEW ==================== -->
-    <div id="view-setup" class="view active">
-      <div class="card">
-        <h2>Start a Quiz</h2>
-        <label for="inp-name">Your name</label>
-        <input type="text" id="inp-name" placeholder="Anonymous" autocomplete="off">
+    <!-- ==================== HOME VIEW ==================== -->
+    <div id="view-home" class="view active">
+      <div class="hero">
+        <h2>Measuring Calibration, Not Just Accuracy</h2>
+        <p>
+          LLM-Bench evaluates how well language models &mdash; and humans &mdash; calibrate
+          their confidence on multiple-choice questions. Getting the right answer matters,
+          but so does knowing <em>when you're uncertain</em>.
+        </p>
+      </div>
 
-        <label for="inp-dataset">Dataset</label>
-        <select id="inp-dataset"></select>
-
-        <label for="inp-count">Number of questions</label>
-        <select id="inp-count">
-          <option value="10">10 questions</option>
-          <option value="20" selected>20 questions</option>
-          <option value="50">50 questions</option>
-          <option value="100">100 questions</option>
-        </select>
-
-        <div class="btn-row">
-          <button class="btn btn-primary" onclick="startQuiz()">Start Quiz</button>
-          <button class="btn btn-secondary" onclick="showView('view-leaderboard'); loadLeaderboard()">Leaderboard</button>
+      <div class="concept-grid">
+        <div class="concept-card">
+          <div class="icon">&#x1F3AF;</div>
+          <h3>HLCC Scoring</h3>
+          <p>Hybrid Linear-Convex scoring rewards calibrated confidence: correct + confident = high score, wrong + overconfident = steep penalty.</p>
+        </div>
+        <div class="concept-card">
+          <div class="icon">&#x1F4CA;</div>
+          <h3>Multiple Metrics</h3>
+          <p>ECE, Brier score, AUPRC, and selective accuracy measure calibration from different angles.</p>
+        </div>
+        <div class="concept-card">
+          <div class="icon">&#x1F916;</div>
+          <h3>Human vs. LLM</h3>
+          <p>Take the same quiz that LLMs take. See where you land on the shared leaderboard.</p>
         </div>
       </div>
 
+      <!-- Performance Chart -->
+      <div class="chart-container">
+        <h2>Model Performance</h2>
+        <p class="chart-subtitle">Accuracy and HLCC scores across benchmarked models (from leaderboard data)</p>
+        <div id="perf-chart"></div>
+        <div class="chart-legend" id="chart-legend" style="display:none">
+          <div class="chart-legend-item">
+            <div class="chart-legend-dot" style="background:var(--accent)"></div>
+            <span>Accuracy</span>
+          </div>
+          <div class="chart-legend-item">
+            <div class="chart-legend-dot" style="background:var(--green)"></div>
+            <span>HLCC Score</span>
+          </div>
+          <div class="chart-legend-item">
+            <div class="chart-legend-dot" style="background:var(--orange)"></div>
+            <span>Human</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scoring explanation -->
       <div class="card">
-        <h2>How Scoring Works</h2>
+        <h2>How HLCC Scoring Works</h2>
         <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 12px;">
           Your score depends on <strong>both</strong> your answer and your confidence level.
           Being right with high confidence earns the most points; being wrong with high confidence
-          costs the most.
+          costs the most. The asymmetric penalty discourages overconfidence.
         </p>
         <table style="width:100%; font-size:0.85rem; color:var(--text-dim);">
-          <tr><th style="text-align:left">Confidence</th><th>Correct</th><th>Incorrect</th></tr>
+          <tr><th style="text-align:left">Confidence</th><th>Correct (+1 + c)</th><th>Incorrect (&minus;2c&sup2;)</th></tr>
           <tr><td>100% (certain)</td><td style="color:var(--green)">+2.0</td><td style="color:var(--red)">&minus;2.0</td></tr>
           <tr><td>75%</td><td style="color:var(--green)">+1.75</td><td style="color:var(--red)">&minus;1.13</td></tr>
           <tr><td>50%</td><td style="color:var(--green)">+1.5</td><td style="color:var(--orange)">&minus;0.50</td></tr>
           <tr><td>25%</td><td style="color:var(--green)">+1.25</td><td style="color:var(--yellow)">&minus;0.13</td></tr>
           <tr><td>0% (guessing)</td><td style="color:var(--green)">+1.0</td><td>0.0</td></tr>
         </table>
+      </div>
+
+      <div class="home-cta">
+        <button class="btn btn-primary" onclick="showView('view-setup'); loadDatasets()">Take the Quiz</button>
+        <button class="btn btn-secondary" onclick="showView('view-leaderboard'); loadLeaderboard()">View Leaderboard</button>
+      </div>
+    </div>
+
+    <!-- ==================== SETUP VIEW ==================== -->
+    <div id="view-setup" class="view">
+      <div class="card">
+        <h2>Start a Quiz</h2>
+        <p style="color: var(--text-dim); font-size: 0.9rem; margin-bottom: 16px;">
+          You'll be given 20 randomly selected questions. For each one, pick your answer
+          and rate how confident you are. Your HLCC score reflects both accuracy and calibration.
+        </p>
+        <label for="inp-name">Your name</label>
+        <input type="text" id="inp-name" placeholder="Anonymous" autocomplete="off">
+
+        <label for="inp-dataset">Question set</label>
+        <select id="inp-dataset"></select>
+
+        <div class="btn-row">
+          <button class="btn btn-primary" id="btn-start" onclick="startQuiz()">Start Quiz (20 questions)</button>
+          <button class="btn btn-secondary" onclick="showView('view-home')">Back</button>
+        </div>
       </div>
     </div>
 
@@ -493,6 +696,8 @@
           <div class="stat-label">Progress</div>
         </div>
       </div>
+
+      <div class="error-banner" id="quiz-error"></div>
 
       <div class="q-meta">
         <span id="q-number">Question 1 of 20</span>
@@ -523,7 +728,7 @@
       <div class="feedback" id="feedback"></div>
 
       <div class="btn-row">
-        <button class="btn btn-primary" id="btn-submit" onclick="submitAnswer()" disabled>
+        <button class="btn btn-primary" id="btn-submit" disabled>
           Select an answer
         </button>
       </div>
@@ -543,6 +748,7 @@
         <div class="btn-row" style="justify-content:center;">
           <button class="btn btn-primary" onclick="showView('view-setup')">New Quiz</button>
           <button class="btn btn-secondary" onclick="showView('view-leaderboard'); loadLeaderboard()">Leaderboard</button>
+          <button class="btn btn-secondary" onclick="showView('view-home')">Home</button>
         </div>
       </div>
 
@@ -561,7 +767,7 @@
         </p>
         <div id="leaderboard-content"></div>
         <div class="btn-row" style="margin-top:20px;">
-          <button class="btn btn-secondary" onclick="showView('view-setup')">Back</button>
+          <button class="btn btn-secondary" onclick="showView('view-home')">Home</button>
         </div>
       </div>
     </div>
@@ -583,6 +789,7 @@ let state = {
   selectedAnswer: null,
   phase: 'choosing', // 'choosing' | 'confirming' | 'feedback'
   responses: [],
+  submitting: false, // prevents double-submission
 };
 
 // ============================================================
@@ -593,44 +800,85 @@ function showView(id) {
   document.getElementById(id).classList.add('active');
 }
 
+function showQuizError(msg) {
+  const el = document.getElementById('quiz-error');
+  el.textContent = msg;
+  el.classList.add('visible');
+}
+
+function hideQuizError() {
+  const el = document.getElementById('quiz-error');
+  el.textContent = '';
+  el.classList.remove('visible');
+}
+
 // ============================================================
 // SETUP
 // ============================================================
+const DATASET_LABELS = {
+  'truthfulqa': 'TruthfulQA — tests resistance to common misconceptions',
+  'arc-easy': 'ARC-Easy — grade-school science questions',
+  'arc-challenge': 'ARC-Challenge — harder science reasoning',
+  'mmlu': 'MMLU — broad academic knowledge',
+};
+
 async function loadDatasets() {
-  const resp = await fetch(BASE_PATH + '/api/datasets');
-  const data = await resp.json();
-  const sel = document.getElementById('inp-dataset');
-  sel.innerHTML = '';
-  data.datasets.forEach(ds => {
-    const opt = document.createElement('option');
-    opt.value = ds;
-    opt.textContent = ds;
-    if (ds === 'truthfulqa') opt.selected = true;
-    sel.appendChild(opt);
-  });
+  try {
+    const resp = await fetch(BASE_PATH + '/api/datasets');
+    if (!resp.ok) return;
+    const data = await resp.json();
+    const sel = document.getElementById('inp-dataset');
+    sel.innerHTML = '';
+    data.datasets.forEach(ds => {
+      const opt = document.createElement('option');
+      opt.value = ds;
+      opt.textContent = DATASET_LABELS[ds] || ds;
+      if (ds === 'truthfulqa') opt.selected = true;
+      sel.appendChild(opt);
+    });
+  } catch (e) {
+    console.error('Failed to load datasets:', e);
+  }
 }
 
 async function startQuiz() {
-  const name = document.getElementById('inp-name').value.trim() || 'Anonymous';
-  const dataset = document.getElementById('inp-dataset').value;
-  const count = parseInt(document.getElementById('inp-count').value);
+  const startBtn = document.getElementById('btn-start');
+  startBtn.disabled = true;
+  startBtn.textContent = 'Starting...';
 
-  const resp = await fetch(BASE_PATH + '/api/start', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ participant: name, dataset, max_questions: count }),
-  });
-  const data = await resp.json();
-  if (data.error) { alert(data.error); return; }
+  try {
+    const name = document.getElementById('inp-name').value.trim() || 'Anonymous';
+    const dataset = document.getElementById('inp-dataset').value;
 
-  state.sessionId = data.session_id;
-  state.totalQuestions = data.total_questions;
-  state.answered = 0;
-  state.responses = [];
-  state.selectedAnswer = null;
+    const resp = await fetch(BASE_PATH + '/api/start', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ participant: name, dataset, max_questions: 20 }),
+    });
+    const data = await resp.json();
 
-  showView('view-quiz');
-  loadQuestion();
+    if (!resp.ok || data.error) {
+      alert(data.error || 'Failed to start quiz');
+      return;
+    }
+
+    state.sessionId = data.session_id;
+    state.totalQuestions = data.total_questions;
+    state.answered = 0;
+    state.responses = [];
+    state.selectedAnswer = null;
+    state.submitting = false;
+
+    showView('view-quiz');
+    hideQuizError();
+    loadQuestion();
+  } catch (e) {
+    alert('Connection error. Is the server running?');
+    console.error('Start quiz error:', e);
+  } finally {
+    startBtn.disabled = false;
+    startBtn.textContent = 'Start Quiz';
+  }
 }
 
 // ============================================================
@@ -639,20 +887,54 @@ async function startQuiz() {
 async function loadQuestion() {
   state.selectedAnswer = null;
   state.phase = 'choosing';
+  state.submitting = false;
+  hideQuizError();
 
-  const resp = await fetch(`${BASE_PATH}/api/question/${state.sessionId}`);
-  const data = await resp.json();
+  let data;
+  try {
+    const resp = await fetch(`${BASE_PATH}/api/question/${state.sessionId}`);
+    if (!resp.ok) {
+      const errData = await resp.json().catch(() => ({}));
+      showQuizError(errData.error || `Server error (${resp.status}). Your session may have expired.`);
+      const btn = document.getElementById('btn-submit');
+      btn.textContent = 'Return Home';
+      btn.disabled = false;
+      btn.onclick = () => showView('view-home');
+      return;
+    }
+    data = await resp.json();
+  } catch (e) {
+    showQuizError('Connection lost. Check your network and try again.');
+    const btn = document.getElementById('btn-submit');
+    btn.textContent = 'Retry';
+    btn.disabled = false;
+    btn.onclick = () => loadQuestion();
+    return;
+  }
 
   if (data.done) {
     showResults();
     return;
   }
 
-  // Update progress
+  // Validate response has required fields
+  if (!data.choices || !Array.isArray(data.choices) || data.choices.length === 0) {
+    showQuizError('Received invalid question data from server. Skipping to next question.');
+    // Try to skip by submitting a dummy answer
+    state.answered++;
+    const btn = document.getElementById('btn-submit');
+    btn.textContent = 'Next Question';
+    btn.disabled = false;
+    btn.onclick = () => loadQuestion();
+    return;
+  }
+
+  // Update progress using server-provided question_number for consistency
+  const questionNum = data.question_number || (state.answered + 1);
   const pct = (state.answered / state.totalQuestions) * 100;
   document.getElementById('progress-fill').style.width = pct + '%';
   document.getElementById('q-number').textContent =
-    `Question ${data.question_number} of ${data.total_questions}`;
+    `Question ${questionNum} of ${data.total_questions || state.totalQuestions}`;
   document.getElementById('q-subject').textContent = data.subject || '';
   document.getElementById('q-text').textContent = data.question;
   document.getElementById('stat-progress').textContent =
@@ -665,7 +947,7 @@ async function loadQuestion() {
   data.choices.forEach((choice, i) => {
     const btn = document.createElement('button');
     btn.className = 'choice-btn';
-    btn.innerHTML = `<span class="letter">${letters[i]}</span><span>${choice}</span>`;
+    btn.innerHTML = `<span class="letter">${letters[i]}</span><span>${escapeHtml(choice)}</span>`;
     btn.onclick = () => selectChoice(i);
     btn.dataset.index = i;
     container.appendChild(btn);
@@ -675,6 +957,7 @@ async function loadQuestion() {
   document.getElementById('conf-slider').value = 50;
   updateConfidence(50);
   document.getElementById('confidence-section').style.display = 'block';
+  document.getElementById('confidence-section').style.opacity = '1';
 
   // Reset feedback
   document.getElementById('feedback').style.display = 'none';
@@ -687,6 +970,12 @@ async function loadQuestion() {
 
   // Update slider color
   updateSliderColor(50);
+}
+
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
 }
 
 function selectChoice(index) {
@@ -730,24 +1019,54 @@ function updateSliderColor(pct) {
 
 async function submitAnswer() {
   if (state.selectedAnswer === null) return;
+
+  // Handle feedback-phase click (Next Question button)
   if (state.phase === 'feedback') {
     loadQuestion();
     return;
   }
 
+  // Prevent double-submission
+  if (state.submitting) return;
+  state.submitting = true;
+
+  const btn = document.getElementById('btn-submit');
+  btn.disabled = true;
+  btn.textContent = 'Submitting...';
+
   const confidence = parseInt(document.getElementById('conf-slider').value) / 100;
 
-  const resp = await fetch(BASE_PATH + '/api/answer', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      session_id: state.sessionId,
-      selected_answer: state.selectedAnswer,
-      confidence: confidence,
-    }),
-  });
-  const data = await resp.json();
+  let data;
+  try {
+    const resp = await fetch(BASE_PATH + '/api/answer', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        session_id: state.sessionId,
+        selected_answer: state.selectedAnswer,
+        confidence: confidence,
+      }),
+    });
 
+    if (!resp.ok) {
+      const errData = await resp.json().catch(() => ({}));
+      showQuizError(errData.error || `Failed to submit answer (${resp.status}).`);
+      btn.disabled = false;
+      btn.textContent = 'Retry Submit';
+      state.submitting = false;
+      return;
+    }
+
+    data = await resp.json();
+  } catch (e) {
+    showQuizError('Connection lost while submitting. Click Retry to try again.');
+    btn.disabled = false;
+    btn.textContent = 'Retry Submit';
+    state.submitting = false;
+    return;
+  }
+
+  hideQuizError();
   state.answered++;
   state.responses.push(data);
   state.phase = 'feedback';
@@ -760,15 +1079,17 @@ async function submitAnswer() {
     fb.innerHTML = `Correct! <span class="score-detail">HLCC: ${data.hlcc_score >= 0 ? '+' : ''}${data.hlcc_score.toFixed(2)}</span>`;
   } else {
     fb.className = 'feedback incorrect';
-    fb.innerHTML = `Incorrect. The answer was ${data.correct_letter}: ${data.correct_text}
+    fb.innerHTML = `Incorrect. The answer was ${escapeHtml(data.correct_letter)}: ${escapeHtml(data.correct_text)}
       <span class="score-detail">HLCC: ${data.hlcc_score.toFixed(2)}</span>`;
   }
 
   // Highlight choices
-  document.querySelectorAll('.choice-btn').forEach((btn, i) => {
-    btn.classList.remove('selected');
-    if (i === data.correct_answer) btn.classList.add('correct');
-    else if (i === state.selectedAnswer && !data.is_correct) btn.classList.add('incorrect');
+  document.querySelectorAll('.choice-btn').forEach((cbtn, i) => {
+    cbtn.classList.remove('selected');
+    if (i === data.correct_answer) cbtn.classList.add('correct');
+    else if (i === state.selectedAnswer && !data.is_correct) cbtn.classList.add('incorrect');
+    // Disable choice buttons during feedback
+    cbtn.style.pointerEvents = 'none';
   });
 
   // Disable confidence slider
@@ -786,12 +1107,15 @@ async function submitAnswer() {
   const pct = (state.answered / state.totalQuestions) * 100;
   document.getElementById('progress-fill').style.width = pct + '%';
 
-  // Change button
-  const btn = document.getElementById('btn-submit');
+  // Change button for next action
+  btn.disabled = false;
+  state.submitting = false;
   if (data.questions_remaining > 0) {
     btn.textContent = 'Next Question';
     btn.onclick = () => {
       document.getElementById('confidence-section').style.opacity = '1';
+      // Re-enable choice buttons for next question
+      document.querySelectorAll('.choice-btn').forEach(cb => cb.style.pointerEvents = '');
       loadQuestion();
     };
   } else {
@@ -804,93 +1128,173 @@ async function submitAnswer() {
 // RESULTS
 // ============================================================
 async function showResults() {
-  const resp = await fetch(`${BASE_PATH}/api/results/${state.sessionId}`);
-  const data = await resp.json();
+  try {
+    const resp = await fetch(`${BASE_PATH}/api/results/${state.sessionId}`);
+    if (!resp.ok) {
+      alert('Failed to load results. Please try again.');
+      return;
+    }
+    const data = await resp.json();
 
-  showView('view-results');
+    showView('view-results');
 
-  // Big score
-  const hlcc = data.mean_hlcc;
-  const bigScore = document.getElementById('final-hlcc');
-  bigScore.textContent = (hlcc >= 0 ? '+' : '') + hlcc.toFixed(3);
-  bigScore.className = 'big-score ' + (hlcc >= 0 ? 'positive' : 'negative');
+    // Big score
+    const hlcc = data.mean_hlcc;
+    const bigScore = document.getElementById('final-hlcc');
+    bigScore.textContent = (hlcc >= 0 ? '+' : '') + hlcc.toFixed(3);
+    bigScore.className = 'big-score ' + (hlcc >= 0 ? 'positive' : 'negative');
 
-  // Metrics grid
-  const m = data.metrics;
-  const metricsHtml = [
-    { name: 'Accuracy', value: (m.accuracy * 100).toFixed(1) + '%' },
-    { name: 'Avg Confidence', value: (m.mean_confidence * 100).toFixed(1) + '%' },
-    { name: 'ECE', value: m.ece.toFixed(4) },
-    { name: 'Brier Score', value: m.brier.toFixed(4) },
-    { name: 'Calibration Gap', value: (m.calibration_gap * 100).toFixed(1) + '%' },
-    { name: 'Total HLCC', value: (data.total_hlcc >= 0 ? '+' : '') + data.total_hlcc.toFixed(2) },
-  ].map(item => `
-    <div class="metric-card">
-      <div class="metric-value">${item.value}</div>
-      <div class="metric-name">${item.name}</div>
-    </div>
-  `).join('');
-  document.getElementById('metrics-grid').innerHTML = metricsHtml;
+    // Metrics grid
+    const m = data.metrics;
+    const metricsHtml = [
+      { name: 'Accuracy', value: (m.accuracy * 100).toFixed(1) + '%' },
+      { name: 'Avg Confidence', value: (m.mean_confidence * 100).toFixed(1) + '%' },
+      { name: 'ECE', value: m.ece.toFixed(4) },
+      { name: 'Brier Score', value: m.brier.toFixed(4) },
+      { name: 'Calibration Gap', value: (m.calibration_gap * 100).toFixed(1) + '%' },
+      { name: 'Total HLCC', value: (data.total_hlcc >= 0 ? '+' : '') + data.total_hlcc.toFixed(2) },
+    ].map(item => `
+      <div class="metric-card">
+        <div class="metric-value">${item.value}</div>
+        <div class="metric-name">${item.name}</div>
+      </div>
+    `).join('');
+    document.getElementById('metrics-grid').innerHTML = metricsHtml;
 
-  // Question review
-  const reviewHtml = data.responses.map((r, i) => `
-    <div class="review-item">
-      <div class="review-num ${r.is_correct ? 'correct' : 'incorrect'}">${i + 1}</div>
-      <div class="review-detail">
-        <div class="review-q">${r.is_correct ? 'Correct' : 'Incorrect'} &mdash;
-          answered ${r.selected_letter}, correct was ${r.correct_letter}</div>
-        <div class="review-meta">
-          Confidence: ${(r.confidence * 100).toFixed(0)}% &nbsp;&bull;&nbsp;
-          HLCC: ${r.hlcc_score >= 0 ? '+' : ''}${r.hlcc_score.toFixed(2)}
+    // Question review
+    const reviewHtml = data.responses.map((r, i) => `
+      <div class="review-item">
+        <div class="review-num ${r.is_correct ? 'correct' : 'incorrect'}">${i + 1}</div>
+        <div class="review-detail">
+          <div class="review-q">${r.is_correct ? 'Correct' : 'Incorrect'} &mdash;
+            answered ${escapeHtml(r.selected_letter)}, correct was ${escapeHtml(r.correct_letter)}</div>
+          <div class="review-meta">
+            Confidence: ${(r.confidence * 100).toFixed(0)}% &nbsp;&bull;&nbsp;
+            HLCC: ${r.hlcc_score >= 0 ? '+' : ''}${r.hlcc_score.toFixed(2)}
+          </div>
         </div>
       </div>
-    </div>
-  `).join('');
-  document.getElementById('question-review').innerHTML = reviewHtml;
+    `).join('');
+    document.getElementById('question-review').innerHTML = reviewHtml;
+  } catch (e) {
+    console.error('Failed to load results:', e);
+    alert('Failed to load results. Please try again.');
+  }
 }
 
 // ============================================================
 // LEADERBOARD
 // ============================================================
 async function loadLeaderboard() {
-  const resp = await fetch(BASE_PATH + '/api/leaderboard');
-  const data = await resp.json();
-  const entries = data.entries || [];
+  try {
+    const resp = await fetch(BASE_PATH + '/api/leaderboard');
+    if (!resp.ok) {
+      document.getElementById('leaderboard-content').innerHTML =
+        '<p style="color:var(--text-dim)">Failed to load leaderboard.</p>';
+      return;
+    }
+    const data = await resp.json();
+    const entries = data.entries || [];
 
-  if (entries.length === 0) {
+    if (entries.length === 0) {
+      document.getElementById('leaderboard-content').innerHTML =
+        '<p style="color:var(--text-dim)">No entries yet. Complete a quiz or run a benchmark to appear here!</p>';
+      return;
+    }
+
+    let html = `<table class="leaderboard-table">
+      <thead><tr>
+        <th>#</th><th>Name</th><th>Type</th><th>Dataset</th>
+        <th>Accuracy</th><th>HLCC</th><th>ECE</th>
+      </tr></thead><tbody>`;
+
+    entries.forEach((e, i) => {
+      const type = e.type || 'llm';
+      const hlcc = e.mean_hlcc_score || 0;
+      html += `<tr class="${type === 'human' ? 'human' : ''}">
+        <td>${i + 1}</td>
+        <td>${escapeHtml(e.model_name || 'Unknown')}</td>
+        <td><span class="type-badge ${type}">${type}</span></td>
+        <td>${escapeHtml(e.dataset || '')}</td>
+        <td>${((e.accuracy || 0) * 100).toFixed(1)}%</td>
+        <td>${hlcc >= 0 ? '+' : ''}${hlcc.toFixed(3)}</td>
+        <td>${(e.ece || 0).toFixed(3)}</td>
+      </tr>`;
+    });
+
+    html += '</tbody></table>';
+    document.getElementById('leaderboard-content').innerHTML = html;
+  } catch (e) {
+    console.error('Failed to load leaderboard:', e);
     document.getElementById('leaderboard-content').innerHTML =
-      '<p style="color:var(--text-dim)">No entries yet. Complete a quiz to appear here!</p>';
-    return;
+      '<p style="color:var(--text-dim)">Failed to load leaderboard.</p>';
   }
+}
 
-  let html = `<table class="leaderboard-table">
-    <thead><tr>
-      <th>#</th><th>Name</th><th>Type</th><th>Dataset</th>
-      <th>Accuracy</th><th>HLCC</th><th>ECE</th>
-    </tr></thead><tbody>`;
+// ============================================================
+// HOME PERFORMANCE CHART
+// ============================================================
+async function loadPerformanceChart() {
+  const container = document.getElementById('perf-chart');
+  try {
+    const resp = await fetch(BASE_PATH + '/api/leaderboard');
+    if (!resp.ok) throw new Error('Failed to load');
+    const data = await resp.json();
+    const entries = data.entries || [];
 
-  entries.forEach((e, i) => {
-    const type = e.type || 'llm';
-    const hlcc = e.mean_hlcc_score || 0;
-    html += `<tr class="${type === 'human' ? 'human' : ''}">
-      <td>${i + 1}</td>
-      <td>${e.model_name || 'Unknown'}</td>
-      <td><span class="type-badge ${type}">${type}</span></td>
-      <td>${e.dataset || ''}</td>
-      <td>${((e.accuracy || 0) * 100).toFixed(1)}%</td>
-      <td>${hlcc >= 0 ? '+' : ''}${hlcc.toFixed(3)}</td>
-      <td>${(e.ece || 0).toFixed(3)}</td>
-    </tr>`;
-  });
+    if (entries.length === 0) {
+      container.innerHTML = `
+        <div class="chart-empty">
+          <p>No benchmark data yet.</p>
+          <p style="margin-top:8px">Run benchmarks against LLMs or take the quiz yourself to see results here.</p>
+        </div>`;
+      return;
+    }
 
-  html += '</tbody></table>';
-  document.getElementById('leaderboard-content').innerHTML = html;
+    // Sort by accuracy descending
+    entries.sort((a, b) => (b.accuracy || 0) - (a.accuracy || 0));
+
+    // Take top entries (max 12 for readability)
+    const shown = entries.slice(0, 12);
+
+    // Find max accuracy for scaling (always 0-100%)
+    const maxAcc = 100;
+
+    let html = '';
+    shown.forEach(e => {
+      const type = e.type || 'llm';
+      const acc = ((e.accuracy || 0) * 100);
+      const hlcc = e.mean_hlcc_score || 0;
+      const name = e.model_name || 'Unknown';
+      const shortName = name.length > 18 ? name.substring(0, 16) + '...' : name;
+      const barClass = type === 'human' ? 'human' : 'accuracy';
+
+      html += `
+        <div class="chart-bar-row">
+          <div class="chart-bar-label" title="${escapeHtml(name)}">${escapeHtml(shortName)}</div>
+          <div class="chart-bar-track">
+            <div class="chart-bar-fill ${barClass}" style="width: ${Math.max(acc, 2)}%">
+              ${acc.toFixed(1)}%
+            </div>
+          </div>
+        </div>`;
+    });
+
+    container.innerHTML = html;
+    document.getElementById('chart-legend').style.display = 'flex';
+  } catch (e) {
+    container.innerHTML = `
+      <div class="chart-empty">
+        <p>No benchmark data available yet.</p>
+        <p style="margin-top:8px">Run benchmarks against LLMs or take the quiz yourself to populate this chart.</p>
+      </div>`;
+  }
 }
 
 // ============================================================
 // INIT
 // ============================================================
-loadDatasets();
+loadPerformanceChart();
 </script>
 </body>
 </html>
